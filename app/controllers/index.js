@@ -1,12 +1,7 @@
-function goToPayBill (event) {
-	var payBillView = Alloy.createController("paybill", {}).getView();
 
-    if (OS_IOS) {
-        $.index.openWindow(payBillView);
-    }
-    if (OS_ANDROID) {
-        payBillView.open();
-    }
+if(OS_IOS){
+	$.nav.open()
 }
-
-$.index.open();
+else{
+	$.index.getView().open();
+}
