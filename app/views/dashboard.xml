@@ -1,7 +1,7 @@
 <Alloy>
 	<Window class="container" title="Insurance POC">
-		<View top="200">
-			<View class="dashboardRow" top="10" >
+		<View class="dashboardLaunchPad">
+			<View class="dashboardRow" >
 				<View class="dashboardGridCell">
 					<View class="dashboardIcon">
 						<Widget class="dashboardIconSvg" src="com.capnajax.vectorimage" svg="svg/bell.svg" style="svg/white-fill.css"/>
@@ -16,12 +16,12 @@
 				</View>
 				<View class="dashboardGridCell" onClick="goToPayBill">
 					<View class="dashboardIcon">
-						<Widget class="dashboardIconSvg" src="com.capnajax.vectorimage" svg="svg/circle-check.svg" style="svg/white-fill.css"/>
+						<Widget class="dashboardIconSvg" src="com.capnajax.vectorimage" svg="svg/circle-check.svg" style="svg/white-fill.css" onClick="goToPayBill"/>
 					</View>
 					<Label class="dashboardIconLabel">Pay Bill</Label>
 				</View>
 			</View>
-			<View class="dashboardRow" top="160">
+			<View class="dashboardRow">
 				<View class="dashboardGridCell">
 					<View class="dashboardIcon">
 						<Widget class="dashboardIconSvg" src="com.capnajax.vectorimage" svg="svg/flag.svg" style="svg/white-fill.css"/>
@@ -41,6 +41,9 @@
 					<Label class="dashboardIconLabel">Notification Center</Label>
 				</View>
 			</View>
+		</View>
+		<View class="footer">
+			<Label class="footerText">2013 Volkswagen Jetta</Label>
 		</View>
 	</Window>
 </Alloy>

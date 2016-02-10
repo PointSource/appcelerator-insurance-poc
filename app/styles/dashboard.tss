@@ -10,10 +10,16 @@
 	statusBarStyle: Titanium.UI.iPhone.StatusBar.LIGHT_CONTENT
 }
 
+".dashboardLaunchPad": {
+	bottom: 80,
+	height: 300,
+	layout: 'vertical'
+}
 
 ".dashboardRow": {
 	layout: 'horizontal',
-	width: '90%'
+	width: '90%',
+	height: 150
 }
 
 ".dashboardGridCell": {
@@ -39,4 +45,14 @@
 	color: "white",
 	width: 100,
 	textAlign: Titanium.UI.TEXT_ALIGNMENT_CENTER
+}
+
+".footer": {
+	backgroundColor: "#262626",
+	bottom: 0,
+	height: 80
+}
+
+".footerText": {
+	color: "white"
 }
