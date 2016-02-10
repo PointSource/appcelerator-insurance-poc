@@ -1,5 +1,10 @@
 ".container": {
-	backgroundColor:"#0361AF"
+	backgroundColor:"#0361AF",
+	titleAttributes:  {
+        color: "white"
+	},
+	barColor: "#262626",
+	statusBarStyle: Titanium.UI.iPhone.StatusBar.LIGHT_CONTENT
 }
 
 ".dashboardRow": {
