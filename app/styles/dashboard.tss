@@ -3,9 +3,13 @@
 	titleAttributes:  {
         color: "white"
 	},
-	barColor: "#262626",
+	barColor: "#262626"
+}
+
+".container[platform=ios]" : { 
 	statusBarStyle: Titanium.UI.iPhone.StatusBar.LIGHT_CONTENT
 }
+
 
 ".dashboardRow": {
 	layout: 'horizontal',
