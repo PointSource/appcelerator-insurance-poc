@@ -4,15 +4,15 @@
 			<View>
 				<View class="dashboardGridCell" left="10">
 					<View class="dashboardIcon"/>
-					<Label class="dashboardIconLabel">Pay Bill</Label>
+					<Label class="dashboardIconLabel">Accident Help</Label>
 				</View>
 				<View class="dashboardGridCell">
 					<View class="dashboardIcon"></View>
 					<Label class="dashboardIconLabel">Policies</Label>
 				</View>
-				<View class="dashboardGridCell" right="10">
+				<View class="dashboardGridCell" right="10" onClick="goToPayBill">
 					<View class="dashboardIcon"/>
-					<Label class="dashboardIconLabel">Accident Help</Label>
+					<Label class="dashboardIconLabel">Pay Bill</Label>
 				</View>
 			</View>
 			<View top="120">
