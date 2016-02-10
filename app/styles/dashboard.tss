@@ -24,6 +24,13 @@
 	borderRadius: 50
 }
 
+".dashboardIconSvg": {
+	top: 20,
+	left: 20,
+	right: 20,
+	bottom: 20
+}
+
 ".dashboardIconLabel": {
 	color: "white",
 	width: 100,

@@ -3,29 +3,41 @@
 		<View top="200">
 			<View class="dashboardRow" top="10" >
 				<View class="dashboardGridCell">
-					<View class="dashboardIcon"/>
+					<View class="dashboardIcon">
+						<Widget class="dashboardIconSvg" src="com.capnajax.vectorimage" svg="svg/bell.svg" style="svg/white-fill.css"/>
+					</View>
 					<Label class="dashboardIconLabel">Accident Help</Label>
 				</View>
 				<View class="dashboardGridCell">
-					<View class="dashboardIcon"></View>
+					<View class="dashboardIcon">
+						<Widget class="dashboardIconSvg" src="com.capnajax.vectorimage" svg="svg/cart.svg" style="svg/white-fill.css"/>
+					</View>
 					<Label class="dashboardIconLabel">Policies</Label>
 				</View>
 				<View class="dashboardGridCell" onClick="goToPayBill">
-					<View class="dashboardIcon"/>
+					<View class="dashboardIcon">
+						<Widget class="dashboardIconSvg" src="com.capnajax.vectorimage" svg="svg/circle-check.svg" style="svg/white-fill.css"/>
+					</View>
 					<Label class="dashboardIconLabel">Pay Bill</Label>
 				</View>
 			</View>
 			<View class="dashboardRow" top="160">
 				<View class="dashboardGridCell">
-					<Label class="dashboardIcon"/>
+					<View class="dashboardIcon">
+						<Widget class="dashboardIconSvg" src="com.capnajax.vectorimage" svg="svg/flag.svg" style="svg/white-fill.css"/>
+					</View>
 					<Label class="dashboardIconLabel">Auto Maintenance</Label>
 				</View>
 				<View class="dashboardGridCell">
-					<View class="dashboardIcon"></View>
+					<View class="dashboardIcon">
+						<Widget class="dashboardIconSvg" src="com.capnajax.vectorimage" svg="svg/cog.svg" style="svg/white-fill.css"/>
+					</View>
 					<Label class="dashboardIconLabel">Home Inventory</Label>
 				</View>
 				<View class="dashboardGridCell">
-					<View class="dashboardIcon"></View>
+					<View class="dashboardIcon">
+						<Widget class="dashboardIconSvg" src="com.capnajax.vectorimage" svg="svg/dashboard.svg" style="svg/white-fill.css"/>
+					</View>
 					<Label class="dashboardIconLabel">Notification Center</Label>
 				</View>
 			</View>
