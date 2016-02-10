@@ -1,0 +1,8 @@
+<Alloy>
+	<Window class="container">
+		<View layout='vertical'>
+			<Label>Pay</Label>
+			<Label>Your bill</Label>
+		</View>
+	</Window>
+</Alloy>

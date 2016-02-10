@@ -3,7 +3,7 @@
 		<Window class="container" title="Insurance POC">
 			<View top="200">
 				<View>
-					<View class="dashboardGridCell" left="10">
+					<View class="dashboardGridCell" left="10" onClick="goToPayBill">
 						<View class="dashboardIcon"/>
 						<Label class="dashboardIconLabel">Pay Bill</Label>
 					</View>
