@@ -1,8 +1,0 @@
-"NavigationWindow":{
-	backgroundColor: "#262626",
-	statusBarStyle: Titanium.UI.iPhone.StatusBar.LIGHT_CONTENT
-}
-
-".container": {
-	backgroundColor:"#0361AF"
-}

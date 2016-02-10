@@ -1,4 +1,11 @@
+".container": {
+	backgroundColor:"#0361AF"
+}
 
+".dashboardRow": {
+	layout: 'horizontal',
+	width: '90%'
+}
 
 ".dashboardGridCell": {
 	 layout:'vertical',
@@ -7,12 +14,13 @@
 
 ".dashboardIcon": {
 	backgroundColor:"#0A4E88",
-	height: 70,
-	width: 70,
-	borderRadius: 35
+	height: 100,
+	width: 100,
+	borderRadius: 50
 }
 
 ".dashboardIconLabel": {
 	color: "white",
+	width: 100,
 	textAlign: Titanium.UI.TEXT_ALIGNMENT_CENTER
 }

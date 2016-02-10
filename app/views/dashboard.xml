@@ -1,7 +1,7 @@
 <Alloy>
 	<Window class="container" title="Insurance POC">
 		<View top="200">
-			<View layout="horizontal" top="10">
+			<View class="dashboardRow" top="10" >
 				<View class="dashboardGridCell">
 					<View class="dashboardIcon"/>
 					<Label class="dashboardIconLabel">Accident Help</Label>
@@ -15,7 +15,7 @@
 					<Label class="dashboardIconLabel">Pay Bill</Label>
 				</View>
 			</View>
-			<View layout="horizontal" top="120">
+			<View class="dashboardRow" top="160">
 				<View class="dashboardGridCell">
 					<Label class="dashboardIcon"/>
 					<Label class="dashboardIconLabel">Auto Maintenance</Label>

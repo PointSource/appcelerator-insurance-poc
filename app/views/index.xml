@@ -2,7 +2,7 @@
 	<Require id="index" src="dashboard" platform="android,windows" /> 
 
     <!-- iOS Window -->
-    <NavigationWindow id="nav" platform="ios" class="container">
+    <NavigationWindow id="nav" platform="ios">
     	<Require src="dashboard" />
     </NavigationWindow>
 
