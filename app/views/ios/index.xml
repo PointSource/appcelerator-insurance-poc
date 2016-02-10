@@ -1,0 +1,36 @@
+<Alloy>
+	<NavigationWindow>
+		<Window class="container" title="Insurance POC">
+			<View top="200">
+				<View>
+					<View class="dashboardGridCell" left="10">
+						<View class="dashboardIcon"/>
+						<Label class="dashboardIconLabel">Pay Bill</Label>
+					</View>
+					<View class="dashboardGridCell">
+						<View class="dashboardIcon"></View>
+						<Label class="dashboardIconLabel">Policies</Label>
+					</View>
+					<View class="dashboardGridCell" right="10">
+						<View class="dashboardIcon"/>
+						<Label class="dashboardIconLabel">Accident Help</Label>
+					</View>
+				</View>
+				<View top="120">
+					<View class="dashboardGridCell" left="10">
+						<Label class="dashboardIcon"/>
+						<Label class="dashboardIconLabel">Auto Maintenance</Label>
+					</View>
+					<View class="dashboardGridCell">
+						<View class="dashboardIcon"></View>
+						<Label class="dashboardIconLabel">Home Inventory</Label>
+					</View>
+					<View class="dashboardGridCell" right="10">
+						<View class="dashboardIcon"></View>
+						<Label class="dashboardIconLabel">Notification Center</Label>
+					</View>
+				</View>
+			</View>
+		</Window>
+	</NavigationWindow>
+</Alloy>

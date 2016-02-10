@@ -1,0 +1,32 @@
+".container": {
+	backgroundColor:"#0361AF"
+}
+
+"Label": {
+	width: Ti.UI.SIZE,
+	height: Ti.UI.SIZE,
+	color: "#000"
+}
+
+"#label": {
+	font: {
+		fontSize: 12
+	}
+}
+
+".dashboardGridCell": {
+	 layout:'vertical',
+	 width:120
+}
+
+".dashboardIcon": {
+	backgroundColor:"#0A4E88",
+	height: 70,
+	width: 70,
+	borderRadius: 35
+}
+
+".dashboardIconLabel": {
+	color: "white",
+	textAlign: Titanium.UI.TEXT_ALIGNMENT_CENTER
+}
