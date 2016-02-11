@@ -1,4 +1,33 @@
 var args = arguments[0] || {};
+var camera;
+
+if (OS_ANDROID) {
+
+	$.payBillWindow.orientationModes = [Ti.UI.LANDSCAPE];
+
+	if( Ti.Media.isCameraSupported ) {
+	    var androidcamera = require("pw.custom.androidcamera");
+	    camera = androidcamera.createCameraView({
+	        save_location: "my_app",
+	        pictureTimeout: 0,
+	        resolutionNamed: androidcamera.RESOLUTION_480
+	    });
+
+	    camera.addEventListener("picture_taken", function(event){
+	        alert("Image saved to "+event.path);
+	    });
+
+	    $.cameraView.addEventListener("close", function(){
+	        camera = null;
+	    });
+
+	    $.cameraView.add(camera);
+	} else {
+	    alert("No camera found!");
+	}
+
+}
+
 
 function takePicture() {
 
@@ -37,48 +66,13 @@ function takePicture() {
 			mediaTypes:[Ti.Media.MEDIA_TYPE_VIDEO,Ti.Media.MEDIA_TYPE_PHOTO]
 		});
 	}
-}
 
-
-if (OS_ANDROID) {
-	var win = $.payBillWindow;
-
-	win.orientationModes = [Ti.UI.PORTRAIT];
-	// win.open();
-
-	if( Ti.Media.isCameraSupported ) {
-	    var androidcamera = require("pw.custom.androidcamera");
-	    var camera = androidcamera.createCameraView({
-	        save_location: "my_app",
-	        useFrontCamera: false,
-	        pictureTimeout: 200,
-	        resolutionNamed: androidcamera.RESOLUTION_480
-	    });
-
-	    var btSnap = Ti.UI.createButton({
-	        title: "Capture",
-	        bottom: "10dp",
-	        height: "80dp",
-	        width: "80dp",
-	        zIndex: 2
-	    });
-
-	    btSnap.addEventListener("click", function(){
+	else if (OS_ANDROID) {
+		if( Ti.Media.isCameraSupported ) {
 	        camera.snapPicture();
-	    });
+	    }	else {
+	    	alert("No camera found!");
+		}
 
-	    camera.addEventListener("picture_taken", function(evt){
-	        alert("Image saved to "+evt.path);
-	    });
-
-	    win.addEventListener("close", function(){
-	        camera = null;
-	    });
-
-	    win.add(camera);
-	    win.add(btSnap);
-	} else {
-	    alert("No camera found!");
 	}
-
 }

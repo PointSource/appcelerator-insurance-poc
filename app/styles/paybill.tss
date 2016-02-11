@@ -2,6 +2,11 @@
    backgroundColor: 'white' 
 }
 
+"#cameraView": {
+	height: 200,
+	width: '90%',
+	backgroundColor: 'gray'
+}
 ".cameraButton": {
 	backgroundColor: 'gray',
 	height: 80,
