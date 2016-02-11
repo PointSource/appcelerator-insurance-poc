@@ -1,10 +1,8 @@
 <Alloy>
 	<Window id="payBillWindow" class="container" layout='vertical'>
-		<View layout='vertical'>
-			<Label>Pay</Label>
-			<Label>Your bill</Label>
-			<View id="cameraView"></View>
-			<Button class="cameraButton" onClick="takePicture">Take a picture of your credit card</Button>
-		</View>
+        <Widget id="camera" src="ts.camera" onPictureTaken="onPictureTaken" /> 
+        <Button onClick="switchCamera">Switch Cameras</Button>
+        <Button onClick="takePicture">Take Picture</Button>
+        <View id="imagePreview"></View>
 	</Window>
 </Alloy>

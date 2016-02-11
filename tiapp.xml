@@ -55,9 +55,10 @@
         <theme>default</theme>
     </mobileweb>
     <modules>
-        <module platform="commonjs">ti.cloud</module>
-        <module platform="android">pw.custom.androidcamera</module>
-    </modules>
+    <module platform="commonjs">ti.cloud</module>
+    <module platform="android">pw.custom.androidcamera</module>
+    <module platform="iphone">com.mfogg.squarecamera</module>
+  </modules>
     <deployment-targets>
         <target device="android">true</target>
         <target device="ipad">true</target>
