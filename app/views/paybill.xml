@@ -1,5 +1,5 @@
 <Alloy>
-	<Window class="container">
+	<Window id="payBillWindow" class="container">
 		<View layout='vertical'>
 			<Label>Pay</Label>
 			<Label>Your bill</Label>
