@@ -1,5 +1,8 @@
 <Alloy>
 	<Window class="container" title="Insurance POC">
+		<RightNavButton>
+            <Button>menu</Button>
+        </RightNavButton>
 		<View class="dashboardLaunchPad">
 			<View class="dashboardRow" >
 				<View class="dashboardGridCell">
