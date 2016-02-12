@@ -2,14 +2,18 @@
 	<Window class="container" title="Insurance POC">
 
 		<RightNavButton platform="ios">
-            <Button>menu</Button>
+            <Button onClick="toggleMenu">menu</Button>
         </RightNavButton>
 
         <Menu platform="android">
-            <MenuItem id="item1" title="Settings" onClick="openSettings" />
+            <MenuItem id="item1" title="Settings" onClick="toggleMenu" />
         </Menu>
 
-		<View class="dashboardLaunchPad">
+		<View id="SlideMenu">
+			<Label class="menuLabel">This is a menu</Label>
+		</View>
+
+		<View id="AppWrapper" class="dashboardLaunchPad">
 			<View class="dashboardRow" >
 				<View class="dashboardGridCell">
 					<View class="dashboardIcon">

@@ -54,6 +54,17 @@
 }
 
 
+"#SlideMenu": {
+	width: "200dp",
+	top: "0dp",
+	right: "-200dp",
+	backgroundColor: "#000",
+	zIndex: 100,
+}
+
+".menuLabel": {
+	color: 'white'
+}
 
 "MenuItem": {
     showAsAction: Ti.Android.SHOW_AS_ACTION_ALWAYS
