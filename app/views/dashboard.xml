@@ -1,8 +1,14 @@
 <Alloy>
 	<Window class="container" title="Insurance POC">
-		<RightNavButton>
+
+		<RightNavButton platform="ios">
             <Button>menu</Button>
         </RightNavButton>
+
+        <Menu platform="android">
+            <MenuItem id="item1" title="Settings" onClick="openSettings" />
+        </Menu>
+
 		<View class="dashboardLaunchPad">
 			<View class="dashboardRow" >
 				<View class="dashboardGridCell">

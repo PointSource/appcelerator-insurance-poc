@@ -52,3 +52,12 @@
 ".footerText": {
 	color: "white"
 }
+
+
+
+"MenuItem": {
+    showAsAction: Ti.Android.SHOW_AS_ACTION_ALWAYS
+},
+"#item1": {
+    icon: Ti.Android.R.drawable.ic_menu_preferences
+}
