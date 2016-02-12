@@ -1,9 +1,5 @@
 ".container": {
-	backgroundColor:"#0361AF",
-	titleAttributes:  {
-        color: "white"
-	},
-	barColor: "#262626"
+	backgroundColor:"#0361AF"
 }
 
 ".container[platform=ios]" : { 

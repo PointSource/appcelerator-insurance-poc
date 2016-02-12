@@ -24,3 +24,10 @@ overrode the settings with other TSS, XML, or JS settings:
 }
 
 */
+
+"Window": {
+	titleAttributes:  {
+        color: "white"
+	},
+	barColor: "#262626"
+}
