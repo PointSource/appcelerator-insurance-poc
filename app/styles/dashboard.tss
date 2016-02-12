@@ -2,10 +2,6 @@
 	backgroundColor:"#0361AF"
 }
 
-".container[platform=ios]" : { 
-	statusBarStyle: Titanium.UI.iPhone.StatusBar.LIGHT_CONTENT
-}
-
 ".dashboardLaunchPad": {
 	bottom: 80,
 	height: 300,

@@ -31,3 +31,7 @@ overrode the settings with other TSS, XML, or JS settings:
 	},
 	barColor: "#262626"
 }
+
+"Window[platform=ios]" : { 
+	statusBarStyle: Titanium.UI.iPhone.StatusBar.LIGHT_CONTENT
+}
