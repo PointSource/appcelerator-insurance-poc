@@ -194,6 +194,9 @@ function drawWebViewImpl(svg, style, width, height, backgroundColor, callback) {
 				'<meta name="viewport" content="user-scalable=no,initial-scale=1" /></head>' +
 				'<body style="margin:0;padding:0">' + svgSource + '</body></html>';
 
+		// Added empty click listener to allow click events to be passed through
+		view.addEventListener('click', function() {});
+
 		$.widget.add(view);
 
 		setTimeout(function() {

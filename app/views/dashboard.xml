@@ -19,7 +19,7 @@
 				</View>
 				<View class="dashboardGridCell" onClick="goToPayBill">
 					<View class="dashboardIcon">
-						<Widget class="dashboardIconSvg" src="com.capnajax.vectorimage" svg="svg/circle-check.svg" style="svg/white-fill.css" onClick="goToPayBill"/>
+						<Widget class="dashboardIconSvg" src="com.capnajax.vectorimage" svg="svg/circle-check.svg" style="svg/white-fill.css"/>
 					</View>
 					<Label class="dashboardIconLabel">Pay Bill</Label>
 				</View>
