@@ -33,8 +33,15 @@
 	height: 150
 }
 
+".auto-header": {
+	font: {
+		fontSize: 30
+	}
+}
+
 ".footer-text": {
-	textAlign: Ti.UI.TEXT_ALIGNMENT_LEFT
+	textAlign: Ti.UI.TEXT_ALIGNMENT_LEFT,
+	left: 0
 }
 
 "#SlideMenu": {
