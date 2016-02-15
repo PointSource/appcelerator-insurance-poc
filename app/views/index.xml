@@ -4,9 +4,7 @@
             <MenuItem id="item1" title="Settings" onClick="toggleMenu" />
         </Menu>
 
-		<View id="SlideMenu">
-			<Label class="menuLabel">This is a menu</Label>
-		</View>
+        <Widget src="menu" id="menu"></Widget>
 
 		<View id="AppWrapper">
 			<Require src="dashboard" /> 
@@ -17,12 +15,12 @@
     <NavigationWindow id="nav" platform="ios">
     	<Window class="container" title="Insurance POC">
 			<RightNavButton platform="ios">
-	            <Button onClick="toggleMenu">menu</Button>
+				<View onClick="toggleMenu">
+					<Widget class="menu-svg" src="com.capnajax.vectorimage" svg="svg/menu.svg" style="svg/pointsource-blue-fill.css"/>
+				</View>
 	        </RightNavButton>
 
-    		<View id="SlideMenu">
-				<Label class="menuLabel">This is a menu</Label>
-			</View>
+	        <Widget src="menu" id="menu"></Widget>
 
 			<View id="AppWrapper">
 		    	<Require src="dashboard" />

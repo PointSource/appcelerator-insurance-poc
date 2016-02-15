@@ -1,0 +1,5 @@
+<Alloy>
+	<View id="SlideMenu">
+		<Label class="menuLabel">This is a menu</Label>
+	</View>
+</Alloy>
