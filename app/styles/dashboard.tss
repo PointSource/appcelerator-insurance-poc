@@ -15,16 +15,10 @@
 	 width:'33.333%'
 }
 
-".dashboardIcon": {
-	height: 100,
-	width: 100
-}
 
 ".dashboardIconSvg": {
-	top: 20,
-	left: 20,
-	right: 20,
-	bottom: 20
+	height: 100,
+	width: 100
 }
 
 ".dashboardIconLabel": {

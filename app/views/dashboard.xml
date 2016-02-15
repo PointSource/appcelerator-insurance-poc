@@ -16,41 +16,29 @@
 		<View id="AppWrapper" class="dashboardLaunchPad">
 			<View class="dashboardRow" >
 				<View class="dashboardGridCell">
-					<View class="dashboardIcon">
-						<Widget class="dashboardIconSvg" src="com.capnajax.vectorimage" svg="svg/main-profile.svg" style="svg/gray-dark-fill.css"/>
-					</View>
+					<Widget class="dashboardIconSvg" src="com.capnajax.vectorimage" svg="svg/main-profile.svg" style="svg/gray-dark-fill.css"/>
 					<Label class="dashboardIconLabel">Profile</Label>
 				</View>
 				<View class="dashboardGridCell">
-					<View class="dashboardIcon">
-						<Widget class="dashboardIconSvg" src="com.capnajax.vectorimage" svg="svg/main-policies.svg" style="svg/gray-dark-fill.css"/>
-					</View>
+					<Widget class="dashboardIconSvg" src="com.capnajax.vectorimage" svg="svg/main-policies.svg" style="svg/gray-dark-fill.css"/>
 					<Label class="dashboardIconLabel">Policies</Label>
 				</View>
 				<View class="dashboardGridCell" onClick="goToPayBill">
-					<View class="dashboardIcon">
-						<Widget class="dashboardIconSvg" src="com.capnajax.vectorimage" svg="svg/main-paybill.svg" style="svg/gray-dark-fill.css"/>
-					</View>
+					<Widget class="dashboardIconSvg" src="com.capnajax.vectorimage" svg="svg/main-paybill.svg" style="svg/gray-dark-fill.css"/>
 					<Label class="dashboardIconLabel">Pay Bill</Label>
 				</View>
 			</View>
 			<View class="dashboardRow">
 				<View class="dashboardGridCell">
-					<View class="dashboardIcon">
-						<Widget class="dashboardIconSvg" src="com.capnajax.vectorimage" svg="svg/main-maintenance.svg" style="svg/gray-dark-fill.css"/>
-					</View>
+					<Widget class="dashboardIconSvg" src="com.capnajax.vectorimage" svg="svg/main-maintenance.svg" style="svg/gray-dark-fill.css"/>
 					<Label class="dashboardIconLabel">Auto Maintenance</Label>
 				</View>
 				<View class="dashboardGridCell">
-					<View class="dashboardIcon">
-						<Widget class="dashboardIconSvg" src="com.capnajax.vectorimage" svg="svg/main-inventory.svg" style="svg/gray-dark-fill.css"/>
-					</View>
+					<Widget class="dashboardIconSvg" src="com.capnajax.vectorimage" svg="svg/main-inventory.svg" style="svg/gray-dark-fill.css"/>
 					<Label class="dashboardIconLabel">Home Inventory</Label>
 				</View>
 				<View class="dashboardGridCell">
-					<View class="dashboardIcon">
-						<Widget class="dashboardIconSvg" src="com.capnajax.vectorimage" svg="svg/main-alerts.svg" style="svg/gray-dark-fill.css"/>
-					</View>
+					<Widget class="dashboardIconSvg" src="com.capnajax.vectorimage" svg="svg/main-alerts.svg" style="svg/gray-dark-fill.css"/>
 					<Label class="dashboardIconLabel">Notification Center</Label>
 				</View>
 			</View>
