@@ -13,7 +13,11 @@
 
     <!-- iOS Window -->
     <NavigationWindow id="nav" platform="ios">
-    	<Window class="container" title="Insurance POC">
+    	<Window class="container" title="">
+			<LeftNavButton platform="ios">
+				<Widget class="logo-svg" src="com.capnajax.vectorimage" svg="svg/point-insurance-logo.svg"/>
+	        </LeftNavButton>
+
 			<RightNavButton platform="ios">
 				<View onClick="toggleMenu">
 					<Widget class="menu-svg" src="com.capnajax.vectorimage" svg="svg/menu.svg" style="svg/pointsource-blue-fill.css"/>
