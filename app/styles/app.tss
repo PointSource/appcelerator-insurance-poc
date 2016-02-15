@@ -34,6 +34,20 @@ http://docs.appcelerator.com/platform/latest/#!/guide/Alloy_Styles_and_Themes
 	}
 }
 
+".header-1": {
+	font: {
+		fontSize: 30,
+		fontFamily: "OpenSans-Semibold"
+	}
+}
+
+".header-2": {
+	font: {
+		fontSize: 18,
+		fontFamily: "OpenSans-Semibold"
+	}
+}
+
 /* Colors */
 ".gray-light-text": {
 	color: "#eeeeee"
@@ -45,4 +59,9 @@ http://docs.appcelerator.com/platform/latest/#!/guide/Alloy_Styles_and_Themes
 
 ".pointsource-blue-background": {
 	backgroundColor: "#49a7f7"
+}
+
+
+".debug": {
+	backgroundColor: "red"
 }

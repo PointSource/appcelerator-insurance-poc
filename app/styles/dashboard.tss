@@ -29,6 +29,7 @@
 	height: Titanium.UI.SIZE
 }
 
+
 ".dashboard-launch-pad": {
 	top: "160",
 	bottom: "160",
@@ -92,13 +93,7 @@
 	height: "100%"
 }
 
-".auto-header": {
-	font: {
-		fontSize: 30
-	}
-}
-
-".footer-text": {
+".info-text": {
 	textAlign: Ti.UI.TEXT_ALIGNMENT_LEFT,
 	left: 5
 }
