@@ -34,13 +34,6 @@ http://docs.appcelerator.com/platform/latest/#!/guide/Alloy_Styles_and_Themes
 	}
 }
 
-".light": {
-	font: {
-		fontFamily: "OpenSans-Light"
-	}
-}
-
-
 /* Colors */
 ".gray-light-text": {
 	color: "#eeeeee"
