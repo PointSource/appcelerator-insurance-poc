@@ -16,29 +16,29 @@
 		<View id="AppWrapper" class="dashboardLaunchPad">
 			<View class="dashboardRow" >
 				<View class="dashboardGridCell">
-					<Widget class="dashboardIconSvg" src="com.capnajax.vectorimage" svg="svg/main-profile.svg" style="svg/gray-dark-fill.css"/>
+					<Widget class="dashboardIconSvg" src="com.capnajax.vectorimage" svg="svg/main-profile.svg"/>
 					<Label class="dashboardIconLabel">Profile</Label>
 				</View>
 				<View class="dashboardGridCell">
-					<Widget class="dashboardIconSvg" src="com.capnajax.vectorimage" svg="svg/main-policies.svg" style="svg/gray-dark-fill.css"/>
+					<Widget class="dashboardIconSvg" src="com.capnajax.vectorimage" svg="svg/main-policies.svg"/>
 					<Label class="dashboardIconLabel">Policies</Label>
 				</View>
 				<View class="dashboardGridCell" onClick="goToPayBill">
-					<Widget class="dashboardIconSvg" src="com.capnajax.vectorimage" svg="svg/main-paybill.svg" style="svg/gray-dark-fill.css"/>
+					<Widget class="dashboardIconSvg" src="com.capnajax.vectorimage" svg="svg/main-paybill.svg"/>
 					<Label class="dashboardIconLabel">Pay Bill</Label>
 				</View>
 			</View>
 			<View class="dashboardRow">
 				<View class="dashboardGridCell">
-					<Widget class="dashboardIconSvg" src="com.capnajax.vectorimage" svg="svg/main-maintenance.svg" style="svg/gray-dark-fill.css"/>
+					<Widget class="dashboardIconSvg" src="com.capnajax.vectorimage" svg="svg/main-maintenance.svg"/>
 					<Label class="dashboardIconLabel">Auto Maintenance</Label>
 				</View>
 				<View class="dashboardGridCell">
-					<Widget class="dashboardIconSvg" src="com.capnajax.vectorimage" svg="svg/main-inventory.svg" style="svg/gray-dark-fill.css"/>
+					<Widget class="dashboardIconSvg" src="com.capnajax.vectorimage" svg="svg/main-inventory.svg"/>
 					<Label class="dashboardIconLabel">Home Inventory</Label>
 				</View>
 				<View class="dashboardGridCell">
-					<Widget class="dashboardIconSvg" src="com.capnajax.vectorimage" svg="svg/main-alerts.svg" style="svg/gray-dark-fill.css"/>
+					<Widget class="dashboardIconSvg" src="com.capnajax.vectorimage" svg="svg/main-alerts.svg"/>
 					<Label class="dashboardIconLabel">Notification Center</Label>
 				</View>
 			</View>
