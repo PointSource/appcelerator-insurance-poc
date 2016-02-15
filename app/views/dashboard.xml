@@ -1,7 +1,9 @@
 <Alloy>
 	<View class="dashboard">
 		<View class="dashboard-agent">
-			<ImageView id="agentPhoto" image="/images/Point-Insurance-Agent-Photo-main.png"/>
+			<View class="agent-photo-section">
+				<ImageView class="agent-photo" image="/images/Point-Insurance-Agent-Photo-main.png"/>
+			</View>
 			<View class="agent-info">
 				<Label>YOUR POINT AGENT</Label>
 				<Label>EVA JOHNSON</Label>
@@ -9,31 +11,43 @@
 		</View>
 		<View class="dashboard-launch-pad">
 			<View class="dashboard-row" >
-				<View class="dashboardGridCell">
-					<Widget class="dashboardIconSvg" src="com.capnajax.vectorimage" svg="svg/main-profile.svg"/>
-					<Label class="dashboardIconLabel">Profile</Label>
+				<View class="dashboard-grid-cell">
+					<View class="dashboard-icon-wrapper">
+						<Widget class="dashboard-icon-svg" src="com.capnajax.vectorimage" svg="svg/main-profile.svg"/>
+						<Label class="dashboard-icon-label">Profile</Label>
+					</View>
 				</View>
-				<View class="dashboardGridCell">
-					<Widget class="dashboardIconSvg" src="com.capnajax.vectorimage" svg="svg/main-policies.svg"/>
-					<Label class="dashboardIconLabel">Policies</Label>
+				<View class="dashboard-grid-cell">
+					<View class="dashboard-icon-wrapper">
+						<Widget class="dashboard-icon-svg" src="com.capnajax.vectorimage" svg="svg/main-policies.svg"/>
+						<Label class="dashboard-icon-label">Policies</Label>
+					</View>
 				</View>
-				<View class="dashboardGridCell" onClick="goToPayBill">
-					<Widget class="dashboardIconSvg" src="com.capnajax.vectorimage" svg="svg/main-paybill.svg"/>
-					<Label class="dashboardIconLabel">Pay Bill</Label>
+				<View class="dashboard-grid-cell" onClick="goToPayBill">
+					<View class="dashboard-icon-wrapper">
+						<Widget class="dashboard-icon-svg" src="com.capnajax.vectorimage" svg="svg/main-paybill.svg"/>
+						<Label class="dashboard-icon-label">Pay Bill</Label>
+					</View>
 				</View>
 			</View>
 			<View class="dashboard-row">
-				<View class="dashboardGridCell">
-					<Widget class="dashboardIconSvg" src="com.capnajax.vectorimage" svg="svg/main-maintenance.svg"/>
-					<Label class="dashboardIconLabel">Auto Maintenance</Label>
+				<View class="dashboard-grid-cell">
+					<View class="dashboard-icon-wrapper">
+						<Widget class="dashboard-icon-svg" src="com.capnajax.vectorimage" svg="svg/main-maintenance.svg"/>
+						<Label class="dashboard-icon-label">Auto Maintenance</Label>
+					</View>
 				</View>
-				<View class="dashboardGridCell">
-					<Widget class="dashboardIconSvg" src="com.capnajax.vectorimage" svg="svg/main-inventory.svg"/>
-					<Label class="dashboardIconLabel">Home Inventory</Label>
+				<View class="dashboard-grid-cell">
+					<View class="dashboard-icon-wrapper">
+						<Widget class="dashboard-icon-svg" src="com.capnajax.vectorimage" svg="svg/main-inventory.svg"/>
+						<Label class="dashboard-icon-label">Home Inventory</Label>
+					</View>
 				</View>
-				<View class="dashboardGridCell">
-					<Widget class="dashboardIconSvg" src="com.capnajax.vectorimage" svg="svg/main-alerts.svg"/>
-					<Label class="dashboardIconLabel">Notification Center</Label>
+				<View class="dashboard-grid-cell">
+					<View class="dashboard-icon-wrapper">
+						<Widget class="dashboard-icon-svg" src="com.capnajax.vectorimage" svg="svg/main-alerts.svg"/>
+						<Label class="dashboard-icon-label">Notification Center</Label>
+					</View>
 				</View>
 			</View>
 		</View>
