@@ -12,8 +12,7 @@
 }
 
 ".agent-photo-section": {
-	width: "30%",
-	height: Ti.UI.FILL
+	width: "30%"
 }
 
 ".agent-photo": {
@@ -21,9 +20,13 @@
 	width: 90
 }
 
+".agent-info-section": {
+	width: "69%"
+}
+
 ".agent-info": {
-	width: "69%",
-	layout: "vertical"
+	layout: "vertical",
+	height: Titanium.UI.SIZE
 }
 
 ".dashboard-launch-pad": {

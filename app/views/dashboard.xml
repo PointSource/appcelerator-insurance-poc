@@ -4,9 +4,12 @@
 			<View class="agent-photo-section">
 				<ImageView class="agent-photo" image="/images/Point-Insurance-Agent-Photo-main.png"/>
 			</View>
-			<View class="agent-info">
-				<Label>YOUR POINT AGENT</Label>
-				<Label>EVA JOHNSON</Label>
+			<View class="agent-info-section">
+				<View class="agent-info">
+					<Label>YOUR POINT AGENT</Label>
+					<Label>EVA JOHNSON</Label>
+					<Label>1-800-555-1212 ext.123</Label>
+				</View>
 			</View>
 		</View>
 		<View class="dashboard-launch-pad">
