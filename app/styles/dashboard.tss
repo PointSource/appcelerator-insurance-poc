@@ -1,10 +1,33 @@
-".dashboardLaunchPad": {
-	bottom: 150,
-	height: 300,
+".dashboard": {
+	height: "100%",
+	width: "100%",
+	//layout: "vertical"
+}
+
+".dashboard-agent": {
+	top: 0,
+	height: "150",
+	backgroundColor: "#49a7f7",
+	width: "100%",
+	layout: "horizontal"
+}
+
+".agent-info": {
+	layout: "vertical"
+}
+
+"#agentPhoto": {
+	height: 30,
+	width: 30
+}
+
+".dashboard-launch-pad": {
+	top: "150",
+	bottom: "150",
 	layout: 'vertical'
 }
 
-".dashboardRow": {
+".dashboard-row": {
 	layout: 'horizontal',
 	width: '90%',
 	height: 150
@@ -29,8 +52,8 @@
 ".footer": {
 	layout: "horizontal",
 	backgroundColor: "#262626",
-	bottom: 0,
-	height: 150
+	height: "150",
+	bottom: 0
 }
 
 ".footer-svg": {
@@ -43,7 +66,13 @@
 	width: 1
 }
 
+".auto-image": {
+	width: "20%",
+	layout: "horizontal"
+}
+
 ".auto-info": {
+	width: "75%",
 	layout: "vertical"
 }
 

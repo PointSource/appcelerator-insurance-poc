@@ -1,7 +1,14 @@
 <Alloy>
-	<View>
-		<View class="dashboardLaunchPad">
-			<View class="dashboardRow" >
+	<View class="dashboard">
+		<View class="dashboard-agent">
+			<ImageView id="agentPhoto" image="/images/Point-Insurance-Agent-Photo-main.png"/>
+			<View class="agent-info">
+				<Label>YOUR POINT AGENT</Label>
+				<Label>EVA JOHNSON</Label>
+			</View>
+		</View>
+		<View class="dashboard-launch-pad">
+			<View class="dashboard-row" >
 				<View class="dashboardGridCell">
 					<Widget class="dashboardIconSvg" src="com.capnajax.vectorimage" svg="svg/main-profile.svg"/>
 					<Label class="dashboardIconLabel">Profile</Label>
@@ -31,7 +38,9 @@
 			</View>
 		</View>
 		<View class="footer">
-			<Widget class="footer-svg" src="com.capnajax.vectorimage" svg="svg/main-auton-no-rule.svg" style="svg/pointsource-blue-fill.css"/>
+			<View class="auto-image">
+				<Widget class="footer-svg" src="com.capnajax.vectorimage" svg="svg/main-auton-no-rule.svg" style="svg/pointsource-blue-fill.css"/>
+			</View>
 			<View class="footer-divider pointsource-blue-background"></View>
 			<View class="auto-info">
 				<Label class="auto-header footer-text pointsource-blue-text bold" fontSize="40">AUTO</Label>
