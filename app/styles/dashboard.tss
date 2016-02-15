@@ -39,7 +39,6 @@
 }
 
 ".footer-divider": {
-	backgroundColor: "#49a7f7",
 	height: "80%",
 	width: 1
 }

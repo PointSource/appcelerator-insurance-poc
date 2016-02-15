@@ -17,8 +17,17 @@ overrode the settings with other TSS, XML, or JS settings:
 
 */
 
-'Label': {
-	color: '#282828'
+"Label": {
+	color: "#282828",
+	font: {
+		fontFamily: "OpenSans"
+	}
+}
+
+".bold": {
+	font: {
+		fontFamily: "OpenSans-Semibold"
+	}
 }
 
 "Window": {
@@ -39,4 +48,8 @@ overrode the settings with other TSS, XML, or JS settings:
 
 ".pointsource-blue-text": {
 	color: "#49a7f7"
+}
+
+".pointsource-blue-background": {
+	backgroundColor: "#49a7f7"
 }
