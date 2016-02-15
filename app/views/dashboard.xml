@@ -44,7 +44,10 @@
 			</View>
 		</View>
 		<View class="footer">
-			<Label class="footerText">2013 Volkswagen Jetta</Label>
+			<Widget class="dashboardIconSvg" src="com.capnajax.vectorimage" svg="svg/main-auton-no-rule.svg" style="svg/pointsource-blue-fill.css"/>
+			<Label class="pointsource-blue-text">Auto\n2013 Volkswagen Jetta
+			</Label>
+			<Label class="gray-light-text footer-text">Year: 2013 Volkswagen Jetta\nModel: A4 QTR\nVIN: WALVJL564396200L68343</Label>
 		</View>
 	</Window>
 </Alloy>

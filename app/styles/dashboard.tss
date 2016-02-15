@@ -1,5 +1,5 @@
 ".dashboardLaunchPad": {
-	bottom: 80,
+	bottom: 150,
 	height: 300,
 	layout: 'vertical'
 }
@@ -15,7 +15,6 @@
 	 width:'33.333%'
 }
 
-
 ".dashboardIconSvg": {
 	height: 100,
 	width: 100
@@ -28,15 +27,15 @@
 }
 
 ".footer": {
+	layout: "horizontal",
 	backgroundColor: "#262626",
 	bottom: 0,
-	height: 80
+	height: 150
 }
 
-".footerText": {
-	color: "white"
+".footer-text": {
+	textAlign: Ti.UI.TEXT_ALIGNMENT_LEFT
 }
-
 
 "#SlideMenu": {
 	width: "200dp",
