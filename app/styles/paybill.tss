@@ -1,7 +1,3 @@
-".container[platform=ios]" : { 
-   backgroundColor: 'white' 
-}
-
 "#cameraView": {
 	height: 200,
 	width: '90%',

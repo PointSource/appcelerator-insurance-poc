@@ -17,19 +17,19 @@
 			<View class="dashboardRow" >
 				<View class="dashboardGridCell">
 					<View class="dashboardIcon">
-						<Widget class="dashboardIconSvg" src="com.capnajax.vectorimage" svg="svg/bell.svg" style="svg/white-fill.css"/>
+						<Widget class="dashboardIconSvg" src="com.capnajax.vectorimage" svg="svg/main-profile.svg" style="svg/gray-dark-fill.css"/>
 					</View>
-					<Label class="dashboardIconLabel">Accident Help</Label>
+					<Label class="dashboardIconLabel">Profile</Label>
 				</View>
 				<View class="dashboardGridCell">
 					<View class="dashboardIcon">
-						<Widget class="dashboardIconSvg" src="com.capnajax.vectorimage" svg="svg/cart.svg" style="svg/white-fill.css"/>
+						<Widget class="dashboardIconSvg" src="com.capnajax.vectorimage" svg="svg/main-policies.svg" style="svg/gray-dark-fill.css"/>
 					</View>
 					<Label class="dashboardIconLabel">Policies</Label>
 				</View>
 				<View class="dashboardGridCell" onClick="goToPayBill">
 					<View class="dashboardIcon">
-						<Widget class="dashboardIconSvg" src="com.capnajax.vectorimage" svg="svg/circle-check.svg" style="svg/white-fill.css"/>
+						<Widget class="dashboardIconSvg" src="com.capnajax.vectorimage" svg="svg/main-paybill.svg" style="svg/gray-dark-fill.css"/>
 					</View>
 					<Label class="dashboardIconLabel">Pay Bill</Label>
 				</View>
@@ -37,19 +37,19 @@
 			<View class="dashboardRow">
 				<View class="dashboardGridCell">
 					<View class="dashboardIcon">
-						<Widget class="dashboardIconSvg" src="com.capnajax.vectorimage" svg="svg/flag.svg" style="svg/white-fill.css"/>
+						<Widget class="dashboardIconSvg" src="com.capnajax.vectorimage" svg="svg/main-maintenance.svg" style="svg/gray-dark-fill.css"/>
 					</View>
 					<Label class="dashboardIconLabel">Auto Maintenance</Label>
 				</View>
 				<View class="dashboardGridCell">
 					<View class="dashboardIcon">
-						<Widget class="dashboardIconSvg" src="com.capnajax.vectorimage" svg="svg/cog.svg" style="svg/white-fill.css"/>
+						<Widget class="dashboardIconSvg" src="com.capnajax.vectorimage" svg="svg/main-inventory.svg" style="svg/gray-dark-fill.css"/>
 					</View>
 					<Label class="dashboardIconLabel">Home Inventory</Label>
 				</View>
 				<View class="dashboardGridCell">
 					<View class="dashboardIcon">
-						<Widget class="dashboardIconSvg" src="com.capnajax.vectorimage" svg="svg/dashboard.svg" style="svg/white-fill.css"/>
+						<Widget class="dashboardIconSvg" src="com.capnajax.vectorimage" svg="svg/main-alerts.svg" style="svg/gray-dark-fill.css"/>
 					</View>
 					<Label class="dashboardIconLabel">Notification Center</Label>
 				</View>
