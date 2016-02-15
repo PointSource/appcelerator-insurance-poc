@@ -30,6 +30,12 @@ overrode the settings with other TSS, XML, or JS settings:
 	}
 }
 
+".light": {
+	font: {
+		fontFamily: "OpenSans-Light"
+	}
+}
+
 "Window": {
 	titleAttributes:  {
         color: "white"
