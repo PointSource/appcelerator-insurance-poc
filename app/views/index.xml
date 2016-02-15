@@ -1,9 +1,33 @@
 <Alloy>
-	<Require id="index" src="dashboard" platform="android,windows" /> 
+	<Window platform="android,windows" id="index" class="container" title="Insurance POC">
+        <Menu platform="android">
+            <MenuItem id="item1" title="Settings" onClick="toggleMenu" />
+        </Menu>
+
+		<View id="SlideMenu">
+			<Label class="menuLabel">This is a menu</Label>
+		</View>
+
+		<View id="AppWrapper">
+			<Require src="dashboard" /> 
+		</View>
+	</Window>
 
     <!-- iOS Window -->
     <NavigationWindow id="nav" platform="ios">
-    	<Require src="dashboard" />
+    	<Window class="container" title="Insurance POC">
+			<RightNavButton platform="ios">
+	            <Button onClick="toggleMenu">menu</Button>
+	        </RightNavButton>
+
+    		<View id="SlideMenu">
+				<Label class="menuLabel">This is a menu</Label>
+			</View>
+
+			<View id="AppWrapper">
+		    	<Require src="dashboard" />
+			</View>
+	    </Window>
     </NavigationWindow>
 
 </Alloy>

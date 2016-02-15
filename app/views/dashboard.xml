@@ -1,19 +1,6 @@
 <Alloy>
-	<Window class="container" title="Insurance POC">
-
-		<RightNavButton platform="ios">
-            <Button onClick="toggleMenu">menu</Button>
-        </RightNavButton>
-
-        <Menu platform="android">
-            <MenuItem id="item1" title="Settings" onClick="toggleMenu" />
-        </Menu>
-
-		<View id="SlideMenu">
-			<Label class="menuLabel">This is a menu</Label>
-		</View>
-
-		<View id="AppWrapper" class="dashboardLaunchPad">
+	<View>
+		<View class="dashboardLaunchPad">
 			<View class="dashboardRow" >
 				<View class="dashboardGridCell">
 					<Widget class="dashboardIconSvg" src="com.capnajax.vectorimage" svg="svg/main-profile.svg"/>
@@ -52,5 +39,5 @@
 				<Label class="footer-text gray-light-text ">Year: 2013\nModel: A4 QTR\nVIN: WALVJL564396200L68343</Label>
 			</View>
 		</View>
-	</Window>
+	</View>
 </Alloy>
