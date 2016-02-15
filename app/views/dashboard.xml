@@ -22,7 +22,7 @@
 					<Label class="dashboardIconLabel">Pay Bill</Label>
 				</View>
 			</View>
-			<View class="dashboardRow">
+			<View class="dashboard-row">
 				<View class="dashboardGridCell">
 					<Widget class="dashboardIconSvg" src="com.capnajax.vectorimage" svg="svg/main-maintenance.svg"/>
 					<Label class="dashboardIconLabel">Auto Maintenance</Label>
@@ -39,9 +39,9 @@
 		</View>
 		<View class="footer">
 			<View class="auto-image">
-				<Widget class="footer-svg" src="com.capnajax.vectorimage" svg="svg/main-auton-no-rule.svg" style="svg/pointsource-blue-fill.css"/>
+				<Widget class="auto-svg" src="com.capnajax.vectorimage" svg="svg/main-auton-no-rule.svg" style="svg/pointsource-blue-fill.css"/>
+				<View class="footer-divider pointsource-blue-background"></View>
 			</View>
-			<View class="footer-divider pointsource-blue-background"></View>
 			<View class="auto-info">
 				<Label class="auto-header footer-text pointsource-blue-text bold" fontSize="40">AUTO</Label>
 				<Label class="footer-text pointsource-blue-text bold">2013 Volkswagen Jetta</Label>

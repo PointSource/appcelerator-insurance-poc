@@ -56,24 +56,27 @@
 	bottom: 0
 }
 
-".footer-svg": {
+
+".auto-image": {
+	width: "20%",
+	height: 150
+}
+
+".auto-svg": {
 	height: 80,
-	width: 80,
+	width: 80,	
 }
 
 ".footer-divider": {
 	height: "80%",
-	width: 1
-}
-
-".auto-image": {
-	width: "20%",
-	layout: "horizontal"
+	width: 1,
+	right: 0
 }
 
 ".auto-info": {
-	width: "75%",
-	layout: "vertical"
+	width: "80%",
+	layout: "vertical",
+	height: "100%"
 }
 
 ".auto-header": {
