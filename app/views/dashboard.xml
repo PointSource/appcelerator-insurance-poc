@@ -44,8 +44,10 @@
 			</View>
 		</View>
 		<View class="footer">
-			<Widget class="dashboardIconSvg" src="com.capnajax.vectorimage" svg="svg/main-auton-no-rule.svg" style="svg/pointsource-blue-fill.css"/>
-			<View layout="vertical">
+			<Widget class="footer-svg" src="com.capnajax.vectorimage" svg="svg/main-auton-no-rule.svg" style="svg/pointsource-blue-fill.css"/>
+			<View class="footer-divider">
+			</View>
+			<View class="auto-info">
 				<Label class="pointsource-blue-text auto-header footer-text" fontSize="40">AUTO</Label>
 				<Label class="pointsource-blue-text footer-text">2013 Volkswagen Jetta</Label>
 				<Label class="gray-light-text footer-text">Year: 2013 Volkswagen Jetta\nModel: A4 QTR\nVIN: WALVJL564396200L68343</Label>

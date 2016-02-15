@@ -33,6 +33,21 @@
 	height: 150
 }
 
+".footer-svg": {
+	height: 80,
+	width: 80,
+}
+
+".footer-divider": {
+	backgroundColor: "#49a7f7",
+	height: "80%",
+	width: 1
+}
+
+".auto-info": {
+	layout: "vertical"
+}
+
 ".auto-header": {
 	font: {
 		fontSize: 30
@@ -41,7 +56,7 @@
 
 ".footer-text": {
 	textAlign: Ti.UI.TEXT_ALIGNMENT_LEFT,
-	left: 0
+	left: 5
 }
 
 "#SlideMenu": {
