@@ -1,9 +1,11 @@
 <Alloy>
 	<View id="SlideMenu">
 		<View class="agent-section">
-			<Label class="">YOUR POINT AGENT</Label>
-			<Label class="pointsource-blue-text header-2">EVA JOHNSON</Label>
-			<ImageView id="agentPhoto"/>
+			<View class="agent-info">
+				<Label class="">YOUR POINT AGENT</Label>
+				<Label class="pointsource-blue-text header-2">EVA JOHNSON</Label>
+				<ImageView id="agentPhoto"/>
+			</View>
 		</View>
 		<View class="menu-section">
 			<Label class="menu-row">PROFILE</Label>

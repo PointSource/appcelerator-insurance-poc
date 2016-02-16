@@ -16,6 +16,11 @@
 	height: 200
 }
 
+".agent-info": {
+	layout: "vertical",
+	height: Ti.UI.SIZE
+}
+
 ".menu-section": {
 	layout: "vertical",
 	top: 200,
