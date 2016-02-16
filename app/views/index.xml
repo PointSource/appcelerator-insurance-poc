@@ -1,8 +1,7 @@
 <Alloy>
 	<Window platform="android,windows" id="index" class="container" title="Insurance POC">
-        <Menu platform="android">
-            <MenuItem id="item1" title="Settings" onClick="toggleMenu" />
-        </Menu>
+		<ActionBar/>
+        <Menu platform="android" id="androidMenu"></Menu>
 
         <Widget src="menu" id="menu"></Widget>
 
