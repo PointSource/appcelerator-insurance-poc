@@ -4,7 +4,12 @@
 			<View class="agent-info">
 				<Label class="">YOUR POINT AGENT</Label>
 				<Label class="pointsource-blue-text header-2">EVA JOHNSON</Label>
-				<ImageView id="agentPhoto"/>
+				<View class="agent-photo-section">
+					<ImageView id="agentPhoto"/>
+					<Widget left="0" class="agent-icon" src="com.capnajax.vectorimage" svg="svg/menu-call.svg" style="svg/pointsource-blue-fill.css"/>
+					<Widget class="agent-icon" src="com.capnajax.vectorimage" svg="svg/menu-email.svg" style="svg/pointsource-blue-fill.css"/>
+					<Widget right="0" class="agent-icon" src="com.capnajax.vectorimage" svg="svg/menu-map.svg" style="svg/pointsource-blue-fill.css"/>
+				</View>
 			</View>
 		</View>
 		<View class="menu-section">
@@ -73,7 +78,7 @@
 				<View class="small-item">
 					<Label class="menu-label">CONTACT US</Label>
 				</View>
-				
+
 			</View>
 		</View>
 	</View>

@@ -1,8 +1,8 @@
 var menuOpen = false;
 
 $.agentPhoto.image = WPATH('images/Point-Insurance-Agent-Photo-menu.png');
-$.agentPhoto.height = 80;
-$.agentPhoto.width = 80;
+$.agentPhoto.height = 100;
+$.agentPhoto.width = 100;
 
 function openMenu() {
     $.SlideMenu.animate({

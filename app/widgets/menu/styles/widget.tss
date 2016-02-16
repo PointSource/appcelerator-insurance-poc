@@ -15,6 +15,20 @@
 	height: 200
 }
 
+".agent-photo-section": {
+	width: 200
+}
+
+"#agentPhoto": {
+	top: 5
+}
+
+".agent-icon": {
+	bottom: "10",
+	height: "60",
+	width: "60"
+}
+
 ".agent-info": {
 	layout: "vertical",
 	height: Ti.UI.SIZE
