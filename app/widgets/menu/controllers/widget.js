@@ -1,6 +1,8 @@
 var menuOpen = false;
 
 $.agentPhoto.image = WPATH('images/Point-Insurance-Agent-Photo-menu.png');
+$.agentPhoto.height = 80;
+$.agentPhoto.width = 80;
 
 function openMenu() {
     $.SlideMenu.animate({
@@ -27,6 +29,13 @@ function toggleMenu() {
 		closeMenu();
 	}
 }
+
+
+$.SlideMenu.addEventListener("swipe", function(_event) {
+    if(_event.direction == "right") {
+        closeMenu();
+    }
+});
 
 
 exports.toggleMenu = toggleMenu;

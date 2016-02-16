@@ -1,7 +1,7 @@
 "#SlideMenu": {
 	width: "280dp",
 	top: "0dp",
-	right: "0",
+	right: "-280dp",
 	backgroundColor: "#282828",
 	zIndex: 100
 }
@@ -9,7 +9,6 @@
 "Label": {
 	color: "#b2b2b2"
 }
-
 
 ".agent-section": {
 	top: 0,
@@ -30,12 +29,22 @@
 ".menu-row": {
 	textAlign: Ti.UI.TEXT_ALIGNMENT_LEFT,
 	width: Ti.UI.FILL,
-	borderWidth: 1,
-	borderColor: "#606060",
 	height: "12.5%"
 }
 
+".menu-label": {
+	left: 10
+}
+
+".horizontal-divider": {
+	backgroundColor: "#606060"
+}
+
+".vertical-divider": {
+	backgroundColor: "#606060"
+}
+
 ".small-item": {
-	width: "50%",
+	width: "49%",
 	height: Ti.UI.FILL
 }

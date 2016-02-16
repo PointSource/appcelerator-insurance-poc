@@ -8,19 +8,72 @@
 			</View>
 		</View>
 		<View class="menu-section">
-			<Label class="menu-row">PROFILE</Label>
-			<Label class="menu-row">POLICIES</Label>
-			<Label class="menu-row">PAY BILL</Label>
-			<Label class="menu-row">AUTO MAINTENANCE</Label>
-			<Label class="menu-row">HOME INVENTORY</Label>
-			<Label class="menu-row">NOTIFICATION CENTER</Label>
+			<View class="horizontal-divider"></View>
+			
+			<View class="menu-row">
+				<Label class="menu-label">PROFILE</Label>
+			</View>
+			
+			<View class="horizontal-divider"></View>
+
+			<View class="menu-row">
+				<Label class="menu-label">POLICIES</Label>
+			</View>
+
+			<View class="horizontal-divider"></View>
+
+			<View class="menu-row">
+				<Label class="menu-label">PAY BILL</Label>
+			</View>
+
+			<View class="horizontal-divider"></View>
+
+			<View class="menu-row">
+				<Label class="menu-label">AUTO MAINTENANCE</Label>
+			</View>
+
+			<View class="horizontal-divider"></View>
+
+			<View class="menu-row">
+				<Label class="menu-label">HOME INVENTORY</Label>
+			</View>
+
+			<View class="horizontal-divider"></View>
+
+			<View class="menu-row">
+				<Label class="menu-label">NOTIFICATION CENTER</Label>
+			</View>
+
+			<View class="horizontal-divider"></View>
+
 			<View class="menu-row" layout="horizontal">
-				<Label class="small-item">SERVICES</Label>
-				<Label class="small-item">FAQ</Label>
+
+				<View class="small-item">
+					<Label class="menu-label">SERVICES</Label>
+				</View>
+
+				<View class="vertical-divider"></View>
+
+				<View class="small-item">
+					<Label class="menu-label">FAQ</Label>
+				</View>
+
 			</View>	
+
+			<View class="horizontal-divider"></View>
+
 			<View class="menu-row" layout="horizontal">
-				<Label class="small-item">PRIVACY</Label>
-				<Label class="small-item">CONTACT US</Label>
+				
+				<View class="small-item">
+					<Label class="menu-label">PRIVACY</Label>
+				</View>
+
+				<View class="vertical-divider"></View>
+				
+				<View class="small-item">
+					<Label class="menu-label">CONTACT US</Label>
+				</View>
+				
 			</View>
 		</View>
 	</View>

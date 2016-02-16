@@ -48,6 +48,16 @@ http://docs.appcelerator.com/platform/latest/#!/guide/Alloy_Styles_and_Themes
 	}
 }
 
+".horizontal-divider": {
+	height: 1,
+	width: Ti.UI.FILL
+}
+
+".vertical-divider": {
+	height: Ti.UI.FILL,
+	width: 1
+}
+
 /* Colors */
 ".gray-light-text": {
 	color: "#eeeeee"
