@@ -1,5 +1,25 @@
 <Alloy>
 	<View id="SlideMenu">
-		<Label class="menuLabel">This is a menu</Label>
+		<View class="agent-section">
+			<Label class="">YOUR POINT AGENT</Label>
+			<Label class="pointsource-blue-text header-2">EVA JOHNSON</Label>
+			<ImageView id="agentPhoto"/>
+		</View>
+		<View class="menu-section">
+			<Label class="menu-row">PROFILE</Label>
+			<Label class="menu-row">POLICIES</Label>
+			<Label class="menu-row">PAY BILL</Label>
+			<Label class="menu-row">AUTO MAINTENANCE</Label>
+			<Label class="menu-row">HOME INVENTORY</Label>
+			<Label class="menu-row">NOTIFICATION CENTER</Label>
+			<View class="menu-row" layout="horizontal">
+				<Label class="small-item">SERVICES</Label>
+				<Label class="small-item">FAQ</Label>
+			</View>	
+			<View class="menu-row" layout="horizontal">
+				<Label class="small-item">PRIVACY</Label>
+				<Label class="small-item">CONTACT US</Label>
+			</View>
+		</View>
 	</View>
 </Alloy>

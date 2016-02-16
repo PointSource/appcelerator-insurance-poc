@@ -1,11 +1,36 @@
 "#SlideMenu": {
-	width: "200dp",
+	width: "280dp",
 	top: "0dp",
-	right: "-200dp",
+	right: "0",
 	backgroundColor: "#282828",
-	zIndex: 100,
+	zIndex: 100
 }
 
-".menuLabel": {
-	color: 'white'
+"Label": {
+	color: "#b2b2b2"
+}
+
+
+".agent-section": {
+	top: 0,
+	height: 200
+}
+
+".menu-section": {
+	layout: "vertical",
+	top: 200,
+	height: Ti.UI.FILL
+}
+
+".menu-row": {
+	textAlign: Ti.UI.TEXT_ALIGNMENT_LEFT,
+	width: Ti.UI.FILL,
+	borderWidth: 1,
+	borderColor: "#606060",
+	height: "12.5%"
+}
+
+".small-item": {
+	width: "50%",
+	height: Ti.UI.FILL
 }
