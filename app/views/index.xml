@@ -14,12 +14,12 @@
     <NavigationWindow id="nav" platform="ios">
     	<Window class="container" title="">
 			<LeftNavButton platform="ios">
-				<Widget class="logo-svg" src="com.capnajax.vectorimage" svg="svg/point-insurance-logo.svg"/>
+				<ImageView image="/images/point-insurance-logo.png" id="logoIcon"></ImageView>
 	        </LeftNavButton>
 
 			<RightNavButton platform="ios">
 				<View onClick="toggleMenu">
-					<Widget class="menu-svg" src="com.capnajax.vectorimage" svg="svg/menu.svg" style="svg/pointsource-blue-fill.css"/>
+					<Label id="menuIcon" class="icomoon-icon"></Label>
 				</View>
 	        </RightNavButton>
 

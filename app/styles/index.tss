@@ -3,12 +3,13 @@
     showAsAction: Ti.Android.SHOW_AS_ACTION_ALWAYS
 },
 
-".menu-svg": {
-	height: 40,
-	width: 40
+"#menuIcon": {
+	font: {
+		fontSize: 30
+	},
+	color: "#49a7f7"
 }
 
-".logo-svg": {
-	height: 100,
-	width: 100
+"#logoIcon": {
+	height: 70
 }

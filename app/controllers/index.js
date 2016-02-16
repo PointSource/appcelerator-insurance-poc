@@ -1,4 +1,3 @@
-var abx = require('com.alcoapps.actionbarextras');
 var IconicFont = require('/lib/IconicFont');
 var icomoon = new IconicFont({
     font: '/lib/icomoon'
@@ -46,9 +45,13 @@ $.AppWrapper.addEventListener("swipe", function(_event) {
 
 
 if(OS_IOS){
+	$.menuIcon.text = icomoon.icon("menu");
+
 	$.nav.open()
 }
-else{
+else if (OS_ANDROID) {
+	var abx = require('com.alcoapps.actionbarextras');
+
 	$.index.addEventListener("open", function() {
 
 	    var activity = $.index.getActivity();
