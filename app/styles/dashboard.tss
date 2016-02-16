@@ -52,9 +52,10 @@
 	 height: Titanium.UI.SIZE
 }
 
-".dashboard-icon-svg": {
-	height: 80,
-	width: 80
+".icomoon-icon": {
+	font: {
+		fontSize: 50
+	}
 }
 
 ".dashboard-icon-label": {
@@ -79,6 +80,13 @@
 ".auto-svg": {
 	height: 80,
 	width: 80,	
+}
+
+"#autoIcon": {
+	font: {
+		fontSize: 80
+	},
+	color: "#49a7f7"
 }
 
 ".footer-divider": {

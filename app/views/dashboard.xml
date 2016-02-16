@@ -16,19 +16,19 @@
 			<View class="dashboard-row" >
 				<View class="dashboard-grid-cell">
 					<View class="dashboard-icon-wrapper">
-						<Widget class="dashboard-icon-svg" src="com.capnajax.vectorimage" svg="svg/main-profile.svg"/>
+						<Label id="profileIcon" class="icomoon-icon"></Label>
 						<Label class="dashboard-icon-label">Profile</Label>
 					</View>
 				</View>
 				<View class="dashboard-grid-cell">
 					<View class="dashboard-icon-wrapper">
-						<Widget class="dashboard-icon-svg" src="com.capnajax.vectorimage" svg="svg/main-policies.svg"/>
+						<Label id="policyIcon" class="icomoon-icon"></Label>
 						<Label class="dashboard-icon-label">Policies</Label>
 					</View>
 				</View>
 				<View class="dashboard-grid-cell" onClick="goToPayBill">
 					<View class="dashboard-icon-wrapper">
-						<Widget class="dashboard-icon-svg" src="com.capnajax.vectorimage" svg="svg/main-paybill.svg"/>
+						<Label id="paybillIcon" class="icomoon-icon"></Label>
 						<Label class="dashboard-icon-label">Pay Bill</Label>
 					</View>
 				</View>
@@ -36,19 +36,19 @@
 			<View class="dashboard-row">
 				<View class="dashboard-grid-cell">
 					<View class="dashboard-icon-wrapper">
-						<Widget class="dashboard-icon-svg" src="com.capnajax.vectorimage" svg="svg/main-maintenance.svg"/>
+						<Label id="maintenanceIcon" class="icomoon-icon"></Label>
 						<Label class="dashboard-icon-label">Auto Maintenance</Label>
 					</View>
 				</View>
 				<View class="dashboard-grid-cell">
 					<View class="dashboard-icon-wrapper">
-						<Widget class="dashboard-icon-svg" src="com.capnajax.vectorimage" svg="svg/main-inventory.svg"/>
+						<Label id="inventoryIcon" class="icomoon-icon"></Label>
 						<Label class="dashboard-icon-label">Home Inventory</Label>
 					</View>
 				</View>
 				<View class="dashboard-grid-cell">
 					<View class="dashboard-icon-wrapper">
-						<Widget class="dashboard-icon-svg" src="com.capnajax.vectorimage" svg="svg/main-alerts.svg"/>
+						<Label id="alertsIcon" class="icomoon-icon"></Label>
 						<Label class="dashboard-icon-label">Notification Center</Label>
 					</View>
 				</View>
@@ -56,7 +56,7 @@
 		</View>
 		<View class="footer">
 			<View class="auto-image">
-				<Widget class="auto-svg" src="com.capnajax.vectorimage" svg="svg/main-auton-no-rule.svg" style="svg/pointsource-blue-fill.css"/>
+				<Label id="autoIcon" class="icomoon-icon"></Label>
 				<View class="footer-divider pointsource-blue-background"></View>
 			</View>
 			<View class="auto-info-section">

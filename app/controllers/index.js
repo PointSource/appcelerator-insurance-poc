@@ -80,10 +80,11 @@ else{
 				});
 			}
 
-
+			// Hide the title
 			abx.title = "Point Insurance";
             abx.setDisplayShowTitleEnabled( false )
 
+            // Set the left-hand side to the Point Insurance logo
             activity.actionBar.displayHomeAsUp = true;
 		    abx.setHomeAsUpIcon("/images/point-insurance-logo.png");
 		}

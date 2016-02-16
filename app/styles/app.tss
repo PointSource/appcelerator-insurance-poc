@@ -28,6 +28,7 @@ http://docs.appcelerator.com/platform/latest/#!/guide/Alloy_Styles_and_Themes
 	}
 }
 
+/* Typography */
 ".bold": {
 	font: {
 		fontFamily: "OpenSans-Semibold"
@@ -48,6 +49,16 @@ http://docs.appcelerator.com/platform/latest/#!/guide/Alloy_Styles_and_Themes
 	}
 }
 
+/* Icon font */
+
+".icomoon-icon": {
+	font: {
+		fontFamily: "icomoon"
+	}
+}
+
+
+/* Layout */
 ".horizontal-divider": {
 	height: 1,
 	width: Ti.UI.FILL
