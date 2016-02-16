@@ -59,10 +59,12 @@
 				<Widget class="auto-svg" src="com.capnajax.vectorimage" svg="svg/main-auton-no-rule.svg" style="svg/pointsource-blue-fill.css"/>
 				<View class="footer-divider pointsource-blue-background"></View>
 			</View>
-			<View class="auto-info">
-				<Label class="header-1 info-text pointsource-blue-text bold" fontSize="40">AUTO</Label>
-				<Label class="info-text pointsource-blue-text bold">2013 Volkswagen Jetta</Label>
-				<Label class="info-text gray-light-text ">Year: 2013\nModel: A4 QTR\nVIN: WALVJL564396200L68343</Label>
+			<View class="auto-info-section">
+				<View class="auto-info">
+					<Label class="header-1 info-text pointsource-blue-text bold" fontSize="40">AUTO</Label>
+					<Label class="info-text pointsource-blue-text header-2">2013 Volkswagen Jetta</Label>
+					<Label class="info-text gray-light-text ">Year: 2013\nModel: A4 QTR\nVIN: WALVJL564396200L68343</Label>
+				</View>
 			</View>
 		</View>
 	</View>
