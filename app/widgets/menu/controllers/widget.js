@@ -1,8 +1,18 @@
+var IconicFont = require('/lib/IconicFont');
+var icomoon = new IconicFont({
+    font: '/lib/icomoon'
+});
+
 var menuOpen = false;
 
 $.agentPhoto.image = WPATH('images/Point-Insurance-Agent-Photo-menu.png');
 $.agentPhoto.height = 100;
 $.agentPhoto.width = 100;
+
+$.callIcon.text = icomoon.icon("menu-call");
+$.emailIcon.text = icomoon.icon("menu-email");
+$.mapIcon.text = icomoon.icon("menu-map");
+
 
 function openMenu() {
     $.SlideMenu.animate({

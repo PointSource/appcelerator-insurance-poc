@@ -6,9 +6,9 @@
 				<Label class="pointsource-blue-text header-2">EVA JOHNSON</Label>
 				<View class="agent-photo-section">
 					<ImageView id="agentPhoto"/>
-					<Widget left="0" class="agent-icon" src="com.capnajax.vectorimage" svg="svg/menu-call.svg" style="svg/pointsource-blue-fill.css"/>
-					<Widget class="agent-icon" src="com.capnajax.vectorimage" svg="svg/menu-email.svg" style="svg/pointsource-blue-fill.css"/>
-					<Widget right="0" class="agent-icon" src="com.capnajax.vectorimage" svg="svg/menu-map.svg" style="svg/pointsource-blue-fill.css"/>
+					<Label id="callIcon" class="icomoon-icon agent-icon" left="0"></Label>	
+					<Label id="emailIcon" class="icomoon-icon agent-icon"></Label>	
+					<Label id="mapIcon" class="icomoon-icon agent-icon" right="0"></Label>
 				</View>
 			</View>
 		</View>
