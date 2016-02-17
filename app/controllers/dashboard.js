@@ -9,6 +9,10 @@ function goToPayBill (event) {
 	Alloy.Globals.Navigator.open("paybill", {});
 }
 
+function goToHomeInventory (event) {
+	Alloy.Globals.Navigator.open("homeInventory", {});
+}
+
 $.profileIcon.text = icomoon.icon("main-profile");
 $.policyIcon.text = icomoon.icon("main-policies");
 $.paybillIcon.text = icomoon.icon("main-paybill");

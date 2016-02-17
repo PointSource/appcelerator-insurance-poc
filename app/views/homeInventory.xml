@@ -1,0 +1,8 @@
+<Alloy>
+	<Window id="homeInventory" class="container" layout='vertical'>
+        <Widget id="camera" src="ts.camera" onPictureTaken="onPictureTaken" /> 
+        <Button onClick="switchCamera">Switch Cameras</Button>
+        <Button onClick="takePicture">Take Picture</Button>
+        <View id="imagePreview"></View>
+	</Window>
+</Alloy>

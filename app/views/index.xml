@@ -3,7 +3,7 @@
 		<ActionBar/>
         <Menu platform="android"></Menu>
 
-        <Widget src="menu" id="menu"></Widget>
+        <Require src="menu" id="menu"></Require>
 
 		<View id="AppWrapper">
 			<Require src="dashboard" /> 
@@ -23,7 +23,7 @@
 				</View>
 	        </RightNavButton>
 
-	        <Widget src="menu" id="menu"></Widget>
+	        <Require src="menu" id="menu"></Require>
 
 			<View id="AppWrapper">
 		    	<Require src="dashboard" />

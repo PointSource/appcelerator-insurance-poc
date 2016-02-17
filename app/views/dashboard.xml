@@ -48,7 +48,7 @@
 						<Label class="dashboard-icon-label">Auto Maintenance</Label>
 					</View>
 				</View>
-				<View class="dashboard-grid-cell">
+				<View class="dashboard-grid-cell" onClick="goToHomeInventory">
 					<View class="dashboard-icon-wrapper">
 						<View class="dashboard-icon-circle">
 							<Label id="inventoryIcon" class="icomoon-icon dashboard-icon"></Label>

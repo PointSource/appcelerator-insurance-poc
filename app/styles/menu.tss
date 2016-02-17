@@ -1,7 +1,7 @@
 "#SlideMenu": {
 	width: "280dp",
 	top: "0dp",
-	right: "-280dp",
+	right: "0",
 	backgroundColor: "#282828",
 	zIndex: 100
 }
@@ -36,7 +36,7 @@
 	height: Ti.UI.SIZE
 }
 
-".menu-section": {
+"#menuSection": {
 	layout: "vertical",
 	top: 200,
 	height: Ti.UI.FILL
@@ -48,8 +48,14 @@
 	height: "12.5%"
 }
 
+".menu-button": {
+	width: Ti.UI.FILL,
+	height: Ti.UI.FILL,
+	color: "#b2b2b2",
+}
+
 ".menu-label": {
-	left: 10
+	left: 10,
 }
 
 ".horizontal-divider": {

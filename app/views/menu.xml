@@ -12,54 +12,54 @@
 				</View>
 			</View>
 		</View>
-		<View class="menu-section">
+		<View id="menuSection">
 			<View class="horizontal-divider"></View>
 			
-			<View class="menu-row">
+			<View class="menu-row" className="menu-clickable">
 				<Label class="menu-label">PROFILE</Label>
 			</View>
 			
 			<View class="horizontal-divider"></View>
 
-			<View class="menu-row">
+			<View class="menu-row" className="menu-clickable">
 				<Label class="menu-label">POLICIES</Label>
 			</View>
 
 			<View class="horizontal-divider"></View>
 
-			<View class="menu-row">
+			<View onClick="goToPayBill" class="menu-row" className="menu-clickable">
 				<Label class="menu-label">PAY BILL</Label>
 			</View>
 
 			<View class="horizontal-divider"></View>
 
-			<View class="menu-row">
+			<View class="menu-row" className="menu-clickable">
 				<Label class="menu-label">AUTO MAINTENANCE</Label>
 			</View>
 
 			<View class="horizontal-divider"></View>
 
-			<View class="menu-row">
+			<View onClick="goToHomeInventory" class="menu-row" className="menu-clickable">
 				<Label class="menu-label">HOME INVENTORY</Label>
 			</View>
 
 			<View class="horizontal-divider"></View>
 
-			<View class="menu-row">
+			<View class="menu-row" className="menu-clickable">
 				<Label class="menu-label">NOTIFICATION CENTER</Label>
 			</View>
 
 			<View class="horizontal-divider"></View>
 
-			<View class="menu-row" layout="horizontal">
+			<View class="menu-row" id="menuSubSection1" layout="horizontal">
 
-				<View class="small-item">
+				<View class="small-item" className="menu-clickable">
 					<Label class="menu-label">SERVICES</Label>
 				</View>
 
 				<View class="vertical-divider"></View>
 
-				<View class="small-item">
+				<View class="small-item" className="menu-clickable">
 					<Label class="menu-label">FAQ</Label>
 				</View>
 
@@ -67,15 +67,15 @@
 
 			<View class="horizontal-divider"></View>
 
-			<View class="menu-row" layout="horizontal">
+			<View class="menu-row" id="menuSubSection2" layout="horizontal">
 				
-				<View class="small-item">
+				<View class="small-item" className="menu-clickable">
 					<Label class="menu-label">PRIVACY</Label>
 				</View>
 
 				<View class="vertical-divider"></View>
 				
-				<View class="small-item">
+				<View class="small-item" className="menu-clickable">
 					<Label class="menu-label">CONTACT US</Label>
 				</View>
 
