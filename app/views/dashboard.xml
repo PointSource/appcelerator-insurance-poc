@@ -16,19 +16,25 @@
 			<View class="dashboard-row" >
 				<View class="dashboard-grid-cell">
 					<View class="dashboard-icon-wrapper">
-						<Label id="profileIcon" class="icomoon-icon"></Label>
+						<View class="dashboard-icon-circle">
+							<Label id="profileIcon" class="icomoon-icon dashboard-icon"></Label>
+						</View>
 						<Label class="dashboard-icon-label">Profile</Label>
 					</View>
 				</View>
 				<View class="dashboard-grid-cell">
 					<View class="dashboard-icon-wrapper">
-						<Label id="policyIcon" class="icomoon-icon"></Label>
+						<View class="dashboard-icon-circle">
+							<Label id="policyIcon" class="icomoon-icon dashboard-icon"></Label>
+						</View>
 						<Label class="dashboard-icon-label">Policies</Label>
 					</View>
 				</View>
 				<View class="dashboard-grid-cell" onClick="goToPayBill">
 					<View class="dashboard-icon-wrapper">
-						<Label id="paybillIcon" class="icomoon-icon"></Label>
+						<View class="dashboard-icon-circle">
+							<Label id="paybillIcon" class="icomoon-icon dashboard-icon"></Label>
+						</View>
 						<Label class="dashboard-icon-label">Pay Bill</Label>
 					</View>
 				</View>
@@ -36,19 +42,25 @@
 			<View class="dashboard-row">
 				<View class="dashboard-grid-cell">
 					<View class="dashboard-icon-wrapper">
-						<Label id="maintenanceIcon" class="icomoon-icon"></Label>
+						<View class="dashboard-icon-circle">
+							<Label id="maintenanceIcon" class="icomoon-icon dashboard-icon"></Label>
+						</View>
 						<Label class="dashboard-icon-label">Auto Maintenance</Label>
 					</View>
 				</View>
 				<View class="dashboard-grid-cell">
 					<View class="dashboard-icon-wrapper">
-						<Label id="inventoryIcon" class="icomoon-icon"></Label>
+						<View class="dashboard-icon-circle">
+							<Label id="inventoryIcon" class="icomoon-icon dashboard-icon"></Label>
+						</View>
 						<Label class="dashboard-icon-label">Home Inventory</Label>
 					</View>
 				</View>
 				<View class="dashboard-grid-cell">
 					<View class="dashboard-icon-wrapper">
-						<Label id="alertsIcon" class="icomoon-icon"></Label>
+						<View class="dashboard-icon-circle">
+							<Label id="alertsIcon" class="icomoon-icon dashboard-icon"></Label>
+						</View>
 						<Label class="dashboard-icon-label">Notification Center</Label>
 					</View>
 				</View>

@@ -52,10 +52,21 @@
 	 height: Titanium.UI.SIZE
 }
 
-".icomoon-icon": {
+".dashboard-icon-circle": {
+	borderWidth: 1,
+	borderColor: "#282828",
+	height: 60,
+	width: 60,
+	borderRadius: 30
+}
+
+".dashboard-icon": {
 	font: {
-		fontSize: 50
-	}
+		fontSize: 65
+	},
+	left: -2,
+	top: 3,
+	textAlign: Ti.UI.TEXT_ALIGNMENT_CENTER,
 }
 
 ".dashboard-icon-label": {
