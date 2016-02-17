@@ -19,5 +19,5 @@ $.paybillIcon.text = icomoon.icon("main-paybill");
 $.maintenanceIcon.text = icomoon.icon("main-maintenance");
 $.inventoryIcon.text = icomoon.icon("main-inventory");
 $.alertsIcon.text = icomoon.icon("main-alerts");
-$.autoIcon.text = icomoon.icon("main-auto");
+$.autoIcon.text = icomoon.icon("main-auton-no-rule");
 

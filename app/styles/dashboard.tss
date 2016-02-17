@@ -49,20 +49,10 @@
 	height: Titanium.UI.SIZE
 }
 
-".dashboard-icon-circle": {
-	borderWidth: 1,
-	borderColor: "#282828",
-	height: "70dp",
-	width: "70dp",
-	borderRadius: "35dp"
-}
-
 ".dashboard-icon": {
 	font: {
 		fontSize: "75sp"
 	},
-	left: -2,
-	top: 0,
 	textAlign: Ti.UI.TEXT_ALIGNMENT_CENTER,
 }
 
