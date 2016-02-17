@@ -62,20 +62,20 @@ else if (OS_ANDROID) {
 			activity.onCreateOptionsMenu = function(e){
 
 				// first, create the item...
-				var settingsItem = e.menu.add({
+				var openMenuItem = e.menu.add({
 					itemId: 101, // don't forget to set an id here
-					title: "Settings",
+					title: "Open Menu",
 					showAsAction : Ti.Android.SHOW_AS_ACTION_ALWAYS
 				});
 
-				settingsItem.addEventListener('click', function(){
+				openMenuItem.addEventListener('click', function(){
 					toggleMenu();
 				});
 
 				// ...then, let abx apply the custom font
 				abx.setMenuItemIcon({
 					menu: e.menu,
-					menuItem: settingsItem,
+					menuItem: openMenuItem,
 					fontFamily: icomoon.fontfamily,
 					icon: icomoon.icon("menu"),
 					color: "#49a7f7",

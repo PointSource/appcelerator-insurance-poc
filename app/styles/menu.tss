@@ -48,12 +48,6 @@
 	height: "12.5%"
 }
 
-".menu-button": {
-	width: Ti.UI.FILL,
-	height: Ti.UI.FILL,
-	color: "#b2b2b2",
-}
-
 ".menu-label": {
 	left: 10,
 }
@@ -66,7 +60,6 @@
 	backgroundColor: "#606060"
 }
 
-".small-item": {
-	width: "49%",
+".menu-column": {
 	height: Ti.UI.FILL
 }
