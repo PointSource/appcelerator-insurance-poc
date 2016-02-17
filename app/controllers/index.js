@@ -87,7 +87,7 @@ else if (OS_ANDROID) {
 			abx.title = "Point Insurance";
             abx.setDisplayShowTitleEnabled( false )
 
-            // Set the left-hand side to the Point Insurance logo
+            // Set the left-hand icon to the Point Insurance logo
             activity.actionBar.displayHomeAsUp = true;
 		    abx.setHomeAsUpIcon("/images/point-insurance-logo.png");
 		}
