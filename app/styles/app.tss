@@ -9,6 +9,14 @@ http://docs.appcelerator.com/platform/latest/#!/guide/Alloy_Styles_and_Themes
 
 */
 
+/* Platform-specific settings */
+
+"Window[platform=ios]" : { 
+	statusBarStyle: Titanium.UI.iPhone.StatusBar.LIGHT_CONTENT
+}
+
+
+/* Default colors */
 "Window": {
 	titleAttributes:  {
         color: "white"
@@ -17,9 +25,7 @@ http://docs.appcelerator.com/platform/latest/#!/guide/Alloy_Styles_and_Themes
 	backgroundColor: '#eeeeee'
 }
 
-"Window[platform=ios]" : { 
-	statusBarStyle: Titanium.UI.iPhone.StatusBar.LIGHT_CONTENT
-}
+/* Typography */
 
 "Label": {
 	color: "#282828",
@@ -28,7 +34,6 @@ http://docs.appcelerator.com/platform/latest/#!/guide/Alloy_Styles_and_Themes
 	}
 }
 
-/* Typography */
 ".bold": {
 	font: {
 		fontFamily: "OpenSans-Semibold"
@@ -49,7 +54,9 @@ http://docs.appcelerator.com/platform/latest/#!/guide/Alloy_Styles_and_Themes
 	}
 }
 
+
 /* Grid */
+
 ".row": {
 	layout: 'horizontal',
 	width: Titanium.UI.FILL
@@ -73,7 +80,7 @@ http://docs.appcelerator.com/platform/latest/#!/guide/Alloy_Styles_and_Themes
 }
 
 
-/* Layout */
+/* Dividers */
 
 ".horizontal-divider": {
 	height: 1,
@@ -88,6 +95,7 @@ http://docs.appcelerator.com/platform/latest/#!/guide/Alloy_Styles_and_Themes
 	accessibilityHidden: true,
 	right: 0
 }
+
 
 /* Colors */
 
@@ -107,6 +115,7 @@ http://docs.appcelerator.com/platform/latest/#!/guide/Alloy_Styles_and_Themes
 ".debug": {
 	backgroundColor: "red"
 }
+
 
 /* Nav Bar */
 
