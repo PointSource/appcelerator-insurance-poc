@@ -3,21 +3,6 @@
 		<ActionBar/>
         <Menu platform="android"></Menu>
 
-        <Require src="menu" id="menu"></Require>
-
-		<LeftNavButton platform="ios">
-			<View onClick="close">
-				<Label id="backIcon" class="icomoon-icon header-icon"></Label>
-				<View class="vertical-divider pointsource-blue-background" height="45"></View>
-			</View>
-        </LeftNavButton>
-
-		<RightNavButton platform="ios">
-			<View onClick="toggleMenu">
-				<Label id="menuIcon2" class="icomoon-icon header-icon"></Label>
-			</View>
-        </RightNavButton>
-
 		<View id="AppWrapper">
 			<Label>Take photos of your valuables</Label>
 <!-- 	        <Widget id="camera" src="ts.camera" onPictureTaken="onPictureTaken" /> 

@@ -15,18 +15,7 @@
 // 	$.camera.snapPicture();
 // }
 
-function close () {
-	$.index.close();
-}
-
-function toggleMenu () {
-	$.menu.toggleMenu();
-}
-
 Alloy.Globals.setUpNavBar({
-	currentWindow: $.index, 
-	menu: $.menu,
-	appWrapper: $.AppWrapper,
-	menuIcon: $.menuIcon2,
-	backIcon: $.backIcon
+	currentWindow: $.index,
+	appWrapper: $.AppWrapper
 });

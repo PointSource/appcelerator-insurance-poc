@@ -28,18 +28,52 @@ Alloy.Globals.findChildrenByClass = function (parent, className) {
 
 
 Alloy.Globals.setUpNavBar = function (options) {
+
+	var sideMenu = Alloy.createController('menu');
+
+	options.currentWindow.add(sideMenu.getView());
+
 	options.appWrapper.addEventListener("swipe", function(_event) {
 	    if(_event.direction == "left") {
-	        options.menu.openMenu();
+	        sideMenu.openMenu();
 	    } else if(_event.direction == "right") {
-	        options.menu.closeMenu();
+	        sideMenu.closeMenu();
 	    }
 	});
 
 	if(OS_IOS){
 
-		options.menuIcon.text = Alloy.Globals.icomoon.icon("menu");
-		options.backIcon.text = Alloy.Globals.icomoon.icon("back-arrow");
+		// Set up iOS menu button
+        var menuIcon = Titanium.UI.createLabel({
+        	text: Alloy.Globals.icomoon.icon("menu"),
+        	font: {
+        		fontFamily: Alloy.Globals.icomoon.fontfamily,
+        		fontSize: 30
+        	},
+        	color: "#49a7f7"
+        });
+
+		menuIcon.addEventListener("click", function() {
+			sideMenu.toggleMenu();
+		});
+
+        options.currentWindow.setRightNavButtons([menuIcon]);
+
+        // Set up iOS back button
+        var backIcon = Titanium.UI.createLabel({
+        	text: Alloy.Globals.icomoon.icon("back-arrow"),
+        	font: {
+        		fontFamily: Alloy.Globals.icomoon.fontfamily,
+        		fontSize: 30
+        	},
+        	color: "#49a7f7"
+        });
+
+		backIcon.addEventListener("click", function() {
+			options.currentWindow.close();
+		});
+
+        options.currentWindow.setLeftNavButtons([backIcon]);
 
 	} else if (OS_ANDROID) {
 
@@ -62,7 +96,7 @@ Alloy.Globals.setUpNavBar = function (options) {
 					});
 
 					openMenuItem.addEventListener('click', function(){
-						options.menu.toggleMenu();
+						sideMenu.toggleMenu();
 					});
 
 					// ...then, let abx apply the custom font
