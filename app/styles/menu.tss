@@ -1,7 +1,7 @@
 "#SlideMenu": {
-	width: "280dp",
-	top: "0dp",
-	right: "-280dp",
+	width: 280,
+	top: 0,
+	right: -280,
 	backgroundColor: "#282828",
 	zIndex: 100
 }

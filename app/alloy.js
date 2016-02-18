@@ -8,4 +8,21 @@
 // accessible globally by attaching them to the `Alloy.Globals`
 // object. For example:
 //
-// Alloy.Globals.someGlobalFunction = function(){};
+
+
+var IconicFont = require('/lib/IconicFont');
+Alloy.Globals.icomoon = new IconicFont({
+    font: '/lib/icomoon'
+});
+
+Alloy.Globals.findChildrenByClass = function (parent, className) {
+	var matchingChildren = []
+	// Add touch states for menu items
+	for (i in parent.children) {
+		var child = parent.children[i];
+		if (child.classes.indexOf(className) !== -1) {
+			matchingChildren.push(child);
+		}
+	}
+	return matchingChildren;
+}

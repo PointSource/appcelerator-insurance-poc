@@ -1,14 +1,7 @@
-var IconicFont = require('/lib/IconicFont');
-var icomoon = new IconicFont({
-    font: '/lib/icomoon'
-});
-
-
 /**
  * Global Navigation Handler
  */
 Alloy.Globals.Navigator = {
-
 	open: function(controller, payload){
 		var win = Alloy.createController(controller, payload || {}).getView();
 
@@ -23,6 +16,8 @@ Alloy.Globals.Navigator = {
 		}
 	}
 };
+
+
 
 function toggleMenu () {
 	$.menu.toggleMenu();
@@ -43,9 +38,9 @@ $.AppWrapper.addEventListener("swipe", function(_event) {
     }
 });
 
-
+// Set up navigation header
 if(OS_IOS){
-	$.menuIcon.text = icomoon.icon("menu");
+	$.menuIcon.text = Alloy.Globals.icomoon.icon("menu");
 
 	$.nav.open()
 }
@@ -76,8 +71,8 @@ else if (OS_ANDROID) {
 				abx.setMenuItemIcon({
 					menu: e.menu,
 					menuItem: openMenuItem,
-					fontFamily: icomoon.fontfamily,
-					icon: icomoon.icon("menu"),
+					fontFamily: Alloy.Globals.icomoon.fontfamily,
+					icon: Alloy.Globals.icomoon.icon("menu"),
 					color: "#49a7f7",
 					size: 30
 				});
