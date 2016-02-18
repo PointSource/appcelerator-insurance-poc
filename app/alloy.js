@@ -17,7 +17,6 @@ Alloy.Globals.icomoon = new IconicFont({
 
 Alloy.Globals.findChildrenByClass = function (parent, className) {
 	var matchingChildren = []
-	// Add touch states for menu items
 	for (i in parent.children) {
 		var child = parent.children[i];
 		if (child.classes.indexOf(className) !== -1) {

@@ -48,8 +48,16 @@
 	height: "12.5%"
 }
 
+".menu-row-selected": {
+	backgroundColor: "#49a7f7"
+}
+
 ".menu-label": {
 	left: 10,
+}
+
+".menu-label-selected": {
+	color: '#282828'
 }
 
 ".horizontal-divider": {

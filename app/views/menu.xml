@@ -1,4 +1,4 @@
-<Alloy>
+<Alloy autoStyle="true">
 	<View id="SlideMenu">
 		<View class="agent-section">
 			<View class="agent-info">
@@ -15,44 +15,44 @@
 		</View>
 		
 		<View id="menuSection">
-			<View class="menu-row" className="menu-clickable">
+			<View class="menu-row menu-clickable">
 				<Label class="menu-label">PROFILE</Label>
 				<View class="horizontal-divider"></View>
 			</View>
 
-			<View class="menu-row" className="menu-clickable">
+			<View class="menu-row menu-clickable">
 				<Label class="menu-label">POLICIES</Label>
 				<View class="horizontal-divider"></View>
 			</View>
 
-			<View onClick="goToPayBill" class="menu-row" className="menu-clickable">
+			<View onClick="goToPayBill" class="menu-row menu-clickable">
 				<Label class="menu-label">PAY BILL</Label>
 				<View class="horizontal-divider"></View>
 			</View>
 
-			<View class="menu-row" className="menu-clickable">
+			<View class="menu-row menu-clickable">
 				<Label class="menu-label">AUTO MAINTENANCE</Label>
 				<View class="horizontal-divider"></View>
 			</View>
 
-			<View onClick="goToHomeInventory" class="menu-row" className="menu-clickable">
+			<View onClick="goToHomeInventory" class="menu-row menu-clickable">
 				<Label class="menu-label">HOME INVENTORY</Label>
 				<View class="horizontal-divider"></View>
 			</View>
 
-			<View class="menu-row" className="menu-clickable">
+			<View class="menu-row menu-clickable">
 				<Label class="menu-label">NOTIFICATION CENTER</Label>
 				<View class="horizontal-divider"></View>
 			</View>
 
 			<View class="menu-row">
 				<View class="row" id="menuSubSection1">
-					<View class="menu-column columns-6" className="menu-clickable">
+					<View class="menu-column columns-6 menu-clickable">
 						<Label class="menu-label">SERVICES</Label>
 						<View class="vertical-divider"></View>
 					</View>
 
-					<View class="menu-column columns-6" className="menu-clickable">
+					<View class="menu-column columns-6 menu-clickable">
 						<Label class="menu-label">FAQ</Label>
 					</View>
 				</View>
@@ -63,12 +63,12 @@
 
 			<View class="menu-row">
 				<View class="row" id="menuSubSection2">
-					<View class="menu-column columns-6" className="menu-clickable">
+					<View class="menu-column columns-6 menu-clickable">
 						<Label class="menu-label">PRIVACY</Label>
 						<View class="vertical-divider"></View>
 					</View>
 					
-					<View class="menu-column columns-6" className="menu-clickable">
+					<View class="menu-column columns-6 menu-clickable">
 						<Label class="menu-label">CONTACT US</Label>
 					</View>
 				</View>

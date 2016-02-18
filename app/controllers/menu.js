@@ -42,47 +42,28 @@ $.SlideMenu.addEventListener("swipe", function(_event) {
     }
 });
 
-
-function test () {
-	alert("clicked!");
-}
-
+// Make all menu-clickable items have a selected and unselected state
 function addTouchState (view) {
 	view.addEventListener('touchstart', function(){
-		console.log('touchstart');
-	    this.setBackgroundColor('#49a7f7');
-	    this.children[0].setColor('#282828');
+	    $.addClass(this, "menu-row-selected");
+	    $.addClass(this.children[0], "menu-label-selected");
 	});
 	view.addEventListener('touchend', function(){
-	    this.setBackgroundColor('#282828');
-	    this.children[0].setColor('#b2b2b2');
+	    $.removeClass(this, "menu-row-selected");
+	    $.removeClass(this.children[0], "menu-label-selected");
 		closeMenu();
 	});
 }
 
-// Add touch states for menu items
-for (i in $.menuSection.children) {
-	var child = $.menuSection.children[i];
-	if (child.className === "menu-clickable") {
-		addTouchState(child);
-	}
+var clickableChildren = Alloy.Globals.findChildrenByClass($.menuSection, "menu-clickable");
+clickableChildren = clickableChildren.concat(Alloy.Globals.findChildrenByClass($.menuSubSection1, "menu-clickable"));
+clickableChildren = clickableChildren.concat(Alloy.Globals.findChildrenByClass($.menuSubSection2, "menu-clickable"));
+
+for (i in clickableChildren) {
+	var child = clickableChildren[i];
+	addTouchState(child);
 }
 
-// Add touch states for menu items
-for (i in $.menuSubSection1.children) {
-	var child = $.menuSubSection1.children[i];
-	if (child.className === "menu-clickable") {
-		addTouchState(child);
-	}
-}
-
-// Add touch states for menu items
-for (i in $.menuSubSection2.children) {
-	var child = $.menuSubSection2.children[i];
-	if (child.className === "menu-clickable") {
-		addTouchState(child);
-	}
-}
 
 function goToPayBill (event) {
 	Alloy.Globals.Navigator.open("paybill", {});
