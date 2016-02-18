@@ -1,16 +1,32 @@
-function onPictureTaken(event) {
-    console.log(event.image); // the taken photo
+// function onPictureTaken(event) {
+//     console.log(event.image); // the taken photo
 
-    var imageView = Ti.UI.createImageView({
-		width:70,
-		image:event.image
-	});
-	$.imagePreview.add(imageView);
+//     var imageView = Ti.UI.createImageView({
+// 		width:70,
+// 		image:event.image
+// 	});
+// 	$.imagePreview.add(imageView);
+// }
+
+// function switchCamera() {
+// 	$.camera.switchCamera();
+// }
+// function takePicture() {
+// 	$.camera.snapPicture();
+// }
+
+function close () {
+	$.index.close();
 }
 
-function switchCamera() {
-	$.camera.switchCamera();
+function toggleMenu () {
+	$.menu.toggleMenu();
 }
-function takePicture() {
-	$.camera.snapPicture();
-}
+
+Alloy.Globals.setUpNavBar({
+	currentWindow: $.index, 
+	menu: $.menu,
+	appWrapper: $.AppWrapper,
+	menuIcon: $.menuIcon2,
+	backIcon: $.backIcon
+});

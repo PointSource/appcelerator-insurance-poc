@@ -107,3 +107,12 @@ http://docs.appcelerator.com/platform/latest/#!/guide/Alloy_Styles_and_Themes
 ".debug": {
 	backgroundColor: "red"
 }
+
+/* Nav Bar */
+
+".header-icon": {
+	font: {
+		fontSize: 30
+	},
+	color: "#49a7f7"
+}

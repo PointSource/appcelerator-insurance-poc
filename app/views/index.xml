@@ -19,7 +19,7 @@
 
 			<RightNavButton platform="ios">
 				<View onClick="toggleMenu">
-					<Label id="menuIcon" class="icomoon-icon"></Label>
+					<Label id="menuIcon" class="icomoon-icon header-icon"></Label>
 				</View>
 	        </RightNavButton>
 

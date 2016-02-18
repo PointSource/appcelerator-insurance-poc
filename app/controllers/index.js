@@ -17,8 +17,6 @@ Alloy.Globals.Navigator = {
 	}
 };
 
-
-
 function toggleMenu () {
 	$.menu.toggleMenu();
 }
@@ -28,6 +26,7 @@ function openMenu () {
 function closeMenu () {
 	$.menu.closeMenu();
 }
+
 
 
 $.AppWrapper.addEventListener("swipe", function(_event) {
