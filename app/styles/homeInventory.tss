@@ -1,5 +1,16 @@
 "TableView": {
+	backgroundColor: "transparent",
 	height: Ti.UI.SIZE,
 	top: 0,
 	scrollable: false
+}
+
+"TableViewRow": {
+	top: 10
+}
+
+".card": {
+	backgroundColor: "#ffffff",
+	height: Ti.UI.SIZE,
+	top: 10
 }

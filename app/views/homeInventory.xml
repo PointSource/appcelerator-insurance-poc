@@ -4,24 +4,27 @@
 		<ActionBar/>
         <Menu platform="android"></Menu>
 
-		<View id="AppWrapper">
+		<View id="AppWrapper" layout="vertical">
+			<View height="Ti.UI.SIZE" layout="vertical" class="card">
+				<Label>TOTAL ESTIMATED VALUE</Label>
+				<Label id="totalValue">Total Value</Label>
+			</View>
 			<TableView dataCollection="room">
-				<TableViewRow layout="horizontal">
-					<Label>{name}</Label>
-					<Label>{value}</Label>
-				</TableViewRow>
-
-			</TableView>
-		</View>
-				<View>
-					<View height="Ti.UI.SIZE" layout="vertical">
-						<Label>TOTAL ESTIMATED VALUE</Label>
-						<Label id="totalValue">Total Value</Label>
+				<TableViewRow>
+					<View class="card" layout="horizontal">
+						
+						<Label>{name}</Label>
+						<Label>{value}</Label>
 					</View>
-				</View>
-				<View bottom="0" height="Ti.UI.SIZE">
-					<Button onClick="goToAddRoom">ADD ROOM</Button>
-				</View>
+				</TableViewRow>
+			</TableView>
+
+			<View height="Ti.UI.SIZE">
+				<Button class="button" onClick="goToAddRoom">ADD ROOM</Button>
+			</View>
+
+		</View>
+				
 
 	</Window>
 </Alloy>

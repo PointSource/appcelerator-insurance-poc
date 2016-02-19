@@ -10,12 +10,6 @@ var room2 = Alloy.createModel('room', {
    value: 525 
 });
 
-var pageInfo = {
-	totalValue: 175
-}
-
-
-
 myRooms.add(room);
 myRooms.add(room2);
 // room.save();

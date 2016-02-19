@@ -16,7 +16,8 @@ http://docs.appcelerator.com/platform/latest/#!/guide/Alloy_Styles_and_Themes
 }
 
 
-/* Default colors */
+/* Colors */
+
 "Window": {
 	titleAttributes:  {
         color: "white"
@@ -24,6 +25,29 @@ http://docs.appcelerator.com/platform/latest/#!/guide/Alloy_Styles_and_Themes
 	barColor: "#282828",
 	backgroundColor: '#eeeeee'
 }
+
+".gray-light-text": {
+	color: "#eeeeee"
+}
+
+".pointsource-blue-text": {
+	color: "#49a7f7"
+}
+
+".pointsource-blue-background": {
+	backgroundColor: "#49a7f7"
+}
+
+/* Buttons */
+
+".button": {
+	left: 10,
+	right: 10,
+	height: 50,
+	color: "#282828",
+	backgroundColor: "#9ad275"
+}
+
 
 /* Typography */
 
@@ -97,24 +121,6 @@ http://docs.appcelerator.com/platform/latest/#!/guide/Alloy_Styles_and_Themes
 }
 
 
-/* Colors */
-
-".gray-light-text": {
-	color: "#eeeeee"
-}
-
-".pointsource-blue-text": {
-	color: "#49a7f7"
-}
-
-".pointsource-blue-background": {
-	backgroundColor: "#49a7f7"
-}
-
-
-".debug": {
-	backgroundColor: "red"
-}
 
 
 /* Nav Bar */
