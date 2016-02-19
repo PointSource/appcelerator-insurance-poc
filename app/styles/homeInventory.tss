@@ -18,7 +18,8 @@
 }
 
 ".button": {
-	top: 10
+	top: 10,
+	bottom: 10
 }
 
 ".item-count": {

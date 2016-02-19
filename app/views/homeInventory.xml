@@ -4,13 +4,14 @@
 		<ActionBar/>
         <Menu platform="android"></Menu>
 
-		<View id="AppWrapper" layout="vertical">
-			<View height="Ti.UI.SIZE" layout="vertical" class="card">
-				<Label>TOTAL ESTIMATED VALUE</Label>
-				<Label id="totalValue">Total Value</Label>
-			</View>
-			<TableView dataCollection="room">
-				<TableViewRow>
+		<View id="AppWrapper">
+			<ScrollView layout="vertical">
+				
+				<View height="Ti.UI.SIZE" layout="vertical" class="card">
+					<Label>TOTAL ESTIMATED VALUE</Label>
+					<Label id="totalValue">Total Value</Label>
+				</View>
+				<View dataCollection="room" layout="vertical">
 					<View class="card">
 						<View layout="horizontal" height="Ti.UI.SIZE" left="10">
 							<Label class="bold">{name}</Label>
@@ -18,12 +19,12 @@
 						</View>
 						<Label right="10">{value}</Label>
 					</View>
-				</TableViewRow>
-			</TableView>
+				</View>
 
-			<View height="Ti.UI.SIZE">
-				<Button class="button" onClick="goToAddRoom">ADD ROOM</Button>
-			</View>
+				<View height="Ti.UI.SIZE">
+					<Button class="button" onClick="goToAddRoom">ADD ROOM</Button>
+				</View>
+			</ScrollView>
 
 		</View>
 				
