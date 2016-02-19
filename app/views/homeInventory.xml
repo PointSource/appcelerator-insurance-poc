@@ -7,9 +7,12 @@
 		<View id="AppWrapper">
 			<ScrollView layout="vertical">
 				
-				<View height="Ti.UI.SIZE" layout="vertical" class="card">
-					<Label>TOTAL ESTIMATED VALUE</Label>
-					<Label id="totalValue">Total Value</Label>
+				<View height="Ti.UI.SIZE">
+					<View class="card top-card">
+						<Label class="card-label" top="10">TOTAL ESTIMATED VALUE</Label>
+						<Label id="totalValue" class="header-1 card-label">Total Value</Label>
+					</View>
+					<Label id="houseIcon" class="icomoon-icon"></Label>
 				</View>
 				<View dataCollection="room" layout="vertical" height="Ti.UI.SIZE">
 					<View class="card">

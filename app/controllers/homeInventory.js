@@ -74,3 +74,5 @@ Alloy.Globals.setUpNavBar({
 function goToAddRoom () {
 	Alloy.Globals.Navigator.open("addRoom", {});
 }
+
+$.houseIcon.text = Alloy.Globals.icomoon.icon("main-home");
