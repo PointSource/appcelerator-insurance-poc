@@ -11,7 +11,7 @@
 					<Label>TOTAL ESTIMATED VALUE</Label>
 					<Label id="totalValue">Total Value</Label>
 				</View>
-				<View dataCollection="room" layout="vertical">
+				<View dataCollection="room" layout="vertical" height="Ti.UI.SIZE">
 					<View class="card">
 						<View layout="horizontal" height="Ti.UI.SIZE" left="10">
 							<Label class="bold">{name}</Label>
