@@ -1,0 +1,16 @@
+<Alloy>
+	<Window id="index" class="container" title="ADD ROOM">
+		<ActionBar/>
+        <Menu platform="android"></Menu>
+
+		<View id="AppWrapper">
+			<Label top="0">Take photos of your valuables</Label>
+<!-- 	        <Widget id="camera" src="ts.camera" onPictureTaken="onPictureTaken" /> 
+	        <Button onClick="switchCamera">Switch Cameras</Button>
+	        <Button onClick="takePicture">Take Picture</Button>
+	        <View id="imagePreview"></View>
+ -->        
+		</View>
+
+	</Window>
+</Alloy>

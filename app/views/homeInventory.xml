@@ -1,16 +1,27 @@
 <Alloy>
-	<Window id="index" class="container" title="ADD ROOM">
+	<Collection src="room"/>
+	<Window id="index" class="container" title="HOME INVENTORY">
 		<ActionBar/>
         <Menu platform="android"></Menu>
 
 		<View id="AppWrapper">
-			<Label>Take photos of your valuables</Label>
-<!-- 	        <Widget id="camera" src="ts.camera" onPictureTaken="onPictureTaken" /> 
-	        <Button onClick="switchCamera">Switch Cameras</Button>
-	        <Button onClick="takePicture">Take Picture</Button>
- -->        
-	        <View id="imagePreview"></View>
+			<TableView dataCollection="room">
+				<TableViewRow layout="horizontal">
+					<Label>{name}</Label>
+					<Label>{value}</Label>
+				</TableViewRow>
+
+			</TableView>
 		</View>
+				<View>
+					<View height="Ti.UI.SIZE" layout="vertical">
+						<Label>TOTAL ESTIMATED VALUE</Label>
+						<Label id="totalValue">Total Value</Label>
+					</View>
+				</View>
+				<View bottom="0" height="Ti.UI.SIZE">
+					<Button onClick="goToAddRoom">ADD ROOM</Button>
+				</View>
 
 	</Window>
 </Alloy>
