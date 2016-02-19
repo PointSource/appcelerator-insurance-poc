@@ -11,10 +11,12 @@
 			</View>
 			<TableView dataCollection="room">
 				<TableViewRow>
-					<View class="card" layout="horizontal">
-						
-						<Label>{name}</Label>
-						<Label>{value}</Label>
+					<View class="card">
+						<View layout="horizontal" height="Ti.UI.SIZE" left="10">
+							<Label class="bold">{name}</Label>
+							<Label class="item-count">(### items)</Label>
+						</View>
+						<Label right="10">{value}</Label>
 					</View>
 				</TableViewRow>
 			</TableView>
