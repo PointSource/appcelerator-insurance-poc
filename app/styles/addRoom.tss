@@ -1,16 +1,15 @@
 "#camera": { // styles for the camera
-    top: 64,
 	backgroundColor: 'gray',
-    width: '100%',
-    height: '200'
+    width: Ti.UI.FILL,
+    height: Ti.UI.FILL
 },
 
 "#imagePreview": {
 	layout: 'horizontal',
-	horizontalWrap: 1
+	horizontalWrap: 1,
+	height: 50,
+	backgroundColor: "white"
 }
-
-
 
 
 "#valueInput[platform=android]": {
@@ -21,7 +20,5 @@
 	keyboardType: Ti.UI.KEYBOARD_DECIMAL_PAD
 }
 
-".button": {
-	top: 10
-}
+
 

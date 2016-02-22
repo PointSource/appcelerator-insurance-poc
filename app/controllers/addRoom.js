@@ -12,6 +12,20 @@ function addRoom() {
     $.addRoom.close();
 }
 
+function onPictureTaken(event) {
+    console.log(event.image); // the taken photo
+
+    var imageView = Ti.UI.createImageView({
+        width:70,
+        image:event.image
+    });
+    $.imagePreview.add(imageView);
+}
+
+function takePicture() {
+    $.camera.snapPicture();
+}
+
 
 function init() {
     Alloy.Globals.setUpNavBar({

@@ -13,6 +13,5 @@
 			</View>
 			<Button class="button" onClick="saveRoom">Submit</Button>
 		</View>
-
 	</Window>
 </Alloy>
