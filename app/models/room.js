@@ -13,11 +13,6 @@ exports.definition = {
 	extendModel: function(Model) {
 		_.extend(Model.prototype, {
 			// extended functions and properties go here
-			// transform: function transform() {
-			// 	var transformed = this.toJSON();
-			// 	transformed.value = string.formatCurrency(transformed.value);
-			// 	return transformed;
-			// }
 		});
 
 		return Model;

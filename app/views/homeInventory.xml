@@ -18,9 +18,9 @@
 					<View class="card">
 						<View layout="horizontal" height="Ti.UI.SIZE" left="10">
 							<Label class="bold">{name}</Label>
-							<Label class="item-count">(### items)</Label>
+							<Label class="item-count">{numItems}</Label>
 						</View>
-						<Label right="10">{value}</Label>
+						<Label right="10" class="bold">{value}</Label>
 					</View>
 				</View>
 

@@ -1,15 +1,3 @@
-"#cameraView": {
-	height: 200,
-	width: '90%',
-	backgroundColor: 'gray'
-}
-".cameraButton": {
-	backgroundColor: 'gray',
-	height: 80,
-	width: 180,
-	borderRadius: 10
-}
-
 "#camera": { // styles for the camera
     top: 64,
 	backgroundColor: 'gray',
@@ -29,12 +17,19 @@
 	top:1
 }
 
+".form-label": {
+	height: 50,
+	width: Ti.UI.FILL,
+	left: 10
+}
+
 "TextField": {
 	width: Ti.UI.FILL,
 	backgroundColor: "transparent",
 	height: 50,
 	left: 10,
-	color: "black"
+	color: "#282828",
+	hintTextColor: "#b2b2b2"
 }
 
 

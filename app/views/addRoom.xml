@@ -5,7 +5,7 @@
 
 		<View id="AppWrapper" layout="vertical">
 			<View class="input-wrapper">
-				<Label>Take photos of your valuables</Label>
+				<Label class="form-label">Take photos of your valuables</Label>
 			</View>
 			<View class="input-wrapper">
 				<TextField id="nameInput" hintText="Room name"></TextField>

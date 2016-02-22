@@ -5,24 +5,14 @@ Alloy.Globals.setUpNavBar({
 	appWrapper: $.AppWrapper
 });
 
-
 var myRooms = Alloy.Collections.room;
-
-// Initialize collection if it's empty
-if (myRooms.length === 0) {
-	myRooms.add([{ 
-		   name : 'BEDROOM', 
-		   value: 1250 
-		}, { 
-		   name : 'KITCHEN', 
-		   value: 525 
-		}
-	]);
-}
+myRooms.fetch();
 
 function formatRoom (room) {
 	var formattedRoom = room.toJSON();
 	formattedRoom.value = string.formatCurrency(formattedRoom.value);
+	formattedRoom.numItems = "("+4+" items)";
+	formattedRoom.name = formattedRoom.name.toUpperCase();
 	return formattedRoom;
 }
 
