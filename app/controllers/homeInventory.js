@@ -15,31 +15,6 @@ if (myRooms.length === 0) {
 		   name : 'KITCHEN', 
 		   value: 525 
 		}
-		// , { 
-		//    name : 'LIVING ROOM', 
-		//    value: 1250 
-		// }, { 
-		//    name : 'DINING ROOM', 
-		//    value: 525 
-		// }, { 
-		//    name : 'BEDROOM 1', 
-		//    value: 525 
-		// }, { 
-		//    name : 'BEDROOM 2', 
-		//    value: 1250 
-		// }, { 
-		//    name : 'BEDROOM 3', 
-		//    value: 1250 
-		// }, { 
-		//    name : 'ATTIC', 
-		//    value: 525 
-		// }, { 
-		//    name : 'BASEMENT', 
-		//    value: 525 
-		// }, { 
-		//    name : 'GARAGE', 
-		//    value: 525 
-		// }
 	]);
 }
 
