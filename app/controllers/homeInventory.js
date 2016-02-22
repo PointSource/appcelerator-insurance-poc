@@ -1,3 +1,5 @@
+var string = require('alloy/string');
+
 Alloy.Globals.setUpNavBar({
 	currentWindow: $.homeInventory,
 	appWrapper: $.AppWrapper
@@ -18,10 +20,15 @@ if (myRooms.length === 0) {
 	]);
 }
 
+function formatRoom (room) {
+	var formattedRoom = room.toJSON();
+	formattedRoom.value = string.formatCurrency(formattedRoom.value);
+	return formattedRoom;
+}
+
 function getTotalEstimate () {
 	var sum = myRooms.getSum();
-
-	$.totalValue.text = "$"+sum;
+	$.totalValue.text = string.formatCurrency(sum);
 }
 
 function goToAddRoom () {
