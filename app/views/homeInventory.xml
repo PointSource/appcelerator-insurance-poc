@@ -15,13 +15,7 @@
 					<Label id="houseIcon" class="icomoon-icon"></Label>
 				</View>
 				<View dataCollection="room" dataTransform="formatRoom" layout="vertical" height="Ti.UI.SIZE">
-					<View class="card">
-						<View layout="horizontal" height="Ti.UI.SIZE" left="10">
-							<Label class="bold">{name}</Label>
-							<Label class="item-count">{numItems}</Label>
-						</View>
-						<Label right="10" class="bold">{value}</Label>
-					</View>
+					<Require src="roomRow"/>
 				</View>
 
 				<View height="Ti.UI.SIZE">

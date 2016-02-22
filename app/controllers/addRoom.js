@@ -1,8 +1,3 @@
-Alloy.Globals.setUpNavBar({
-	currentWindow: $.addRoom,
-	appWrapper: $.AppWrapper
-});
-
 var myRooms = Alloy.Collections.room;
 
 function addRoom() {
@@ -16,3 +11,14 @@ function addRoom() {
     // Close the window.
     $.addRoom.close();
 }
+
+
+function init() {
+    Alloy.Globals.setUpNavBar({
+        currentWindow: $.addRoom,
+        appWrapper: $.AppWrapper
+    });
+}
+
+// Initialize Page
+init();

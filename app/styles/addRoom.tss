@@ -10,27 +10,7 @@
 	horizontalWrap: 1
 }
 
-".input-wrapper": {
-	backgroundColor: "white",
-	width: Ti.UI.FILL,
-	height: Ti.UI.SIZE,
-	top:1
-}
 
-".form-label": {
-	height: 50,
-	width: Ti.UI.FILL,
-	left: 10
-}
-
-"TextField": {
-	width: Ti.UI.FILL,
-	backgroundColor: "transparent",
-	height: 50,
-	left: 10,
-	color: "#282828",
-	hintTextColor: "#b2b2b2"
-}
 
 
 "#valueInput[platform=android]": {

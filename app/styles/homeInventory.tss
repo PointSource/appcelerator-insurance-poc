@@ -1,33 +1,3 @@
-"TableView": {
-	backgroundColor: "transparent",
-	top: 0,
-	scrollable: true
-}
-
-"TableView[platform=ios]": {
-	separatorStyle: Titanium.UI.iPhone.TableViewSeparatorStyle.NONE
-}
-
-"TableViewRow": {
-}
-
-".card": {
-	backgroundColor: "#ffffff",
-	height: 60,
-	top: 10
-}
-
-".card[platform=ios]": {
-	viewShadowRadius: 2,
-	viewShadowColor: "#b2b2b2",
-	viewShadowOffset: "(0,0)"
-}
-
-".card-label": {
-	width: Ti.UI.FILL,
-	left: 10
-}
-
 ".top-card": {
 	top: 0,
 	height: Ti.UI.SIZE,

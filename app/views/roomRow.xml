@@ -1,0 +1,9 @@
+<Alloy>
+	<View class="card" onClick="editRoom">
+		<View layout="horizontal" height="Ti.UI.SIZE" left="10">
+			<Label class="bold" >{name}</Label>
+			<Label class="item-count">{numItems}</Label>
+		</View>
+		<Label right="10" class="bold">{value}</Label>
+	</View>
+</Alloy>

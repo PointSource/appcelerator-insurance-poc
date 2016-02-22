@@ -1,12 +1,8 @@
 var string = require('alloy/string');
+var homeInventoryPage = {
+	roomList: Alloy.Collections.room
+};
 
-Alloy.Globals.setUpNavBar({
-	currentWindow: $.homeInventory,
-	appWrapper: $.AppWrapper
-});
-
-var myRooms = Alloy.Collections.room;
-myRooms.fetch();
 
 function formatRoom (room) {
 	var formattedRoom = room.toJSON();
@@ -17,7 +13,7 @@ function formatRoom (room) {
 }
 
 function getTotalEstimate () {
-	var sum = myRooms.getSum();
+	var sum = homeInventoryPage.roomList.getSum();
 	$.totalValue.text = string.formatCurrency(sum);
 }
 
@@ -25,9 +21,21 @@ function goToAddRoom () {
 	Alloy.Globals.Navigator.open("addRoom", {});
 }
 
-// Add event listeners
-myRooms.on("change", getTotalEstimate);
+
+function init() {
+	Alloy.Globals.setUpNavBar({
+		currentWindow: $.homeInventory,
+		appWrapper: $.AppWrapper
+	});
+	
+	homeInventoryPage.roomList.fetch();
+
+	// Add event listeners
+	homeInventoryPage.roomList.on("change", getTotalEstimate);
+
+	getTotalEstimate();
+	$.houseIcon.text = Alloy.Globals.icomoon.icon("main-home");
+}
 
 // Initialize page
-getTotalEstimate();
-$.houseIcon.text = Alloy.Globals.icomoon.icon("main-home");
+init();

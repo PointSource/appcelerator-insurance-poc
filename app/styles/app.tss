@@ -120,8 +120,47 @@ http://docs.appcelerator.com/platform/latest/#!/guide/Alloy_Styles_and_Themes
 	right: 0
 }
 
+/* Card Layout */
 
+".card": {
+	backgroundColor: "#ffffff",
+	height: 60,
+	top: 10
+}
 
+".card[platform=ios]": {
+	viewShadowRadius: 2,
+	viewShadowColor: "#b2b2b2",
+	viewShadowOffset: "(0,0)"
+}
+
+".card-label": {
+	width: Ti.UI.FILL,
+	left: 10
+}
+
+/* Forms */
+".input-wrapper": {
+	backgroundColor: "white",
+	width: Ti.UI.FILL,
+	height: Ti.UI.SIZE,
+	top:1
+}
+
+".form-label": {
+	height: 50,
+	width: Ti.UI.FILL,
+	left: 10
+}
+
+"TextField": {
+	width: Ti.UI.FILL,
+	backgroundColor: "transparent",
+	height: 50,
+	left: 10,
+	color: "#282828",
+	hintTextColor: "#b2b2b2"
+}
 
 /* Nav Bar */
 
