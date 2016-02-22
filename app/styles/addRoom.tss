@@ -21,3 +21,32 @@
 	layout: 'horizontal',
 	horizontalWrap: 1
 }
+
+".input-wrapper": {
+	backgroundColor: "white",
+	width: Ti.UI.FILL,
+	height: Ti.UI.SIZE,
+	top:1
+}
+
+"TextField": {
+	width: Ti.UI.FILL,
+	backgroundColor: "transparent",
+	height: 50,
+	left: 10,
+	color: "black"
+}
+
+
+"#valueInput[platform=android]": {
+	keyboardType: Ti.UI.KEYBOARD_NUMBER_PAD
+}
+
+"#valueInput[platform=ios]": {
+	keyboardType: Ti.UI.KEYBOARD_DECIMAL_PAD
+}
+
+".button": {
+	top: 10
+}
+

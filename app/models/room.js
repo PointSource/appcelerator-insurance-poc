@@ -35,6 +35,14 @@ exports.definition = {
 				return Backbone.Collection.prototype.fetch.call(this, options);
 			}
 			*/
+
+			getSum: function () {
+				var sum = this.reduce(function(memo, room) {
+					return memo + room.get('value');
+				}, 0);
+
+				return sum;
+			}
 		});
 
 		return Collection;
