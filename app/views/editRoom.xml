@@ -1,17 +1,11 @@
 <Alloy>
-	<Model src="room" />
-	<Window id="editRoom" class="container" title="ADD ROOM">
-		<View id="AppWrapper" layout="vertical">
-			<View class="input-wrapper">
-				<Label class="form-label">Edit room</Label>
-			</View>
-			<View class="input-wrapper">
-				<TextField id="nameInput" hintText="Room name" value="{room.name}"></TextField>
-			</View>
-			<View class="input-wrapper">
-				<TextField id="valueInput" hintText="Estimated value" value="{room.value}"></TextField>
-			</View>
-			<Button class="button" onClick="saveRoom">Submit</Button>
+	<Collection src="room"/>
+	<Window id="editRoom" class="container" title="Edit Room">
+		<ActionBar/>
+        <Menu platform="android"></Menu>
+
+		<View id="AppWrapper" layout="vertical" dataCollection="room" dataFilter="filterRooms">
+			<Require src="editRoomForm"/>
 		</View>
 	</Window>
 </Alloy>

@@ -1,11 +1,11 @@
-var myRooms = Alloy.Collections.room;
+var roomList = Alloy.Collections.room;
 
 function addRoom() {
     var room = Alloy.createModel('room', {
         name : $.nameInput.value,
         value : parseInt($.valueInput.value, 10)
     });
-    myRooms.add(room);
+    roomList.add(room);
     room.save();
 
     // Close the window.

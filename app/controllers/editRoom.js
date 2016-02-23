@@ -1,12 +1,22 @@
 var args = arguments[0] || {};
-var selectedRoom = Alloy.Models.room;
+var roomList = Alloy.Collections.room;
 
-selectedRoom.set('id', args.roomId);
-selectedRoom.fetch();
 
-function saveRoom () {
-	selectedRoom.set('name', $.nameInput.value);
-	selectedRoom.set('value', parseInt($.valueInput.value, 10));
-	selectedRoom.save();
-    $.editRoom.close();
+function filterRooms (collection) {
+	return collection.filter(function (room) {
+		return room.id === args.roomId;
+	});
 }
+
+function init () {
+
+    Alloy.Globals.setUpNavBar({
+        currentWindow: $.editRoom,
+        appWrapper: $.AppWrapper
+    });	
+
+	roomList.fetch();
+}
+
+// Initialize Page
+init()

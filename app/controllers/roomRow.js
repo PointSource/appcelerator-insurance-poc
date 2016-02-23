@@ -6,6 +6,5 @@ if ($model) {
 }
 
 function editRoom () {
-	var room = roomList.get(id);
 	Alloy.Globals.Navigator.open("editRoom", {roomId: id});
 }
