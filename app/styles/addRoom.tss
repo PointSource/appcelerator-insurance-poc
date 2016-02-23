@@ -1,0 +1,24 @@
+"#camera": { // styles for the camera
+	backgroundColor: 'gray',
+    width: Ti.UI.FILL,
+    height: Ti.UI.FILL
+},
+
+"#imagePreview": {
+	layout: 'horizontal',
+	horizontalWrap: 1,
+	height: 50,
+	backgroundColor: "white"
+}
+
+
+"#valueInput[platform=android]": {
+	keyboardType: Ti.UI.KEYBOARD_NUMBER_PAD
+}
+
+"#valueInput[platform=ios]": {
+	keyboardType: Ti.UI.KEYBOARD_DECIMAL_PAD
+}
+
+
+

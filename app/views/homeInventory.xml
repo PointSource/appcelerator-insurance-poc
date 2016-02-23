@@ -1,0 +1,30 @@
+<Alloy>
+	<Collection src="room"/>
+	<Window id="homeInventory" class="container" title="HOME INVENTORY">
+		<ActionBar/>
+        <Menu platform="android"></Menu>
+
+		<View id="AppWrapper">
+			<ScrollView layout="vertical">
+				
+				<View height="Ti.UI.SIZE">
+					<View class="card top-card">
+						<Label class="card-label" top="10">TOTAL ESTIMATED VALUE</Label>
+						<Label id="totalValue" class="header-1 card-label">Total Value</Label>
+					</View>
+					<Label id="houseIcon" class="icomoon-icon"></Label>
+				</View>
+				<View dataCollection="room" dataTransform="formatRoom" layout="vertical" height="Ti.UI.SIZE">
+					<Require src="roomRow"/>
+				</View>
+
+				<View height="Ti.UI.SIZE">
+					<Button class="button" onClick="goToAddRoom">ADD ROOM</Button>
+				</View>
+			</ScrollView>
+
+		</View>
+				
+
+	</Window>
+</Alloy>

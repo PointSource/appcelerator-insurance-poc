@@ -9,7 +9,6 @@
   "os:mobileweb": {},
   "os:windows": {},
   "dependencies": {
-    "ts.camera": "*",
-    "menu": "1.0"
+    "ts.camera": "*"
   }
 }

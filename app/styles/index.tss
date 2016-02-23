@@ -3,13 +3,6 @@
     showAsAction: Ti.Android.SHOW_AS_ACTION_ALWAYS
 },
 
-"#menuIcon": {
-	font: {
-		fontSize: 30
-	},
-	color: "#49a7f7"
-}
-
 "#logoIcon": {
 	height: 70
 }

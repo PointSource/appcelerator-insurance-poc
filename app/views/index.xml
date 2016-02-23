@@ -3,7 +3,7 @@
 		<ActionBar/>
         <Menu platform="android"></Menu>
 
-        <Widget src="menu" id="menu"></Widget>
+        <Require src="menu" id="menu"></Require>
 
 		<View id="AppWrapper">
 			<Require src="dashboard" /> 
@@ -19,11 +19,11 @@
 
 			<RightNavButton platform="ios">
 				<View onClick="toggleMenu">
-					<Label id="menuIcon" class="icomoon-icon"></Label>
+					<Label id="menuIcon" class="icomoon-icon header-icon"></Label>
 				</View>
 	        </RightNavButton>
 
-	        <Widget src="menu" id="menu"></Widget>
+	        <Require src="menu" id="menu"></Require>
 
 			<View id="AppWrapper">
 		    	<Require src="dashboard" />

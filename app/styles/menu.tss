@@ -1,7 +1,7 @@
 "#SlideMenu": {
-	width: "280dp",
-	top: "0dp",
-	right: "-280dp",
+	width: 280,
+	top: 0,
+	right: -280,
 	backgroundColor: "#282828",
 	zIndex: 100
 }
@@ -36,7 +36,7 @@
 	height: Ti.UI.SIZE
 }
 
-".menu-section": {
+"#menuSection": {
 	layout: "vertical",
 	top: 200,
 	height: Ti.UI.FILL
@@ -48,8 +48,16 @@
 	height: "12.5%"
 }
 
+".menu-row-selected": {
+	backgroundColor: "#49a7f7"
+}
+
 ".menu-label": {
-	left: 10
+	left: 10,
+}
+
+".menu-label-selected": {
+	color: '#282828'
 }
 
 ".horizontal-divider": {
@@ -60,7 +68,6 @@
 	backgroundColor: "#606060"
 }
 
-".small-item": {
-	width: "49%",
+".menu-column": {
 	height: Ti.UI.FILL
 }

@@ -1,6 +1,6 @@
 <Alloy>
 	<View class="dashboard">
-		<View class="dashboard-agent">
+		<View class="agent-section">
 			<View class="agent-photo-section">
 				<ImageView class="agent-photo" image="/images/Point-Insurance-Agent-Photo-main.png"/>
 			</View>
@@ -12,52 +12,52 @@
 				</View>
 			</View>
 		</View>
-		<View class="dashboard-launch-pad">
-			<View class="dashboard-row" >
-				<View class="dashboard-grid-cell">
+		<View class="launch-pad-section">
+			<View class="dashboard-row row" >
+				<View class="dashboard-grid-cell columns-4">
 					<View class="dashboard-icon-wrapper">
-						<Label id="profileIcon" class="icomoon-icon"></Label>
+						<Label id="profileIcon" class="icomoon-icon dashboard-icon"></Label>
 						<Label class="dashboard-icon-label">Profile</Label>
 					</View>
 				</View>
-				<View class="dashboard-grid-cell">
+				<View class="dashboard-grid-cell columns-4">
 					<View class="dashboard-icon-wrapper">
-						<Label id="policyIcon" class="icomoon-icon"></Label>
+						<Label id="policyIcon" class="icomoon-icon dashboard-icon"></Label>
 						<Label class="dashboard-icon-label">Policies</Label>
 					</View>
 				</View>
-				<View class="dashboard-grid-cell" onClick="goToPayBill">
+				<View class="dashboard-grid-cell columns-4" onClick="goToPayBill">
 					<View class="dashboard-icon-wrapper">
-						<Label id="paybillIcon" class="icomoon-icon"></Label>
+						<Label id="paybillIcon" class="icomoon-icon dashboard-icon"></Label>
 						<Label class="dashboard-icon-label">Pay Bill</Label>
 					</View>
 				</View>
 			</View>
-			<View class="dashboard-row">
-				<View class="dashboard-grid-cell">
+			<View class="dashboard-row row">
+				<View class="dashboard-grid-cell columns-4">
 					<View class="dashboard-icon-wrapper">
-						<Label id="maintenanceIcon" class="icomoon-icon"></Label>
+						<Label id="maintenanceIcon" class="icomoon-icon dashboard-icon"></Label>
 						<Label class="dashboard-icon-label">Auto Maintenance</Label>
 					</View>
 				</View>
-				<View class="dashboard-grid-cell">
+				<View class="dashboard-grid-cell columns-4" onClick="goToHomeInventory">
 					<View class="dashboard-icon-wrapper">
-						<Label id="inventoryIcon" class="icomoon-icon"></Label>
+						<Label id="inventoryIcon" class="icomoon-icon dashboard-icon"></Label>
 						<Label class="dashboard-icon-label">Home Inventory</Label>
 					</View>
 				</View>
-				<View class="dashboard-grid-cell">
+				<View class="dashboard-grid-cell columns-4">
 					<View class="dashboard-icon-wrapper">
-						<Label id="alertsIcon" class="icomoon-icon"></Label>
+						<Label id="alertsIcon" class="icomoon-icon dashboard-icon"></Label>
 						<Label class="dashboard-icon-label">Notification Center</Label>
 					</View>
 				</View>
 			</View>
 		</View>
-		<View class="footer">
+		<View class="auto-section">
 			<View class="auto-image">
 				<Label id="autoIcon" class="icomoon-icon"></Label>
-				<View class="footer-divider pointsource-blue-background"></View>
+				<View class="vertical-divider auto-section-divider"></View>
 			</View>
 			<View class="auto-info-section">
 				<View class="auto-info">

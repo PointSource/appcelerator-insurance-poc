@@ -3,7 +3,7 @@
 	width: "100%",
 }
 
-".dashboard-agent": {
+".agent-section": {
 	top: 0,
 	height: "150",
 	backgroundColor: "#49a7f7",
@@ -30,32 +30,30 @@
 }
 
 
-".dashboard-launch-pad": {
-	top: "160",
-	bottom: "160",
+".launch-pad-section": {
+	top: "150",
+	bottom: "150",
 	layout: 'vertical'
 }
 
 ".dashboard-row": {
-	layout: 'horizontal',
-	width: '90%',
 	height: '50%'
 }
 
 ".dashboard-grid-cell": {
-	 width:'33%',
 	 height: Titanium.UI.FILL
 }
 
 ".dashboard-icon-wrapper": {
 	layout:'vertical',
-	 height: Titanium.UI.SIZE
+	height: Titanium.UI.SIZE
 }
 
-".icomoon-icon": {
+".dashboard-icon": {
 	font: {
-		fontSize: 50
-	}
+		fontSize: "75sp"
+	},
+	textAlign: Ti.UI.TEXT_ALIGNMENT_CENTER,
 }
 
 ".dashboard-icon-label": {
@@ -64,7 +62,7 @@
 	textAlign: Titanium.UI.TEXT_ALIGNMENT_CENTER
 }
 
-".footer": {
+".auto-section": {
 	layout: "horizontal",
 	backgroundColor: "#262626",
 	height: "150",
@@ -89,10 +87,9 @@
 	color: "#49a7f7"
 }
 
-".footer-divider": {
+".auto-section-divider": {
 	height: "80%",
-	width: 1,
-	right: 0
+	backgroundColor: "#49a7f7"
 }
 
 ".auto-info-section": {

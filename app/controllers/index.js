@@ -1,14 +1,7 @@
-var IconicFont = require('/lib/IconicFont');
-var icomoon = new IconicFont({
-    font: '/lib/icomoon'
-});
-
-
 /**
  * Global Navigation Handler
  */
 Alloy.Globals.Navigator = {
-
 	open: function(controller, payload){
 		var win = Alloy.createController(controller, payload || {}).getView();
 
@@ -35,6 +28,7 @@ function closeMenu () {
 }
 
 
+
 $.AppWrapper.addEventListener("swipe", function(_event) {
     if(_event.direction == "left") {
         openMenu();
@@ -43,9 +37,9 @@ $.AppWrapper.addEventListener("swipe", function(_event) {
     }
 });
 
-
+// Set up navigation header
 if(OS_IOS){
-	$.menuIcon.text = icomoon.icon("menu");
+	$.menuIcon.text = Alloy.Globals.icomoon.icon("menu");
 
 	$.nav.open()
 }
@@ -62,22 +56,22 @@ else if (OS_ANDROID) {
 			activity.onCreateOptionsMenu = function(e){
 
 				// first, create the item...
-				var settingsItem = e.menu.add({
+				var openMenuItem = e.menu.add({
 					itemId: 101, // don't forget to set an id here
-					title: "Settings",
+					title: "Open Menu",
 					showAsAction : Ti.Android.SHOW_AS_ACTION_ALWAYS
 				});
 
-				settingsItem.addEventListener('click', function(){
+				openMenuItem.addEventListener('click', function(){
 					toggleMenu();
 				});
 
 				// ...then, let abx apply the custom font
 				abx.setMenuItemIcon({
 					menu: e.menu,
-					menuItem: settingsItem,
-					fontFamily: icomoon.fontfamily,
-					icon: icomoon.icon("menu"),
+					menuItem: openMenuItem,
+					fontFamily: Alloy.Globals.icomoon.fontfamily,
+					icon: Alloy.Globals.icomoon.icon("menu"),
 					color: "#49a7f7",
 					size: 30
 				});
