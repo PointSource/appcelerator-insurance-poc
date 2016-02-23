@@ -2,12 +2,17 @@
 // your view controllers are ever executed, including the index.
 // You have access to all functionality on the `Alloy` namespace.
 //
-// This is a great place to do any initialization for your app
-// or create any global variables/functions that you'd like to
-// make available throughout your app. You can easily make things
-// accessible globally by attaching them to the `Alloy.Globals`
-// object. For example:
-//
+
+
+/* Colors to be used in TSS */
+Alloy.Globals.Colors = {
+	"pointsource_blue": "#49a7f7",
+	"gray_verydark": "#282828",
+	"gray_dark": "#606060",
+	"gray_medium": "#b2b2b2",
+	"gray_light": "#eeeeee",
+	"green": "#9ad275"
+}
 
 
 var IconicFont = require('/lib/IconicFont');

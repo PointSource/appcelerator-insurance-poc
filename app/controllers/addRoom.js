@@ -1,4 +1,5 @@
 var roomList = Alloy.Collections.room;
+var imageCount = 0;
 
 function addRoom() {
     var room = Alloy.createModel('room', {
@@ -13,13 +14,28 @@ function addRoom() {
 }
 
 function onPictureTaken(event) {
-    console.log(event.image); // the taken photo
-
-    var imageView = Ti.UI.createImageView({
-        width:70,
-        image:event.image
+    var baseImage = Titanium.UI.createImageView({
+        image:event.image,
+        height: 100
     });
-    $.imagePreview.add(imageView);
+
+    // Here's the view we'll use to do the cropping. 
+    var cropView = Titanium.UI.createView({
+        width:60, 
+        height:60,
+        backgroundColor: 'blue',
+        left: 5,
+        top: 5
+    });
+
+    // Add the image to the crop-view.
+    // Position it left and above origin.
+    cropView.add(baseImage);
+    baseImage.left=0;
+    baseImage.top="-50%";
+
+    $.imagePreview.add(cropView);
+    imageCount++;
 }
 
 function takePicture() {

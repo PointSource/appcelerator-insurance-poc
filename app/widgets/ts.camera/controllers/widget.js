@@ -21,11 +21,11 @@ function generateCameraView() {
         Ti.API.error('Camera is not found.');
 
         var width = Titanium.Platform.displayCaps.platformWidth;
-        var height = Titanium.Platform.displayCaps.platformWidth;
+        var height = Titanium.Platform.displayCaps.platformHeight;
 
         if (OS_ANDROID) {
             width = width + 'px';
-            height = width + 'px';
+            height = height + 'px';
         }
         return Ti.UI.createView({
             top: 0,
@@ -43,7 +43,7 @@ function generateCameraView() {
             top: 0,
             left: 0,
             width: Titanium.Platform.displayCaps.platformWidth + 'px',
-            height: Titanium.Platform.displayCaps.platformWidth + 'px',
+            height: Titanium.Platform.displayCaps.platformHeight + 'px',
 
             pictureTimeout: 200,
             useFrontCamera: false,

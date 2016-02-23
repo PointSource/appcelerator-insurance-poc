@@ -28,7 +28,7 @@
 	font: {
 		fontSize: 50
 	},
-	color: "#49a7f7"
+	color: Alloy.Globals.Colors.pointsource_blue
 }
 
 ".agent-info": {
@@ -49,7 +49,7 @@
 }
 
 ".menu-row-selected": {
-	backgroundColor: "#49a7f7"
+	backgroundColor: Alloy.Globals.Colors.pointsource_blue
 }
 
 ".menu-label": {

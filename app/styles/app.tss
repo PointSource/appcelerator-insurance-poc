@@ -22,20 +22,20 @@ http://docs.appcelerator.com/platform/latest/#!/guide/Alloy_Styles_and_Themes
 	titleAttributes:  {
         color: "white"
 	},
-	barColor: "#282828",
-	backgroundColor: '#eeeeee'
+	barColor: Alloy.Globals.Colors.gray_verydark,
+	backgroundColor: Alloy.Globals.Colors.gray_light
 }
 
 ".gray-light-text": {
-	color: "#eeeeee"
+	color: Alloy.Globals.Colors.gray_light
 }
 
 ".pointsource-blue-text": {
-	color: "#49a7f7"
+	color: Alloy.Globals.Colors.pointsource_blue
 }
 
 ".pointsource-blue-background": {
-	backgroundColor: "#49a7f7"
+	backgroundColor: Alloy.Globals.Colors.pointsource_blue
 }
 
 /* Buttons */
@@ -44,15 +44,15 @@ http://docs.appcelerator.com/platform/latest/#!/guide/Alloy_Styles_and_Themes
 	left: 10,
 	right: 10,
 	height: 50,
-	color: "#282828",
-	backgroundColor: "#9ad275"
+	color: Alloy.Globals.Colors.gray_verydark,
+	backgroundColor: Alloy.Globals.Colors.green
 }
 
 
 /* Typography */
 
 "Label": {
-	color: "#282828",
+	color: Alloy.Globals.Colors.gray_verydark,
 	font: {
 		fontFamily: "OpenSans"
 	}
@@ -123,14 +123,14 @@ http://docs.appcelerator.com/platform/latest/#!/guide/Alloy_Styles_and_Themes
 /* Card Layout */
 
 ".card": {
-	backgroundColor: "#ffffff",
+	backgroundColor: "white",
 	height: 60,
 	top: 10
 }
 
 ".card[platform=ios]": {
 	viewShadowRadius: 2,
-	viewShadowColor: "#b2b2b2",
+	viewShadowColor: Alloy.Globals.Colors.gray_medium,
 	viewShadowOffset: "(0,0)"
 }
 
@@ -158,8 +158,8 @@ http://docs.appcelerator.com/platform/latest/#!/guide/Alloy_Styles_and_Themes
 	backgroundColor: "transparent",
 	height: 50,
 	left: 10,
-	color: "#282828",
-	hintTextColor: "#b2b2b2"
+	color: Alloy.Globals.Colors.gray_verydark,
+	hintTextColor: Alloy.Globals.Colors.gray_medium
 }
 
 /* Nav Bar */
@@ -168,5 +168,5 @@ http://docs.appcelerator.com/platform/latest/#!/guide/Alloy_Styles_and_Themes
 	font: {
 		fontSize: 30
 	},
-	color: "#49a7f7"
+	color: Alloy.Globals.Colors.pointsource_blue
 }

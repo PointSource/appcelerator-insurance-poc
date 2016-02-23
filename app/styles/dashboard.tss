@@ -6,7 +6,7 @@
 ".agent-section": {
 	top: 0,
 	height: "150",
-	backgroundColor: "#49a7f7",
+	backgroundColor: Alloy.Globals.Colors.pointsource_blue,
 	width: Ti.UI.FILL,
 	layout: "horizontal"
 }
@@ -84,12 +84,12 @@
 	font: {
 		fontSize: 80
 	},
-	color: "#49a7f7"
+	color: Alloy.Globals.Colors.pointsource_blue
 }
 
 ".auto-section-divider": {
 	height: "80%",
-	backgroundColor: "#49a7f7"
+	backgroundColor: Alloy.Globals.Colors.pointsource_blue
 }
 
 ".auto-info-section": {

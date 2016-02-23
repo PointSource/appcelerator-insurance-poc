@@ -4,7 +4,9 @@
         <Menu platform="android"></Menu>
 
 		<View id="AppWrapper">
-			<View layout="vertical" height="Ti.UI.SIZE" top="0" zIndex="10" backgroundColor="#eeeeee">
+	        <Widget id="camera" src="ts.camera" onPictureTaken="onPictureTaken" backgroundColor="red" />
+
+			<View class="camera-overlay" top="0">
 				<View class="input-wrapper">
 					<Label class="form-label">Take photos of your valuables</Label>
 				</View>
@@ -15,11 +17,12 @@
 					<TextField id="valueInput" hintText="Estimated value"></TextField>
 				</View>
 			</View>
-	        <Widget id="camera" src="ts.camera" onPictureTaken="onPictureTaken" /> 
 
-	        <View layout="vertical" bottom="0" height="Ti.UI.SIZE">
-		        <Button class="button camera-button" onClick="takePicture">Take Picture</Button>
-		        <View id="imagePreview"></View>
+	        <View class="camera-overlay" bottom="0">
+	        	<View class="camera-button-overlay">
+			        <View class="camera-button" onClick="takePicture"></View>
+	        	</View>
+		        <ScrollView id="imagePreview"></ScrollView>
 				<Button class="button submit-button" onClick="addRoom">Submit</Button>
 	        </View>
         

@@ -1,16 +1,15 @@
-"#camera": { // styles for the camera
-	backgroundColor: 'gray',
+"#camera": {
     width: Ti.UI.FILL,
     height: Ti.UI.FILL
 },
 
 "#imagePreview": {
 	layout: 'horizontal',
-	horizontalWrap: 1,
-	height: 50,
-	backgroundColor: "white"
+	height: 70,
+	contentHeight: 70,
+	backgroundColor: "white",
+    width: Ti.UI.FILL
 }
-
 
 "#valueInput[platform=android]": {
 	keyboardType: Ti.UI.KEYBOARD_NUMBER_PAD
@@ -20,5 +19,26 @@
 	keyboardType: Ti.UI.KEYBOARD_DECIMAL_PAD
 }
 
+".camera-overlay": {
+	layout: "vertical",
+	zIndex: 10,
+	height: Ti.UI.SIZE,
+	backgroundColor: Alloy.Globals.Colors.gray_light
+}
 
+".camera-button-overlay": {
+	backgroundColor: Alloy.Globals.Colors.gray_verydark,
+	height: 50
+}
 
+".camera-button": {
+	backgroundColor: Alloy.Globals.Colors.gray_dark,
+	height: 40,
+	width: 40,
+	borderRadius: 20
+}
+
+".button": {
+	bottom: 10,
+	top: 10
+}
