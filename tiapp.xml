@@ -60,7 +60,7 @@
     <module platform="android">com.alcoapps.actionbarextras</module>
     <module platform="iphone">com.pointsource.card.io</module>
     <module platform="android">com.pointsource.card.io</module>
-
+    <module platform="android">pw.custom.androidcamera</module>
   </modules>
     <deployment-targets>
         <target device="android">true</target>

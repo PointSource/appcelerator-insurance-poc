@@ -5,6 +5,7 @@
 version: 0.6.3
 apiversion: 2
 description: Custom Android Camera
+architectures: armeabi armeabi-v7a x86
 author: Michael Browne
 license: The MIT License (MIT)
 copyright: Copyright (c) 2013 by ProductWorld
