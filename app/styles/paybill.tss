@@ -21,3 +21,19 @@
 	layout: 'horizontal',
 	horizontalWrap: 1
 }
+
+"#accountNoField": {
+	width: Ti.UI.FILL,
+	height: 80,
+	left: 1,
+	right: 1,
+	borderRadius: 0
+}
+
+"#routingNoField": {
+	width: Ti.UI.FILL,
+	height: 80,
+	top: 4,
+	left: 1,
+	right: 1
+}

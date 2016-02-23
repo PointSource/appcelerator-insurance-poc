@@ -1,8 +1,9 @@
 <Alloy>
 	<Window id="payBillWindow" class="container" layout='vertical'>
-        <Widget id="camera" src="ts.camera" onPictureTaken="onPictureTaken" /> 
-        <Button onClick="switchCamera">Switch Cameras</Button>
-        <Button onClick="takePicture">Take Picture</Button>
-        <View id="imagePreview"></View>
+
+        <Button onClick="openCardIO">Scan Card</Button>
+        <TextField id="accountNoField"  hintText="Account no." borderStyle="Ti.UI.INPUT_BORDERSTYLE_ROUNDED" />
+        <TextField id="routingNoField"  hintText="Routing no." borderStyle="Ti.UI.INPUT_BORDERSTYLE_ROUNDED" />
+
 	</Window>
 </Alloy>
