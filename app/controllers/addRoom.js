@@ -49,7 +49,8 @@ function onPictureTaken(event) {
         width:60, 
         height:60,
         backgroundColor: 'blue',
-        left: 5,
+        left: 3,
+        right: 3,
         top: 5
     });
 
@@ -60,6 +61,7 @@ function onPictureTaken(event) {
     baseImage.top="-30";
 
     $.imagePreview.add(cropView);
+    $.imagePreview.scrollToBottom();
 
     addRoomPage.images.push(event.image);
 }
