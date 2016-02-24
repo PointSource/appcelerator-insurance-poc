@@ -48,6 +48,17 @@ function init() {
         currentWindow: $.addRoom,
         appWrapper: $.AppWrapper
     });
+
+    if (!Ti.Media.getIsCameraSupported()) {
+        alert("No camera is available on this device");
+    }
+
+    // If rear camera is not available, and front camera is available,
+    // switch to front camera
+    if (Ti.Media.availableCameras.indexOf(Ti.Media.CAMERA_REAR) === -1 &&
+        Ti.Media.availableCameras.indexOf(Ti.Media.CAMERA_FRONT) !== -1) {
+        $.camera.switchCamera();
+    }
 }
 
 // Initialize Page
