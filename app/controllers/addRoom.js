@@ -87,6 +87,10 @@ function init() {
         Ti.Media.availableCameras.indexOf(Ti.Media.CAMERA_FRONT) !== -1) {
         $.camera.switchCamera();
     }
+
+    $.imagePreview.addEventListener("swipe", function(e) {
+        e.cancelBubble = true;
+    })
 }
 
 // Initialize Page
