@@ -14,7 +14,7 @@
 					</View>
 					<Label id="houseIcon" class="icomoon-icon"></Label>
 				</View>
-				<View dataCollection="room" dataTransform="formatRoom" layout="vertical" height="Ti.UI.SIZE">
+				<View dataCollection="room" dataTransform="formatRoom" dataFunction="redrawRoomList" layout="vertical" height="Ti.UI.SIZE">
 					<Require src="roomRow"/>
 				</View>
 

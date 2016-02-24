@@ -9,10 +9,6 @@
 	bottom: 10
 }
 
-".item-count": {
-	left: 5
-}
-
 "#totalValue": {
 	height: 30,
 	bottom: 10
