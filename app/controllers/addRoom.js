@@ -5,25 +5,37 @@ var addRoomPage = {
 }
 
 function addRoom() {
-    var room = Alloy.createModel('room', {
-        name : $.nameInput.value,
-        value : parseInt($.valueInput.value, 10)
-    });
-    addRoomPage.roomCollection.add(room);
-    room.save();
-
-    for (i in addRoomPage.images) {
-        var image = Alloy.createModel('image', {
-            path: addRoomPage.images[i],
-            room_id: room.id
+    var parsedValue = parseInt($.valueInput.value, 10);
+    if (isNaN(parsedValue)) {
+        alert("Invalid estimated value. Please only enter numbers.");
+        return;
+    }
+    else {
+        var room = Alloy.createModel('room', {
+            name : $.nameInput.value,
+            value : parseInt($.valueInput.value, 10)
         });
 
-        addRoomPage.imageCollection.add(image);
-        image.save();
-    }
+        if (room.isValid()) {
+            addRoomPage.roomCollection.add(room);
+            room.save();
 
-    // Close the window.
-    $.addRoom.close();
+            for (i in addRoomPage.images) {
+                var image = Alloy.createModel('image', {
+                    path: addRoomPage.images[i],
+                    room_id: room.id
+                });
+
+                addRoomPage.imageCollection.add(image);
+                image.save();
+            }
+
+            // Close the window.
+            $.addRoom.close(); 
+        } else {
+            alert("Please fill out all fields");
+        }
+    }
 }
 
 function onPictureTaken(event) {

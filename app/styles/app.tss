@@ -48,6 +48,13 @@ http://docs.appcelerator.com/platform/latest/#!/guide/Alloy_Styles_and_Themes
 	backgroundColor: Alloy.Globals.Colors.green
 }
 
+".button-secondary": {
+	backgroundColor: "transparent",
+	borderColor: Alloy.Globals.Colors.primary_accent,
+	borderWidth: 1,
+	color: Alloy.Globals.Colors.primary_accent
+}
+
 
 /* Typography */
 

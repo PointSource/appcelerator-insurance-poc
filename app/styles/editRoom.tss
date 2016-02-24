@@ -1,3 +1,11 @@
 ".button" : {
   	top: 10
 }
+
+"#valueInput[platform=android]": {
+	keyboardType: Ti.UI.KEYBOARD_NUMBER_PAD
+}
+
+"#valueInput[platform=ios]": {
+	keyboardType: Ti.UI.KEYBOARD_DECIMAL_PAD
+}

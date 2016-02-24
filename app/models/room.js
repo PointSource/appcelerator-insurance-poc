@@ -14,7 +14,21 @@ exports.definition = {
 	},
 	extendModel: function(Model) {
 		_.extend(Model.prototype, {
-			// extended functions and properties go here
+			validate: function (attrs) {
+    	        for (var key in attrs) {
+                    var value = attrs[key];
+                    if (key === "name") {
+                        if (value.length <= 0) {
+                            return "Error: No name!";
+                        }
+                    }
+                    if (key === "value") {
+                        if (value.length <= 0) {
+                            return "Error: No estimated value!";
+                        }	
+                    }	
+                }
+			}
 		});
 
 		return Model;

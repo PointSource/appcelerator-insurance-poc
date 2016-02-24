@@ -18,7 +18,8 @@
 			<View dataCollection="image" dataFilter="filterImages" height="Ti.UI.SIZE" layout="horizontal">
 				<ImageView height="60" width="60" image="{path}" left="10" top="10" />
 			</View>
-			<Button class="button" onClick="saveRoom">Submit</Button>
+			<Button class="button" onClick="saveRoom">UPDATE ROOM</Button>
+			<Button class="button button-secondary" onClick="deleteRoom">DELETE ROOM</Button>
 		</View>
 	</Window>
 </Alloy>

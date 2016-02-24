@@ -18,6 +18,13 @@ function saveRoom () {
 	$.editRoom.close();
 }
 
+function deleteRoom () {
+	var room = args.room;
+	room.destroy();
+	
+	$.editRoom.close();
+}
+
 function init () {
 
     Alloy.Globals.setUpNavBar({

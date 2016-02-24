@@ -11,7 +11,8 @@ Alloy.Globals.Colors = {
 	"gray_dark": "#606060",
 	"gray_medium": "#b2b2b2",
 	"gray_light": "#eeeeee",
-	"green": "#9ad275"
+	"green": "#9ad275",
+	"primary_accent": "#ee3c50"
 }
 
 
