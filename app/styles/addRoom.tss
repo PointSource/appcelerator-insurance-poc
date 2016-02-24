@@ -35,11 +35,11 @@
 	height: 50
 }
 
-".camera-button": {
-	backgroundColor: Alloy.Globals.Colors.gray_dark,
-	height: 40,
-	width: 40,
-	borderRadius: 20
+"#cameraIcon": {
+	color: Alloy.Globals.Colors.gray_dark,
+	font: {
+		fontSize: 40
+	},
 }
 
 ".button": {

@@ -15,5 +15,6 @@ exports.charcode = {
 	'menu-call': 0xE90B,
 	'menu-email': 0xE90C,
 	'menu-map': 0xE90D,
-	'menu': 0xE90E
+	'menu': 0xE90E,
+	'camera': 0xE90F
 };

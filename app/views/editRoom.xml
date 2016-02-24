@@ -1,6 +1,6 @@
 <Alloy>
 	<Model src="room" instance="true" id="roomDetail"/>
-	<Window id="editRoom" class="container" title="Edit Room">
+	<Window id="editRoom" class="container" title="EDIT ROOM">
 		<ActionBar/>
         <Menu platform="android"></Menu>
 

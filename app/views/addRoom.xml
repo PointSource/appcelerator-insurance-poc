@@ -20,7 +20,7 @@
 
 	        <View class="camera-overlay" bottom="0">
 	        	<View class="camera-button-overlay">
-			        <View class="camera-button" onClick="takePicture"></View>
+			        <Label id="cameraIcon" class="icomoon-icon" onClick="takePicture"></Label>
 	        	</View>
 		        <ScrollView id="imagePreview"></ScrollView>
 				<Button class="button submit-button" onClick="addRoom">Submit</Button>

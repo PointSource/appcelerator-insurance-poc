@@ -49,6 +49,8 @@ function init() {
         appWrapper: $.AppWrapper
     });
 
+    $.cameraIcon.text = Alloy.Globals.icomoon.icon("camera");
+
     if (!Ti.Media.getIsCameraSupported()) {
         alert("No camera is available on this device");
     }
