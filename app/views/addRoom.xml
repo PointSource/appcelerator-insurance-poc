@@ -4,7 +4,7 @@
         <Menu platform="android"></Menu>
 
 		<View id="AppWrapper">
-	        <Widget id="camera" src="ts.camera" onPictureTaken="onPictureTaken" backgroundColor="red" />
+	        <Widget id="camera" src="ts.camera" onPictureTaken="onPictureTaken"/>
 
 			<View class="camera-overlay" top="0">
 				<View class="input-wrapper">

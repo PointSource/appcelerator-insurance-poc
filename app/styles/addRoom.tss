@@ -1,3 +1,7 @@
+"#addRoom[platform=android]": {
+	windowSoftInputMode: Titanium.UI.Android.SOFT_INPUT_ADJUST_PAN
+}
+
 "#camera": {
     width: Ti.UI.FILL,
     height: Ti.UI.FILL

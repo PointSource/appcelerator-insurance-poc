@@ -16,7 +16,7 @@ function addRoom() {
 function onPictureTaken(event) {
     var baseImage = Titanium.UI.createImageView({
         image:event.image,
-        height: 100
+        height: 120
     });
 
     // Here's the view we'll use to do the cropping. 
@@ -32,7 +32,7 @@ function onPictureTaken(event) {
     // Position it left and above origin.
     cropView.add(baseImage);
     baseImage.left=0;
-    baseImage.top="-50%";
+    baseImage.top="-30";
 
     $.imagePreview.add(cropView);
     imageCount++;
