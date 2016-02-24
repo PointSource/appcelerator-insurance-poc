@@ -3,11 +3,13 @@ exports.definition = {
 	config: {
 		columns: {
 		    "name": "TEXT",
-		    "value": "INTEGER"
+		    "value": "INTEGER",
+            "room_id": "INTEGER PRIMARY KEY AUTOINCREMENT"
 		},
 		adapter: {
 			type: "sql",
-			collection_name: "room"
+			collection_name: "room",
+            idAttribute: "room_id"
 		}
 	},
 	extendModel: function(Model) {

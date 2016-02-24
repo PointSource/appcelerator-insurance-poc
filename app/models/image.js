@@ -1,11 +1,12 @@
 exports.definition = {
 	config: {
 		columns: {
-		    "path": "string"
+		    "path": "TEXT",
+		    "room_id": "INTEGER"
 		},
 		adapter: {
 			type: "sql",
-			collection_name: "photo"
+			collection_name: "image"
 		}
 	},
 	extendModel: function(Model) {

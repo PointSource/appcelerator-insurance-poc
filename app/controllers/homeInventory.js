@@ -1,19 +1,22 @@
 var string = require('alloy/string');
 var homeInventoryPage = {
-	roomList: Alloy.Collections.room
+	roomCollection: Alloy.Collections.room,
+	imageCollection: Alloy.Collections.instance('image')
 };
-
 
 function formatRoom (room) {
 	var formattedRoom = room.toJSON();
 	formattedRoom.value = string.formatCurrency(formattedRoom.value);
-	formattedRoom.numItems = "("+4+" items)";
 	formattedRoom.name = formattedRoom.name.toUpperCase();
+
+	var imagesForRoom = homeInventoryPage.imageCollection.where({room_id: room.id});
+	formattedRoom.numItems = "("+imagesForRoom.length+" items)";
+
 	return formattedRoom;
 }
 
 function getTotalEstimate () {
-	var sum = homeInventoryPage.roomList.getSum();
+	var sum = homeInventoryPage.roomCollection.getSum();
 	$.totalValue.text = string.formatCurrency(sum);
 }
 
@@ -28,10 +31,11 @@ function init() {
 		appWrapper: $.AppWrapper
 	});
 	
-	homeInventoryPage.roomList.fetch();
+	homeInventoryPage.imageCollection.fetch();
+	homeInventoryPage.roomCollection.fetch();
 
 	// Add event listeners
-	homeInventoryPage.roomList.on("change", getTotalEstimate);
+	homeInventoryPage.roomCollection.on("change", getTotalEstimate);
 
 	getTotalEstimate();
 	$.houseIcon.text = Alloy.Globals.icomoon.icon("main-home");

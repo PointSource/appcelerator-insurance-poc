@@ -1,13 +1,26 @@
-var roomList = Alloy.Collections.room;
-var imageCount = 0;
+var addRoomPage = {
+    roomCollection: Alloy.Collections.room,
+    imageCollection: Alloy.Collections.instance('image'),
+    images: []
+}
 
 function addRoom() {
     var room = Alloy.createModel('room', {
         name : $.nameInput.value,
         value : parseInt($.valueInput.value, 10)
     });
-    roomList.add(room);
+    addRoomPage.roomCollection.add(room);
     room.save();
+
+    for (i in addRoomPage.images) {
+        var image = Alloy.createModel('image', {
+            path: addRoomPage.images[i],
+            room_id: room.id
+        });
+
+        addRoomPage.imageCollection.add(image);
+        image.save();
+    }
 
     // Close the window.
     $.addRoom.close();
@@ -35,7 +48,8 @@ function onPictureTaken(event) {
     baseImage.top="-30";
 
     $.imagePreview.add(cropView);
-    imageCount++;
+
+    addRoomPage.images.push(event.image);
 }
 
 function takePicture() {
