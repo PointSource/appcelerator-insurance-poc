@@ -1,4 +1,5 @@
 <Alloy>
+	<Collection src="image" />
 	<Model src="room" instance="true" id="roomDetail"/>
 	<Window id="editRoom" class="container" title="EDIT ROOM">
 		<ActionBar/>
@@ -14,8 +15,10 @@
 			<View class="input-wrapper">
 				<TextField id="valueInput" hintText="Estimated value" value="{$.roomDetail.value}"></TextField>
 			</View>
+			<View dataCollection="image" dataFilter="filterImages" height="Ti.UI.SIZE" layout="horizontal">
+				<ImageView height="60" width="60" image="{path}" left="10" top="10" />
+			</View>
 			<Button class="button" onClick="saveRoom">Submit</Button>
-
 		</View>
 	</Window>
 </Alloy>

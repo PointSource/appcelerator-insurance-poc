@@ -1,10 +1,13 @@
 var args = arguments[0] || {};
+var imageCollection = Alloy.Collections.image;
 
-function filterRooms (collection) {
-	return collection.filter(function (room) {
-		return room.id === args.roomId;
+
+function filterImages (collection) {
+	return collection.filter(function (image) {
+		return image.get("room_id") === args.room.id;
 	});
 }
+
 
 function saveRoom () {
 	var room = args.room;
@@ -23,6 +26,8 @@ function init () {
     });	
 
 	$.roomDetail.set(args.room.attributes);
+
+	imageCollection.fetch();
 }
 
 // Initialize Page
