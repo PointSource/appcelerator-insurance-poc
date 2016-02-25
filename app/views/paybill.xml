@@ -1,9 +1,24 @@
 <Alloy>
-	<Window id="payBillWindow" class="container" layout='vertical'>
+	<Window id="payBillWindow" class="container" title="PAY BILL">
+		<View id="AppWrapper">
+			<View layout="vertical">
+				<View class="input-wrapper">
+					<Label class="form-label">Scan your card</Label>
+				</View>
+				<View height="Ti.UI.SIZE">
+			        <Button class="button" top="10" bottom="10" onClick="openCardIO">Scan Card</Button>
+				</View>
+				<View class="input-wrapper">
+					<Label class="form-label">Or enter your card information</Label>
+				</View>
 
-        <Button onClick="openCardIO">Scan Card</Button>
-        <TextField id="accountNoField"  hintText="Account no." borderStyle="Ti.UI.INPUT_BORDERSTYLE_ROUNDED" />
-        <TextField id="routingNoField"  hintText="Routing no." borderStyle="Ti.UI.INPUT_BORDERSTYLE_ROUNDED" />
-
+				<View class="input-wrapper">
+			        <TextField id="accountNoField"  hintText="Account no." />
+			    </View>
+				<View class="input-wrapper">
+			        <TextField id="routingNoField"  hintText="Routing no." />
+			    </View>
+			</View>
+		</View>
 	</Window>
 </Alloy>

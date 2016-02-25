@@ -38,3 +38,13 @@ function openCardIO() {
 		restrictPostalCodeToNumericOnly: true
 	});
 }
+
+function init () {
+	Alloy.Globals.setUpNavBar({
+		currentWindow: $.payBillWindow,
+		appWrapper: $.AppWrapper
+	});
+	
+}
+
+init();

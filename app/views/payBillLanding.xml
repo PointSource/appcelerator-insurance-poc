@@ -1,12 +1,12 @@
 <Alloy>
-	<Window id="payBillLanding" class="container" title="PAY BILL">
+	<Window id="payBillLanding" class="container" title="YOUR BILL">
 		<View id="AppWrapper">
 
 			<View layout="vertical">
 				<View class="card top-card" layout="vertical">
 					<View height="Ti.UI.SIZE" top="20">
 						<Label id="autoIcon" class="icomoon-icon"></Label>
-						<Label class="card-label header-3" top="-5">AUTO</Label>
+						<Label class="card-label header-3">AUTO</Label>
 					</View>
 					<Label class="card-label small">AMOUNT OF</Label>
 					<Label class="card-label header-1">$176.59</Label>
@@ -17,6 +17,8 @@
 					<Label class="card-label header-2">Hunter Patterson</Label>
 					<Label class="card-label small">Policy No.</Label>
 					<Label class="card-label header-2">12345678</Label>
+					<!-- Spacer -->
+					<View height="80"/>
 				</View>
 				<View height="Ti.UI.SIZE">
 					<Button class="button button-secondary" onClick="goToPayBill" top="10">PAY NOW</Button>
