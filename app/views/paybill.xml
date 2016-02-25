@@ -7,7 +7,7 @@
 				</View>
 				<View class="card-scan-wrapper" onClick="openCardIO">
 			        <Label id="cameraIcon" class="icomoon-icon"></Label>
-					<Label class="card-scan-label bold">TAP TO SCAN</Label>
+					<Label class="card-scan-label">TAP TO SCAN</Label>
 				</View>
 				<View class="input-wrapper">
 					<Label class="form-label">Or enter your card info</Label>
