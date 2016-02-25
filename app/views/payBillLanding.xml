@@ -1,0 +1,24 @@
+<Alloy>
+	<Window id="payBillLanding" class="container" title="PAY BILL">
+		<View id="AppWrapper">
+
+			<View layout="vertical">
+				<View class="card top-card" layout="vertical">
+					<Label class="card-label bold" top="10">AUTO</Label>
+					<Label class="card-label">AMOUNT OF</Label>
+					<Label class="card-label header-1">$176.59</Label>
+					<Label class="card-label">DUE MARCH 05, 2016</Label>
+					<Label class="card-label small">Vehicle(s)</Label>
+					<Label class="card-label header-2">Volkswagen Jetta 2014</Label>
+					<Label class="card-label small">Driver(s)</Label>
+					<Label class="card-label header-2">Hunter Patterson</Label>
+					<Label class="card-label small">Policy No.</Label>
+					<Label class="card-label header-2">12345678</Label>
+				</View>
+				<View height="Ti.UI.SIZE">
+					<Button class="button button-secondary" onClick="goToPayBill" top="10">PAY NOW</Button>
+				</View>
+			</View>
+		</View>
+	</Window>
+</Alloy>

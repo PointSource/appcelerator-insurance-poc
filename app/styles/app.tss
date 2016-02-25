@@ -85,6 +85,12 @@ http://docs.appcelerator.com/platform/latest/#!/guide/Alloy_Styles_and_Themes
 	}
 }
 
+".small": {
+	font: {
+		fontSize: 10
+	}
+}
+
 
 /* Grid */
 
@@ -131,7 +137,7 @@ http://docs.appcelerator.com/platform/latest/#!/guide/Alloy_Styles_and_Themes
 
 ".card": {
 	backgroundColor: "white",
-	height: 60,
+	height: Ti.UI.SIZE,
 	top: 10
 }
 
