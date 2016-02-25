@@ -152,6 +152,10 @@ http://docs.appcelerator.com/platform/latest/#!/guide/Alloy_Styles_and_Themes
 	left: 10
 }
 
+".top-card": {
+	top: 0
+}
+
 /* Forms */
 ".input-wrapper": {
 	backgroundColor: "white",
