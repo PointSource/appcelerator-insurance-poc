@@ -7,7 +7,7 @@
 }
 
 ".header-2": {
-	top: -5
+	top: -7
 }
 ".header-1": {
 	top: -10
@@ -21,11 +21,6 @@
 }
 
 ".due-label": {
-	color: Alloy.Globals.Colors.primary_accent
-}
-
-".auto-label": {
-	font: {
-		fontSize: 18
-	}
+	color: Alloy.Globals.Colors.primary_accent,
+	top: -8
 }

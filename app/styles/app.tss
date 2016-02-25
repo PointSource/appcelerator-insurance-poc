@@ -73,12 +73,19 @@ http://docs.appcelerator.com/platform/latest/#!/guide/Alloy_Styles_and_Themes
 
 ".header-1": {
 	font: {
-		fontSize: 30,
+		fontSize: 35,
 		fontFamily: "OpenSans-Semibold"
 	}
 }
 
 ".header-2": {
+	font: {
+		fontSize: 25,
+		fontFamily: "OpenSans-Semibold"
+	}
+}
+
+".header-3": {
 	font: {
 		fontSize: 18,
 		fontFamily: "OpenSans-Semibold"
@@ -87,7 +94,7 @@ http://docs.appcelerator.com/platform/latest/#!/guide/Alloy_Styles_and_Themes
 
 ".small": {
 	font: {
-		fontSize: 10
+		fontSize: 12
 	}
 }
 

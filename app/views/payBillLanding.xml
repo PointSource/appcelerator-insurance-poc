@@ -6,11 +6,11 @@
 				<View class="card top-card" layout="vertical">
 					<View height="Ti.UI.SIZE" top="20">
 						<Label id="autoIcon" class="icomoon-icon"></Label>
-						<Label class="card-label bold auto-label">AUTO</Label>
+						<Label class="card-label header-3" top="-5">AUTO</Label>
 					</View>
 					<Label class="card-label small">AMOUNT OF</Label>
 					<Label class="card-label header-1">$176.59</Label>
-					<Label class="card-label header-2 due-label">DUE MARCH 05, 2016</Label>
+					<Label class="card-label header-3 due-label">DUE MARCH 05, 2016</Label>
 					<Label class="card-label small">Vehicle(s)</Label>
 					<Label class="card-label header-2">Volkswagen Jetta 2014</Label>
 					<Label class="card-label small">Driver(s)</Label>
