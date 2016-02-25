@@ -9,7 +9,7 @@ function formatRoom (room) {
 	formattedRoom.value = string.formatCurrency(formattedRoom.value);
 	formattedRoom.name = formattedRoom.name.toUpperCase();
 
-	var imagesForRoom = homeInventoryPage.imageCollection.where({room_id: room.id});
+	var imagesForRoom = room.getImagesForRoom(homeInventoryPage.imageCollection);
 	formattedRoom.numItems = "("+imagesForRoom.length+" items)";
 
 	return formattedRoom;
@@ -36,6 +36,7 @@ function init() {
 
 	// Add event listeners
 	homeInventoryPage.roomCollection.on("change", getTotalEstimate);
+	homeInventoryPage.roomCollection.on("destroy", getTotalEstimate);
 	homeInventoryPage.imageCollection.on("change", redrawRoomList);
 
 	getTotalEstimate();

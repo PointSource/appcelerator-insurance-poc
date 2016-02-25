@@ -3,9 +3,7 @@ var imageCollection = Alloy.Collections.image;
 
 
 function filterImages (collection) {
-	return collection.filter(function (image) {
-		return image.get("room_id") === args.room.id;
-	});
+	return args.room.getImagesForRoom(collection);
 }
 
 
@@ -20,8 +18,18 @@ function saveRoom () {
 
 function deleteRoom () {
 	var room = args.room;
+	var imagesForRoom = args.room.getImagesForRoom(imageCollection);
+
+	// Delete room
 	room.destroy();
-	
+
+	// Remove all images for this room, once this page closes
+	$.editRoom.addEventListener("close", function () {
+		imagesForRoom.forEach(function(imageModel) {
+			imageModel.destroy();
+		});
+	})
+
 	$.editRoom.close();
 }
 

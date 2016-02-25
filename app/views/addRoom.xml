@@ -11,10 +11,26 @@
 					<Label class="form-label">Take photos of your valuables</Label>
 				</View>
 				<View class="input-wrapper">
-					<TextField id="nameInput" hintText="Room name"></TextField>
+					<TextField id="nameInput" hintText="Room name" returnKeyType="Titanium.UI.RETURNKEY_NEXT"></TextField>
 				</View>
 				<View class="input-wrapper">
-					<TextField id="valueInput" hintText="Estimated value"></TextField>
+
+					<!-- android text field -->
+					<TextField id="valueInput" hintText="Estimated value" platform="android"></TextField>
+
+					<!-- iOS text field with custom keyboard -->
+					<TextField id="valueInput" hintText="Estimated value" platform="ios">
+			            <KeyboardToolbar >
+			                <Toolbar>
+			                    <Items>
+			                        <Button systemButton="Ti.UI.iPhone.SystemButton.CANCEL" onClick="closeKeyboard"></Button>
+			                        <FlexSpace/>
+			                        <Button systemButton="Ti.UI.iPhone.SystemButton.SAVE" onClick="addRoom"></Button>
+			                    </Items>
+			                </Toolbar>
+			            </KeyboardToolbar>
+
+					</TextField>
 				</View>
 			</View>
 

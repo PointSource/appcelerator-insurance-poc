@@ -38,6 +38,10 @@ function addRoom() {
     }
 }
 
+function closeKeyboard () {
+    $.valueInput.blur();
+}
+
 function onPictureTaken(event) {
     var baseImage = Titanium.UI.createImageView({
         image:event.image,
@@ -78,6 +82,10 @@ function init() {
     });
 
     $.cameraIcon.text = Alloy.Globals.icomoon.icon("camera");
+
+    $.nameInput.addEventListener("return", function() {
+        $.valueInput.focus();
+    });
 
     if (!Ti.Media.getIsCameraSupported()) {
         alert("No camera is available on this device");

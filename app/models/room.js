@@ -28,6 +28,11 @@ exports.definition = {
                         }	
                     }	
                 }
+			},
+			getImagesForRoom: function (imageCollection) {
+				return imageCollection.where({
+					room_id: this.id
+				});
 			}
 		});
 
