@@ -1,8 +1,5 @@
 <Alloy>
 	<Window platform="android,windows" id="index" class="container" title="Insurance POC">
-		<ActionBar/>
-        <Menu platform="android"></Menu>
-
         <Require src="menu" id="menu"></Require>
 
 		<View id="AppWrapper">

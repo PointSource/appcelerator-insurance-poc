@@ -1,8 +1,5 @@
 <Alloy>
 	<Window id="addRoom" class="container" title="ADD ROOM">
-		<ActionBar/>
-        <Menu platform="android"></Menu>
-
 		<View id="AppWrapper">
 	        <Widget id="camera" src="ts.camera" onPictureTaken="onPictureTaken"/>
 
