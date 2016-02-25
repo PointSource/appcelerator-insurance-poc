@@ -15,16 +15,45 @@
 
 				<View class="input-wrapper">
 			        <TextField id="cardNumberField" class="number-input" hintText="Card number">
+			            <KeyboardToolbar platform="ios">
+			                <Toolbar>
+			                    <Items>
+			                        <Button systemButton="Ti.UI.iPhone.SystemButton.CANCEL" onClick="closeKeyboard" currentField="cardNumberField"></Button>
+			                        <FlexSpace/>
+			                        <Button style="Titanium.UI.iPhone.SystemButtonStyle.DONE" onClick="focusNextField" nextField="cardholderNameField">Next</Button>
+			                    </Items>
+			                </Toolbar>
+			            </KeyboardToolbar>
 			        </TextField>
 			    </View>
 				<View class="input-wrapper">
 			        <TextField id="cardholderNameField" hintText="Cardholder name" returnKeyType="Titanium.UI.RETURNKEY_NEXT"/>
 			    </View>
 				<View class="input-wrapper">
-			        <TextField id="postalCodeField" class="number-input"  hintText="Postal code" />
+			        <TextField id="postalCodeField" class="number-input"  hintText="Postal code">
+			            <KeyboardToolbar platform="ios">
+			                <Toolbar>
+			                    <Items>
+			                        <Button systemButton="Ti.UI.iPhone.SystemButton.CANCEL" onClick="closeKeyboard" currentField="postalCodeField"></Button>
+			                        <FlexSpace/>
+			                        <Button style="Titanium.UI.iPhone.SystemButtonStyle.DONE" onClick="focusNextField" nextField="cvvField">Next</Button>
+			                    </Items>
+			                </Toolbar>
+			            </KeyboardToolbar>
+			        </TextField>
 			    </View>
 				<View class="input-wrapper">
-			        <TextField id="cvvField" class="number-input" hintText="CVV" />
+			        <TextField id="cvvField" class="number-input" hintText="CVV">
+			            <KeyboardToolbar platform="ios">
+			                <Toolbar>
+			                    <Items>
+			                        <Button systemButton="Ti.UI.iPhone.SystemButton.CANCEL" onClick="closeKeyboard" currentField="cvvField"></Button>
+			                        <FlexSpace/>
+			                        <Button style="Titanium.UI.iPhone.SystemButtonStyle.DONE" onClick="submit">Done</Button>
+			                    </Items>
+			                </Toolbar>
+			            </KeyboardToolbar>
+			        </TextField>
 			    </View>
 
 				<View height="Ti.UI.SIZE">

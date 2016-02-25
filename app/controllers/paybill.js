@@ -42,6 +42,14 @@ function openCardIO() {
 	});
 }
 
+function closeKeyboard(e) {
+	$[e.source.currentField].blur();
+}
+
+function focusNextField(e) {
+	$[e.source.nextField].focus();
+}
+
 
 function init () {
 	Alloy.Globals.setUpNavBar({
@@ -51,6 +59,13 @@ function init () {
 
     $.cameraIcon.text = Alloy.Globals.icomoon.icon("camera");
 
+    $.cardholderNameField.addEventListener("return", function() {
+        $.postalCodeField.focus();
+    });
+
+    $.cvvField.addEventListener("return", function() {
+        submit();
+    });
 }
 
 init();
