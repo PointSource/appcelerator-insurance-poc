@@ -6,13 +6,13 @@
 
 /* Colors to be used in TSS */
 Alloy.Globals.Colors = {
-	"pointsource_blue": "#49a7f7",
-	"gray_verydark": "#282828",
-	"gray_dark": "#606060",
-	"gray_medium": "#b2b2b2",
-	"gray_light": "#eeeeee",
-	"green": "#9ad275",
-	"primary_accent": "#ee3c50"
+	pointsource_blue: "#49a7f7",
+	gray_verydark: "#282828",
+	gray_dark: "#606060",
+	gray_medium: "#b2b2b2",
+	gray_light: "#eeeeee",
+	green: "#9ad275",
+	primary_accent: "#ee3c50"
 }
 
 

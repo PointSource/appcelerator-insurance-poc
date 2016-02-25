@@ -5,19 +5,30 @@
 				<View class="input-wrapper">
 					<Label class="form-label">Scan your card</Label>
 				</View>
-				<View height="Ti.UI.SIZE">
-			        <Button class="button" top="10" bottom="10" onClick="openCardIO">Scan Card</Button>
+				<View class="card-scan-wrapper" onClick="openCardIO">
+			        <Label id="cameraIcon" class="icomoon-icon"></Label>
+					<Label class="card-scan-label bold">TAP TO SCAN</Label>
 				</View>
 				<View class="input-wrapper">
-					<Label class="form-label">Or enter your card information</Label>
+					<Label class="form-label">Or enter your card info</Label>
 				</View>
 
 				<View class="input-wrapper">
-			        <TextField id="accountNoField"  hintText="Account no." />
+			        <TextField id="cardNumberField"  hintText="Card number" />
 			    </View>
 				<View class="input-wrapper">
-			        <TextField id="routingNoField"  hintText="Routing no." />
+			        <TextField id="cardholderNameField" hintText="Cardholder name" />
 			    </View>
+				<View class="input-wrapper">
+			        <TextField id="postalCodeField"  hintText="Postal code" />
+			    </View>
+				<View class="input-wrapper">
+			        <TextField id="cvvField"  hintText="CVV" />
+			    </View>
+
+				<View height="Ti.UI.SIZE">
+			        <Button class="button" top="10" bottom="10" onClick="submit">SUBMIT PAYMENT</Button>
+				</View>
 			</View>
 		</View>
 	</Window>

@@ -18,7 +18,7 @@
 					<Label class="card-label small">Policy No.</Label>
 					<Label class="card-label header-2">12345678</Label>
 					<!-- Spacer -->
-					<View height="80"/>
+					<View height="60"/>
 				</View>
 				<View height="Ti.UI.SIZE">
 					<Button class="button button-secondary" onClick="goToPayBill" top="10">PAY NOW</Button>

@@ -1,14 +1,14 @@
 var cardio = require('com.pointsource.card.io');
 
 function handleScan(e) {
-	console.log('scan event', e);
-	var cardNumber = e.cardNumber;
+	$.cardNumberField.value = e.cardNumber;
+	$.cardholderNameField.value = e.cardholderName;
+	$.postalCodeField.value = e.postalCode;
+	$.cvvField.value = e.cvv;
 	var cardType = e.cardType;
-	var cardholderName = e.cardholderName;
 	var cvv = e.cvv;
 	var expiryMonth = e.expiryMonth;
 	var expiryYear = e.expiryYear;
-	var postalCode = e.postalCode;
 	removeListeners();
 }
 
@@ -22,6 +22,9 @@ function removeListeners() {
 	cardio.removeEventListener("cancel", handleCancel);
 }
 
+function submit() {
+	alert("submit payment");
+}
 
 function openCardIO() {
 
@@ -30,11 +33,11 @@ function openCardIO() {
 
 	console.log("Opening Card.io");
 	cardio.scanCard({
-		languageOrLocale: "fr",
+		languageOrLocale: "en",
 		collectPostalCode: true,
 		collectCardholderName: true,
-		guideColor: "yellow",
-		navigationBarTintColor: "green",
+		guideColor: "white",
+		navigationBarTintColor: "#eeeeee",
 		restrictPostalCodeToNumericOnly: true
 	});
 }
@@ -43,8 +46,10 @@ function init () {
 	Alloy.Globals.setUpNavBar({
 		currentWindow: $.payBillWindow,
 		appWrapper: $.AppWrapper
-	});
-	
+	});	
+
+    $.cameraIcon.text = Alloy.Globals.icomoon.icon("camera");
+
 }
 
 init();
