@@ -6,7 +6,7 @@ function goToPayBill (event) {
 
 function init() {
     Alloy.Globals.setUpNavBar({
-        currentWindow: $.payBillLanding,
+        currentWindow: $.viewBill,
         appWrapper: $.AppWrapper
     });
 

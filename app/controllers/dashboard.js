@@ -1,7 +1,7 @@
 var args = arguments[0] || {};
 
-function goToPayBillLanding (event) {
-	Alloy.Globals.Navigator.open("payBillLanding", {});
+function goToViewBill (event) {
+	Alloy.Globals.Navigator.open("viewBill", {});
 }
 
 function goToHomeInventory (event) {

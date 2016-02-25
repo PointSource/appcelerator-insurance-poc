@@ -42,6 +42,7 @@ function openCardIO() {
 	});
 }
 
+
 function init () {
 	Alloy.Globals.setUpNavBar({
 		currentWindow: $.payBillWindow,

@@ -22,3 +22,7 @@
 		fontSize: 20
 	}
 }
+
+".number-input": {
+	keyboardType: Ti.UI.KEYBOARD_DECIMAL_PAD
+}

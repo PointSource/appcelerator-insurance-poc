@@ -1,5 +1,5 @@
 <Alloy>
-	<Window id="payBillLanding" class="container" title="YOUR BILL">
+	<Window id="viewBill" class="container" title="YOUR BILL">
 		<View id="AppWrapper">
 
 			<View layout="vertical">

@@ -1,7 +1,7 @@
 <Alloy>
 	<Window id="payBillWindow" class="container" title="PAY BILL">
 		<View id="AppWrapper">
-			<View layout="vertical">
+			<ScrollView layout="vertical">
 				<View class="input-wrapper">
 					<Label class="form-label">Scan your card</Label>
 				</View>
@@ -14,22 +14,23 @@
 				</View>
 
 				<View class="input-wrapper">
-			        <TextField id="cardNumberField"  hintText="Card number" />
+			        <TextField id="cardNumberField" class="number-input" hintText="Card number">
+			        </TextField>
 			    </View>
 				<View class="input-wrapper">
-			        <TextField id="cardholderNameField" hintText="Cardholder name" />
+			        <TextField id="cardholderNameField" hintText="Cardholder name" returnKeyType="Titanium.UI.RETURNKEY_NEXT"/>
 			    </View>
 				<View class="input-wrapper">
-			        <TextField id="postalCodeField"  hintText="Postal code" />
+			        <TextField id="postalCodeField" class="number-input"  hintText="Postal code" />
 			    </View>
 				<View class="input-wrapper">
-			        <TextField id="cvvField"  hintText="CVV" />
+			        <TextField id="cvvField" class="number-input" hintText="CVV" />
 			    </View>
 
 				<View height="Ti.UI.SIZE">
 			        <Button class="button" top="10" bottom="10" onClick="submit">SUBMIT PAYMENT</Button>
 				</View>
-			</View>
+			</ScrollView>
 		</View>
 	</Window>
 </Alloy>

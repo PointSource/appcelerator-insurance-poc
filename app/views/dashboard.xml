@@ -26,7 +26,7 @@
 						<Label class="dashboard-icon-label">Policies</Label>
 					</View>
 				</View>
-				<View class="dashboard-grid-cell columns-4" onClick="goToPayBillLanding">
+				<View class="dashboard-grid-cell columns-4" onClick="goToViewBill">
 					<View class="dashboard-icon-wrapper">
 						<Label id="paybillIcon" class="icomoon-icon dashboard-icon"></Label>
 						<Label class="dashboard-icon-label">Pay Bill</Label>
