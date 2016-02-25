@@ -1,3 +1,14 @@
 ".card-label": {
 	left: 30
 }
+
+".small": {
+	top: 10
+}
+
+".header-2": {
+	top: -5
+}
+".header-1": {
+	top: -10
+}
