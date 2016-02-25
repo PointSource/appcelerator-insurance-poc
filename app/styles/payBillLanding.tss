@@ -1,5 +1,5 @@
 ".card-label": {
-	left: 30
+	left: 50
 }
 
 ".small": {
@@ -11,4 +11,21 @@
 }
 ".header-1": {
 	top: -10
+}
+
+"#autoIcon": {
+	left: 10,
+	font: {
+		fontSize: 35
+	}
+}
+
+".due-label": {
+	color: Alloy.Globals.Colors.primary_accent
+}
+
+".auto-label": {
+	font: {
+		fontSize: 18
+	}
 }

@@ -9,6 +9,9 @@ function init() {
         currentWindow: $.payBillLanding,
         appWrapper: $.AppWrapper
     });
+
+	$.autoIcon.text = Alloy.Globals.icomoon.icon("main-auto");
+
 }
 
 init();
