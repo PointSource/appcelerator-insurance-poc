@@ -15,6 +15,11 @@ http://docs.appcelerator.com/platform/latest/#!/guide/Alloy_Styles_and_Themes
 	statusBarStyle: Titanium.UI.iPhone.StatusBar.LIGHT_CONTENT
 }
 
+"Window[platform=android]" : { 
+	/* Keeps keyboard from automatically showing */
+	windowSoftInputMode: Titanium.UI.Android.SOFT_INPUT_STATE_HIDDEN
+}
+
 
 /* Colors */
 

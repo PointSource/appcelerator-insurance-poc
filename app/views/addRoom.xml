@@ -22,7 +22,7 @@
 			                    <Items>
 			                        <Button systemButton="Ti.UI.iPhone.SystemButton.CANCEL" onClick="closeKeyboard"></Button>
 			                        <FlexSpace/>
-			                        <Button systemButton="Ti.UI.iPhone.SystemButton.SAVE" onClick="addRoom"></Button>
+			                        <Button systemButton="Ti.UI.iPhone.SystemButton.SAVE" onClick="submit"></Button>
 			                    </Items>
 			                </Toolbar>
 			            </KeyboardToolbar>
@@ -36,7 +36,7 @@
 			        <Label id="cameraIcon" class="icomoon-icon" onClick="takePicture"></Label>
 	        	</View>
 		        <ScrollView id="imagePreview"></ScrollView>
-				<Button class="button submit-button" onClick="addRoom">Submit</Button>
+				<Button class="button submit-button" onClick="submit">Submit</Button>
 	        </View>
         
 		</View>

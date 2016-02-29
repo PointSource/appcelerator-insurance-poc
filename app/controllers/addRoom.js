@@ -4,7 +4,7 @@ var addRoomPage = {
     images: []
 }
 
-function addRoom() {
+function submit() {
     var parsedValue = parseInt($.valueInput.value, 10);
     if (isNaN(parsedValue)) {
         alert("Invalid estimated value. Please only enter numbers.");
@@ -85,6 +85,10 @@ function init() {
 
     $.nameInput.addEventListener("return", function() {
         $.valueInput.focus();
+    });
+
+    $.valueInput.addEventListener("return", function() {
+        submit();
     });
 
     if (!Ti.Media.getIsCameraSupported()) {
