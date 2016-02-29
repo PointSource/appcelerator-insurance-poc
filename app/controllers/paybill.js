@@ -13,7 +13,6 @@ function handleScan(e) {
 }
 
 function handleCancel(e) {
-	console.log("Canceled scan");
 	removeListeners();
 }
 
@@ -23,7 +22,7 @@ function removeListeners() {
 }
 
 function submit() {
-	alert("submit payment");
+	$.payBillWindow.close();
 }
 
 function openCardIO() {
@@ -31,7 +30,6 @@ function openCardIO() {
 	cardio.addEventListener("scan", handleScan);
 	cardio.addEventListener("cancel", handleCancel);
 
-	console.log("Opening Card.io");
 	cardio.scanCard({
 		languageOrLocale: "en",
 		collectPostalCode: true,
