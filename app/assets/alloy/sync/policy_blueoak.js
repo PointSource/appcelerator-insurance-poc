@@ -15,16 +15,8 @@ module.exports.sync = function(method, model, options) {
 
 		// This case is called by the Model.fetch and Collection.fetch methods to retrieve data.
 		case 'read':
-			// Use the idAttribute property in case the model ID is set to something else besides 'id'
-			if (payload[model.idAttribute]) {
-				console.log('trying to fetch one model')
-				// If we have an ID, fetch only one document
-				http_request('GET', BASE_URL + payload[model.idAttribute], null, callback);
-			} else {
-				console.log('trying to fetch all policies')
-				// if not, fetch all documents
-				http_request('GET', BASE_URL, null, callback);
-			}
+			// Fetch all documents
+			http_request('GET', BASE_URL, null, callback);
 			break;
 
 		// This case is called by the Model.save and Collection.create methods

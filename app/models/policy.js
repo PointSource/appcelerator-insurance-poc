@@ -4,7 +4,8 @@ exports.definition = {
 		    "policyNumber": "integer",
 		    "type": "text",
 		    "coverageStartDate": "text",
-		    "coverageEndDate": "text"
+		    "coverageEndDate": "text",
+		    "billDetails": "text"
 		},
 		adapter: {
 			type: "policy_blueoak",
@@ -15,6 +16,7 @@ exports.definition = {
 	},
 	extendModel: function(Model) {
 		_.extend(Model.prototype, {
+            idAttribute: "policyNumber"
 			// extended functions and properties go here
 		});
 

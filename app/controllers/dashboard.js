@@ -1,7 +1,16 @@
 var args = arguments[0] || {};
 
 function goToViewBill (event) {
-	Alloy.Globals.Navigator.open("viewBill", {});
+	var policyCollection = Alloy.Collections.instance('policy');
+
+	policyCollection.fetch({
+		success: function () {
+			Alloy.Globals.Navigator.open("viewBill", {policyCollection: policyCollection});
+		},
+		error: function () {
+			alert('error fetching policies');
+		}
+	});
 }
 
 function goToHomeInventory (event) {
