@@ -10,5 +10,6 @@
   "os:windows": {},
   "dependencies": {
     "ts.camera": "*"
-  }
+  },
+  "backbone": "1.1.2"
 }

@@ -1,4 +1,5 @@
 <Alloy>
+	<Model src="policy" instance="true" id="billDetail"/>
 	<Window id="viewBill" class="container" title="YOUR BILL">
 		<View id="AppWrapper">
 
