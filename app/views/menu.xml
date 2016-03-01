@@ -5,7 +5,7 @@
 				<Label class="">YOUR POINT AGENT</Label>
 				<Label class="pointsource-blue-text header-2">EVA JOHNSON</Label>
 				<View class="agent-photo-section">
-					<ImageView id="agentPhoto"/>
+					<ImageView id="agentPhoto" image="/images/Point-Insurance-Agent-Photo-menu.png" height="100" width="100"/>
 					<Label id="callIcon" class="icomoon-icon agent-icon" left="0"></Label>	
 					<Label id="emailIcon" class="icomoon-icon agent-icon"></Label>	
 					<Label id="mapIcon" class="icomoon-icon agent-icon" right="0"></Label>

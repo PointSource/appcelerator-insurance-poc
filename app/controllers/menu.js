@@ -1,9 +1,5 @@
 var menuOpen = false;
 
-$.agentPhoto.image = 'images/Point-Insurance-Agent-Photo-menu.png';
-$.agentPhoto.height = 100;
-$.agentPhoto.width = 100;
-
 $.callIcon.text = Alloy.Globals.icomoon.icon("menu-call");
 $.emailIcon.text = Alloy.Globals.icomoon.icon("menu-email");
 $.mapIcon.text = Alloy.Globals.icomoon.icon("menu-map");
@@ -66,7 +62,7 @@ for (i in clickableChildren) {
 
 
 function goToPayBill (event) {
-	Alloy.Globals.Navigator.open("paybill", {});
+	Alloy.Globals.Navigator.open("viewBill", {});
 }
 
 function goToHomeInventory (event) {

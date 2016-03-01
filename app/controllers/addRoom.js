@@ -5,6 +5,10 @@ var addRoomPage = {
 }
 
 function submit() {
+    if ($.valueInput.value.length === 0) {
+        alert("Please fill out all fields");
+        return;
+    }
     var parsedValue = parseInt($.valueInput.value, 10);
     if (isNaN(parsedValue)) {
         alert("Invalid estimated value. Please only enter numbers.");
@@ -13,7 +17,7 @@ function submit() {
     else {
         var room = Alloy.createModel('room', {
             name : $.nameInput.value,
-            value : parseInt($.valueInput.value, 10)
+            value : parsedValue
         });
 
         if (room.isValid()) {
