@@ -12,7 +12,7 @@ exports.definition = {
 		adapter: {
 			type: "policy_blueoak",
 			collection_name: "policy",
-			// Endpoint URL to access the Arrow application
+			// Endpoint URL to access the BlueOak server
 			base_url: "http://10.128.64.179:1337/policies/"
 		}
 	},

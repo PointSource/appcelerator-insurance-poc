@@ -1,7 +1,14 @@
 var args = arguments[0] || {};
+var currentPolicy = {};
 
 function goToPayBill (event) {
-	Alloy.Globals.Navigator.open("paybill", {});
+	var payment = Alloy.createModel('payment', {
+		policyNumber: currentPolicy.get("policyNumber"),
+		paymentAmount: 50
+	});
+
+	payment.save();
+	// Alloy.Globals.Navigator.open("paybill", {});
 }
 
 function formatVehicle(vehicle) {
@@ -27,7 +34,8 @@ function init() {
 
 	var policyCollection = args.policyCollection;
 
-	var currentPolicy = policyCollection.get(12345678)
+	currentPolicy = policyCollection.get(12345678);
+	// var currentPolicy = policyCollection.get(90000008);
 	$.currentPolicy.set(currentPolicy.attributes);
 
 	var vehicleCollection = Alloy.Collections.vehicles;
@@ -35,6 +43,10 @@ function init() {
 
 	var driverCollection = Alloy.Collections.drivers;
 	driverCollection.reset(currentPolicy.get('drivers'));
+
+	$.viewBill.addEventListener('close', function() {
+	    $.destroy();
+	});
 
 }
 
