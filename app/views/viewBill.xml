@@ -7,7 +7,7 @@
 				<View class="card top-card" layout="vertical">
 					<View height="Ti.UI.SIZE" top="20">
 						<Label id="autoIcon" class="icomoon-icon"></Label>
-						<Label class="card-label header-3">AUTO</Label>
+						<Label class="card-label header-3">{$.currentPolicy.type}</Label>
 					</View>
 					<Label class="card-label small">AMOUNT OF</Label>
 					<Label class="card-label header-1">{$.currentPolicy.totalAmountDue}</Label>
