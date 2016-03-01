@@ -5,10 +5,17 @@ function goToPayBill (event) {
 }
 
 function formatVehicle(vehicle) {
-	var formattedVehicle = vehicle.toJSON();
-	formattedVehicle.display = formattedVehicle.make + " " + formattedVehicle.model + " " + formattedVehicle.year;
-	return formattedVehicle;
+	var formatted = vehicle.toJSON();
+	formatted.display = formatted.make + " " + formatted.model + " " + formatted.year;
+	return formatted;
 }
+
+function formatDriver(driver) {
+	var formatted = driver.toJSON();
+	formatted.display = formatted.firstName + " " + formatted.lastName;
+	return formatted;
+}
+
 
 function init() {
     Alloy.Globals.setUpNavBar({
@@ -25,6 +32,10 @@ function init() {
 
 	var vehicleCollection = Alloy.Collections.vehicles;
 	vehicleCollection.reset(currentPolicy.get('vehicles'));
+
+	var driverCollection = Alloy.Collections.drivers;
+	driverCollection.reset(currentPolicy.get('drivers'));
+
 }
 
 init();

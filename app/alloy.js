@@ -21,6 +21,10 @@ var vehicleCollection = Backbone.Collection.extend({});
 var vehicles = new vehicleCollection();
 Alloy.Collections.vehicles = vehicles;
 
+var driverCollection = Backbone.Collection.extend({});
+var drivers = new driverCollection();
+Alloy.Collections.drivers = drivers;
+
 
 /* Icon Font */
 
