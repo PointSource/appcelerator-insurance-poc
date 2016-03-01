@@ -15,11 +15,21 @@ Alloy.Globals.Colors = {
 	primary_accent: "#ee3c50"
 }
 
+/* Custom backbone models */
+
+var vehicleCollection = Backbone.Collection.extend({});
+var vehicles = new vehicleCollection();
+Alloy.Collections.vehicles = vehicles;
+
+
+/* Icon Font */
 
 var IconicFont = require('/lib/IconicFont');
 Alloy.Globals.icomoon = new IconicFont({
     font: '/lib/icomoon'
 });
+
+/* Utility functions */
 
 Alloy.Globals.findChildrenByClass = function (parent, className) {
 	var matchingChildren = []
@@ -32,7 +42,7 @@ Alloy.Globals.findChildrenByClass = function (parent, className) {
 	return matchingChildren;
 }
 
-
+/* Global Layout */
 Alloy.Globals.setUpNavBar = function (options) {
 
 	var sideMenu = Alloy.createController('menu');

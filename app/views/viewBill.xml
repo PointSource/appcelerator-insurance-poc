@@ -1,5 +1,5 @@
 <Alloy>
-	<Model src="policy" instance="true" id="billDetail"/>
+	<Model src="policy" instance="true" id="currentPolicy"/>
 	<Window id="viewBill" class="container" title="YOUR BILL">
 		<View id="AppWrapper">
 
@@ -10,14 +10,16 @@
 						<Label class="card-label header-3">AUTO</Label>
 					</View>
 					<Label class="card-label small">AMOUNT OF</Label>
-					<Label class="card-label header-1">$176.59</Label>
-					<Label class="card-label header-3 due-label">DUE MARCH 05, 2016</Label>
+					<Label class="card-label header-1">{$.currentPolicy.totalAmountDue}</Label>
+					<Label class="card-label header-3 due-label">{$.currentPolicy.formattedDueDate}</Label>
 					<Label class="card-label small">Vehicle(s)</Label>
-					<Label class="card-label header-2">Volkswagen Jetta 2014</Label>
+					<View dataCollection="vehicles" height="Ti.UI.SIZE" layout="vertical" dataTransform="formatVehicle">
+						<Label class="card-label header-2">{display}</Label>
+					</View>
 					<Label class="card-label small">Driver(s)</Label>
 					<Label class="card-label header-2">Hunter Patterson</Label>
 					<Label class="card-label small">Policy No.</Label>
-					<Label class="card-label header-2">12345678</Label>
+					<Label class="card-label header-2">{$.currentPolicy.policyNumber}</Label>
 					<!-- Spacer -->
 					<View height="60"/>
 				</View>

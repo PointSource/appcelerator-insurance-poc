@@ -1,4 +1,3 @@
-var string = require('alloy/string');
 exports.definition = {
 	config: {
 		columns: {

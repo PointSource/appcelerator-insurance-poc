@@ -1,3 +1,5 @@
+var moment = require('alloy/moment');
+
 exports.definition = {
 	config: {
 		columns: {
@@ -16,8 +18,14 @@ exports.definition = {
 	},
 	extendModel: function(Model) {
 		_.extend(Model.prototype, {
-            idAttribute: "policyNumber"
-			// extended functions and properties go here
+            idAttribute: "policyNumber",
+            transform: function() {
+            	var transformed = this.toJSON();
+            	transformed.totalAmountDue = "$"+transformed.billDetails.totalAmountDue;
+            	var dueDate = moment(transformed.billDetails.dueDate, "MM/DD/YYYY")
+            	transformed.formattedDueDate = dueDate.format("MMMM DD, YYYY").toUpperCase();
+            	return transformed;
+            }
 		});
 
 		return Model;

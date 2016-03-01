@@ -4,6 +4,12 @@ function goToPayBill (event) {
 	Alloy.Globals.Navigator.open("paybill", {});
 }
 
+function formatVehicle(vehicle) {
+	var formattedVehicle = vehicle.toJSON();
+	formattedVehicle.display = formattedVehicle.make + " " + formattedVehicle.model + " " + formattedVehicle.year;
+	return formattedVehicle;
+}
+
 function init() {
     Alloy.Globals.setUpNavBar({
         currentWindow: $.viewBill,
@@ -14,13 +20,11 @@ function init() {
 
 	var policyCollection = args.policyCollection;
 
-	console.log('policyCollection on viewBill', JSON.stringify(policyCollection));
+	var currentPolicy = policyCollection.get(12345678)
+	$.currentPolicy.set(currentPolicy.attributes);
 
-	console.log('get policy by id', JSON.stringify(policyCollection.get(12345678)));
-	console.log('billDetails', JSON.stringify(policyCollection.at(0).get('billDetails')));
-	console.log('bill dueDate', JSON.stringify(policyCollection.at(0).get('billDetails').dueDate));
-
-
+	var vehicleCollection = Alloy.Collections.vehicles;
+	vehicleCollection.reset(currentPolicy.get('vehicles'));
 }
 
 init();
