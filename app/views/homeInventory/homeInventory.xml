@@ -12,7 +12,7 @@
 					<Label id="houseIcon" class="icomoon-icon"></Label>
 				</View>
 				<View dataCollection="room" dataTransform="formatRoom" dataFunction="redrawRoomList" layout="vertical" height="Ti.UI.SIZE">
-					<Require src="roomRow"/>
+					<Require src="homeInventory/roomRow"/>
 				</View>
 
 				<View height="Ti.UI.SIZE">

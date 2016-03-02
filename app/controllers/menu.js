@@ -62,11 +62,11 @@ for (i in clickableChildren) {
 
 
 function goToPayBill (event) {
-	Alloy.Globals.Navigator.open("viewBill", {});
+	Alloy.Globals.Navigator.open("payBill/viewBill", {});
 }
 
 function goToHomeInventory (event) {
-	Alloy.Globals.Navigator.open("homeInventory", {});
+	Alloy.Globals.Navigator.open("homeInventory/homeInventory", {});
 }
 
 exports.toggleMenu = toggleMenu;

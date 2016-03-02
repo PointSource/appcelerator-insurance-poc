@@ -1,0 +1,30 @@
+<Alloy>
+	<View class="card top-card" layout="vertical">
+		<View height="Ti.UI.SIZE" top="20">
+			<Label id="autoIcon" class="icomoon-icon"></Label>
+			<Label class="card-label header-3">{type}</Label>
+		</View>
+		<Label class="card-label small">AMOUNT OF</Label>
+		<Label class="card-label header-1">{minimumDue}</Label>
+		<Label class="card-label header-3 due-label">{formattedDueDate}</Label>
+		<Label class="card-label small">Vehicle(s)</Label>
+<!-- 
+		<View dataCollection="vehicles" height="Ti.UI.SIZE" layout="vertical" dataTransform="formatVehicle">
+			<Label class="card-label header-2">{display}</Label>
+		</View> 
+-->
+		<Label class="card-label small">Driver(s)</Label>
+<!-- 		
+		<View dataCollection="drivers" height="Ti.UI.SIZE" layout="vertical" dataTransform="formatDriver">
+			<Label class="card-label header-2">{display}</Label>
+		</View> 
+-->
+		<Label class="card-label small">Policy No.</Label>
+		<Label class="card-label header-2">{policyNumber}</Label>
+		<!-- Spacer -->
+		<View height="60"/>
+		<View height="Ti.UI.SIZE">
+			<Button class="button button-secondary" onClick="goToPayBill" top="10">PAY NOW</Button>
+		</View>
+	</View>
+</Alloy>

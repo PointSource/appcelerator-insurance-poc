@@ -1,20 +1,22 @@
 var args = arguments[0] || {};
 
 function goToViewBill (event) {
-	var policyCollection = Alloy.Collections.instance('policy');
+	Alloy.Globals.Navigator.open("payBill/billList", {});
 
-	policyCollection.fetch({
-		success: function () {
-			Alloy.Globals.Navigator.open("viewBill", {policyCollection: policyCollection});
-		},
-		error: function () {
-			alert('error fetching policies');
-		}
-	});
+	// var policyCollection = Alloy.Collections.instance('policy');
+
+	// policyCollection.fetch({
+	// 	success: function () {
+	// 		Alloy.Globals.Navigator.open("payBill/billList", {policyCollection: policyCollection});
+	// 	},
+	// 	error: function () {
+	// 		alert('error fetching policies');
+	// 	}
+	// });
 }
 
 function goToHomeInventory (event) {
-	Alloy.Globals.Navigator.open("homeInventory", {});
+	Alloy.Globals.Navigator.open("homeInventory/homeInventory", {});
 }
 
 $.profileIcon.text = Alloy.Globals.icomoon.icon("main-profile");

@@ -21,7 +21,7 @@ function getTotalEstimate () {
 }
 
 function goToAddRoom () {
-	Alloy.Globals.Navigator.open("addRoom", {});
+	Alloy.Globals.Navigator.open("homeInventory/addRoom", {});
 }
 
 
