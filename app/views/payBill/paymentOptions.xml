@@ -1,0 +1,25 @@
+<Alloy>
+	<Model src="policy" instance="true" id="currentPolicy"/>
+	<Window id="paymentOptions" class="container">
+		<View id="AppWrapper">
+			<View layout="vertical">
+				<Label>PAYMENT OPTIONS</Label>
+				<View layout="horizontal" height="Ti.UI.SIZE">
+					<View class="radio radio-selected"></View>
+					<View layout="vertical" height="Ti.UI.SIZE">
+						<Label class="card-label small">MINIMUM DUE NOW</Label>
+						<Label class="card-label header-2">{$.currentPolicy.minimumDue}</Label>
+					</View>
+				</View>
+				<View layout="horizontal" height="Ti.UI.SIZE">
+					<View class="radio"></View>
+					<View layout="vertical" height="Ti.UI.SIZE">
+						<Label class="card-label small">FULL BALANCE</Label>
+						<Label class="card-label header-2">{$.currentPolicy.totalAmountDue}</Label>
+					</View>
+				</View>
+				<Button class="button" onClick="goToPayBill">PAY BY CREDIT CARD</Button>
+			</View>
+		</View>
+	</Window>
+</Alloy>

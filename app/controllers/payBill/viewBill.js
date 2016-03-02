@@ -1,7 +1,7 @@
 var args = arguments[0] || {};
 
 function goToPayBill (event) {
-	Alloy.Globals.Navigator.open("payBill/payBill", {currentPolicy: $model});
+	Alloy.Globals.Navigator.open("payBill/paymentOptions", {currentPolicy: $model});
 }
 
 function init() {
