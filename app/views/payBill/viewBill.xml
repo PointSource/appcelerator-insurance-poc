@@ -23,8 +23,7 @@
 		<Label class="card-label header-2">{policyNumber}</Label>
 		<!-- Spacer -->
 		<View height="Ti.UI.SIZE">
-			<Button class="button button-secondary" onClick="goToPayBill" top="10">PAY NOW</Button>
+			<Button class="button button-secondary" onClick="goToPayBill" top="10" bottom="20">PAY NOW</Button>
 		</View>
-		<View height="60"/>
 	</View>
 </Alloy>

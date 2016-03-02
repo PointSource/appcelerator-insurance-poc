@@ -1,8 +1,6 @@
 var args = arguments[0] || {};
 var moment = require('alloy/moment');
 var string = require('alloy/string');
-var policyCollection = Alloy.Collections.policy;
-var roomCollection = Alloy.Collections.room;
 
 function formatPolicy(policy) {
 	var transformed = policy.toJSON();
@@ -11,7 +9,6 @@ function formatPolicy(policy) {
 	var dueDate = moment(transformed.billDetails.dueDate, "MM/DD/YYYY")
 	transformed.formattedDueDate = dueDate.format("MMMM DD, YYYY").toUpperCase();
 	return transformed;
-
 }
 
 
@@ -21,9 +18,7 @@ function init() {
         appWrapper: $.AppWrapper
     });
 
- 	policyCollection.fetch();
- 	roomCollection.fetch();
-
+    Alloy.Collections.policy.fetch();
 }
 
 init();

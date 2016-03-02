@@ -18,16 +18,9 @@ function formatDriver(driver) {
 	return formatted;
 }
 
-// function updatePolicyData() {
-// 	currentPolicy = policyCollection.get(12345678);
-// 	$.currentPolicy.set(currentPolicy.attributes);
-// }
-
 function init() {
 
 	$.autoIcon.text = Alloy.Globals.icomoon.icon("main-auto");
-
-	// policyCollection.on('change', updatePolicyData);
 
 	var vehicleCollection = Alloy.Collections.vehicles;
 	if ($model.has('vehicles')) {
@@ -38,10 +31,6 @@ function init() {
 	if ($model.has('drivers')) {
 		driverCollection.reset($model.get('drivers'));
 	}
-
-	// $.viewBill.addEventListener('close', function() {
-	//     $.destroy();
-	// });
 
 }
 
