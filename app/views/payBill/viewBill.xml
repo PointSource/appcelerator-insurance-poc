@@ -7,17 +7,10 @@
 		<Label class="card-label small">AMOUNT OF</Label>
 		<Label class="card-label header-1">{minimumDue}</Label>
 		<Label class="card-label header-3 due-label">{formattedDueDate}</Label>
-		<Label class="card-label small">Vehicle(s)</Label>
  
-		<View dataCollection="vehicles" height="Ti.UI.SIZE" layout="vertical" dataTransform="formatVehicle">
-			<Label class="card-label header-2">{display}</Label>
-		</View> 
-
-		<Label class="card-label small">Driver(s)</Label>
+		<View children="{vehicle_data}" height="Ti.UI.SIZE" layout="vertical"/> 
  		
-		<View dataCollection="drivers" height="Ti.UI.SIZE" layout="vertical" dataTransform="formatDriver">
-			<Label class="card-label header-2">{display}</Label>
-		</View> 
+		<View children="{driver_data}" height="Ti.UI.SIZE" layout="vertical"/> 
 
 		<Label class="card-label small">Policy No.</Label>
 		<Label class="card-label header-2">{policyNumber}</Label>

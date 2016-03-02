@@ -15,17 +15,6 @@ Alloy.Globals.Colors = {
 	primary_accent: "#ee3c50"
 }
 
-/* Custom backbone models */
-
-var vehicleCollection = Backbone.Collection.extend({});
-var vehicles = new vehicleCollection();
-Alloy.Collections.vehicles = vehicles;
-
-var driverCollection = Backbone.Collection.extend({});
-var drivers = new driverCollection();
-Alloy.Collections.drivers = drivers;
-
-
 /* Icon Font */
 
 var IconicFont = require('/lib/IconicFont');
