@@ -13,8 +13,6 @@ module.exports.sync = function(method, model, options) {
 
 		// This case is called by the Model.fetch and Collection.fetch methods to retrieve data.
 		case 'read':
-			// Fetch all documents
-			// http_request('GET', BASE_URL, null, callback);
 			break;
 
 		// This case is called by the Model.save and Collection.create methods
@@ -42,12 +40,6 @@ module.exports.sync = function(method, model, options) {
 		// This case is called by the Model.save and Collection.create methods
 		// to update a model if they have IDs set.
 		case 'update':
-			// console.log('update payload = ', payload)
-			// if (payload[model.idAttribute]) {
-			// 	http_request('PUT', BASE_URL + payload[model.idAttribute], {paymentAmount: payload.paymentAmount}, callback);
-			// } else {
-			// 	error = 'ERROR: Model does not have an ID!';
-			// }
 			break;
 
 		default :
@@ -64,13 +56,12 @@ module.exports.sync = function(method, model, options) {
 	function callback(error, response) {
 		var res = response ? JSON.parse(response) : null;
 		if (error) {
-			console.log("there was an error");
 			// Calls the default Backbone error callback
 			// and invokes a custom callback if options.error was defined.
-			// var err = res.error || error;
-			// Ti.API.error('ERROR: ' + err);
-			// options.error(model, error, options);
-			// model.trigger('error');
+			var err = res.error || error;
+			Ti.API.error('ERROR: ' + err);
+			options.error(model, error, options);
+			model.trigger('error');
 		} else {
 			// Calls the default Backbone success callback
 			// and invokes a custom callback if options.success was defined.

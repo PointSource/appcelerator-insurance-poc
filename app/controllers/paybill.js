@@ -1,4 +1,6 @@
+var args = arguments[0] || {};
 var cardio = require('com.pointsource.card.io');
+var policyCollection = Alloy.Collections.instance('policy');
 
 function handleScan(e) {
 	$.cardNumberField.value = e.cardNumber;
@@ -22,7 +24,22 @@ function removeListeners() {
 }
 
 function submit() {
-	$.payBillWindow.close();
+
+	var payment = Alloy.createModel('payment', {
+		policyNumber: args.currentPolicy.get("policyNumber"),
+		paymentAmount: 50
+	});
+
+	payment.save();
+
+	policyCollection.fetch({
+		success: function() {
+			$.payBillWindow.close();
+		}, error: function() {
+			alert('could not submit payment');
+		}
+	});
+
 }
 
 function openCardIO() {
