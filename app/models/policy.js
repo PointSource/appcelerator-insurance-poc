@@ -1,4 +1,5 @@
 var moment = require('alloy/moment');
+var string = require('alloy/string');
 
 exports.definition = {
 	config: {
@@ -21,7 +22,8 @@ exports.definition = {
             idAttribute: "policyNumber",
             transform: function() {
             	var transformed = this.toJSON();
-            	transformed.totalAmountDue = "$"+transformed.billDetails.totalAmountDue;
+            	transformed.totalAmountDue = string.formatCurrency(transformed.billDetails.totalAmountDue);
+            	transformed.minimumDue = string.formatCurrency(transformed.billDetails.minimumDue);
             	var dueDate = moment(transformed.billDetails.dueDate, "MM/DD/YYYY")
             	transformed.formattedDueDate = dueDate.format("MMMM DD, YYYY").toUpperCase();
             	return transformed;

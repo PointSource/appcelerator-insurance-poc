@@ -10,7 +10,7 @@
 						<Label class="card-label header-3">{$.currentPolicy.type}</Label>
 					</View>
 					<Label class="card-label small">AMOUNT OF</Label>
-					<Label class="card-label header-1">{$.currentPolicy.totalAmountDue}</Label>
+					<Label class="card-label header-1">{$.currentPolicy.minimumDue}</Label>
 					<Label class="card-label header-3 due-label">{$.currentPolicy.formattedDueDate}</Label>
 					<Label class="card-label small">Vehicle(s)</Label>
 					<View dataCollection="vehicles" height="Ti.UI.SIZE" layout="vertical" dataTransform="formatVehicle">
