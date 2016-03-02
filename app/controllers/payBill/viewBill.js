@@ -1,22 +1,15 @@
 var args = arguments[0] || {};
-var policyCollection = {};
-var currentPolicy = {};
 
 function goToPayBill (event) {
 	Alloy.Globals.Navigator.open("payBill/payBill", {currentPolicy: $model});
 }
 
 function init() {
-	switch ($model.get("type")) {
-		case "AUTO":
-			$.typeIcon.text = Alloy.Globals.icomoon.icon("main-auto");
-			break;
-		case "RENTERS":
-		case "HOME":
-			$.typeIcon.text = Alloy.Globals.icomoon.icon("main-home");
-			break;
-		default:
-			$.typeIcon.text = Alloy.Globals.icomoon.icon("main-auto");
+	if ($model.getIsOverdue()) {
+		$.payNowButton.color = Alloy.Globals.Colors.primary_accent;
+		$.payNowButton.borderColor = Alloy.Globals.Colors.primary_accent;
+
+		$.dueLabel.color =  Alloy.Globals.Colors.primary_accent;
 	}
 }
 

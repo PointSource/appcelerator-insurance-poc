@@ -1,16 +1,7 @@
 var args = arguments[0] || {};
 
 function goToViewBill (event) {
-	var policyCollection = Alloy.Collections.instance('policy');
-
-	policyCollection.fetch({
-		success: function () {
-			Alloy.Globals.Navigator.open("payBill/billList", {policyCollection: policyCollection});
-		},
-		error: function () {
-			alert('error fetching policies');
-		}
-	});
+	Alloy.Globals.Navigator.open("payBill/billList", {});
 }
 
 function goToHomeInventory (event) {

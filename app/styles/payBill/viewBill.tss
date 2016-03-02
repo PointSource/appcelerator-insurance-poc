@@ -20,7 +20,6 @@
 	}
 }
 
-".due-label": {
-	color: Alloy.Globals.Colors.primary_accent,
+"#dueLabel": {
 	top: -8
 }

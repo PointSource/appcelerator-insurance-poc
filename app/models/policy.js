@@ -27,7 +27,28 @@ exports.definition = {
             	var dueDate = moment(transformed.billDetails.dueDate, "MM/DD/YYYY")
             	transformed.formattedDueDate = dueDate.format("MMMM DD, YYYY").toUpperCase();
             	return transformed;
-            }
+            },
+
+            getMinimumDue: function () {
+            	return this.get('billDetails').minimumDue;
+            },
+
+            getDueDate: function() {
+            	var transformed = this.toJSON();
+            	return moment(transformed.billDetails.dueDate, "MM/DD/YYYY");
+            },
+
+            getIsOverdue: function () {
+            	return moment().isAfter(this.getDueDate());
+            },
+
+            getFormattedDriver: function (item) {
+				return item.firstName + " " + item.lastName
+			},
+
+            getFormattedVehicle: function (item) {
+				return item.make + " " + item.model + " " + item.year
+			}
 		});
 
 		return Model;

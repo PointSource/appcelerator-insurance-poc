@@ -4,15 +4,24 @@ var string = require('alloy/string');
 
 function formatPolicy(policy) {
 	var transformed = policy.toJSON();
-	transformed.minimumDue = string.formatCurrency(transformed.billDetails.minimumDue);
-	var dueDate = moment(transformed.billDetails.dueDate, "MM/DD/YYYY")
+
+	transformed.minimumDue = string.formatCurrency(policy.getMinimumDue());
+	var dueDate = policy.getDueDate();
 	transformed.formattedDueDate = dueDate.format("MMMM DD, YYYY").toUpperCase();
 
-	transformed.formatDriver = function (item) {
-		return item.firstName + " " + item.lastName
-	}
-	transformed.formatVehicle = function (item) {
-		return item.make + " " + item.model + " " + item.year
+	transformed.getFormattedDriver = policy.getFormattedDriver;
+	transformed.getFormattedVehicle = policy.getFormattedVehicle;
+
+	switch (transformed.type) {
+		case "AUTO":
+			transformed.typeIcon = Alloy.Globals.icomoon.icon("main-auto");
+			break;
+		case "RENTERS":
+		case "HOME":
+			transformed.typeIcon = Alloy.Globals.icomoon.icon("main-home");
+			break;
+		default:
+			transformed.typeIcon = Alloy.Globals.icomoon.icon("main-auto");
 	}
 
 	return transformed;
@@ -25,7 +34,7 @@ function init() {
         appWrapper: $.AppWrapper
     });
 
-    $.myPolicies.reset(args.policyCollection.models);
+    Alloy.Collections.policy.fetch();
 }
 
 init();
