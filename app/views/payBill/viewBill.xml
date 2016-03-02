@@ -8,9 +8,9 @@
 		<Label class="card-label header-1">{minimumDue}</Label>
 		<Label class="card-label header-3 due-label">{formattedDueDate}</Label>
  
-		<Require src="payBill/policyDetailList" items="{vehicles}" title="Vehicle(s)" format="{formatVehicle}"/>
+		<Require src="payBill/policyDetailList" items="{vehicles}" title="Vehicle(s)" formatItem="{formatVehicle}"/>
 
-		<Require src="payBill/policyDetailList" items="{drivers}" title="Driver(s)" format="{formatDriver}"/>
+		<Require src="payBill/policyDetailList" items="{drivers}" title="Driver(s)" formatItem="{formatDriver}"/>
 
 		<Label class="card-label small">Policy No.</Label>
 		<Label class="card-label header-2">{policyNumber}</Label>

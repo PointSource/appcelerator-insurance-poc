@@ -19,7 +19,7 @@ function init () {
 
 	_.each(args.items, function (item) {
 		var label = Ti.UI.createLabel(labelStyle);
-		label.text = args.format(item)
+		label.text = args.formatItem(item)
 		$.itemList.add(label);
 	});
 
