@@ -1,8 +1,8 @@
 <Alloy>
-	<Collection src="policy"/>
+	<Collection src="policy" instance="true" id="myPolicies"/>
 	<Window id="billList" class="container" title="YOUR BILLS">
 		<View id="AppWrapper">
-			<ScrollView layout="vertical" dataCollection="policy" dataTransform="formatPolicy">
+			<ScrollView layout="vertical" dataCollection="$.myPolicies" dataTransform="formatPolicy">
 				<Require src="payBill/viewBill"/>
 			</ScrollView>
 		</View>

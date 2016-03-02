@@ -13,7 +13,7 @@
 	top: -10
 }
 
-"#autoIcon": {
+"#typeIcon": {
 	left: 10,
 	font: {
 		fontSize: 35

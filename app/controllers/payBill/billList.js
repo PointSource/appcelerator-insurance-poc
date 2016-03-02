@@ -25,7 +25,7 @@ function init() {
         appWrapper: $.AppWrapper
     });
 
-    Alloy.Collections.policy.fetch();
+    $.myPolicies.reset(args.policyCollection.models);
 }
 
 init();

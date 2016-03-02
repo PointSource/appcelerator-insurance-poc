@@ -1,7 +1,7 @@
 <Alloy>
 	<View class="card" layout="vertical">
 		<View height="Ti.UI.SIZE" top="20">
-			<Label id="autoIcon" class="icomoon-icon"></Label>
+			<Label id="typeIcon" class="icomoon-icon"></Label>
 			<Label class="card-label header-3">{type}</Label>
 		</View>
 		<Label class="card-label small">AMOUNT OF</Label>
