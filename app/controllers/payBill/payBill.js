@@ -25,21 +25,26 @@ function removeListeners() {
 
 function submit() {
 
-	var payment = Alloy.createModel('payment', {
-		policyNumber: args.currentPolicy.get("policyNumber"),
-		paymentAmount: args.selectedPayment
-	});
+	var payment = Alloy.createModel('payment');
 
-	payment.save();
+	payment.set("policyNumber", args.currentPolicy.get("policyNumber"));
+	payment.set("paymentAmount", args.selectedPayment);
 
-	policyCollection.fetch({
-		success: function() {
-			$.trigger('paymentMade');
-			$.payBillWindow.close();
-		}, error: function() {
+	payment.save({}, {
+		success: function () {
+			policyCollection.fetch({
+				success: function() {
+					$.trigger('paymentMade');
+					$.payBillWindow.close();
+				}, error: function() {
+					alert('could not submit payment');
+				}
+			});
+		}, error: function () {
 			alert('could not submit payment');
 		}
 	});
+
 
 }
 

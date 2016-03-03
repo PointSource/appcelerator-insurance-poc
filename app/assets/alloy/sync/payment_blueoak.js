@@ -70,7 +70,28 @@ module.exports.sync = function(method, model, options) {
 
 // Helper function for creating an HTTP request
 function http_request(method, url, payload, callback) {
-	var xhr = Ti.Network.createHTTPClient({});
+		var xhr = Ti.Network.createHTTPClient({
+		onload: function(e) {
+			if (callback) {
+				var resource = this.getResponseHeader('Location') || null;
+				if (resource) {
+					// Arrow applications do not return a payload response for non-GET methods.
+					// Need to retrieve the model to pass to Backbone APIs
+					resource = resource.slice(resource.lastIndexOf('/') + 1);
+					http_request('GET', BASE_URL + resource, null, callback);
+				} else {
+					callback(null, this.responseText);
+				}
+			}
+		},
+		onerror: function(e) {
+			if (callback) {
+				callback(e.error, this.responseText);
+			}
+		},
+		timeout : 5000
+	});
+		
 	xhr.open(method, url);
 	xhr.setRequestHeader("Content-Type", "application/json");
 	xhr.send(JSON.stringify(payload));
