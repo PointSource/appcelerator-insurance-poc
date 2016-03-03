@@ -6,7 +6,22 @@ function goToPayBill (event) {
 	if (selectedPayment === 0) {
 		alert("Please select a payment amount");
 	} else {
-		Alloy.Globals.Navigator.open("payBill/payBill", {currentPolicy: args.currentPolicy, selectedPayment: selectedPayment});
+		var payBillController = Alloy.createController("payBill/payBill", {
+			currentPolicy: args.currentPolicy,
+			selectedPayment: selectedPayment
+		});
+
+		function paymentHandler(e) {
+			alert("Payment of $"+selectedPayment+" submitted");
+			$.paymentOptions.close();
+			removeListener();
+		}
+		function removeListener() {
+		  	payBillController.off('paymentMade', paymentHandler);
+		}
+		payBillController.on('paymentMade', paymentHandler);
+
+		Alloy.Globals.Navigator.openWindow(payBillController.getView());
 	}
 }
 

@@ -8,8 +8,13 @@ Alloy.Globals.Navigator = {
 		if(OS_IOS){
 			$.nav.openWindow(win);
 		}
-		else if(OS_MOBILEWEB){
-			$.nav.open(win);
+		else {
+			win.open();
+		}
+	},
+	openWindow: function(win){
+		if(OS_IOS){
+			$.nav.openWindow(win);
 		}
 		else {
 			win.open();

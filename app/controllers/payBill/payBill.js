@@ -34,6 +34,7 @@ function submit() {
 
 	policyCollection.fetch({
 		success: function() {
+			$.trigger('paymentMade');
 			$.payBillWindow.close();
 		}, error: function() {
 			alert('could not submit payment');
