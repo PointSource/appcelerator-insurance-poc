@@ -9,22 +9,20 @@
 						<Label class="card-label header-3">PAYMENT OPTIONS</Label>
 					</View>
 					<View height="Ti.UI.SIZE">
-						<View class="radio-wrapper">
-							<View class="radio radio-selected"></View>
-						</View>
-						<View layout="vertical" height="Ti.UI.SIZE">
-							<Label id="minimumDueTitle" class="card-label small">MINIMUM DUE</Label>
-							<Label id="minimumDueAmount" class="card-label header-2">{$.currentPolicy.minimumDue}</Label>
-						</View>
+						<Require src="radioButton" onChange="minimumRadioSelected">
+							<View layout="vertical" height="Ti.UI.SIZE">
+								<Label id="minimumDueTitle" class="card-label small">MINIMUM DUE</Label>
+								<Label id="minimumDueAmount" class="card-label header-2">{$.currentPolicy.minimumDue}</Label>
+							</View>
+						</Require>
 					</View>
 					<View height="Ti.UI.SIZE">
-						<View class="radio-wrapper">
-							<View class="radio"></View>
-						</View>
-						<View layout="vertical" height="Ti.UI.SIZE">
-							<Label class="card-label small">FULL BALANCE</Label>
-							<Label class="card-label header-2">{$.currentPolicy.totalAmountDue}</Label>
-						</View>
+						<Require src="radioButton" onChange="totalRadioSelected">
+							<View layout="vertical" height="Ti.UI.SIZE">
+								<Label class="card-label small">FULL BALANCE</Label>
+								<Label class="card-label header-2">{$.currentPolicy.totalAmountDue}</Label>
+							</View>
+						</Require>
 					</View>
 					<!-- Spacer -->
 					<View height="20"/>

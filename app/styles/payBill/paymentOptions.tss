@@ -2,25 +2,7 @@
 	left: 50
 }
 
-".radio-wrapper": {
-	height: 28,
-	width: 28,
-	borderRadius: 14,
-	borderColor: Alloy.Globals.Colors.gray_verydark,
-	borderWidth: 1,
-	left: 12
-}
 
-".radio": {
-	height: 22,
-	width: 22,
-	borderRadius: 11
-}
-
-
-".radio-selected": {
-	backgroundColor: Alloy.Globals.Colors.green,
-}
 
 ".button": {
 	top: 10

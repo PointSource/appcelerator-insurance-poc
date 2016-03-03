@@ -1,0 +1,28 @@
+".radio-wrapper": {
+	height: Ti.UI.SIZE
+}
+
+".radio-outline": {
+	height: 28,
+	width: 28,
+	borderRadius: 14,
+	borderColor: Alloy.Globals.Colors.gray_verydark,
+	borderWidth: 1,
+	left: 12
+}
+
+".radio": {
+	height: 22,
+	width: 22,
+	borderRadius: 11
+}
+
+
+".radio-selected": {
+	backgroundColor: Alloy.Globals.Colors.green
+}
+
+
+".radio-unselected": {
+	backgroundColor: "transparent"
+}

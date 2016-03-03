@@ -5,6 +5,14 @@ function goToPayBill (event) {
 	Alloy.Globals.Navigator.open("payBill/payBill", {currentPolicy: args.currentPolicy});
 }
 
+function minimumRadioSelected (selected) {
+	console.log("minimumRadioSelected", JSON.stringify(selected));
+}
+
+function totalRadioSelected (selected) {
+	console.log("totalRadioSelected", JSON.stringify(selected));
+}
+
 function init() {
 
     Alloy.Globals.setUpNavBar({
