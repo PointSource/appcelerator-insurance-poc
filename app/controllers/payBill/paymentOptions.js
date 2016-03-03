@@ -10,14 +10,10 @@ function goToPayBill (event) {
 	}
 }
 
-function minimumRadioSelected (options) {
-	if (options.selected) {
+function handlePaymentChange (data) {
+	if (data.selectedIndex === 0) {
 		selectedPayment = args.currentPolicy.get("billDetails").minimumDue;
-	}
-}
-
-function totalRadioSelected (options) {
-	if (options.selected) {
+	} else if (data.selectedIndex === 1) {
 		selectedPayment = args.currentPolicy.get("billDetails").totalAmountDue;
 	}
 }
@@ -29,8 +25,6 @@ function init() {
         appWrapper: $.AppWrapper
     });	
 	
-    selectedPayment = args.currentPolicy.get("billDetails").minimumDue;
-
 	$.currentPolicy.set(args.currentPolicy.attributes);
 
 	$.paymentOptions.title = "PAY "+args.currentPolicy.get("type");

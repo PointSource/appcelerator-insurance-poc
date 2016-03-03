@@ -31,7 +31,6 @@ function init () {
 		unselect();
 	}
 
-	console.log('radioButton args = ', $.args);
 	_.each($.args.children || [], function(child) {
 		$.radioContent.add(child);
 	});
