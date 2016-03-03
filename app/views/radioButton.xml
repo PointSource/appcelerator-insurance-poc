@@ -1,5 +1,5 @@
 <Alloy>
-	<View class="radio-wrapper" onClick="toggleSelected">
+	<View class="radio-wrapper" onClick="handleClick">
 		<View class="radio-outline">
 			<View id="radio" class="radio"></View>
 		</View>

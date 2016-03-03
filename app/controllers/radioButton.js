@@ -2,45 +2,36 @@
 var args = $.args;
 var selected = false;
 
-function unselectRadio () {
+function unselect () {
 	var style = $.createStyle({
 		classes: ["radio-unselected"]
 	});
 	$.radio.applyProperties(style);
 
 	selected = false;
-	$.trigger('change', {
-		selected: selected
-	});
 }
 
-function selectRadio () {
+function select () {
 	var style = $.createStyle({
 		classes: ["radio-selected"]
 	});
 	$.radio.applyProperties(style);
 
 	selected = true;
-	$.trigger('change', {
-		selected: selected
-	});
 }
 
-function toggleSelected () {
-	if (!selected) {
-		selectRadio();
-	} else {
-		unselectRadio();
-	}
+function handleClick () {
+	$.trigger('click', {});
 }
 
 function init () {
 	if ($.args.selected === true || $.args.selected === 'true') {
-		selectRadio();
+		select();
 	} else if ($.args.selected === false || $.args.selected === 'false') {
-		unselectRadio();
+		unselect();
 	}
 
+	console.log('radioButton args = ', $.args);
 	_.each($.args.children || [], function(child) {
 		$.radioContent.add(child);
 	});
@@ -50,3 +41,6 @@ function init () {
 }
 
 init();
+
+exports.select = select;
+exports.unselect = unselect;
