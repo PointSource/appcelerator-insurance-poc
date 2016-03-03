@@ -55,7 +55,7 @@
 			</View>
 		</View>
 		<View class="auto-section">
-			<View class="auto-image">
+			<View class="auto-image" onClick="resetBills">
 				<Label id="autoIcon" class="icomoon-icon"></Label>
 				<View class="vertical-divider auto-section-divider"></View>
 			</View>

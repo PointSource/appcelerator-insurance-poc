@@ -167,8 +167,12 @@ http://docs.appcelerator.com/platform/latest/#!/guide/Alloy_Styles_and_Themes
 }
 
 ".card-label": {
+	color: Alloy.Globals.Colors.gray_verydark,
 	width: Ti.UI.FILL,
-	left: 10
+	left: 10,
+	font: {
+		fontFamily: "OpenSans"
+	}
 }
 
 ".top-card": {

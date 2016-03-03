@@ -48,6 +48,20 @@ exports.definition = {
 
             getFormattedVehicle: function (item) {
 				return item.make + " " + item.model + " " + item.year
+			},
+
+			getIcon: function () {
+				switch (this.get('type')) {
+					case "AUTO":
+						return Alloy.Globals.icomoon.icon("main-auto");
+						break;
+					case "RENTERS":
+					case "HOME":
+						return Alloy.Globals.icomoon.icon("main-home");
+						break;
+					default:
+						return Alloy.Globals.icomoon.icon("main-auto");
+				}
 			}
 		});
 

@@ -70,7 +70,7 @@ module.exports.sync = function(method, model, options) {
 
 // Helper function for creating an HTTP request
 function http_request(method, url, payload, callback) {
-		var xhr = Ti.Network.createHTTPClient({
+	var xhr = Ti.Network.createHTTPClient({
 		onload: function(e) {
 			if (callback) {
 				var resource = this.getResponseHeader('Location') || null;

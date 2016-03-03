@@ -11,18 +11,7 @@ function formatPolicy(policy) {
 
 	transformed.getFormattedDriver = policy.getFormattedDriver;
 	transformed.getFormattedVehicle = policy.getFormattedVehicle;
-
-	switch (transformed.type) {
-		case "AUTO":
-			transformed.typeIcon = Alloy.Globals.icomoon.icon("main-auto");
-			break;
-		case "RENTERS":
-		case "HOME":
-			transformed.typeIcon = Alloy.Globals.icomoon.icon("main-home");
-			break;
-		default:
-			transformed.typeIcon = Alloy.Globals.icomoon.icon("main-auto");
-	}
+	transformed.typeIcon = policy.getIcon();
 
 	return transformed;
 }
