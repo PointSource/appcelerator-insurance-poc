@@ -9,7 +9,7 @@
 						<Label class="card-label header-3">PAYMENT OPTIONS</Label>
 					</View>
 					<View height="Ti.UI.SIZE">
-						<Require src="radioButton" onChange="minimumRadioSelected">
+						<Require src="radioButton" onChange="minimumRadioSelected" selected="true">
 							<View layout="vertical" height="Ti.UI.SIZE">
 								<Label id="minimumDueTitle" class="card-label small">MINIMUM DUE</Label>
 								<Label id="minimumDueAmount" class="card-label header-2">{$.currentPolicy.minimumDue}</Label>

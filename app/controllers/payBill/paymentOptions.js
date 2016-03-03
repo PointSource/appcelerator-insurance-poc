@@ -1,16 +1,25 @@
 // Arguments passed into this controller can be accessed off of the `$.args` object directly or:
 var args = $.args;
+var selectedPayment = 0;
 
 function goToPayBill (event) {
-	Alloy.Globals.Navigator.open("payBill/payBill", {currentPolicy: args.currentPolicy});
+	if (selectedPayment === 0) {
+		alert("Please select a payment amount");
+	} else {
+		Alloy.Globals.Navigator.open("payBill/payBill", {currentPolicy: args.currentPolicy, selectedPayment: selectedPayment});
+	}
 }
 
-function minimumRadioSelected (selected) {
-	console.log("minimumRadioSelected", JSON.stringify(selected));
+function minimumRadioSelected (options) {
+	if (options.selected) {
+		selectedPayment = args.currentPolicy.get("billDetails").minimumDue;
+	}
 }
 
-function totalRadioSelected (selected) {
-	console.log("totalRadioSelected", JSON.stringify(selected));
+function totalRadioSelected (options) {
+	if (options.selected) {
+		selectedPayment = args.currentPolicy.get("billDetails").totalAmountDue;
+	}
 }
 
 function init() {
@@ -20,6 +29,8 @@ function init() {
         appWrapper: $.AppWrapper
     });	
 	
+    selectedPayment = args.currentPolicy.get("billDetails").minimumDue;
+
 	$.currentPolicy.set(args.currentPolicy.attributes);
 
 	$.paymentOptions.title = "PAY "+args.currentPolicy.get("type");

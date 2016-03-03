@@ -22,30 +22,15 @@ module.exports.sync = function(method, model, options) {
 		// This case is called by the Model.save and Collection.create methods
 		// to initialize a model if the IDs are not set.
 		case 'create':
-			if (payload.title && payload.author) {
-				http_request('POST', BASE_URL, {title: payload.title, author: payload.author}, callback);
-			} else {
-				error = 'ERROR: Cannot create model without an author or title!';
-			}
 			break;
 
 		// This case is called by the Model.destroy method to delete the model from storage.
 		case 'delete':
-			if (payload[model.idAttribute]) {
-				http_request('DELETE', BASE_URL + payload[model.idAttribute], null, callback);
-			} else {
-				error = 'ERROR: Model does not have an ID!';
-			}
 			break;
 
 		// This case is called by the Model.save and Collection.create methods
 		// to update a model if they have IDs set.
 		case 'update':
-			if (payload[model.idAttribute]) {
-				http_request('PUT', BASE_URL + payload[model.idAttribute], {title: payload.title, author: payload.author}, callback);
-			} else {
-				error = 'ERROR: Model does not have an ID!';
-			}
 			break;
 
 		default :
@@ -82,7 +67,7 @@ module.exports.sync = function(method, model, options) {
 
 // Helper function for creating an HTTP request
 function http_request(method, url, payload, callback) {
-	var client = Ti.Network.createHTTPClient({
+	var xhr = Ti.Network.createHTTPClient({
 		onload: function(e) {
 			if (callback) {
 				var resource = this.getResponseHeader('Location') || null;
@@ -104,14 +89,9 @@ function http_request(method, url, payload, callback) {
 		timeout : 5000
 	});
 
-	client.open(method, url);
-	if (AUTH_TYPE === 'basic') {
-		client.setRequestHeader('Authorization', 'Basic ' + Ti.Utils.base64encode(API_KEY + ':'));
-	}
-	if (AUTH_TYPE === 'apikey') {
-		client.setRequestHeader('APIKey', API_KEY);
-	}
-	client.send(payload);
+	xhr.open(method, url);
+	xhr.setRequestHeader("Content-Type", "application/json");
+	xhr.send(payload);
 };
 
 // Perform some actions before creating the Model class

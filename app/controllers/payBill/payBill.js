@@ -1,4 +1,4 @@
-var args = arguments[0] || {};
+var args = $.args;
 var cardio = require('com.pointsource.card.io');
 var policyCollection = Alloy.Collections.instance('policy');
 
@@ -27,7 +27,7 @@ function submit() {
 
 	var payment = Alloy.createModel('payment', {
 		policyNumber: args.currentPolicy.get("policyNumber"),
-		paymentAmount: 50
+		paymentAmount: args.selectedPayment
 	});
 
 	payment.save();

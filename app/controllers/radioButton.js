@@ -2,28 +2,51 @@
 var args = $.args;
 var selected = false;
 
-function toggleSelected () {
-	if (!selected) {
-		var style = $.createStyle({
-			classes: ["radio-selected"]
-		});
-		$.radio.applyProperties(style);
-	} else {
-		var style = $.createStyle({
-			classes: ["radio-unselected"]
-		});
-		$.radio.applyProperties(style);
-	}
-	selected = !selected;
+function unselectRadio () {
+	var style = $.createStyle({
+		classes: ["radio-unselected"]
+	});
+	$.radio.applyProperties(style);
 
+	selected = false;
 	$.trigger('change', {
 		selected: selected
 	});
 }
 
-_.each($.args.children || [], function(child) {
-	$.radioContent.add(child);
-});
+function selectRadio () {
+	var style = $.createStyle({
+		classes: ["radio-selected"]
+	});
+	$.radio.applyProperties(style);
 
-$.radioContent.height = Ti.UI.SIZE;
+	selected = true;
+	$.trigger('change', {
+		selected: selected
+	});
+}
 
+function toggleSelected () {
+	if (!selected) {
+		selectRadio();
+	} else {
+		unselectRadio();
+	}
+}
+
+function init () {
+	if ($.args.selected === true || $.args.selected === 'true') {
+		selectRadio();
+	} else if ($.args.selected === false || $.args.selected === 'false') {
+		unselectRadio();
+	}
+
+	_.each($.args.children || [], function(child) {
+		$.radioContent.add(child);
+	});
+
+	$.radioContent.height = Ti.UI.SIZE;
+	
+}
+
+init();

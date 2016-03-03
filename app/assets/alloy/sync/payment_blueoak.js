@@ -18,7 +18,6 @@ module.exports.sync = function(method, model, options) {
 		// This case is called by the Model.save and Collection.create methods
 		// to initialize a model if the IDs are not set.
 		case 'create':
-			console.log('create payload = ', payload)
 			if (payload.paymentAmount && payload.policyNumber) {
 				http_request('PUT', BASE_URL + payload.policyNumber, {
 					paymentAmount: payload.paymentAmount
@@ -30,11 +29,6 @@ module.exports.sync = function(method, model, options) {
 
 		// This case is called by the Model.destroy method to delete the model from storage.
 		case 'delete':
-			// if (payload[model.idAttribute]) {
-			// 	http_request('DELETE', BASE_URL + payload[model.idAttribute], null, callback);
-			// } else {
-			// 	error = 'ERROR: Model does not have an ID!';
-			// }
 			break;
 
 		// This case is called by the Model.save and Collection.create methods

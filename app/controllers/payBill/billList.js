@@ -27,6 +27,11 @@ function formatPolicy(policy) {
 	return transformed;
 }
 
+function filterPolicies (policyCollection) {
+	return policyCollection.filter(function(policy) {
+		return parseFloat(policy.get("billDetails").minimumDue) > 0;
+	});
+}
 
 function init() {
     Alloy.Globals.setUpNavBar({
