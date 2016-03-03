@@ -1,17 +1,35 @@
-"Window": {
-	backgroundColor: "white"
+".card-label": {
+	left: 50
+}
+
+".radio-wrapper": {
+	height: 28,
+	width: 28,
+	borderRadius: 14,
+	borderColor: Alloy.Globals.Colors.gray_verydark,
+	borderWidth: 1,
+	left: 12
 }
 
 ".radio": {
-	height: 20,
-	width: 20,
-	borderRadius: 10,
-	borderColor: Alloy.Globals.Colors.gray_verydark,
-	borderWidth: 1,
-	left: 10
+	height: 22,
+	width: 22,
+	borderRadius: 11
 }
 
 
 ".radio-selected": {
 	backgroundColor: Alloy.Globals.Colors.green,
+}
+
+".button": {
+	top: 10
+}
+
+
+"#typeIcon": {
+	left: 10,
+	font: {
+		fontSize: 35
+	}
 }
