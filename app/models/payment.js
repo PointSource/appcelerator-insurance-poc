@@ -7,7 +7,7 @@ exports.definition = {
 		adapter: {
 			type: "payment_blueoak",
 			collection_name: "payment",
-			base_url: "http://10.128.64.179:1337/payment/"
+			base_url: Alloy.Globals.url + "/payment/"
 		}
 	},
 	extendModel: function(Model) {

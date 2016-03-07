@@ -14,7 +14,7 @@ exports.definition = {
 			type: "policy_blueoak",
 			collection_name: "policy",
 			// Endpoint URL to access the BlueOak server
-			base_url: "http://10.128.64.179:1337/policies/"
+			base_url: Alloy.Globals.url + "/policies/"
 		}
 	},
 	extendModel: function(Model) {
