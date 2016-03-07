@@ -1,5 +1,3 @@
-var args = arguments[0] || {};
-var moment = require('alloy/moment');
 var string = require('alloy/string');
 
 function formatPolicy(policy) {
@@ -28,7 +26,15 @@ function init() {
         appWrapper: $.AppWrapper
     });
 
-    Alloy.Collections.policy.fetch();
+    Alloy.Collections.policy.fetch({
+    	success: function () {
+
+    	},
+    	error: function (err) {
+    		alert('could not get list of policies');
+    	}
+    });
+	// Alloy.Globals.apm.leaveBreadcrumb("exit init");
 }
 
 init();
