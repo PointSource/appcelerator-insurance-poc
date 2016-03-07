@@ -1,31 +1,11 @@
 <Alloy>
 	<Window platform="android,windows" id="index" class="container" title="Insurance POC">
-        <Require src="menu" id="menu"></Require>
-
-		<View id="AppWrapper">
-			<Require src="dashboard" /> 
-		</View>
+ 
 	</Window>
 
     <!-- iOS Window -->
     <NavigationWindow id="nav" platform="ios">
-    	<Window class="container" title="">
-			<LeftNavButton platform="ios">
-				<ImageView image="/images/point-insurance-logo.png" id="logoIcon"></ImageView>
-	        </LeftNavButton>
-
-			<RightNavButton platform="ios">
-				<View onClick="toggleMenu">
-					<Label id="menuIcon" class="icomoon-icon header-icon"></Label>
-				</View>
-	        </RightNavButton>
-
-	        <Require src="menu" id="menu"></Require>
-
-			<View id="AppWrapper">
-		    	<Require src="dashboard" />
-			</View>
-	    </Window>
+    	<Require src="dashboard"/>
     </NavigationWindow>
 
 </Alloy>

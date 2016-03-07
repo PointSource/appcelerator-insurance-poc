@@ -1,71 +1,78 @@
 <Alloy>
-	<View class="dashboard">
-		<View class="agent-section">
-			<View class="agent-photo-section">
-				<ImageView class="agent-photo" image="/images/Point-Insurance-Agent-Photo-main.png"/>
-			</View>
-			<View class="agent-info-section">
-				<View class="agent-info">
-					<Label class="bold info-text">YOUR POINT AGENT</Label>
-					<Label class="header-1 info-text">EVA JOHNSON</Label>
-					<Label class="header-3 info-text">1-800-555-1212 ext.123</Label>
+	<Window id="dashboard" title="Point Insurance">
+		<View id="AppWrapper">
+
+			<View class="dashboard">
+				<View class="agent-section">
+					<View class="agent-photo-section">
+						<ImageView class="agent-photo" image="/images/Point-Insurance-Agent-Photo-main.png"/>
+					</View>
+					<View class="agent-info-section">
+						<View class="agent-info">
+							<Label class="bold info-text">YOUR POINT AGENT</Label>
+							<Label class="header-1 info-text">EVA JOHNSON</Label>
+							<Label class="header-3 info-text">1-800-555-1212 ext.123</Label>
+						</View>
+					</View>
+				</View>
+				<View class="launch-pad-section">
+					<View class="dashboard-row row" >
+						<View class="dashboard-grid-cell columns-4">
+							<View class="dashboard-icon-wrapper">
+								<Label id="profileIcon" class="icomoon-icon dashboard-icon"></Label>
+								<Label class="dashboard-icon-label">Profile</Label>
+							</View>
+						</View>
+						<View class="dashboard-grid-cell columns-4">
+							<View class="dashboard-icon-wrapper">
+								<Label id="policyIcon" class="icomoon-icon dashboard-icon"></Label>
+								<Label class="dashboard-icon-label">Policies</Label>
+							</View>
+						</View>
+						<View class="dashboard-grid-cell columns-4" onClick="goToViewBill">
+							<View class="dashboard-icon-wrapper">
+								<Label id="paybillIcon" class="icomoon-icon dashboard-icon"></Label>
+								<Label class="dashboard-icon-label">Pay Bill</Label>
+							</View>
+						</View>
+					</View>
+					<View class="dashboard-row row">
+						<View class="dashboard-grid-cell columns-4">
+							<View class="dashboard-icon-wrapper">
+								<Label id="maintenanceIcon" class="icomoon-icon dashboard-icon"></Label>
+								<Label class="dashboard-icon-label">Auto Maintenance</Label>
+							</View>
+						</View>
+						<View class="dashboard-grid-cell columns-4" onClick="goToHomeInventory">
+							<View class="dashboard-icon-wrapper">
+								<Label id="inventoryIcon" class="icomoon-icon dashboard-icon"></Label>
+								<Label class="dashboard-icon-label">Home Inventory</Label>
+							</View>
+						</View>
+						<View class="dashboard-grid-cell columns-4">
+							<View class="dashboard-icon-wrapper">
+								<Label id="alertsIcon" class="icomoon-icon dashboard-icon"></Label>
+								<Label class="dashboard-icon-label">Notification Center</Label>
+							</View>
+						</View>
+					</View>
+				</View>
+				<View class="auto-section">
+					<View class="auto-image" onClick="resetBills">
+						<Label id="autoIcon" class="icomoon-icon"></Label>
+						<View class="vertical-divider auto-section-divider"></View>
+					</View>
+					<View class="auto-info-section">
+						<View class="auto-info">
+							<Label class="header-1 info-text pointsource-blue-text bold" fontSize="40">AUTO</Label>
+							<Label class="info-text pointsource-blue-text header-3">2013 Volkswagen Jetta</Label>
+							<Label class="info-text gray-light-text ">Year: 2013\nModel: A4 QTR\nVIN: WALVJL564396200L68343</Label>
+						</View>
+					</View>
 				</View>
 			</View>
 		</View>
-		<View class="launch-pad-section">
-			<View class="dashboard-row row" >
-				<View class="dashboard-grid-cell columns-4">
-					<View class="dashboard-icon-wrapper">
-						<Label id="profileIcon" class="icomoon-icon dashboard-icon"></Label>
-						<Label class="dashboard-icon-label">Profile</Label>
-					</View>
-				</View>
-				<View class="dashboard-grid-cell columns-4">
-					<View class="dashboard-icon-wrapper">
-						<Label id="policyIcon" class="icomoon-icon dashboard-icon"></Label>
-						<Label class="dashboard-icon-label">Policies</Label>
-					</View>
-				</View>
-				<View class="dashboard-grid-cell columns-4" onClick="goToViewBill">
-					<View class="dashboard-icon-wrapper">
-						<Label id="paybillIcon" class="icomoon-icon dashboard-icon"></Label>
-						<Label class="dashboard-icon-label">Pay Bill</Label>
-					</View>
-				</View>
-			</View>
-			<View class="dashboard-row row">
-				<View class="dashboard-grid-cell columns-4">
-					<View class="dashboard-icon-wrapper">
-						<Label id="maintenanceIcon" class="icomoon-icon dashboard-icon"></Label>
-						<Label class="dashboard-icon-label">Auto Maintenance</Label>
-					</View>
-				</View>
-				<View class="dashboard-grid-cell columns-4" onClick="goToHomeInventory">
-					<View class="dashboard-icon-wrapper">
-						<Label id="inventoryIcon" class="icomoon-icon dashboard-icon"></Label>
-						<Label class="dashboard-icon-label">Home Inventory</Label>
-					</View>
-				</View>
-				<View class="dashboard-grid-cell columns-4">
-					<View class="dashboard-icon-wrapper">
-						<Label id="alertsIcon" class="icomoon-icon dashboard-icon"></Label>
-						<Label class="dashboard-icon-label">Notification Center</Label>
-					</View>
-				</View>
-			</View>
-		</View>
-		<View class="auto-section">
-			<View class="auto-image" onClick="resetBills">
-				<Label id="autoIcon" class="icomoon-icon"></Label>
-				<View class="vertical-divider auto-section-divider"></View>
-			</View>
-			<View class="auto-info-section">
-				<View class="auto-info">
-					<Label class="header-1 info-text pointsource-blue-text bold" fontSize="40">AUTO</Label>
-					<Label class="info-text pointsource-blue-text header-3">2013 Volkswagen Jetta</Label>
-					<Label class="info-text gray-light-text ">Year: 2013\nModel: A4 QTR\nVIN: WALVJL564396200L68343</Label>
-				</View>
-			</View>
-		</View>
-	</View>
+
+	</Window>
+
 </Alloy>

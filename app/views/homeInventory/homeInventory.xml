@@ -1,6 +1,6 @@
 <Alloy>
 	<Collection src="room"/>
-	<Window id="homeInventory" class="container" title="HOME INVENTORY">
+	<Window id="homeInventory" class="container" title="Home Inventory">
 		<View id="AppWrapper">
 			<ScrollView layout="vertical">
 				

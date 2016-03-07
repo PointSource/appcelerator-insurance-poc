@@ -38,23 +38,24 @@ Alloy.Globals.findChildrenByClass = function (parent, className) {
 
 /* Global Layout */
 Alloy.Globals.setUpNavBar = function (options) {
-
+	var menuIcon, backIcon;
 	var sideMenu = Alloy.createController('menu');
-
-	options.currentWindow.add(sideMenu.getView());
-
-	options.appWrapper.addEventListener("swipe", function(_event) {
-	    if(_event.direction == "left") {
-	        sideMenu.openMenu();
-	    } else if(_event.direction == "right") {
-	        sideMenu.closeMenu();
-	    }
-	});
 
 	if(OS_IOS){
 
+		options.currentWindow.add(sideMenu.getView());
+
+		options.appWrapper.addEventListener("swipe", function(_event) {
+		    if(_event.direction == "left") {
+		        sideMenu.openMenu();
+		    } else if(_event.direction == "right") {
+		        sideMenu.closeMenu();
+		    }
+		});
+
+
 		// Set up iOS menu button
-        var menuIcon = Titanium.UI.createLabel({
+        menuIcon = Titanium.UI.createLabel({
         	text: Alloy.Globals.icomoon.icon("menu"),
         	font: {
         		fontFamily: Alloy.Globals.icomoon.fontfamily,
@@ -69,66 +70,67 @@ Alloy.Globals.setUpNavBar = function (options) {
 
         options.currentWindow.setRightNavButtons([menuIcon]);
 
-        // Set up iOS back button
-        var backIcon = Titanium.UI.createLabel({
-        	text: Alloy.Globals.icomoon.icon("back-arrow"),
-        	font: {
-        		fontFamily: Alloy.Globals.icomoon.fontfamily,
-        		fontSize: 30
-        	},
-        	color: "#49a7f7"
-        });
 
-		backIcon.addEventListener("click", function() {
-			options.currentWindow.close();
-		});
+		if (options.leftButtonImage) {
+			backIcon = Titanium.UI.createImageView({
+				image: options.leftButtonImage,
+				height: 70
+			});
+
+		}
+		else {
+	        // Set up iOS back button
+	        backIcon = Titanium.UI.createLabel({
+	        	text: Alloy.Globals.icomoon.icon("back-arrow"),
+	        	font: {
+	        		fontFamily: Alloy.Globals.icomoon.fontfamily,
+	        		fontSize: 30
+	        	},
+	        	color: "#49a7f7"
+	        });
+
+			backIcon.addEventListener("click", function() {
+				options.currentWindow.close();
+			});
+		}
 
         options.currentWindow.setLeftNavButtons([backIcon]);
 
 	} else if (OS_ANDROID) {
 
-		var abx = require('com.alcoapps.actionbarextras');
+		// Load module
+		var TiDrawerLayout = require('com.tripvi.drawerlayout');
+
+		// define left and center view
+		var leftView = sideMenu.getView();
+		var centerView = options.appWrapper;
+
+		// create the Drawer
+		var drawer = TiDrawerLayout.createDrawer({
+		    leftView: leftView,
+		    centerView: centerView,
+		    leftDrawerWidth: "240dp",
+		    width: Ti.UI.FILL,
+		    height: Ti.UI.FILL
+		});
+
+		options.currentWindow.add(drawer);
 
 		options.currentWindow.addEventListener("open", function() {
-
 		    var activity = options.currentWindow.getActivity();
-			
-		    if(activity){
 
-		    	// Add menu items
-				activity.onCreateOptionsMenu = function(e){
+		    var actionbar = activity.getActionBar();
+	        if (actionbar){
 
-					// first, create the item...
-					var openMenuItem = e.menu.add({
-						itemId: 101, // don't forget to set an id here
-						title: "Open Menu",
-						showAsAction : Ti.Android.SHOW_AS_ACTION_ALWAYS
-					});
+		        // this makes the drawer indicator visible in the action bar
+		        actionbar.displayHomeAsUp = true;
 
-					openMenuItem.addEventListener('click', function(){
-						sideMenu.toggleMenu();
-					});
+		        // open and close with the app icon
+		        actionbar.onHomeIconItemSelected = function() {
+		            drawer.toggleLeftWindow();
+		        };
+		    }
 
-					// ...then, let abx apply the custom font
-					abx.setMenuItemIcon({
-						menu: e.menu,
-						menuItem: openMenuItem,
-						fontFamily: Alloy.Globals.icomoon.fontfamily,
-						icon: Alloy.Globals.icomoon.icon("menu"),
-						color: "#49a7f7",
-						size: 30
-					});
-				}
-
-	            // Set the left-hand icon to the Point Insurance logo
-	            activity.actionBar.displayHomeAsUp = true;
-	            activity.actionBar.setHomeButtonEnabled(true);
-	            activity.actionBar.setOnHomeIconItemSelected(function () {
-	            	options.currentWindow.close();
-	            });
-
-			    abx.setHomeAsUpIcon("/images/back-arrow.png");
-			}
 		});
 
 	}
