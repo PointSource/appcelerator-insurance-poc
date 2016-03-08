@@ -37,6 +37,34 @@ Alloy.Globals.findChildrenByClass = function (parent, className) {
 }
 
 /* Global Layout */
+
+  Alloy.Globals.drawer = undefined;
+  
+  Alloy.Globals.menu = undefined;
+  
+  Alloy.Globals.contentView = undefined;
+
+  var currentCtrl;
+  
+  var backstack = [];
+
+  Alloy.Globals.open = function(_ctrl, _backstack) {
+  
+    if (currentCtrl) {
+      Alloy.Globals.contentView.remove(currentCtrl.getView());
+      _.isFunction(currentCtrl.cleanup) && currentCtrl.cleanup();
+    }
+  
+    currentCtrl = _ctrl;
+    Alloy.Globals.contentView.add(currentCtrl.getView());
+    currentCtrl.init();
+    
+    if (_backstack && _.has(currentCtrl, 'id')){
+	  !_.contains(backstack, currentCtrl.id) && backstack.push(currentCtrl.id);
+	}
+  };
+
+
 Alloy.Globals.setUpNavBar = function (options) {
 	var menuIcon, backIcon;
 	var sideMenu = Alloy.createController('menu');
@@ -98,40 +126,7 @@ Alloy.Globals.setUpNavBar = function (options) {
 
 	} else if (OS_ANDROID) {
 
-		// Load module
-		var TiDrawerLayout = require('com.tripvi.drawerlayout');
 
-		// define left and center view
-		var leftView = sideMenu.getView();
-		var centerView = options.appWrapper;
-
-		// create the Drawer
-		var drawer = TiDrawerLayout.createDrawer({
-		    leftView: leftView,
-		    centerView: centerView,
-		    leftDrawerWidth: "240dp",
-		    width: Ti.UI.FILL,
-		    height: Ti.UI.FILL
-		});
-
-		options.currentWindow.add(drawer);
-
-		options.currentWindow.addEventListener("open", function() {
-		    var activity = options.currentWindow.getActivity();
-
-		    var actionbar = activity.getActionBar();
-	        if (actionbar){
-
-		        // this makes the drawer indicator visible in the action bar
-		        actionbar.displayHomeAsUp = true;
-
-		        // open and close with the app icon
-		        actionbar.onHomeIconItemSelected = function() {
-		            drawer.toggleLeftWindow();
-		        };
-		    }
-
-		});
 
 	}
 

@@ -40,7 +40,8 @@
     </ios>
     <android xmlns:android="http://schemas.android.com/apk/res/android">
         <manifest>
-            <application android:theme="@style/Theme.CustomActionBar"/>
+            <application android:theme="@style/Theme.DrawerTest"/>
+            <!-- <application android:theme="@style/Theme.CustomActionBar"/> -->
             <uses-sdk android:minSdkVersion="14" android:targetSdkVersion="23"/>
             <!-- Camera Permissions -->
             <uses-permission android:name="android.permission.CAMERA"/>
@@ -64,6 +65,8 @@
     <module platform="android">com.pointsource.card.io</module>
     <module platform="android">pw.custom.androidcamera</module>
     <module platform="android">com.tripvi.drawerlayout</module>
+    <module platform="android">com.appcelerator.apm</module>
+    <module platform="iphone">com.appcelerator.apm</module>
   </modules>
     <deployment-targets>
         <target device="android">true</target>
@@ -93,4 +96,5 @@
     <property name="acs-password-production" type="string">AOhPjpB90nXNvVH1hf</property>
     <property name="appc-org-id" type="string">100098714</property>
     <property name="appc-creator-user-id" type="string">f0b0bc96-49a8-477a-9d33-088f7b861ddc</property>
+    <property name="com-appcelerator-apm-id" type="string">cba07563d0c846919e5c0a359519e5e900555300</property>
 </ti:app>

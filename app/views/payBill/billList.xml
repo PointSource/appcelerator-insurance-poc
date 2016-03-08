@@ -1,10 +1,8 @@
 <Alloy>
 	<Collection src="policy"/>
-	<Window id="billList" class="container" title="YOUR BILLS">
 		<View id="AppWrapper">
 			<ScrollView layout="vertical" dataCollection="policy" dataTransform="formatPolicy" dataFilter="filterPolicies">
 				<Require src="payBill/viewBill"/>
 			</ScrollView>
 		</View>
-	</Window>
 </Alloy>

@@ -21,10 +21,10 @@ function filterPolicies (policyCollection) {
 }
 
 function init() {
-    Alloy.Globals.setUpNavBar({
-        currentWindow: $.billList,
-        appWrapper: $.AppWrapper
-    });
+    // Alloy.Globals.setUpNavBar({
+    //     currentWindow: $.billList,
+    //     appWrapper: $.AppWrapper
+    // });
 
     Alloy.Collections.policy.fetch({
     	success: function () {
@@ -37,4 +37,4 @@ function init() {
 	// Alloy.Globals.apm.leaveBreadcrumb("exit init");
 }
 
-init();
+exports.init = init;

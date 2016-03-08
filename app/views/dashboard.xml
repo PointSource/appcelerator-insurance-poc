@@ -1,5 +1,4 @@
 <Alloy>
-	<Window id="dashboard" title="Point Insurance">
 		<View id="AppWrapper">
 
 			<View class="dashboard">
@@ -73,6 +72,5 @@
 			</View>
 		</View>
 
-	</Window>
 
 </Alloy>

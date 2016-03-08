@@ -1,5 +1,10 @@
 <Alloy>
 
+	<Window platform="android" id="index">
+        <!-- add header bar here -->
+	</Window>
+
+
     <!-- iOS Window -->
     <NavigationWindow id="nav" platform="ios">
     	<Require src="dashboard"/>

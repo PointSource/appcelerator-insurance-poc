@@ -4,23 +4,28 @@ $.callIcon.text = Alloy.Globals.icomoon.icon("menu-call");
 $.emailIcon.text = Alloy.Globals.icomoon.icon("menu-email");
 $.mapIcon.text = Alloy.Globals.icomoon.icon("menu-map");
 
-
 function openMenu() {
-    $.SlideMenu.animate({
-        right: "0dp",
-        duration: 250,
-        curve: Ti.UI.ANIMATION_CURVE_EASE_IN_OUT
-    });
-    menuOpen = true;
+	if (OS_IOS) {
+	    $.SlideMenu.animate({
+	        right: "0dp",
+	        duration: 250,
+	        curve: Ti.UI.ANIMATION_CURVE_EASE_IN_OUT
+	    });
+	    menuOpen = true;
+	}
 }
 
 function closeMenu() {
-	$.SlideMenu.animate({
-	    right: "-280dp",
-	    duration: 250,
-	    curve: Ti.UI.ANIMATION_CURVE_EASE_IN_OUT
-	});
-	menuOpen = false;
+	if (OS_IOS) {
+		$.SlideMenu.animate({
+		    right: "-280dp",
+		    duration: 250,
+		    curve: Ti.UI.ANIMATION_CURVE_EASE_IN_OUT
+		});
+		menuOpen = false;
+	} else if (OS_ANDROID) {
+		Alloy.Globals.drawer.toggleLeftWindow();
+	}
 }
 
 function toggleMenu() {
@@ -45,12 +50,14 @@ function addHighlight(e) {
 function removeHighlight(e) {
 	this.setBackgroundColor('transparent');
 	this.children[0].setColor(Alloy.Globals.Colors.gray_medium);
+	closeMenu();
 }
 
 
 function goToPayBill () {
 	Titanium.Analytics.featureEvent('menu.select.payBill');
-	Alloy.Globals.Navigator.open("payBill/billList", {});
+
+	Alloy.Globals.open(Alloy.createController("payBill/billList"));
 }
 
 function goToHomeInventory () {
