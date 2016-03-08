@@ -38,34 +38,23 @@ $.SlideMenu.addEventListener("swipe", function(_event) {
     }
 });
 
-// Make all menu-clickable items have a selected and unselected state
-function addTouchState (view) {
-	view.addEventListener('touchstart', function(){
-	    $.addClass(this, "menu-row-selected");
-	    $.addClass(this.children[0], "menu-label-selected");
-	});
-	view.addEventListener('touchend', function(){
-	    $.removeClass(this, "menu-row-selected");
-	    $.removeClass(this.children[0], "menu-label-selected");
-		closeMenu();
-	});
+function addHighlight(e) {
+	this.setBackgroundColor(Alloy.Globals.Colors.pointsource_blue);
+	this.children[0].setColor(Alloy.Globals.Colors.gray_verydark);
 }
-
-var clickableChildren = Alloy.Globals.findChildrenByClass($.menuSection, "menu-clickable");
-clickableChildren = clickableChildren.concat(Alloy.Globals.findChildrenByClass($.menuSubSection1, "menu-clickable"));
-clickableChildren = clickableChildren.concat(Alloy.Globals.findChildrenByClass($.menuSubSection2, "menu-clickable"));
-
-for (i in clickableChildren) {
-	var child = clickableChildren[i];
-	addTouchState(child);
+function removeHighlight(e) {
+	this.setBackgroundColor('transparent');
+	this.children[0].setColor(Alloy.Globals.Colors.gray_medium);
 }
 
 
-function goToPayBill (event) {
-	Alloy.Globals.Navigator.open("payBill/viewBill", {});
+function goToPayBill () {
+	Titanium.Analytics.featureEvent('menu.select.payBill');
+	Alloy.Globals.Navigator.open("payBill/billList", {});
 }
 
-function goToHomeInventory (event) {
+function goToHomeInventory () {
+	Titanium.Analytics.featureEvent('menu.select.homeInventory');
 	Alloy.Globals.Navigator.open("homeInventory/homeInventory", {});
 }
 

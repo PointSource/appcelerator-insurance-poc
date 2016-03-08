@@ -2,12 +2,12 @@
 	width: 280,
 	top: 0,
 	right: -280,
-	backgroundColor: "#282828",
+	backgroundColor: Alloy.Globals.Colors.gray_verydark,
 	zIndex: 100
 }
 
 "Label": {
-	color: "#b2b2b2"
+	color: Alloy.Globals.Colors.gray_medium
 }
 
 ".agent-section": {
@@ -57,15 +57,15 @@
 }
 
 ".menu-label-selected": {
-	color: '#282828'
+	color: Alloy.Globals.Colors.gray_verydark
 }
 
 ".horizontal-divider": {
-	backgroundColor: "#606060"
+	backgroundColor: Alloy.Globals.Colors.gray_dark
 }
 
 ".vertical-divider": {
-	backgroundColor: "#606060"
+	backgroundColor: Alloy.Globals.Colors.gray_dark
 }
 
 ".menu-column": {

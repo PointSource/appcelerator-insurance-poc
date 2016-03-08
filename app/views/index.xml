@@ -1,7 +1,4 @@
 <Alloy>
-	<Window platform="android,windows" id="index" class="container" title="Insurance POC">
- 
-	</Window>
 
     <!-- iOS Window -->
     <NavigationWindow id="nav" platform="ios">
