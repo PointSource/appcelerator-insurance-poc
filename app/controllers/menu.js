@@ -1,10 +1,8 @@
 var menuOpen = false;
 
-$.callIcon.text = Alloy.Globals.icomoon.icon("menu-call");
-$.emailIcon.text = Alloy.Globals.icomoon.icon("menu-email");
-$.mapIcon.text = Alloy.Globals.icomoon.icon("menu-map");
 
 function openMenu() {
+	console.log("openMenu");
 	if (OS_IOS) {
 	    $.SlideMenu.animate({
 	        right: "0dp",
@@ -16,6 +14,7 @@ function openMenu() {
 }
 
 function closeMenu() {
+	console.log("closeMenu");
 	if (OS_IOS) {
 		$.SlideMenu.animate({
 		    right: "-280dp",
@@ -23,12 +22,11 @@ function closeMenu() {
 		    curve: Ti.UI.ANIMATION_CURVE_EASE_IN_OUT
 		});
 		menuOpen = false;
-	} else if (OS_ANDROID) {
-		Alloy.Globals.drawer.toggleLeftWindow();
 	}
 }
 
 function toggleMenu() {
+	console.log("toggleMenu");
 	if (!menuOpen) {
 	    openMenu();
 	} else {
@@ -37,11 +35,6 @@ function toggleMenu() {
 }
 
 
-$.SlideMenu.addEventListener("swipe", function(_event) {
-    if(_event.direction == "right") {
-        closeMenu();
-    }
-});
 
 function addHighlight(e) {
 	this.setBackgroundColor(Alloy.Globals.Colors.pointsource_blue);
@@ -56,8 +49,7 @@ function removeHighlight(e) {
 
 function goToPayBill () {
 	Titanium.Analytics.featureEvent('menu.select.payBill');
-
-	Alloy.Globals.open(Alloy.createController("payBill/billList"), true);
+	select("payBill/billList");
 }
 
 function goToHomeInventory () {
@@ -65,6 +57,28 @@ function goToHomeInventory () {
 	Alloy.Globals.Navigator.open("homeInventory/homeInventory", {});
 }
 
+function select (index, addToBackstack) {
+	if (_.isUndefined(addToBackstack)) {
+		addToBackstack = true;
+	}
+	Alloy.Globals.Navigator.open(index);
+}
+
+function init () {
+	$.callIcon.text = Alloy.Globals.icomoon.icon("menu-call");
+	$.emailIcon.text = Alloy.Globals.icomoon.icon("menu-email");
+	$.mapIcon.text = Alloy.Globals.icomoon.icon("menu-map");
+
+	if (OS_IOS) {
+		$.SlideMenu.addEventListener("swipe", function(_event) {
+		    if(_event.direction == "right") {
+		        closeMenu();
+		    }
+		});
+	}
+}
+
+init();
 
 /**
  * Select menu item by index or id
@@ -72,15 +86,7 @@ function goToHomeInventory () {
  * @param {Function} callback
  * @param {Boolean} backstack
  */
-exports.select = function(index, callback, _addToBackstack) {
-	Alloy.Globals.open(Alloy.createController(index));
-
-	if (callback) {
-		callback();
-	}
-};
-
-
+exports.select = select;
 exports.toggleMenu = toggleMenu;
 exports.closeMenu = closeMenu;
 exports.openMenu = openMenu;

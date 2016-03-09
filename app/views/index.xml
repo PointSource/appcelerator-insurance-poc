@@ -7,7 +7,9 @@
 
     <!-- iOS Window -->
     <NavigationWindow id="nav" platform="ios">
-    	<Require src="dashboard"/>
+    	<Window title="Point Insurance" id="index">
+	    	<Require src="dashboard"/>
+    	</Window>
     </NavigationWindow>
 
 </Alloy>

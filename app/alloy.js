@@ -38,50 +38,50 @@ Alloy.Globals.findChildrenByClass = function (parent, className) {
 
 /* Global Layout */
 
-  Alloy.Globals.drawer = undefined;
-  
-  Alloy.Globals.menu = undefined;
-  
-  Alloy.Globals.contentView = undefined;
+Alloy.Globals.drawer = undefined;
 
-  var currentCtrl;
-  
-  var backstack = [];
-  
-  Alloy.Globals.open = function(_ctrl, _backstack) {
-  
-    if (currentCtrl) {
-      Alloy.Globals.contentView.remove(currentCtrl.getView());
-      _.isFunction(currentCtrl.cleanup) && currentCtrl.cleanup();
-    }
-  
-    currentCtrl = _ctrl;
-    Alloy.Globals.contentView.add(currentCtrl.getView());
-    currentCtrl.init();
-    
-    if (_backstack && _.has(currentCtrl, 'id')){
-	  !_.contains(backstack, currentCtrl.id) && backstack.push(currentCtrl.id);
+Alloy.Globals.menu = undefined;
+
+Alloy.Globals.contentView = undefined;
+
+var currentCtrl;
+
+var backstack = [];
+
+Alloy.Globals.open = function(controller, addToBackstack) {
+
+	if (currentCtrl) {
+		Alloy.Globals.contentView.remove(currentCtrl.getView());
+		_.isFunction(currentCtrl.cleanup) && currentCtrl.cleanup();
 	}
-  };
+
+	currentCtrl = controller;
+	Alloy.Globals.contentView.add(currentCtrl.getView());
+	currentCtrl.init();
+
+	if (addToBackstack && _.has(currentCtrl, 'id')){
+		!_.contains(backstack, currentCtrl.id) && backstack.push(currentCtrl.id);
+	}
+};
 
 
 
-  /**
-   * closes current controller and re-opens the previous one
-   * if backstack isn't empty
-   */
-  Alloy.Globals.back = function(){
-    
-    backstack.pop();
-    
-    if (!_.isEmpty(backstack)){
-      var previousCtrlId = _.last(backstack);
-      Alloy.Globals.menu.select(previousCtrlId, function(){}, false);
-    }else{
-      Ti.Android.currentActivity.finish();
-    }
-    
-  };
+/**
+* closes current controller and re-opens the previous one
+* if backstack isn't empty
+*/
+Alloy.Globals.back = function(){
+
+	backstack.pop();
+
+	if (!_.isEmpty(backstack)){
+		var previousCtrlId = _.last(backstack);
+		Alloy.Globals.menu.select(previousCtrlId, false);
+	}else{
+		Ti.Android.currentActivity.finish();
+	}
+
+};
 
 
 Alloy.Globals.setUpNavBar = function (options) {

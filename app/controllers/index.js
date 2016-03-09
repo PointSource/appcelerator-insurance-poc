@@ -1,35 +1,59 @@
-// /**
-//  * Global Navigation Handler
-//  */
-// Alloy.Globals.Navigator = {
-// 	open: function(controller, payload){
+/**
+ * Global Navigation Handler
+ */
+Alloy.Globals.Navigator = {
+	open: function(controllerName, payload){
 
-// 		Titanium.Analytics.navEvent('Somewhere', controller, 'nav.messageapp');
-// 		var win = Alloy.createController(controller, payload || {}).getView();
+		Titanium.Analytics.navEvent('Somewhere', controllerName, 'nav.messageapp');
+		var controller = Alloy.createController(controllerName, payload || {});
 
-// 		if(OS_IOS){
-// 			$.nav.openWindow(win);
-// 		}
-// 		else {
-// 			win.open();
-// 		}
-// 	},
-// 	openWindow: function(win){
-// 		if(OS_IOS){
-// 			$.nav.openWindow(win);
-// 		}
-// 		else {
-// 			win.open();
-// 		}
-// 	}
-// };
+		if(OS_IOS){
+			var win = Ti.UI.createWindow({
+				barColor: Alloy.Globals.Colors.gray_verydark,
+				backgroundColor: Alloy.Globals.Colors.gray_light
+			});
+			win.add(controller.getView());
+			$.nav.openWindow(win);
+		}
+		else if (OS_ANDROID) {
+			Alloy.Globals.open(controller, true)
+		}
+	},
+	openWindow: function(win){
+		if(OS_IOS){
+			$.nav.openWindow(win);
+		}
+		else {
+			win.open();
+		}
+	}
+};
 
 initDrawer();
 
 
 function initDrawer() {
 	// Set up navigation header
-	if(OS_IOS){
+	if (OS_IOS) {
+		Alloy.Globals.menu = Alloy.createController('menu', {});
+
+		// Set up iOS menu button
+        var menuIcon = Titanium.UI.createLabel({
+        	text: Alloy.Globals.icomoon.icon("menu"),
+        	font: {
+        		fontFamily: Alloy.Globals.icomoon.fontfamily,
+        		fontSize: 30
+        	},
+        	color: "#49a7f7"
+        });
+
+		menuIcon.addEventListener("click", function() {
+			Alloy.Globals.menu.toggleMenu();
+		});
+
+		$.index.add(Alloy.Globals.menu.getView());
+
+        $.index.setRightNavButtons([menuIcon]);
 		$.nav.open();
 	}
 	else if (OS_ANDROID) {
