@@ -1,4 +1,4 @@
-var args = arguments[0] || {};
+var args = $.args;
 var imageCollection = Alloy.Collections.image;
 
 
@@ -13,7 +13,7 @@ function saveRoom () {
 	room.set('value', parseInt($.valueInput.value, 10));
 	room.save();
 
-	$.editRoom.close();
+	Alloy.Globals.close($.editRoom);
 }
 
 function deleteRoom () {
@@ -34,16 +34,12 @@ function deleteRoom () {
 }
 
 function init () {
-
-    Alloy.Globals.setUpNavBar({
-        currentWindow: $.editRoom,
-        appWrapper: $.AppWrapper
-    });	
-
 	$.roomDetail.set(args.room.attributes);
 
 	imageCollection.fetch();
 }
 
-// Initialize Page
-init()
+
+exports.id = 'homeInventory/editRoom';
+exports.title = 'Edit Room';
+exports.init = init;

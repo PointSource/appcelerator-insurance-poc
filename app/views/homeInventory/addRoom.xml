@@ -1,45 +1,42 @@
 <Alloy>
-	<Window id="addRoom" class="container" title="ADD ROOM">
-		<View id="AppWrapper">
-	        <Widget id="camera" src="ts.camera" onPictureTaken="onPictureTaken"/>
+	<View id="AppWrapper">
+        <Widget id="camera" src="ts.camera" onPictureTaken="onPictureTaken"/>
 
-			<View class="camera-overlay" top="0">
-				<View class="input-wrapper">
-					<Label class="form-label">Take photos of your valuables</Label>
-				</View>
-				<View class="input-wrapper">
-					<TextField id="nameInput" hintText="Room name" returnKeyType="Titanium.UI.RETURNKEY_NEXT"></TextField>
-				</View>
-				<View class="input-wrapper">
-
-					<!-- android text field -->
-					<TextField id="valueInput" hintText="Estimated value" platform="android"></TextField>
-
-					<!-- iOS text field with custom keyboard -->
-					<TextField id="valueInput" hintText="Estimated value" platform="ios">
-			            <KeyboardToolbar >
-			                <Toolbar>
-			                    <Items>
-			                        <Button systemButton="Ti.UI.iPhone.SystemButton.CANCEL" onClick="closeKeyboard"></Button>
-			                        <FlexSpace/>
-			                        <Button systemButton="Ti.UI.iPhone.SystemButton.SAVE" onClick="submit"></Button>
-			                    </Items>
-			                </Toolbar>
-			            </KeyboardToolbar>
-
-					</TextField>
-				</View>
+		<View class="camera-overlay" top="0">
+			<View class="input-wrapper">
+				<Label class="form-label">Take photos of your valuables</Label>
 			</View>
+			<View class="input-wrapper">
+				<TextField id="nameInput" hintText="Room name" returnKeyType="Titanium.UI.RETURNKEY_NEXT"></TextField>
+			</View>
+			<View class="input-wrapper">
 
-	        <View class="camera-overlay" bottom="0">
-	        	<View class="camera-button-overlay">
-			        <Label id="cameraIcon" class="icomoon-icon" onClick="takePicture"></Label>
-	        	</View>
-		        <ScrollView id="imagePreview"></ScrollView>
-				<Button class="button submit-button" onClick="submit">Submit</Button>
-	        </View>
-        
+				<!-- android text field -->
+				<TextField id="valueInput" hintText="Estimated value" platform="android"></TextField>
+
+				<!-- iOS text field with custom keyboard -->
+				<TextField id="valueInput" hintText="Estimated value" platform="ios">
+		            <KeyboardToolbar >
+		                <Toolbar>
+		                    <Items>
+		                        <Button systemButton="Ti.UI.iPhone.SystemButton.CANCEL" onClick="closeKeyboard"></Button>
+		                        <FlexSpace/>
+		                        <Button systemButton="Ti.UI.iPhone.SystemButton.SAVE" onClick="submit"></Button>
+		                    </Items>
+		                </Toolbar>
+		            </KeyboardToolbar>
+
+				</TextField>
+			</View>
 		</View>
 
-	</Window>
+        <View class="camera-overlay" bottom="0">
+        	<View class="camera-button-overlay">
+		        <Label id="cameraIcon" class="icomoon-icon" onClick="takePicture"></Label>
+        	</View>
+	        <ScrollView id="imagePreview"></ScrollView>
+			<Button class="button submit-button" onClick="submit">Submit</Button>
+        </View>
+    
+	</View>
 </Alloy>

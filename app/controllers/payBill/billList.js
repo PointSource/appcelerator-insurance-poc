@@ -21,8 +21,6 @@ function filterPolicies (policyCollection) {
 }
 
 function init() {
-    Alloy.Globals.setPageTitle("Your Bills");
-
     Alloy.Collections.policy.fetch({
     	success: function () {
 

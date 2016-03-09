@@ -8,5 +8,5 @@ if ($model) {
 function editRoom () {
 	var room = roomList.get(id);
 
-	Alloy.Globals.Navigator.open("homeInventory/editRoom", {room: room});
+	Alloy.Globals.Navigator.open("homeInventory/editRoom", {room: $model});
 }

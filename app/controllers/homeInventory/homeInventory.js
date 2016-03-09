@@ -25,12 +25,7 @@ function goToAddRoom () {
 }
 
 
-function init() {
-	Alloy.Globals.setUpNavBar({
-		currentWindow: $.homeInventory,
-		appWrapper: $.AppWrapper
-	});
-	
+function init() {	
 	homeInventoryPage.imageCollection.fetch();
 	homeInventoryPage.roomCollection.fetch();
 
@@ -43,5 +38,6 @@ function init() {
 	$.houseIcon.text = Alloy.Globals.icomoon.icon("main-home");
 }
 
-// Initialize page
-init();
+exports.id = 'homeInventory/homeInventory';
+exports.title = 'Home Inventory';
+exports.init = init;

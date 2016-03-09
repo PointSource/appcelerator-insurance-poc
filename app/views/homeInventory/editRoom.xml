@@ -1,22 +1,20 @@
 <Alloy>
 	<Collection src="image" />
 	<Model src="room" instance="true" id="roomDetail"/>
-	<Window id="editRoom" class="container" title="EDIT ROOM">
-		<View id="AppWrapper" layout="vertical">
-			<View class="input-wrapper">
-				<Label class="form-label">Edit room</Label>
-			</View>
-			<View class="input-wrapper">
-				<TextField id="nameInput" hintText="Room name" value="{$.roomDetail.name}"></TextField>
-			</View>
-			<View class="input-wrapper">
-				<TextField id="valueInput" hintText="Estimated value" value="{$.roomDetail.value}"></TextField>
-			</View>
-			<View dataCollection="image" dataFilter="filterImages" height="Ti.UI.SIZE" layout="horizontal">
-				<ImageView height="60" width="60" image="{path}" left="10" top="10" />
-			</View>
-			<Button class="button" onClick="saveRoom">UPDATE ROOM</Button>
-			<Button class="button button-secondary" onClick="deleteRoom">DELETE ROOM</Button>
+	<View id="AppWrapper" layout="vertical">
+		<View class="input-wrapper">
+			<Label class="form-label">Edit room</Label>
 		</View>
-	</Window>
+		<View class="input-wrapper">
+			<TextField id="nameInput" hintText="Room name" value="{$.roomDetail.name}"></TextField>
+		</View>
+		<View class="input-wrapper">
+			<TextField id="valueInput" hintText="Estimated value" value="{$.roomDetail.value}"></TextField>
+		</View>
+		<View dataCollection="image" dataFilter="filterImages" height="Ti.UI.SIZE" layout="horizontal">
+			<ImageView height="60" width="60" image="{path}" left="10" top="10" />
+		</View>
+		<Button class="button" onClick="saveRoom">UPDATE ROOM</Button>
+		<Button class="button button-secondary" onClick="deleteRoom">DELETE ROOM</Button>
+	</View>
 </Alloy>

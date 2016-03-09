@@ -50,20 +50,31 @@ var backstack = [];
 
 Alloy.Globals.open = function(controller, addToBackstack) {
 
-	if (currentCtrl) {
-		Alloy.Globals.contentView.remove(currentCtrl.getView());
-		_.isFunction(currentCtrl.cleanup) && currentCtrl.cleanup();
-	}
+	if (OS_ANDROID) {
+		if (currentCtrl) {
+			Alloy.Globals.contentView.remove(currentCtrl.getView());
+			_.isFunction(currentCtrl.cleanup) && currentCtrl.cleanup();
+		}
 
-	currentCtrl = controller;
-	Alloy.Globals.contentView.add(currentCtrl.getView());
-	currentCtrl.init();
+		currentCtrl = controller;
+		Alloy.Globals.contentView.add(currentCtrl.getView());
+		currentCtrl.init();
 
-	if (addToBackstack && _.has(currentCtrl, 'id')){
-		!_.contains(backstack, currentCtrl.id) && backstack.push(currentCtrl.id);
+		if (addToBackstack && _.has(currentCtrl, 'id')){
+			!_.contains(backstack, currentCtrl.id) && backstack.push(currentCtrl.id);
+		}
 	}
 };
 
+Alloy.Globals.close = function(win){
+
+	if (OS_IOS) {
+		win.close();
+	}
+	else if (OS_ANDROID) {
+		Alloy.Globals.back();
+	}
+}
 
 
 /**
@@ -72,21 +83,55 @@ Alloy.Globals.open = function(controller, addToBackstack) {
 */
 Alloy.Globals.back = function(){
 
-	backstack.pop();
 
-	if (!_.isEmpty(backstack)){
-		var previousCtrlId = _.last(backstack);
-		Alloy.Globals.menu.select(previousCtrlId, false);
-	}else{
-		Ti.Android.currentActivity.finish();
+	if (OS_ANDROID) {
+
+		backstack.pop();
+
+		if (!_.isEmpty(backstack)){
+			var previousCtrlId = _.last(backstack);
+			Alloy.Globals.menu.select(previousCtrlId, false);
+		}else{
+			Ti.Android.currentActivity.finish();
+		}
 	}
 
 };
 
 
 Alloy.Globals.buildIOSWindow = function (options) {
-	var win, menuIcon;
-	if(OS_IOS){
+	var win, menuIcon, backIcon;
+	if (OS_IOS) {
+		// Add menu button
+        menuIcon = Titanium.UI.createLabel({
+        	text: Alloy.Globals.icomoon.icon("menu"),
+        	font: {
+        		fontFamily: Alloy.Globals.icomoon.fontfamily,
+        		fontSize: 30
+        	},
+        	color: "#49a7f7"
+        });
+		menuIcon.addEventListener("click", function() {
+			Alloy.Globals.menu.toggleMenu();
+		});
+
+		// Add back button
+        if (options.hasBackButton !== false) {
+	        backIcon = Titanium.UI.createLabel({
+	        	text: Alloy.Globals.icomoon.icon("back-arrow"),
+	        	font: {
+	        		fontFamily: Alloy.Globals.icomoon.fontfamily,
+	        		fontSize: 30
+	        	},
+	        	color: "#49a7f7"
+	        });
+
+			backIcon.addEventListener("click", function() {
+				win.close();
+			});
+        }
+
+
 		// Create window
 		win = Ti.UI.createWindow({
 			titleAttributes:  {
@@ -95,7 +140,9 @@ Alloy.Globals.buildIOSWindow = function (options) {
 			barColor: Alloy.Globals.Colors.gray_verydark,
 			backgroundColor: Alloy.Globals.Colors.gray_light,
 			statusBarStyle: Titanium.UI.iPhone.StatusBar.LIGHT_CONTENT,
-			title: options.controller.title
+			title: options.controller.title,
+			rightNavButton: menuIcon,
+			leftNavButton: backIcon
 		});
 
 		// Add main controller view and initialize it
@@ -111,26 +158,6 @@ Alloy.Globals.buildIOSWindow = function (options) {
 		        Alloy.Globals.menu.closeMenu();
 		    }
 		});
-
-		// Add menu button
-        menuIcon = Titanium.UI.createLabel({
-        	text: Alloy.Globals.icomoon.icon("menu"),
-        	font: {
-        		fontFamily: Alloy.Globals.icomoon.fontfamily,
-        		fontSize: 30
-        	},
-        	color: "#49a7f7"
-        });
-		menuIcon.addEventListener("click", function() {
-			Alloy.Globals.menu.toggleMenu();
-		});
-        win.setRightNavButtons([menuIcon]);
-
-
-	} else if (OS_ANDROID) {
-
-
-
 	}
 
 	return win;

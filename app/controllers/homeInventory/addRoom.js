@@ -80,11 +80,6 @@ function takePicture() {
 
 
 function init() {
-    Alloy.Globals.setUpNavBar({
-        currentWindow: $.addRoom,
-        appWrapper: $.AppWrapper
-    });
-
     $.cameraIcon.text = Alloy.Globals.icomoon.icon("camera");
 
     $.nameInput.addEventListener("return", function() {
@@ -111,5 +106,6 @@ function init() {
     })
 }
 
-// Initialize Page
-init();
+exports.id = 'homeInventory/addRoom';
+exports.title = 'Add Room';
+exports.init = init;

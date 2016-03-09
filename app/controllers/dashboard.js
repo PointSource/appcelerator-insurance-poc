@@ -25,9 +25,6 @@ function resetBills () {
 }
 
 function init() {
-
-    Alloy.Globals.setPageTitle("Point Insurance");
-
 	$.profileIcon.text = Alloy.Globals.icomoon.icon("main-profile");
 	$.policyIcon.text = Alloy.Globals.icomoon.icon("main-policies");
 	$.paybillIcon.text = Alloy.Globals.icomoon.icon("main-paybill");

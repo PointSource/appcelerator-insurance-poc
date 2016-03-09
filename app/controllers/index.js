@@ -4,7 +4,7 @@ var ios_navWindow;
  * Global Navigation Handler
  */
 Alloy.Globals.Navigator = {
-	open: function(controllerName, payload){
+	open: function (controllerName, payload) {
 		var controller, win;
 
 		Titanium.Analytics.navEvent('Somewhere', controllerName, 'nav.messageapp');
@@ -18,10 +18,23 @@ Alloy.Globals.Navigator = {
 			ios_navWindow.openWindow(win);
 		}
 		else if (OS_ANDROID) {
+			// Set page title
+			if (controller.title) {
+				var activity = $.index.getActivity();
+
+				if (activity) {
+
+					var actionBar = activity.getActionBar();
+
+					if (actionBar) {
+					  	actionBar.title = controller.title;
+					}
+				};
+			}
 			Alloy.Globals.open(controller, true)
 		}
 	},
-	openWindow: function(win){
+	openWindow: function (win) {
 		if(OS_IOS){
 			$.nav.openWindow(win);
 		}
@@ -32,22 +45,6 @@ Alloy.Globals.Navigator = {
 };
 
 
-Alloy.Globals.setPageTitle = function(title) {
-
-	if (OS_ANDROID) {
-		var activity = $.index.getActivity();
-
-		if (activity) {
-
-			var actionBar = activity.getActionBar();
-
-			if (actionBar) {
-			  	actionBar.title = title;
-			}
-		};
-	}
-}
-
 initDrawer();
 
 
@@ -56,14 +53,14 @@ function initDrawer() {
 	if (OS_IOS) {
 		Alloy.Globals.menu = Alloy.createController('menu', {});
 		var dashboardWin = Alloy.Globals.buildIOSWindow({
-			controller: Alloy.createController("dashboard")
+			controller: Alloy.createController("dashboard"),
+			hasBackButton: false
 		});
 		ios_navWindow = Titanium.UI.iOS.createNavigationWindow({
 		   window: dashboardWin
 		});
 
 		ios_navWindow.open();
-		// $.dashboard.init();
 	}
 	else if (OS_ANDROID) {
 	    
