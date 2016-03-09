@@ -21,11 +21,6 @@ function filterPolicies (policyCollection) {
 }
 
 function init() {
-    // Alloy.Globals.setUpNavBar({
-    //     currentWindow: $.billList,
-    //     appWrapper: $.AppWrapper
-    // });
-
     Alloy.Globals.setPageTitle("Your Bills");
 
     Alloy.Collections.policy.fetch({
@@ -36,8 +31,8 @@ function init() {
     		alert('could not get list of policies');
     	}
     });
-	// Alloy.Globals.apm.leaveBreadcrumb("exit init");
 }
 
 exports.id = 'payBill/billList';
+exports.title = 'Your Bills';
 exports.init = init;

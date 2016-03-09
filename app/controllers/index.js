@@ -5,29 +5,17 @@ var ios_navWindow;
  */
 Alloy.Globals.Navigator = {
 	open: function(controllerName, payload){
+		var controller, win;
 
 		Titanium.Analytics.navEvent('Somewhere', controllerName, 'nav.messageapp');
-		var controller = Alloy.createController(controllerName, payload || {});
+		controller = Alloy.createController(controllerName, payload || {});
 
 		if(OS_IOS){
-			var win = Ti.UI.createWindow({
-				titleAttributes:  {
-			        color: "white"
-				},
-				barColor: Alloy.Globals.Colors.gray_verydark,
-				backgroundColor: Alloy.Globals.Colors.gray_light,
-				statusBarStyle: Titanium.UI.iPhone.StatusBar.LIGHT_CONTENT
-			});
-			win.add(controller.getView());
-			win.addEventListener("swipe", function(_event) {
-			    if(_event.direction == "left") {
-			        Alloy.Globals.menu.openMenu();
-			    } else if(_event.direction == "right") {
-			        Alloy.Globals.menu.closeMenu();
-			    }
-			});
+			win = Alloy.Globals.buildIOSWindow({
+				controller: controller
+			})
+
 			ios_navWindow.openWindow(win);
-			controller.init();
 		}
 		else if (OS_ANDROID) {
 			Alloy.Globals.open(controller, true)
@@ -67,7 +55,7 @@ function initDrawer() {
 	// Set up navigation header
 	if (OS_IOS) {
 		Alloy.Globals.menu = Alloy.createController('menu', {});
-		var dashboardWin = Alloy.Globals.setUpNavBar({
+		var dashboardWin = Alloy.Globals.buildIOSWindow({
 			controller: Alloy.createController("dashboard")
 		});
 		ios_navWindow = Titanium.UI.iOS.createNavigationWindow({

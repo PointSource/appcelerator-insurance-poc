@@ -84,7 +84,7 @@ Alloy.Globals.back = function(){
 };
 
 
-Alloy.Globals.setUpNavBar = function (options) {
+Alloy.Globals.buildIOSWindow = function (options) {
 	var win, menuIcon;
 	if(OS_IOS){
 		// Create window
