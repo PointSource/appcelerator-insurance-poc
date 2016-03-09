@@ -9,8 +9,12 @@ Alloy.Globals.Navigator = {
 
 		if(OS_IOS){
 			var win = Ti.UI.createWindow({
+				titleAttributes:  {
+			        color: "white"
+				},
 				barColor: Alloy.Globals.Colors.gray_verydark,
-				backgroundColor: Alloy.Globals.Colors.gray_light
+				backgroundColor: Alloy.Globals.Colors.gray_light,
+				statusBarStyle: Titanium.UI.iPhone.StatusBar.LIGHT_CONTENT
 			});
 			win.add(controller.getView());
 			$.nav.openWindow(win);
