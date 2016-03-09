@@ -85,23 +85,34 @@ Alloy.Globals.back = function(){
 
 
 Alloy.Globals.setUpNavBar = function (options) {
-	var menuIcon, backIcon;
-	var sideMenu = Alloy.createController('menu');
-
+	var win, menuIcon;
 	if(OS_IOS){
+		// Create window
+		win = Ti.UI.createWindow({
+			titleAttributes:  {
+		        color: "white"
+			},
+			barColor: Alloy.Globals.Colors.gray_verydark,
+			backgroundColor: Alloy.Globals.Colors.gray_light,
+			statusBarStyle: Titanium.UI.iPhone.StatusBar.LIGHT_CONTENT,
+			title: options.controller.title
+		});
 
-		options.currentWindow.add(sideMenu.getView());
+		// Add main controller view and initialize it
+		win.add(options.controller.getView());
+		options.controller.init();
 
-		options.appWrapper.addEventListener("swipe", function(_event) {
+		// Add menu and swipe listener to open menu
+		win.add(Alloy.Globals.menu.getView());
+		win.addEventListener("swipe", function(_event) {
 		    if(_event.direction == "left") {
-		        sideMenu.openMenu();
+		        Alloy.Globals.menu.openMenu();
 		    } else if(_event.direction == "right") {
-		        sideMenu.closeMenu();
+		        Alloy.Globals.menu.closeMenu();
 		    }
 		});
 
-
-		// Set up iOS menu button
+		// Add menu button
         menuIcon = Titanium.UI.createLabel({
         	text: Alloy.Globals.icomoon.icon("menu"),
         	font: {
@@ -110,38 +121,11 @@ Alloy.Globals.setUpNavBar = function (options) {
         	},
         	color: "#49a7f7"
         });
-
 		menuIcon.addEventListener("click", function() {
-			sideMenu.toggleMenu();
+			Alloy.Globals.menu.toggleMenu();
 		});
+        win.setRightNavButtons([menuIcon]);
 
-        options.currentWindow.setRightNavButtons([menuIcon]);
-
-
-		if (options.leftButtonImage) {
-			backIcon = Titanium.UI.createImageView({
-				image: options.leftButtonImage,
-				height: 70
-			});
-
-		}
-		else {
-	        // Set up iOS back button
-	        backIcon = Titanium.UI.createLabel({
-	        	text: Alloy.Globals.icomoon.icon("back-arrow"),
-	        	font: {
-	        		fontFamily: Alloy.Globals.icomoon.fontfamily,
-	        		fontSize: 30
-	        	},
-	        	color: "#49a7f7"
-	        });
-
-			backIcon.addEventListener("click", function() {
-				options.currentWindow.close();
-			});
-		}
-
-        options.currentWindow.setLeftNavButtons([backIcon]);
 
 	} else if (OS_ANDROID) {
 
@@ -149,5 +133,5 @@ Alloy.Globals.setUpNavBar = function (options) {
 
 	}
 
-
+	return win;
 }

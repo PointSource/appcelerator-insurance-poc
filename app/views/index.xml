@@ -5,11 +5,4 @@
 	</Window>
 
 
-    <!-- iOS Window -->
-    <NavigationWindow id="nav" platform="ios">
-    	<Window title="Point Insurance" id="index">
-	    	<Require src="dashboard" id="dashboard"/>
-    	</Window>
-    </NavigationWindow>
-
 </Alloy>

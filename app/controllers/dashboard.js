@@ -26,12 +26,6 @@ function resetBills () {
 
 function init() {
 
-	// Alloy.Globals.setUpNavBar({
-	// 	currentWindow: $.dashboard,
-	// 	appWrapper: $.AppWrapper,
-	// 	leftButtonImage: "/images/point-insurance-logo.png"
-	// });
-
     Alloy.Globals.setPageTitle("Point Insurance");
 
 	$.profileIcon.text = Alloy.Globals.icomoon.icon("main-profile");
@@ -45,4 +39,5 @@ function init() {
 
 
 exports.id = 'dashboard';
+exports.title = 'Point Insurance';
 exports.init = init;

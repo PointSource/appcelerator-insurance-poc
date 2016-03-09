@@ -1,3 +1,5 @@
+var ios_navWindow;
+
 /**
  * Global Navigation Handler
  */
@@ -17,7 +19,14 @@ Alloy.Globals.Navigator = {
 				statusBarStyle: Titanium.UI.iPhone.StatusBar.LIGHT_CONTENT
 			});
 			win.add(controller.getView());
-			$.nav.openWindow(win);
+			win.addEventListener("swipe", function(_event) {
+			    if(_event.direction == "left") {
+			        Alloy.Globals.menu.openMenu();
+			    } else if(_event.direction == "right") {
+			        Alloy.Globals.menu.closeMenu();
+			    }
+			});
+			ios_navWindow.openWindow(win);
 			controller.init();
 		}
 		else if (OS_ANDROID) {
@@ -58,26 +67,35 @@ function initDrawer() {
 	// Set up navigation header
 	if (OS_IOS) {
 		Alloy.Globals.menu = Alloy.createController('menu', {});
-
-		// Set up iOS menu button
-        var menuIcon = Titanium.UI.createLabel({
-        	text: Alloy.Globals.icomoon.icon("menu"),
-        	font: {
-        		fontFamily: Alloy.Globals.icomoon.fontfamily,
-        		fontSize: 30
-        	},
-        	color: "#49a7f7"
-        });
-
-		menuIcon.addEventListener("click", function() {
-			Alloy.Globals.menu.toggleMenu();
+		var dashboardWin = Alloy.Globals.setUpNavBar({
+			controller: Alloy.createController("dashboard")
+		});
+		ios_navWindow = Titanium.UI.iOS.createNavigationWindow({
+		   window: dashboardWin
 		});
 
-		$.index.add(Alloy.Globals.menu.getView());
+		// $.nav.add(Ti.UI.createWindow({}));
+		// Alloy.Globals.menu = Alloy.createController('menu', {});
 
-        $.index.setRightNavButtons([menuIcon]);
-		$.nav.open();
-		$.dashboard.init();
+		// // Set up iOS menu button
+  //       var menuIcon = Titanium.UI.createLabel({
+  //       	text: Alloy.Globals.icomoon.icon("menu"),
+  //       	font: {
+  //       		fontFamily: Alloy.Globals.icomoon.fontfamily,
+  //       		fontSize: 30
+  //       	},
+  //       	color: "#49a7f7"
+  //       });
+
+		// menuIcon.addEventListener("click", function() {
+		// 	Alloy.Globals.menu.toggleMenu();
+		// });
+
+		// $.index.add(Alloy.Globals.menu.getView());
+
+  //       $.index.setRightNavButtons([menuIcon]);
+		ios_navWindow.open();
+		// $.dashboard.init();
 	}
 	else if (OS_ANDROID) {
 	    
