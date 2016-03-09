@@ -45,6 +45,15 @@
 	height: Ti.UI.FILL
 }
 
+
+".agent-section[platform=android]": {
+	top: 40
+}
+
+"#menuSection[platform=android]": {
+	top: 240
+}
+
 ".menu-row": {
 	textAlign: Ti.UI.TEXT_ALIGNMENT_LEFT,
 	width: Ti.UI.FILL,
