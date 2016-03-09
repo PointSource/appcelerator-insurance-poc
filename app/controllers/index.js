@@ -18,6 +18,7 @@ Alloy.Globals.Navigator = {
 			});
 			win.add(controller.getView());
 			$.nav.openWindow(win);
+			controller.init();
 		}
 		else if (OS_ANDROID) {
 			Alloy.Globals.open(controller, true)
@@ -32,6 +33,23 @@ Alloy.Globals.Navigator = {
 		}
 	}
 };
+
+
+Alloy.Globals.setPageTitle = function(title) {
+
+	if (OS_ANDROID) {
+		var activity = $.index.getActivity();
+
+		if (activity) {
+
+			var actionBar = activity.getActionBar();
+
+			if (actionBar) {
+			  	actionBar.title = title;
+			}
+		};
+	}
+}
 
 initDrawer();
 
@@ -59,6 +77,7 @@ function initDrawer() {
 
         $.index.setRightNavButtons([menuIcon]);
 		$.nav.open();
+		$.dashboard.init();
 	}
 	else if (OS_ANDROID) {
 	    
@@ -116,19 +135,6 @@ function onOpen() {
 }
 
 
-Alloy.Globals.setPageTitle = function(title) {
-
-	var activity = $.index.getActivity();
-
-	if (activity) {
-
-		var actionBar = activity.getActionBar();
-
-		if (actionBar) {
-		  	actionBar.title = title;
-		}
-	};
-}
 
 /**
  * callback for Android back button
