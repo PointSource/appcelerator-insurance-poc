@@ -6,7 +6,7 @@
         
     <style name="_base" parent="@style/Theme.AppCompat.Light.NoActionBar">
       	<item name="android:windowTranslucentStatus">true</item>
-      	<item name="colorPrimary">@color/primary</item>
+      	<item name="colorPrimary">@color/pointsourceBlue</item>
 
 		<!-- This item is required for Android 2.3.x support -->
 		<item name="actionBarStyle">@style/MyActionBar</item>
