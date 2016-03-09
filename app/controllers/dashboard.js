@@ -32,6 +32,8 @@ function init() {
 	// 	leftButtonImage: "/images/point-insurance-logo.png"
 	// });
 
+    Alloy.Globals.setPageTitle("Point Insurance");
+
 	$.profileIcon.text = Alloy.Globals.icomoon.icon("main-profile");
 	$.policyIcon.text = Alloy.Globals.icomoon.icon("main-policies");
 	$.paybillIcon.text = Alloy.Globals.icomoon.icon("main-paybill");

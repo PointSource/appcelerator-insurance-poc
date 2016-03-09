@@ -67,24 +67,39 @@ function initDrawer() {
  */
 function onOpen() {
   
-  var activity = $.index.getActivity();
+	var activity = $.index.getActivity();
 
-  if (activity) {
+	if (activity) {
 
-    var actionBar = activity.getActionBar();
+		var actionBar = activity.getActionBar();
 
-    if (actionBar) {
-      actionBar.displayHomeAsUp = true;
-      actionBar.title = "Point Insurance";
-      actionBar.onHomeIconItemSelected = function() {
-        Alloy.Globals.drawer.toggleLeftWindow();
-      };
-    }
-  };
+		if (actionBar) {
+			actionBar.displayHomeAsUp = true;
+			actionBar.title = "Point Insurance";
+			actionBar.onHomeIconItemSelected = function() {
+				Alloy.Globals.drawer.toggleLeftWindow();
+			};
+		}
+	};
 
 	Alloy.Globals.open(Alloy.createController("dashboard"), true);
 
   return true;
+}
+
+
+Alloy.Globals.setPageTitle = function(title) {
+
+	var activity = $.index.getActivity();
+
+	if (activity) {
+
+		var actionBar = activity.getActionBar();
+
+		if (actionBar) {
+		  	actionBar.title = title;
+		}
+	};
 }
 
 /**

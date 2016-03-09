@@ -26,6 +26,8 @@ function init() {
     //     appWrapper: $.AppWrapper
     // });
 
+    Alloy.Globals.setPageTitle("Your Bills");
+
     Alloy.Collections.policy.fetch({
     	success: function () {
 
