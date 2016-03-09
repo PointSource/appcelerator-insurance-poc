@@ -74,26 +74,6 @@ function initDrawer() {
 		   window: dashboardWin
 		});
 
-		// $.nav.add(Ti.UI.createWindow({}));
-		// Alloy.Globals.menu = Alloy.createController('menu', {});
-
-		// // Set up iOS menu button
-  //       var menuIcon = Titanium.UI.createLabel({
-  //       	text: Alloy.Globals.icomoon.icon("menu"),
-  //       	font: {
-  //       		fontFamily: Alloy.Globals.icomoon.fontfamily,
-  //       		fontSize: 30
-  //       	},
-  //       	color: "#49a7f7"
-  //       });
-
-		// menuIcon.addEventListener("click", function() {
-		// 	Alloy.Globals.menu.toggleMenu();
-		// });
-
-		// $.index.add(Alloy.Globals.menu.getView());
-
-  //       $.index.setRightNavButtons([menuIcon]);
 		ios_navWindow.open();
 		// $.dashboard.init();
 	}
