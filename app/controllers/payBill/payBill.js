@@ -73,11 +73,6 @@ function focusNextField(e) {
 
 
 function init () {
-	Alloy.Globals.setUpNavBar({
-		currentWindow: $.payBillWindow,
-		appWrapper: $.AppWrapper
-	});	
-
     $.cameraIcon.text = Alloy.Globals.icomoon.icon("camera");
 
     $.cardholderNameField.addEventListener("return", function() {
@@ -89,4 +84,6 @@ function init () {
     });
 }
 
-init();
+exports.id = 'payBill/payBill';
+exports.title = 'Pay By Card';
+exports.init = init;

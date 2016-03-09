@@ -35,11 +35,6 @@ function handlePaymentChange (data) {
 
 function init() {
 
-    Alloy.Globals.setUpNavBar({
-        currentWindow: $.paymentOptions,
-        appWrapper: $.AppWrapper
-    });	
-	
 	$.currentPolicy.set(args.currentPolicy.attributes);
 
 	$.paymentOptions.title = "PAY "+args.currentPolicy.get("type");
@@ -53,4 +48,6 @@ function init() {
 	}
 }
 
-init();
+exports.id = 'payBill/paymentOptions';
+exports.title = 'Payment Options';
+exports.init = init;

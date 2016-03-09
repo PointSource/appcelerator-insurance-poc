@@ -1,5 +1,4 @@
 <Alloy>
-	<Window id="payBillWindow" class="container" title="PAY BY CARD">
 		<View id="AppWrapper">
 			<ScrollView layout="vertical">
 				<View class="input-wrapper">
@@ -61,5 +60,4 @@
 				</View>
 			</ScrollView>
 		</View>
-	</Window>
 </Alloy>

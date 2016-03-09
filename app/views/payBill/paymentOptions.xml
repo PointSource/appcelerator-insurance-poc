@@ -1,6 +1,5 @@
 <Alloy>
 	<Model src="policy" instance="true" id="currentPolicy"/>
-	<Window id="paymentOptions" class="container">
 		<View id="AppWrapper">
 			<View layout="vertical">
 				<View class="card top-card" layout="vertical">
@@ -24,5 +23,4 @@
 				<Button class="button" onClick="goToPayBill">PAY BY CREDIT CARD</Button>
 			</View>
 		</View>
-	</Window>
 </Alloy>
