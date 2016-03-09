@@ -42,4 +42,5 @@ function init() {
 }
 
 
+exports.id = 'dashboard';
 exports.init = init;

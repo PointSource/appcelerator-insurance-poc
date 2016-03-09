@@ -56,9 +56,16 @@ function init() {
 	  
 		$.index.open();
 
-		Alloy.Globals.open(Alloy.createController("dashboard"));
+		Alloy.Globals.open(Alloy.createController("dashboard"), true);
 	}
 }
 
+/**
+ * callback for Android back button
+ */
+function onBack(){
+	console.log("onBack");
+  Alloy.Globals.back();
+}
 
 init();

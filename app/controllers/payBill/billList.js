@@ -37,4 +37,5 @@ function init() {
 	// Alloy.Globals.apm.leaveBreadcrumb("exit init");
 }
 
+exports.id = 'payBill/billList';
 exports.init = init;

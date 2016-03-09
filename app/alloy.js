@@ -65,6 +65,27 @@ Alloy.Globals.findChildrenByClass = function (parent, className) {
   };
 
 
+
+  /**
+   * closes current controller and re-opens the previous one
+   * if backstack isn't empty
+   */
+  Alloy.Globals.back = function(){
+    
+    backstack.pop();
+    
+    if (!_.isEmpty(backstack)){
+      var previousCtrlId = _.last(backstack);
+      Alloy.Globals.menu.select(previousCtrlId, function(){
+        // Alloy.Globals.optionsMenu();
+      }, false);
+    }else{
+      Ti.Android.currentActivity.finish();
+    }
+    
+  };
+
+
 Alloy.Globals.setUpNavBar = function (options) {
 	var menuIcon, backIcon;
 	var sideMenu = Alloy.createController('menu');

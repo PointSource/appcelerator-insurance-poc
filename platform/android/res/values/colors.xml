@@ -1,4 +1,6 @@
 <resources>
-    <color name="primary">#009688</color>
-    <color name="primaryDark">#00796B</color>
+	<color name="primary">#606060</color>
+	<color name="primaryDark">#282828</color>
+	<color name="grayVeryDark">#282828</color>
+	<color name="pointsourceBlue">#49a7f7</color>
 </resources>

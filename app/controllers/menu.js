@@ -57,13 +57,29 @@ function removeHighlight(e) {
 function goToPayBill () {
 	Titanium.Analytics.featureEvent('menu.select.payBill');
 
-	Alloy.Globals.open(Alloy.createController("payBill/billList"));
+	Alloy.Globals.open(Alloy.createController("payBill/billList"), true);
 }
 
 function goToHomeInventory () {
 	Titanium.Analytics.featureEvent('menu.select.homeInventory');
 	Alloy.Globals.Navigator.open("homeInventory/homeInventory", {});
 }
+
+
+/**
+ * Select menu item by index or id
+ * @param {Number|String} Index / id
+ * @param {Function} callback
+ * @param {Boolean} backstack
+ */
+exports.select = function(index, callback, _addToBackstack) {
+	Alloy.Globals.open(Alloy.createController(index));
+
+	if (callback) {
+		callback();
+	}
+};
+
 
 exports.toggleMenu = toggleMenu;
 exports.closeMenu = closeMenu;
