@@ -47,7 +47,7 @@ Alloy.Globals.findChildrenByClass = function (parent, className) {
   var currentCtrl;
   
   var backstack = [];
-
+  
   Alloy.Globals.open = function(_ctrl, _backstack) {
   
     if (currentCtrl) {
@@ -76,9 +76,7 @@ Alloy.Globals.findChildrenByClass = function (parent, className) {
     
     if (!_.isEmpty(backstack)){
       var previousCtrlId = _.last(backstack);
-      Alloy.Globals.menu.select(previousCtrlId, function(){
-        // Alloy.Globals.optionsMenu();
-      }, false);
+      Alloy.Globals.menu.select(previousCtrlId, function(){}, false);
     }else{
       Ti.Android.currentActivity.finish();
     }

@@ -24,7 +24,10 @@
 // 	}
 // };
 
-function init() {
+initDrawer();
+
+
+function initDrawer() {
 	// Set up navigation header
 	if(OS_IOS){
 		$.nav.open();
@@ -56,8 +59,32 @@ function init() {
 	  
 		$.index.open();
 
-		Alloy.Globals.open(Alloy.createController("dashboard"), true);
 	}
+}
+
+/**
+ * Android callback for {Ti.UI.Window} open event
+ */
+function onOpen() {
+  
+  var activity = $.index.getActivity();
+
+  if (activity) {
+
+    var actionBar = activity.getActionBar();
+
+    if (actionBar) {
+      actionBar.displayHomeAsUp = true;
+      actionBar.title = "Point Insurance";
+      actionBar.onHomeIconItemSelected = function() {
+        Alloy.Globals.drawer.toggleLeftWindow();
+      };
+    }
+  };
+
+	Alloy.Globals.open(Alloy.createController("dashboard"), true);
+
+  return true;
 }
 
 /**
@@ -68,4 +95,3 @@ function onBack(){
   Alloy.Globals.back();
 }
 
-init();

@@ -1,6 +1,6 @@
 <Alloy>
 
-	<Window platform="android" onAndroidback="onBack" id="index">
+	<Window platform="android" onAndroidback="onBack" onOpen="onOpen"  id="index">
         <!-- add header bar here -->
 	</Window>
 
