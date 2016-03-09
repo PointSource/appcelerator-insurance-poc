@@ -35,7 +35,7 @@ function submit() {
             }
 
             // Close the window.
-            $.addRoom.close(); 
+            Alloy.Globals.close($.addRoom);
         } else {
             alert("Please fill out all fields");
         }
