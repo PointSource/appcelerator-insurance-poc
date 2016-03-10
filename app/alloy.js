@@ -141,9 +141,6 @@ Alloy.Globals.setUpNavBar = function (options) {
 
 			    var actionbar = activity.getActionBar();
 		        if (actionbar){
-					var abx = require('com.alcoapps.actionbarextras');
-
-					abx.setUpColor(Alloy.Globals.Colors.pointsource_blue);
 
 			        // this makes the drawer indicator visible in the action bar
 			        actionbar.displayHomeAsUp = true;

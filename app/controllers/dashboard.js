@@ -19,7 +19,7 @@ function resetBills () {
 		timeout : 5000
 	});
 		
-	xhr.open("POST", "http://10.128.64.179:1337/payment/reset");
+	xhr.open("POST", Alloy.Globals.url+"/payment/reset");
 	xhr.setRequestHeader("Content-Type", "application/json");
 	xhr.send();
 }
@@ -32,6 +32,10 @@ function init() {
 		leftButtonImage: "/images/point-insurance-logo.png",
 		androidMenu: true
 	});
+
+	if (OS_IOS) {
+		$.dashboard.title = "";
+	}
 
 	$.profileIcon.text = Alloy.Globals.icomoon.icon("main-profile");
 	$.policyIcon.text = Alloy.Globals.icomoon.icon("main-policies");

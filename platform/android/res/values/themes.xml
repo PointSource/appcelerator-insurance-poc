@@ -18,6 +18,7 @@
 	<style name="Theme.RegularPage" parent="@style/Theme.AppCompat">
       	<item name="colorPrimary">@color/primary</item>
 
+	    <item name="actionBarTheme">@style/MyApp.ActionBarTheme</item>
 		<!-- Specify an Action Bar style to use -->
 		<item name="android:actionBarStyle">@style/MyActionBar</item>
 		<!-- This item is required for Android 2.3.x support -->
@@ -25,6 +26,12 @@
 
 	    <item name="drawerArrowStyle">@style/DrawerArrowStyle</item>
 
+	</style>
+
+
+	<style name="MyApp.ActionBarTheme" parent="@style/ThemeOverlay.AppCompat.ActionBar">       
+	    <!-- Color the back arrow! -->
+	    <item name="colorControlNormal">@color/pointsourceBlue</item>
 	</style>
 
 	<style name="MyActionBar" parent="@style/Widget.AppCompat.ActionBar">
