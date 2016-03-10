@@ -98,40 +98,65 @@ Alloy.Globals.setUpNavBar = function (options) {
 
 	} else if (OS_ANDROID) {
 
-		// Load module
-		var TiDrawerLayout = require('com.tripvi.drawerlayout');
+		if (options.androidMenu === true ) {
 
-		// define left and center view
-		var leftView = sideMenu.getView();
-		var centerView = options.appWrapper;
+			// Load module
+			var TiDrawerLayout = require('com.tripvi.drawerlayout');
 
-		// create the Drawer
-		Alloy.Globals.drawer = TiDrawerLayout.createDrawer({
-		    leftView: leftView,
-		    centerView: centerView,
-		    leftDrawerWidth: "240dp",
-		    width: Ti.UI.FILL,
-		    height: Ti.UI.FILL
-		});
+			// define left and center view
+			var leftView = sideMenu.getView();
+			var centerView = options.appWrapper;
 
-		options.currentWindow.add(Alloy.Globals.drawer);
+			// create the Drawer
+			Alloy.Globals.drawer = TiDrawerLayout.createDrawer({
+			    leftView: leftView,
+			    centerView: centerView,
+			    leftDrawerWidth: "280dp",
+			    width: Ti.UI.FILL,
+			    height: Ti.UI.FILL
+			});
 
-		options.currentWindow.addEventListener("open", function() {
-		    var activity = options.currentWindow.getActivity();
+			options.currentWindow.add(Alloy.Globals.drawer);
 
-		    var actionbar = activity.getActionBar();
-	        if (actionbar){
+			options.currentWindow.addEventListener("open", function() {
+			    var activity = options.currentWindow.getActivity();
 
-		        // this makes the drawer indicator visible in the action bar
-		        actionbar.displayHomeAsUp = true;
+			    var actionbar = activity.getActionBar();
+		        if (actionbar){
 
-		        // open and close with the app icon
-		        actionbar.onHomeIconItemSelected = function() {
-		            Alloy.Globals.drawer.toggleLeftWindow();
-		        };
-		    }
+			        // this makes the drawer indicator visible in the action bar
+			        actionbar.displayHomeAsUp = true;
 
-		});
+			        // open and close with the app icon
+			        actionbar.onHomeIconItemSelected = function() {
+			            Alloy.Globals.drawer.toggleLeftWindow();
+			        };
+			    }
+
+			});
+		} else {
+
+			options.currentWindow.addEventListener("open", function() {
+			    var activity = options.currentWindow.getActivity();
+
+			    var actionbar = activity.getActionBar();
+		        if (actionbar){
+					var abx = require('com.alcoapps.actionbarextras');
+
+					abx.setUpColor(Alloy.Globals.Colors.pointsource_blue);
+
+			        // this makes the drawer indicator visible in the action bar
+			        actionbar.displayHomeAsUp = true;
+
+			        // open and close with the app icon
+			        actionbar.onHomeIconItemSelected = function() {
+			            options.currentWindow.close();
+			        };
+			    }
+
+			});
+		}
+
 
 	}
 

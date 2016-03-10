@@ -1,5 +1,5 @@
 <Alloy>
-	<Window id="dashboard" title="Point Insurance">
+	<Window id="dashboard" title="Point Insurance" theme="Theme.DrawerPage">
 		<View id="AppWrapper">
 
 			<View class="dashboard">

@@ -2,7 +2,7 @@
 
 <resources xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <style name="Theme.DrawerTest" parent="@style/_base"/>
+    <style name="Theme.DrawerPage" parent="@style/_base"/>
         
     <style name="_base" parent="@style/Theme.AppCompat.Light.NoActionBar">
       	<item name="android:windowTranslucentStatus">true</item>
@@ -12,7 +12,20 @@
 		<item name="actionBarStyle">@style/MyActionBar</item>
 
 	    <item name="drawerArrowStyle">@style/DrawerArrowStyle</item>
+
     </style>
+
+	<style name="Theme.RegularPage" parent="@style/Theme.AppCompat">
+      	<item name="colorPrimary">@color/primary</item>
+
+		<!-- Specify an Action Bar style to use -->
+		<item name="android:actionBarStyle">@style/MyActionBar</item>
+		<!-- This item is required for Android 2.3.x support -->
+		<item name="actionBarStyle">@style/MyActionBar</item>
+
+	    <item name="drawerArrowStyle">@style/DrawerArrowStyle</item>
+
+	</style>
 
 	<style name="MyActionBar" parent="@style/Widget.AppCompat.ActionBar">
 		<!-- For Android 3.x and later, you can specify either a color or background image -->

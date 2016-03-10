@@ -29,7 +29,8 @@ function init() {
 	Alloy.Globals.setUpNavBar({
 		currentWindow: $.dashboard,
 		appWrapper: $.AppWrapper,
-		leftButtonImage: "/images/point-insurance-logo.png"
+		leftButtonImage: "/images/point-insurance-logo.png",
+		androidMenu: true
 	});
 
 	$.profileIcon.text = Alloy.Globals.icomoon.icon("main-profile");
