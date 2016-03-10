@@ -106,7 +106,7 @@ Alloy.Globals.setUpNavBar = function (options) {
 		var centerView = options.appWrapper;
 
 		// create the Drawer
-		var drawer = TiDrawerLayout.createDrawer({
+		Alloy.Globals.drawer = TiDrawerLayout.createDrawer({
 		    leftView: leftView,
 		    centerView: centerView,
 		    leftDrawerWidth: "240dp",
@@ -114,7 +114,7 @@ Alloy.Globals.setUpNavBar = function (options) {
 		    height: Ti.UI.FILL
 		});
 
-		options.currentWindow.add(drawer);
+		options.currentWindow.add(Alloy.Globals.drawer);
 
 		options.currentWindow.addEventListener("open", function() {
 		    var activity = options.currentWindow.getActivity();
@@ -127,7 +127,7 @@ Alloy.Globals.setUpNavBar = function (options) {
 
 		        // open and close with the app icon
 		        actionbar.onHomeIconItemSelected = function() {
-		            drawer.toggleLeftWindow();
+		            Alloy.Globals.drawer.toggleLeftWindow();
 		        };
 		    }
 
