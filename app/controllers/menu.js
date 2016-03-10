@@ -2,7 +2,6 @@ var menuOpen = false;
 
 
 function openMenu() {
-	console.log("openMenu");
 	if (OS_IOS) {
 	    $.SlideMenu.animate({
 	        right: "0dp",
@@ -10,11 +9,12 @@ function openMenu() {
 	        curve: Ti.UI.ANIMATION_CURVE_EASE_IN_OUT
 	    });
 	    menuOpen = true;
+	} else if (OS_ANDROID) {
+		Alloy.Globals.drawer.openLeftWindow();
 	}
 }
 
 function closeMenu() {
-	console.log("closeMenu");
 	if (OS_IOS) {
 		$.SlideMenu.animate({
 		    right: "-280dp",
@@ -22,11 +22,12 @@ function closeMenu() {
 		    curve: Ti.UI.ANIMATION_CURVE_EASE_IN_OUT
 		});
 		menuOpen = false;
+	} else if (OS_ANDROID) {
+		Alloy.Globals.drawer.closeLeftWindow();
 	}
 }
 
 function toggleMenu() {
-	console.log("toggleMenu");
 	if (!menuOpen) {
 	    openMenu();
 	} else {
@@ -54,7 +55,7 @@ function goToPayBill () {
 
 function goToHomeInventory () {
 	Titanium.Analytics.featureEvent('menu.select.homeInventory');
-	Alloy.Globals.Navigator.open("homeInventory/homeInventory", {});
+	select("homeInventory/homeInventory");
 }
 
 function select (index, addToBackstack) {
@@ -69,6 +70,7 @@ function init () {
 	$.emailIcon.text = Alloy.Globals.icomoon.icon("menu-email");
 	$.mapIcon.text = Alloy.Globals.icomoon.icon("menu-map");
 
+	// Add swipe listener to iOS
 	if (OS_IOS) {
 		$.SlideMenu.addEventListener("swipe", function(_event) {
 		    if(_event.direction == "right") {

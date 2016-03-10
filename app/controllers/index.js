@@ -1,11 +1,13 @@
 var ios_navWindow;
 
+initDrawer();
+
 /**
  * Global Navigation Handler
  */
 Alloy.Globals.Navigator = {
 	open: function (controllerName, payload) {
-		var controller, win;
+		var controller, win, activity, actionBar;
 
 		Titanium.Analytics.navEvent('Somewhere', controllerName, 'nav.messageapp');
 		controller = Alloy.createController(controllerName, payload || {});
@@ -20,11 +22,11 @@ Alloy.Globals.Navigator = {
 		else if (OS_ANDROID) {
 			// Set page title
 			if (controller.title) {
-				var activity = $.index.getActivity();
+				activity = $.index.getActivity();
 
 				if (activity) {
 
-					var actionBar = activity.getActionBar();
+					actionBar = activity.getActionBar();
 
 					if (actionBar) {
 					  	actionBar.title = controller.title;
@@ -45,14 +47,13 @@ Alloy.Globals.Navigator = {
 };
 
 
-initDrawer();
-
 
 function initDrawer() {
+	var dashboardWin, TiDrawerLayout;
 	// Set up navigation header
 	if (OS_IOS) {
 		Alloy.Globals.menu = Alloy.createController('menu', {});
-		var dashboardWin = Alloy.Globals.buildIOSWindow({
+		dashboardWin = Alloy.Globals.buildIOSWindow({
 			controller: Alloy.createController("dashboard"),
 			hasBackButton: false
 		});
@@ -65,7 +66,7 @@ function initDrawer() {
 	else if (OS_ANDROID) {
 	    
 		// Load module
-		var TiDrawerLayout = require('com.tripvi.drawerlayout');
+		TiDrawerLayout = require('com.tripvi.drawerlayout');
 
 		// define menu and main content view
 		Alloy.Globals.menu = Alloy.createController('menu', {
@@ -96,34 +97,32 @@ function initDrawer() {
  * Android callback for {Ti.UI.Window} open event
  */
 function onOpen() {
-  
-	var activity = $.index.getActivity();
+	var activity, actionBar;
+	if (OS_ANDROID) {
+		activity = $.index.getActivity();
 
-	if (activity) {
+		if (activity) {
 
-		var actionBar = activity.getActionBar();
+			actionBar = activity.getActionBar();
 
-		if (actionBar) {
-			actionBar.displayHomeAsUp = true;
-			actionBar.title = "Point Insurance";
-			actionBar.onHomeIconItemSelected = function() {
-				Alloy.Globals.drawer.toggleLeftWindow();
-			};
-		}
-	};
+			if (actionBar) {
+				actionBar.displayHomeAsUp = true;
+				actionBar.title = "Point Insurance";
+				actionBar.onHomeIconItemSelected = function() {
+					Alloy.Globals.drawer.toggleLeftWindow();
+				};
+			}
+		};
 
-	Alloy.Globals.open(Alloy.createController("dashboard"), true);
-
-  return true;
+		Alloy.Globals.open(Alloy.createController("dashboard"), true);
+	}
 }
-
 
 
 /**
  * callback for Android back button
  */
 function onBack(){
-	console.log("onBack");
-  Alloy.Globals.back();
+	Alloy.Globals.back();
 }
 

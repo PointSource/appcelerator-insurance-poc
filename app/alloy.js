@@ -26,9 +26,10 @@ Alloy.Globals.icomoon = new IconicFont({
 /* Utility functions */
 
 Alloy.Globals.findChildrenByClass = function (parent, className) {
-	var matchingChildren = []
+	var matchingChildren = [];
+	var child;
 	for (i in parent.children) {
-		var child = parent.children[i];
+		child = parent.children[i];
 		if (child.classes.indexOf(className) !== -1) {
 			matchingChildren.push(child);
 		}
@@ -82,14 +83,14 @@ Alloy.Globals.close = function(win){
 * if backstack isn't empty
 */
 Alloy.Globals.back = function(){
-
+	var previousCtrlId;
 
 	if (OS_ANDROID) {
 
 		backstack.pop();
 
 		if (!_.isEmpty(backstack)){
-			var previousCtrlId = _.last(backstack);
+			previousCtrlId = _.last(backstack);
 			Alloy.Globals.menu.select(previousCtrlId, false);
 		}else{
 			Ti.Android.currentActivity.finish();
