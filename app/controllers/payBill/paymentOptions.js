@@ -13,7 +13,7 @@ function goToPayBill (event) {
 
 		function paymentHandler(e) {
 			alert("Payment of $"+selectedPayment+" submitted");
-			$.paymentOptions.close();
+			Alloy.Globals.close();
 			removeListener();
 		}
 		function removeListener() {
@@ -21,7 +21,7 @@ function goToPayBill (event) {
 		}
 		payBillController.on('paymentMade', paymentHandler);
 
-		Alloy.Globals.Navigator.openWindow(payBillController.getView());
+		Alloy.Globals.Navigator.openController(payBillController);
 	}
 }
 
@@ -37,8 +37,6 @@ function init() {
 
 	$.currentPolicy.set(args.currentPolicy.attributes);
 
-	$.paymentOptions.title = "PAY "+args.currentPolicy.get("type");
-
 	$.typeIcon.text = args.currentPolicy.getIcon();
 
 	if (args.currentPolicy.getIsOverdue()) {
@@ -49,5 +47,5 @@ function init() {
 }
 
 exports.id = 'payBill/paymentOptions';
-exports.title = 'Payment Options';
+exports.title = 'Payment '+args.currentPolicy.get("type");
 exports.init = init;

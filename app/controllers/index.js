@@ -12,6 +12,9 @@ Alloy.Globals.Navigator = {
 		Titanium.Analytics.navEvent('Somewhere', controllerName, 'nav.messageapp');
 		controller = Alloy.createController(controllerName, payload || {});
 
+		this.openController(controller);
+	},
+	openController: function (controller) {
 		if(OS_IOS){
 			win = Alloy.Globals.buildIOSWindow({
 				controller: controller
@@ -34,14 +37,6 @@ Alloy.Globals.Navigator = {
 				};
 			}
 			Alloy.Globals.open(controller, true)
-		}
-	},
-	openWindow: function (win) {
-		if(OS_IOS){
-			$.nav.openWindow(win);
-		}
-		else {
-			win.open();
 		}
 	}
 };

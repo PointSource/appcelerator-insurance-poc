@@ -1,26 +1,26 @@
 <Alloy>
 	<Model src="policy" instance="true" id="currentPolicy"/>
-		<View id="AppWrapper">
-			<View layout="vertical">
-				<View class="card top-card" layout="vertical">
-					<View height="Ti.UI.SIZE" top="20">
-						<Label id="typeIcon" class="icomoon-icon"></Label>
-						<Label class="card-label header-3">PAYMENT OPTIONS</Label>
-					</View>
-					<Require src="radioButtonGroup" onChange="handlePaymentChange" selectedIndex="0">
-						<View layout="vertical" height="Ti.UI.SIZE">
-							<Label id="minimumDueTitle" class="card-label small">MINIMUM DUE</Label>
-							<Label id="minimumDueAmount" class="card-label header-2">{$.currentPolicy.minimumDue}</Label>
-						</View>
-						<View layout="vertical" height="Ti.UI.SIZE">
-							<Label class="card-label small">FULL BALANCE</Label>
-							<Label class="card-label header-2">{$.currentPolicy.totalAmountDue}</Label>
-						</View>
-					</Require>
-					<!-- Spacer -->
-					<View height="20"/>
+	<View id="AppWrapper">
+		<View layout="vertical">
+			<View class="card top-card" layout="vertical">
+				<View height="Ti.UI.SIZE" top="20">
+					<Label id="typeIcon" class="icomoon-icon"></Label>
+					<Label class="card-label header-3">PAYMENT OPTIONS</Label>
 				</View>
-				<Button class="button" onClick="goToPayBill">PAY BY CREDIT CARD</Button>
+				<Require src="radioButtonGroup" onChange="handlePaymentChange" selectedIndex="0">
+					<View layout="vertical" height="Ti.UI.SIZE">
+						<Label id="minimumDueTitle" class="card-label small">MINIMUM DUE</Label>
+						<Label id="minimumDueAmount" class="card-label header-2">{$.currentPolicy.minimumDue}</Label>
+					</View>
+					<View layout="vertical" height="Ti.UI.SIZE">
+						<Label class="card-label small">FULL BALANCE</Label>
+						<Label class="card-label header-2">{$.currentPolicy.totalAmountDue}</Label>
+					</View>
+				</Require>
+				<!-- Spacer -->
+				<View height="20"/>
 			</View>
+			<Button class="button" onClick="goToPayBill">PAY BY CREDIT CARD</Button>
 		</View>
+	</View>
 </Alloy>

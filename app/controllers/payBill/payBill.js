@@ -35,7 +35,7 @@ function submit() {
 			policyCollection.fetch({
 				success: function() {
 					$.trigger('paymentMade');
-					$.payBillWindow.close();
+					Alloy.Globals.close();
 				}, error: function() {
 					alert('could not submit payment');
 				}

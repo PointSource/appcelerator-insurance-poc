@@ -41,6 +41,8 @@ Alloy.Globals.findChildrenByClass = function (parent, className) {
 
 Alloy.Globals.drawer = undefined;
 
+Alloy.Globals.ios_window = undefined;
+
 Alloy.Globals.menu = undefined;
 
 Alloy.Globals.contentView = undefined;
@@ -67,10 +69,10 @@ Alloy.Globals.open = function(controller, addToBackstack) {
 	}
 };
 
-Alloy.Globals.close = function(win){
+Alloy.Globals.close = function(){
 
-	if (OS_IOS) {
-		win.close();
+	if (OS_IOS && Alloy.Globals.ios_window) {
+		Alloy.Globals.ios_window.close();
 	}
 	else if (OS_ANDROID) {
 		Alloy.Globals.back();
@@ -101,7 +103,7 @@ Alloy.Globals.back = function(){
 
 
 Alloy.Globals.buildIOSWindow = function (options) {
-	var win, menuIcon, backIcon;
+	var menuIcon, backIcon;
 	if (OS_IOS) {
 		// Add menu button
         menuIcon = Titanium.UI.createLabel({
@@ -128,13 +130,13 @@ Alloy.Globals.buildIOSWindow = function (options) {
 	        });
 
 			backIcon.addEventListener("click", function() {
-				win.close();
+				Alloy.Globals.ios_window.close();
 			});
         }
 
 
 		// Create window
-		win = Ti.UI.createWindow({
+		Alloy.Globals.ios_window = Ti.UI.createWindow({
 			titleAttributes:  {
 		        color: "white"
 			},
@@ -147,12 +149,12 @@ Alloy.Globals.buildIOSWindow = function (options) {
 		});
 
 		// Add main controller view and initialize it
-		win.add(options.controller.getView());
+		Alloy.Globals.ios_window.add(options.controller.getView());
 		options.controller.init();
 
 		// Add menu and swipe listener to open menu
-		win.add(Alloy.Globals.menu.getView());
-		win.addEventListener("swipe", function(_event) {
+		Alloy.Globals.ios_window.add(Alloy.Globals.menu.getView());
+		Alloy.Globals.ios_window.addEventListener("swipe", function(_event) {
 		    if(_event.direction == "left") {
 		        Alloy.Globals.menu.openMenu();
 		    } else if(_event.direction == "right") {
@@ -161,5 +163,5 @@ Alloy.Globals.buildIOSWindow = function (options) {
 		});
 	}
 
-	return win;
+	return Alloy.Globals.ios_window;
 }

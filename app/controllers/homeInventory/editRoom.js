@@ -13,7 +13,7 @@ function saveRoom () {
 	room.set('value', parseInt($.valueInput.value, 10));
 	room.save();
 
-	Alloy.Globals.close($.editRoom);
+	Alloy.Globals.close();
 }
 
 function deleteRoom () {
@@ -30,7 +30,7 @@ function deleteRoom () {
 		});
 	})
 
-	$.editRoom.close();
+	Alloy.Globals.close();
 }
 
 function init () {
