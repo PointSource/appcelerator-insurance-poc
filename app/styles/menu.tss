@@ -1,9 +1,12 @@
-"#SlideMenu": {
+"#SlideMenu[platform=ios]": {
 	width: 280,
 	top: 0,
 	right: -280,
-	backgroundColor: Alloy.Globals.Colors.gray_verydark,
 	zIndex: 100
+}
+
+"#SlideMenu": {
+	backgroundColor: Alloy.Globals.Colors.gray_verydark,
 }
 
 "Label": {
@@ -40,6 +43,15 @@
 	layout: "vertical",
 	top: 200,
 	height: Ti.UI.FILL
+}
+
+
+".agent-section[platform=android]": {
+	top: 40
+}
+
+"#menuSection[platform=android]": {
+	top: 240
 }
 
 ".menu-row": {
