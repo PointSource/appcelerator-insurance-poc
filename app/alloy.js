@@ -71,14 +71,7 @@ Alloy.Globals.setUpNavBar = function (options) {
         options.currentWindow.setRightNavButtons([menuIcon]);
 
 
-		if (options.leftButtonImage) {
-			backIcon = Titanium.UI.createImageView({
-				image: options.leftButtonImage,
-				height: 70
-			});
-
-		}
-		else {
+		if (options.iosBackButton !== false) {
 	        // Set up iOS back button
 	        backIcon = Titanium.UI.createLabel({
 	        	text: Alloy.Globals.icomoon.icon("back-arrow"),
@@ -92,9 +85,9 @@ Alloy.Globals.setUpNavBar = function (options) {
 			backIcon.addEventListener("click", function() {
 				options.currentWindow.close();
 			});
+	        options.currentWindow.setLeftNavButtons([backIcon]);
 		}
 
-        options.currentWindow.setLeftNavButtons([backIcon]);
 
 	} else if (OS_ANDROID) {
 

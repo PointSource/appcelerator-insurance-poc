@@ -29,13 +29,9 @@ function init() {
 	Alloy.Globals.setUpNavBar({
 		currentWindow: $.dashboard,
 		appWrapper: $.AppWrapper,
-		leftButtonImage: "/images/point-insurance-logo.png",
+		iosBackButton: false,
 		androidMenu: true
 	});
-
-	if (OS_IOS) {
-		$.dashboard.title = "";
-	}
 
 	$.profileIcon.text = Alloy.Globals.icomoon.icon("main-profile");
 	$.policyIcon.text = Alloy.Globals.icomoon.icon("main-policies");
