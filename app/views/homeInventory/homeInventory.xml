@@ -23,7 +23,7 @@
 
                 	    <ItemTemplate name="roomTemplate">
 							<View class="room-row">
-								<View layout="horizontal" left="10" height="Ti.UI.SIZE">
+								<View class="room-left-info">
 									<Label bindId="name" class="bold"/>
 									<Label bindId="numItems" class="item-count"/>
 								</View>
