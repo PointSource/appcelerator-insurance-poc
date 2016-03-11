@@ -24,6 +24,13 @@ function goToAddRoom () {
 	Alloy.Globals.Navigator.open("homeInventory/addRoom", {});
 }
 
+function onSelectRoom (event) {
+	var item = event.section.getItemAt(event.itemIndex);
+	var room = homeInventoryPage.roomCollection.get(item.properties.room_id);
+
+	Alloy.Globals.Navigator.open("homeInventory/editRoom", {room: room});
+}
+
 
 function init() {
 	Alloy.Globals.setUpNavBar({

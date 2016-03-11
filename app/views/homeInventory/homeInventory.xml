@@ -4,15 +4,14 @@
 		<View id="AppWrapper">
 			<View layout="vertical">
 				
-				<ListView defaultItemTemplate="template">
+				<ListView defaultItemTemplate="roomTemplate" onItemclick="onSelectRoom">
 		            <HeaderView>
-		                <View height="Ti.UI.SIZE">
+		                <View height="Ti.UI.SIZE" class="home-inventory-header">
         					<View height="Ti.UI.SIZE" layout="vertical">
 								<Label class="card-label" top="10">TOTAL ESTIMATED VALUE</Label>
 								<Label id="totalValue" class="header-1 card-label">Total Value</Label>
 							</View>
 							<Label id="houseIcon" class="icomoon-icon"></Label>
-
 		                </View>
 		            </HeaderView>
 
@@ -20,21 +19,20 @@
 
 		            <Templates>
 
-		                <!-- Define your item templates within the Templates tags or use the
-		                     Require tag to include a view that only contains an ItemTemplate -->
+		                <!-- Define your item templates within the Templates tags or use the Require tag to include a view that only contains an ItemTemplate -->
 
-		                <ItemTemplate name="template">
-                    		<View layout="horizontal" height="Ti.UI.SIZE" left="10">
+                	    <ItemTemplate name="roomTemplate">
+							<View layout="horizontal" height="Ti.UI.SIZE" left="10">
 								<Label bindId="name" class="bold"/>
 								<Label bindId="numItems" class="item-count"/>
 							</View>
-							<Label bindId="value" right="10" class="bold"/>
-		                </ItemTemplate>
+							<Label bindId="value" class="room-value"/>
+						</ItemTemplate>
 
 		            </Templates>
 
 					<ListSection dataCollection="room" dataTransform="formatRoom" dataFunction="redrawRoomList" >
-						<ListItem name:text="{name}" numItems:text="{numItems}" value:text="{value}" accessoryType="Titanium.UI.LIST_ACCESSORY_TYPE_DETAIL"/>
+						<ListItem name:text="{name}" room_id="{room_id}" numItems:text="{numItems}" value:text="{value}" accessoryType="Titanium.UI.LIST_ACCESSORY_TYPE_DISCLOSURE"/>
 					</ListSection>
 
 					<FooterView>

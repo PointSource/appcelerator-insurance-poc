@@ -20,3 +20,25 @@
 		fontSize: 40
 	}
 }
+
+".item-count": {
+	left: 5
+}
+
+".home-inventory-header": {
+	backgroundColor: "white"
+}
+
+".room-value": {
+	right: "10",
+	class: "bold"
+}
+
+".room-value[platform=android]": {
+	right: "30",
+}
+
+"ListItem": {
+	backgroundColor: "white",
+	height: 50
+}
