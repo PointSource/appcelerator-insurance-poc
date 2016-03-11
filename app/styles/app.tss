@@ -190,14 +190,14 @@ http://docs.appcelerator.com/platform/latest/#!/guide/Alloy_Styles_and_Themes
 ".form-label": {
 	height: 50,
 	width: Ti.UI.FILL,
-	left: 10
+	left: 15
 }
 
 "TextField": {
 	width: Ti.UI.FILL,
 	backgroundColor: "transparent",
 	height: 50,
-	left: 10,
+	left: 15,
 	color: Alloy.Globals.Colors.gray_verydark,
 	hintTextColor: Alloy.Globals.Colors.gray_medium
 }
