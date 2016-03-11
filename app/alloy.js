@@ -23,6 +23,17 @@ Alloy.Globals.icomoon = new IconicFont({
     font: '/lib/icomoon'
 });
 
+// Dashboard icon size
+Alloy.Globals.deviceWidth = Ti.Platform.displayCaps.platformWidth;
+Alloy.Globals.deviceHeight = Ti.Platform.displayCaps.platformHeight;
+
+if (OS_ANDROID) {
+	Alloy.Globals.deviceWidth = Ti.Platform.displayCaps.platformWidth / (Ti.Platform.displayCaps.xdpi / 160);
+	Alloy.Globals.deviceHeight = Ti.Platform.displayCaps.platformHeight / (Ti.Platform.displayCaps.ydpi / 160);
+}
+
+Alloy.Globals.dashboardIconSize = Alloy.Globals.deviceWidth / 4;
+
 /* Utility functions */
 
 Alloy.Globals.findChildrenByClass = function (parent, className) {

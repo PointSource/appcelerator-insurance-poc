@@ -46,8 +46,8 @@ http://docs.appcelerator.com/platform/latest/#!/guide/Alloy_Styles_and_Themes
 /* Buttons */
 
 ".button": {
-	left: 10,
-	right: 10,
+	left: 15,
+	right: 15,
 	height: 50,
 	color: Alloy.Globals.Colors.gray_verydark,
 	backgroundColor: Alloy.Globals.Colors.green

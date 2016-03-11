@@ -16,8 +16,8 @@
 }
 
 ".agent-photo": {
-	height: 90,
-	width: 90
+	height: 100,
+	width: 100
 }
 
 ".agent-info-section": {
@@ -51,7 +51,7 @@
 
 ".dashboard-icon": {
 	font: {
-		fontSize: "75sp"
+		fontSize: Alloy.Globals.dashboardIconSize
 	},
 	textAlign: Ti.UI.TEXT_ALIGNMENT_CENTER,
 }

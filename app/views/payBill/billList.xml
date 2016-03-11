@@ -2,8 +2,17 @@
 	<Collection src="policy"/>
 	<Window id="billList" class="container" title="YOUR BILLS">
 		<View id="AppWrapper">
-			<ScrollView layout="vertical" dataCollection="policy" dataTransform="formatPolicy" dataFilter="filterPolicies">
-				<Require src="payBill/viewBill"/>
+			<ScrollView layout="vertical">
+				<View layout="vertical" dataCollection="policy" dataTransform="formatPolicy" dataFilter="filterPolicies">
+					<View platform="ios" class="card" layout="vertical">
+						<Require src="payBill/viewBill"/>
+					</View>
+					<CardView platform="android" left="15" right="15" top="15">
+						<Require src="payBill/viewBill"/>
+					</CardView>
+				</View>
+				<!-- Spacer -->
+				<View height="15"></View>
 			</ScrollView>
 		</View>
 	</Window>

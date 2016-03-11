@@ -1,13 +1,13 @@
 <Alloy>
-	<View class="card" layout="vertical">
+	<View height="Ti.UI.SIZE" layout="vertical">
 		<View height="Ti.UI.SIZE" top="20">
 			<Label id="typeIcon" class="icomoon-icon" text="{typeIcon}"></Label>
-			<Label class="card-label header-3">{type}</Label>
+			<Label class="card-label header-3" left="70" height="70">{type}</Label>
 		</View>
 		<Label class="card-label small">AMOUNT OF</Label>
 		<Label class="card-label header-1">{minimumDue}</Label>
 		<Label id="dueLabel" class="card-label header-3">{formattedDueDate}</Label>
- 
+
 		<Require src="payBill/policyDetailList" items="{vehicles}" title="Vehicle(s)" formatItem="{getFormattedVehicle}"/>
 
 		<Require src="payBill/policyDetailList" items="{drivers}" title="Driver(s)" formatItem="{getFormattedDriver}"/>

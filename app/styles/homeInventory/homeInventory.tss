@@ -16,9 +16,13 @@
 	backgroundColor: "white"
 }
 
+".total-estimated-label": {
+	top: 15
+}
+
 "#totalValue": {
 	height: 40,
-	bottom: 10
+	bottom: 15
 }
 
 "#houseIcon": {
