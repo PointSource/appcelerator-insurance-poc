@@ -1,11 +1,19 @@
-".top-card": {
-	height: Ti.UI.SIZE,
-	layout: "vertical"
+"ListView": {
+	backgroundColor: "transparent"
+}
+
+"ListItem": {
+	backgroundColor: "white",
+	height: 50
 }
 
 ".button": {
-	top: 10,
-	bottom: 10
+	left: 0,
+	right: 0
+}
+
+".home-inventory-header": {
+	backgroundColor: "white"
 }
 
 "#totalValue": {
@@ -25,20 +33,17 @@
 	left: 5
 }
 
-".home-inventory-header": {
-	backgroundColor: "white"
+".room-row": {
+	height:Ti.UI.SIZE
+}
+
+".room-row[platform=android]": {
+	right: "30"
 }
 
 ".room-value": {
-	right: "10",
+	right: "0",
 	class: "bold"
 }
 
-".room-value[platform=android]": {
-	right: "30",
-}
 
-"ListItem": {
-	backgroundColor: "white",
-	height: 50
-}
