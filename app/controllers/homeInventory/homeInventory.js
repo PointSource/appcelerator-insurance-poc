@@ -37,7 +37,6 @@ function init() {
 	// Add event listeners
 	homeInventoryPage.roomCollection.on("change", getTotalEstimate);
 	homeInventoryPage.roomCollection.on("destroy", getTotalEstimate);
-	homeInventoryPage.imageCollection.on("change", redrawRoomList);
 
 	getTotalEstimate();
 	$.houseIcon.text = Alloy.Globals.icomoon.icon("main-home");

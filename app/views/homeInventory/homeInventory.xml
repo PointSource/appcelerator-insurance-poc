@@ -4,7 +4,7 @@
 		<View id="AppWrapper">
 			<View layout="vertical">
 				
-				<ListView>
+				<ListView defaultItemTemplate="template">
 		            <HeaderView>
 		                <View height="Ti.UI.SIZE">
         					<View height="Ti.UI.SIZE" layout="vertical">
@@ -15,8 +15,26 @@
 
 		                </View>
 		            </HeaderView>
+
+		            <!-- The Templates tag sets the ListView's templates property -->
+
+		            <Templates>
+
+		                <!-- Define your item templates within the Templates tags or use the
+		                     Require tag to include a view that only contains an ItemTemplate -->
+
+		                <ItemTemplate name="template">
+                    		<View layout="horizontal" height="Ti.UI.SIZE" left="10">
+								<Label bindId="name" class="bold"/>
+								<Label bindId="numItems" class="item-count"/>
+							</View>
+							<Label bindId="value" right="10" class="bold"/>
+		                </ItemTemplate>
+
+		            </Templates>
+
 					<ListSection dataCollection="room" dataTransform="formatRoom" dataFunction="redrawRoomList" >
-						<ListItem title="{name}"></ListItem>
+						<ListItem name:text="{name}" numItems:text="{numItems}" value:text="{value}" accessoryType="Titanium.UI.LIST_ACCESSORY_TYPE_DETAIL"/>
 					</ListSection>
 
 					<FooterView>
