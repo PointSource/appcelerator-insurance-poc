@@ -1,5 +1,5 @@
 <Alloy>
-	<Window id="dashboard" title="Point Insurance" theme="Theme.DrawerPage">
+	<Window id="dashboard" title="Point Insurance" theme="Theme.DrawerLayout">
 		<View id="AppWrapper">
 
 			<View class="dashboard">
@@ -11,7 +11,7 @@
 						<View class="agent-info">
 							<Label class="bold info-text">YOUR POINT AGENT</Label>
 							<Label class="header-1 info-text">EVA JOHNSON</Label>
-							<Label class="header-3 info-text">1-800-555-1212 ext.123</Label>
+							<Label class="header-3 info-text" top="5">1-800-555-1212 ext.123</Label>
 						</View>
 					</View>
 				</View>

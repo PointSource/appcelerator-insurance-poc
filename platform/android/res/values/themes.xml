@@ -2,48 +2,46 @@
 
 <resources xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <style name="Theme.DrawerPage" parent="@style/_base"/>
+    <style name="Theme.DrawerLayout" parent="@style/_drawer"/>
+    <style name="Theme.RegularLayout" parent="@style/_base"/>
         
-    <style name="_base" parent="@style/Theme.AppCompat.Light.NoActionBar">
-      	<item name="android:windowTranslucentStatus">true</item>
+    <style name="_drawer" parent="@style/Theme.AppCompat.Light.NoActionBar">
       	<item name="colorPrimary">@color/primary</item>
-
 		<!-- This item is required for Android 2.3.x support -->
-		<item name="actionBarStyle">@style/MyActionBar</item>
+		<item name="actionBarStyle">@style/ActionBar.Style</item>
+	    <item name="android:textViewStyle">@style/TextView.Style</item>
 
-	    <item name="drawerArrowStyle">@style/DrawerArrowStyle</item>
+      	<item name="android:windowTranslucentStatus">true</item>
+	    <item name="drawerArrowStyle">@style/DrawerArrowToggle.Style</item>
 
     </style>
 
-	<style name="Theme.RegularPage" parent="@style/Theme.AppCompat">
+	<style name="_base" parent="@style/Theme.AppCompat">
       	<item name="colorPrimary">@color/primary</item>
-
-	    <item name="actionBarTheme">@style/MyApp.ActionBarTheme</item>
-		<!-- Specify an Action Bar style to use -->
-		<item name="android:actionBarStyle">@style/MyActionBar</item>
 		<!-- This item is required for Android 2.3.x support -->
-		<item name="actionBarStyle">@style/MyActionBar</item>
+		<item name="actionBarStyle">@style/ActionBar.Style</item>
+		<!-- Specify an Action Bar style to use -->
+		<item name="android:actionBarStyle">@style/ActionBar.Style</item>
+	    <item name="android:textViewStyle">@style/TextView.Style</item>
 
-	    <item name="drawerArrowStyle">@style/DrawerArrowStyle</item>
-
+	    <item name="actionBarTheme">@style/ActionBar.Theme</item>
 	</style>
 
+	<style name="TextView.Style" parent="android:Widget.TextView">
+	    <item name="android:lineSpacingMultiplier">0.9</item>
+	</style>
 
-	<style name="MyApp.ActionBarTheme" parent="@style/ThemeOverlay.AppCompat.ActionBar">       
+	<style name="ActionBar.Theme" parent="@style/ThemeOverlay.AppCompat.ActionBar">       
 	    <!-- Color the back arrow! -->
 	    <item name="colorControlNormal">@color/pointsourceBlue</item>
 	</style>
 
-	<style name="MyActionBar" parent="@style/Widget.AppCompat.ActionBar">
+	<style name="ActionBar.Style" parent="@style/Widget.AppCompat.ActionBar">
 		<!-- For Android 3.x and later, you can specify either a color or background image -->
 		<item name="android:background">@color/grayVeryDark</item>
-		
-		<!-- For Android 2.3.x, you can only specify a background image not a color -->
-		<!-- This example references the platform/android/res/drawable-nodpi/actionbar_background.png image -->
-		<!-- <item name="background">@drawable/actionbar_background</item> -->
 	</style>
 
-	<style name="DrawerArrowStyle" parent="Widget.AppCompat.DrawerArrowToggle">
+	<style name="DrawerArrowToggle.Style" parent="Widget.AppCompat.DrawerArrowToggle">
 	    <item name="spinBars">false</item>
 	    <item name="color">@color/pointsourceBlue</item>
 	</style>
