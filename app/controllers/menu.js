@@ -61,15 +61,11 @@ function removeHighlight(e) {
     closeMenu();
 }
 
-
-function goToPayBill () {
-	Ti.Analytics.featureEvent(Ti.Platform.osname+"."+title+".select.payBill");
-	Alloy.Globals.Navigator.open("payBill/billList", {});
-}
-
-function goToHomeInventory () {
-	Ti.Analytics.featureEvent(Ti.Platform.osname+"."+title+".select.homeInventory");
-	Alloy.Globals.Navigator.open("homeInventory/homeInventory", {});
+function selectMenuItem (event) {
+	if (this.controller) {
+		Ti.Analytics.featureEvent(title+".select."+this.controller);
+		Alloy.Globals.Navigator.open(this.controller, {});
+	}
 }
 
 exports.toggleMenu = toggleMenu;

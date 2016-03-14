@@ -15,7 +15,7 @@
 		<Label class="card-label small">Policy No.</Label>
 		<Label class="card-label header-2">{policyNumber}</Label>
 		<View height="Ti.UI.SIZE">
-			<Button id="payNowButton" class="button button-outline" onClick="goToPayBill" top="10" bottom="20">PAY NOW</Button>
+			<Button id="payNowButton" class="button button-outline" onClick="goToPaymentOptions" top="10" bottom="20">PAY NOW</Button>
 		</View>
 	</View>
 </Alloy>

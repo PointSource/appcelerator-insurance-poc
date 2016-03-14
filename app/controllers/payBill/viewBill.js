@@ -1,8 +1,8 @@
 var title = "viewBill";
 Ti.Analytics.featureEvent(Ti.Platform.osname+"."+title+".viewed");
 
-function goToPayBill (event) {
-	Ti.Analytics.featureEvent(Ti.Platform.osname+"."+title+".goToPayBill");
+function goToPaymentOptions (event) {
+	Ti.Analytics.featureEvent(title+".goToPaymentOptions");
 	Alloy.Globals.Navigator.open("payBill/paymentOptions", {currentPolicy: $model});
 }
 

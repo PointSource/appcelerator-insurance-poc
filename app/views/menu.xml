@@ -25,7 +25,7 @@
 				<View class="horizontal-divider"></View>
 			</View>
 
-			<View class="menu-row" onClick="goToPayBill" onTouchstart="addHighlight" onTouchend="removeHighlight">
+			<View class="menu-row" onClick="selectMenuItem" controller="payBill/billList" onTouchstart="addHighlight" onTouchend="removeHighlight">
 				<Label class="menu-label">PAY BILL</Label>
 				<View class="horizontal-divider"></View>
 			</View>
@@ -35,7 +35,7 @@
 				<View class="horizontal-divider"></View>
 			</View>
 
-			<View class="menu-row" onClick="goToHomeInventory"  onTouchstart="addHighlight" onTouchend="removeHighlight">
+			<View class="menu-row" onClick="selectMenuItem" controller="homeInventory/homeInventory" onTouchstart="addHighlight" onTouchend="removeHighlight">
 				<Label class="menu-label">HOME INVENTORY</Label>
 				<View class="horizontal-divider"></View>
 			</View>

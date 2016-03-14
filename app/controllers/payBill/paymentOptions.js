@@ -1,8 +1,15 @@
 // Arguments passed into this controller can be accessed off of the `$.args` object directly or:
 var args = $.args;
 var selectedPayment = 0;
+var title = "paymentOptions";
+Ti.Analytics.featureEvent(Ti.Platform.osname+"."+title+".viewed");
 
 function goToPayBill (event) {
+	Ti.Analytics.featureEvent(title+".goToPayBill", {
+		plaform: Ti.Platform.osname,
+		selectedPayment: selectedPayment
+	});
+
 	if (selectedPayment === 0) {
 		alert("Please select a payment amount");
 	} else {
@@ -12,6 +19,9 @@ function goToPayBill (event) {
 		});
 
 		function paymentHandler(e) {
+			Ti.Analytics.featureEvent(title+".paymentMade", {
+				plaform: Ti.Platform.osname
+			});
 			alert("Payment of $"+selectedPayment+" submitted");
 			$.paymentOptions.close();
 			removeListener();
