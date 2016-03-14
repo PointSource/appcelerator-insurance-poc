@@ -1,4 +1,6 @@
 var string = require('alloy/string');
+var title = "billList";
+Ti.Analytics.featureEvent(Ti.Platform.osname+"."+title+".viewed");
 
 function formatPolicy(policy) {
 	Alloy.Globals.apm.leaveBreadcrumb("enter formatPolicy: billList");

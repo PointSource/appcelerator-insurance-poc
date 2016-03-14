@@ -1,10 +1,13 @@
-var args = arguments[0] || {};
+var title = "dashboard";
+Ti.Analytics.featureEvent(Ti.Platform.osname+"."+title+".viewed");
 
 function goToViewBill (event) {
+Ti.Analytics.featureEvent(Ti.Platform.osname+"."+title+".select.viewBill");
 	Alloy.Globals.Navigator.open("payBill/billList", {});
 }
 
 function goToHomeInventory (event) {
+	Ti.Analytics.featureEvent(Ti.Platform.osname+"."+title+".select.homeInventory");
 	Alloy.Globals.Navigator.open("homeInventory/homeInventory", {});
 }
 

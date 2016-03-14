@@ -1,11 +1,13 @@
 var menuOpen = false;
+var title = "menu";
+Ti.Analytics.featureEvent(Ti.Platform.osname+"."+title+".viewed");
 
 $.callIcon.text = Alloy.Globals.icomoon.icon("menu-call");
 $.emailIcon.text = Alloy.Globals.icomoon.icon("menu-email");
 $.mapIcon.text = Alloy.Globals.icomoon.icon("menu-map");
 
-
 function openMenu() {
+	Ti.Analytics.featureEvent(Ti.Platform.osname+"."+title+".opened");
 	if (OS_IOS) {
 	    $.SlideMenu.animate({
 	        right: "0dp",
@@ -19,6 +21,7 @@ function openMenu() {
 }
 
 function closeMenu() {
+	Ti.Analytics.featureEvent(Ti.Platform.osname+"."+title+".closed");
 	if (OS_IOS) {
 		$.SlideMenu.animate({
 		    right: "-280dp",
@@ -41,6 +44,7 @@ function toggleMenu() {
 
 
 $.SlideMenu.addEventListener("swipe", function(_event) {
+	Ti.Analytics.featureEvent(Ti.Platform.osname+"."+title+".swiped");
     if(_event.direction == "right") {
         closeMenu();
     }
@@ -50,6 +54,7 @@ function addHighlight(e) {
 	this.setBackgroundColor(Alloy.Globals.Colors.pointsource_blue);
 	this.children[0].setColor(Alloy.Globals.Colors.gray_verydark);
 }
+
 function removeHighlight(e) {
 	this.setBackgroundColor('transparent');
 	this.children[0].setColor(Alloy.Globals.Colors.gray_medium);
@@ -58,12 +63,12 @@ function removeHighlight(e) {
 
 
 function goToPayBill () {
-	Titanium.Analytics.featureEvent('menu.select.payBill');
+	Ti.Analytics.featureEvent(Ti.Platform.osname+"."+title+".select.payBill");
 	Alloy.Globals.Navigator.open("payBill/billList", {});
 }
 
 function goToHomeInventory () {
-	Titanium.Analytics.featureEvent('menu.select.homeInventory');
+	Ti.Analytics.featureEvent(Ti.Platform.osname+"."+title+".select.homeInventory");
 	Alloy.Globals.Navigator.open("homeInventory/homeInventory", {});
 }
 
