@@ -1,6 +1,7 @@
 var string = require('alloy/string');
 
 function formatPolicy(policy) {
+	Alloy.Globals.apm.leaveBreadcrumb("enter formatPolicy: billList");
 	var transformed = policy.toJSON();
 
 	transformed.minimumDue = string.formatCurrency(policy.getMinimumDue());
@@ -11,6 +12,7 @@ function formatPolicy(policy) {
 	transformed.getFormattedVehicle = policy.getFormattedVehicle;
 	transformed.typeIcon = policy.getIcon();
 
+	Alloy.Globals.apm.leaveBreadcrumb("exit formatPolicy: billList");
 	return transformed;
 }
 
@@ -21,6 +23,7 @@ function filterPolicies (policyCollection) {
 }
 
 function init() {
+	Alloy.Globals.apm.leaveBreadcrumb("enter init: billList");
     Alloy.Globals.setUpNavBar({
         currentWindow: $.billList,
         appWrapper: $.AppWrapper
@@ -32,9 +35,10 @@ function init() {
     	},
     	error: function (err) {
     		alert('could not get list of policies');
+		    Alloy.Globals.apm.logHandledException(err);
     	}
     });
-	// Alloy.Globals.apm.leaveBreadcrumb("exit init");
+	Alloy.Globals.apm.leaveBreadcrumb("exit init: billList");
 }
 
 init();

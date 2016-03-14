@@ -3,6 +3,10 @@
 // You have access to all functionality on the `Alloy` namespace.
 //
 
+// Appcelerator Performance Management
+Alloy.Globals.apm = require("com.appcelerator.apm");
+Alloy.Globals.apm.init();
+
 Alloy.Globals.url = "http://10.128.64.62:1337"
 
 /* Colors to be used in TSS */
