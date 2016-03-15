@@ -14,30 +14,20 @@ function goToPayBill (event) {
 	if (controller.selectedPayment === 0) {
 		alert("Please select a payment amount");
 	} else {
-		var payBillController = Alloy.createController("billing/payBill", {
+		Alloy.Globals.Navigator.open("billing/payBill", {
 			currentPolicy: args.currentPolicy,
-			selectedPayment: controller.selectedPayment
-		});
+			selectedPayment: controller.selectedPayment,
+			onPaymentMade: function(selectedPayment) {
+				Ti.Analytics.featureEvent(controller.title+".paymentMade");
+				$.paymentOptions.close();
 
-		function paymentHandler(e) {
-			Ti.Analytics.featureEvent(controller.title+".paymentMade", {
-				plaform: Ti.Platform.osname
-			});
-			alert("Payment of $"+controller.selectedPayment+" submitted");
-			$.paymentOptions.close();
-			removeListener();
-		}
-		function removeListener() {
-		  	payBillController.off('paymentMade', paymentHandler);
-		}
-		payBillController.on('paymentMade', paymentHandler);
-
-		Alloy.Globals.Navigator.openWindow(payBillController.getView());
+				alert("Payment of $"+selectedPayment+" submitted");
+			}
+		}, controller.title);
 	}
 }
 
 function handlePaymentChange (data) {
-	console.log('handlePaymentChange');
 	if (data.selectedIndex === 0) {
 		controller.selectedPayment = args.currentPolicy.get("billDetails").minimumDue;
 	} else if (data.selectedIndex === 1) {

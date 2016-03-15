@@ -1,7 +1,7 @@
 var string = require('alloy/string');
 
 var controller = {
-	title: "billList"
+	title: "viewBills"
 }
 
 function formatPolicy(policy) {

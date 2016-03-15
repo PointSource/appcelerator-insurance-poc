@@ -37,7 +37,9 @@ function submit() {
 		success: function () {
 			controller.policyCollection.fetch({
 				success: function() {
-					$.trigger('paymentMade');
+					if (_.isFunction(args.onPaymentMade)) {
+						args.onPaymentMade(args.selectedPayment);
+					}
 					$.payBillWindow.close();
 				}, error: function() {
 					alert('could not submit payment');

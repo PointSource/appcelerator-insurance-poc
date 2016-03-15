@@ -1,6 +1,8 @@
+var args = $.args;
+
 var controller = {
-	title: "viewBill"
-}
+	title: "billInfo"
+};
 
 function goToPaymentOptions (event) {
 	Ti.Analytics.featureEvent(controller.title+".goToPaymentOptions");

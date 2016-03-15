@@ -1,7 +1,7 @@
 var string = require('alloy/string');
 
 var controller = {
-	title: "homeInventory",
+	title: "viewRooms",
 	roomCollection: Alloy.Collections.room,
 	imageCollection: Alloy.Collections.instance('image')
 };
