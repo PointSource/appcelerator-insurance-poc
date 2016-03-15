@@ -57,14 +57,14 @@
 }
 
 ".dashboard-icon-label": {
-	color: "#606060",
+	color: Alloy.Globals.Colors.gray_dark,
 	width: 100,
 	textAlign: Titanium.UI.TEXT_ALIGNMENT_CENTER
 }
 
 ".auto-section": {
 	layout: "horizontal",
-	backgroundColor: "#262626",
+	backgroundColor: Alloy.Globals.Colors.gray_verydark,
 	height: "150",
 	bottom: 0
 }
