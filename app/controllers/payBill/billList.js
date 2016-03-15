@@ -1,6 +1,8 @@
 var string = require('alloy/string');
-var title = "billList";
-Ti.Analytics.featureEvent(Ti.Platform.osname+"."+title+".viewed");
+
+var controller = {
+	title: "billList"
+}
 
 function formatPolicy(policy) {
 	Alloy.Globals.apm.leaveBreadcrumb("enter formatPolicy: billList");
@@ -25,6 +27,8 @@ function filterPolicies (policyCollection) {
 }
 
 function init() {
+	Ti.Analytics.featureEvent(Ti.Platform.osname+"."+controller.title+".viewed");
+
 	Alloy.Globals.apm.leaveBreadcrumb("enter init: billList");
     Alloy.Globals.setUpNavBar({
         currentWindow: $.billList,

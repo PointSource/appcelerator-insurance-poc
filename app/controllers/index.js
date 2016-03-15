@@ -2,9 +2,12 @@
  * Global Navigation Handler
  */
 Alloy.Globals.Navigator = {
-	open: function(controller, payload){
+	open: function(controller, payload, fromWin){
 
-		Ti.Analytics.navEvent('Somewhere', controller, 'nav.messageapp');
+		if (fromWin) {
+			Ti.Analytics.navEvent(fromWin, controller, 'nav.messageapp');
+			Ti.Analytics.featureEvent(fromWin+"-to-"+controller);
+		}
 		var win = Alloy.createController(controller, payload || {}).getView();
 
 		if(OS_IOS){
@@ -25,11 +28,14 @@ Alloy.Globals.Navigator = {
 };
 
 
+function init() {
+	// Set up navigation header
+	if(OS_IOS){
+		$.nav.open();
+	}
+	else if (OS_ANDROID) {
+		Alloy.Globals.Navigator.open("dashboard");
+	}
+}
 
-// Set up navigation header
-if(OS_IOS){
-	$.nav.open();
-}
-else if (OS_ANDROID) {
-	Alloy.Globals.Navigator.open("dashboard");
-}
+init();

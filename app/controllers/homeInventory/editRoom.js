@@ -1,5 +1,8 @@
 var args = arguments[0] || {};
-var imageCollection = Alloy.Collections.image;
+var controller = {
+	title: "editRoom",
+	imageCollection: Alloy.Collections.image
+}
 
 
 function filterImages (collection) {
@@ -8,6 +11,8 @@ function filterImages (collection) {
 
 
 function saveRoom () {
+	Ti.Analytics.featureEvent(controller.title+".saveRoom");
+
 	var room = args.room;
 	room.set('name', $.nameInput.value);
 	room.set('value', parseInt($.valueInput.value, 10));
@@ -17,8 +22,10 @@ function saveRoom () {
 }
 
 function deleteRoom () {
+	Ti.Analytics.featureEvent(controller.title+".deleteRoom");
+
 	var room = args.room;
-	var imagesForRoom = args.room.getImagesForRoom(imageCollection);
+	var imagesForRoom = args.room.getImagesForRoom(controller.imageCollection);
 
 	// Delete room
 	room.destroy();
@@ -34,6 +41,7 @@ function deleteRoom () {
 }
 
 function init () {
+	Ti.Analytics.featureEvent(Ti.Platform.osname+"."+controller.title+".viewed");
 
     Alloy.Globals.setUpNavBar({
         currentWindow: $.editRoom,
@@ -42,7 +50,7 @@ function init () {
 
 	$.roomDetail.set(args.room.attributes);
 
-	imageCollection.fetch();
+	controller.imageCollection.fetch();
 }
 
 // Initialize Page

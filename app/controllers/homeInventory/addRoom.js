@@ -1,10 +1,12 @@
-var addRoomPage = {
+var controller = {
+    title: "addRoom",
     roomCollection: Alloy.Collections.room,
     imageCollection: Alloy.Collections.instance('image'),
     images: []
 }
 
 function submit() {
+    Ti.Analytics.featureEvent(controller.title+".pressedSubmit");
     if ($.valueInput.value.length === 0) {
         alert("Please fill out all fields");
         return;
@@ -21,16 +23,16 @@ function submit() {
         });
 
         if (room.isValid()) {
-            addRoomPage.roomCollection.add(room);
+            controller.roomCollection.add(room);
             room.save();
 
-            for (i in addRoomPage.images) {
+            for (i in controller.images) {
                 var image = Alloy.createModel('image', {
-                    path: addRoomPage.images[i],
+                    path: controller.images[i],
                     room_id: room.id
                 });
 
-                addRoomPage.imageCollection.add(image);
+                controller.imageCollection.add(image);
                 image.save();
             }
 
@@ -71,7 +73,7 @@ function onPictureTaken(event) {
     $.imagePreview.add(cropView);
     $.imagePreview.scrollToBottom();
 
-    addRoomPage.images.push(event.image);
+    controller.images.push(event.image);
 }
 
 function takePicture() {
@@ -80,6 +82,8 @@ function takePicture() {
 
 
 function init() {
+    Ti.Analytics.featureEvent(Ti.Platform.osname+"."+controller.title+".viewed");
+
     Alloy.Globals.setUpNavBar({
         currentWindow: $.addRoom,
         appWrapper: $.AppWrapper

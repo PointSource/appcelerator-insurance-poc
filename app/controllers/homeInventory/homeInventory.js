@@ -1,5 +1,7 @@
 var string = require('alloy/string');
-var homeInventoryPage = {
+
+var controller = {
+	title: "homeInventory",
 	roomCollection: Alloy.Collections.room,
 	imageCollection: Alloy.Collections.instance('image')
 };
@@ -9,41 +11,46 @@ function formatRoom (room) {
 	formattedRoom.value = string.formatCurrency(formattedRoom.value);
 	formattedRoom.name = formattedRoom.name.toUpperCase();
 
-	var imagesForRoom = room.getImagesForRoom(homeInventoryPage.imageCollection);
+	var imagesForRoom = room.getImagesForRoom(controller.imageCollection);
 	formattedRoom.numItems = "("+imagesForRoom.length+" items)";
 
 	return formattedRoom;
 }
 
 function getTotalEstimate () {
-	var sum = homeInventoryPage.roomCollection.getSum();
+	var sum = controller.roomCollection.getSum();
 	$.totalValue.text = string.formatCurrency(sum);
 }
 
 function goToAddRoom () {
-	Alloy.Globals.Navigator.open("homeInventory/addRoom", {});
+	Ti.Analytics.featureEvent(controller.title+".select.addRoom");
+	Alloy.Globals.Navigator.open("homeInventory/addRoom", {}, controller.title);
 }
 
 function onSelectRoom (event) {
+	Ti.Analytics.featureEvent(controller.title+".select.editRoom");
+	
 	var item = event.section.getItemAt(event.itemIndex);
-	var room = homeInventoryPage.roomCollection.get(item.properties.room_id);
+	var room = controller.roomCollection.get(item.properties.room_id);
 
 	Alloy.Globals.Navigator.open("homeInventory/editRoom", {room: room});
 }
 
 
 function init() {
+	Ti.Analytics.featureEvent(Ti.Platform.osname+"."+controller.title+".viewed");
+
 	Alloy.Globals.setUpNavBar({
 		currentWindow: $.homeInventory,
 		appWrapper: $.AppWrapper
 	});
 	
-	homeInventoryPage.imageCollection.fetch();
-	homeInventoryPage.roomCollection.fetch();
+	controller.imageCollection.fetch();
+	controller.roomCollection.fetch();
 
 	// Add event listeners
-	homeInventoryPage.roomCollection.on("change", getTotalEstimate);
-	homeInventoryPage.roomCollection.on("destroy", getTotalEstimate);
+	controller.roomCollection.on("change", getTotalEstimate);
+	controller.roomCollection.on("destroy", getTotalEstimate);
 
 	getTotalEstimate();
 	$.houseIcon.text = Alloy.Globals.icomoon.icon("main-home");

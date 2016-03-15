@@ -12,6 +12,7 @@
 								<Label id="totalValue" class="header-1 card-label">Total Value</Label>
 							</View>
 							<Label id="houseIcon" class="icomoon-icon"></Label>
+							<View class="horizontal-divider"></View>
 		                </View>
 		            </HeaderView>
 

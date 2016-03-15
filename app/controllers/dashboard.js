@@ -1,14 +1,12 @@
-var title = "dashboard";
-Ti.Analytics.featureEvent(Ti.Platform.osname+"."+title+".viewed");
-
-function goToViewBill (event) {
-	Ti.Analytics.featureEvent(title+".select.viewBill");
-	Alloy.Globals.Navigator.open("payBill/billList", {});
+var controller = {
+	title: "dashboard"
 }
 
-function goToHomeInventory (event) {
-	Ti.Analytics.featureEvent(title+".select.homeInventory");
-	Alloy.Globals.Navigator.open("homeInventory/homeInventory", {});
+function onSelectDashboardIcon(event) {
+	if (this.controllerLink) {
+		Ti.Analytics.featureEvent(controller.title+".select."+this.controllerLink);
+		Alloy.Globals.Navigator.open(this.controllerLink, {}, controller.title);
+	}
 }
 
 function resetBills () {
@@ -28,6 +26,7 @@ function resetBills () {
 }
 
 function init() {
+	Ti.Analytics.featureEvent(Ti.Platform.osname+"."+controller.title+".viewed");
 
 	Alloy.Globals.setUpNavBar({
 		currentWindow: $.dashboard,
