@@ -6,7 +6,7 @@
 	height: 28,
 	width: 28,
 	borderRadius: 14,
-	borderColor: Alloy.Globals.Colors.gray_verydark,
+	borderColor: "#282828",
 	borderWidth: 1,
 	left: 12
 }
@@ -19,7 +19,7 @@
 
 
 ".radio-selected": {
-	backgroundColor: Alloy.Globals.Colors.green
+	backgroundColor: "#9ad275"
 }
 
 
