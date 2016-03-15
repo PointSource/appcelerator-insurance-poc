@@ -1,6 +1,9 @@
 var args = $.args;
 var cardio = require('com.pointsource.card.io');
-var policyCollection = Alloy.Collections.instance('policy');
+var controller = {
+	title: "payBill",
+	policyCollection: Alloy.Collections.instance('policy')
+}
 
 function handleScan(e) {
 	$.cardNumberField.value = e.cardNumber;
@@ -32,7 +35,7 @@ function submit() {
 
 	payment.save({}, {
 		success: function () {
-			policyCollection.fetch({
+			controller.policyCollection.fetch({
 				success: function() {
 					$.trigger('paymentMade');
 					$.payBillWindow.close();
@@ -73,6 +76,8 @@ function focusNextField(e) {
 
 
 function init () {
+	Ti.Analytics.featureEvent(Ti.Platform.osname+"."+controller.title+".viewed");
+	
 	Alloy.Globals.setUpNavBar({
 		currentWindow: $.payBillWindow,
 		appWrapper: $.AppWrapper

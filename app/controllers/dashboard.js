@@ -2,7 +2,7 @@ var controller = {
 	title: "dashboard"
 }
 
-function onSelectDashboardIcon(event) {
+function onSelectIcon(event) {
 	if (this.controllerLink) {
 		Ti.Analytics.featureEvent(controller.title+".select."+this.controllerLink);
 		Alloy.Globals.Navigator.open(this.controllerLink, {}, controller.title);

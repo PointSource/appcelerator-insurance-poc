@@ -1,13 +1,14 @@
 // Arguments passed into this controller can be accessed off of the `$.args` object directly or:
 var args = $.args;
-var selectedPayment = 0;
-var title = "paymentOptions";
-Ti.Analytics.featureEvent(Ti.Platform.osname+"."+title+".viewed");
+var controller = {
+	title: "paymentOptions",
+	selectedPayment: 0
+}
 
 function goToPayBill (event) {
-	Ti.Analytics.featureEvent(title+".goToPayBill", {
+	Ti.Analytics.featureEvent(controller.title+".goToPayBill", {
 		plaform: Ti.Platform.osname,
-		selectedPayment: selectedPayment
+		selectedPayment: controller.selectedPayment
 	});
 
 	if (selectedPayment === 0) {
@@ -15,14 +16,14 @@ function goToPayBill (event) {
 	} else {
 		var payBillController = Alloy.createController("payBill/payBill", {
 			currentPolicy: args.currentPolicy,
-			selectedPayment: selectedPayment
+			selectedPayment: controller.selectedPayment
 		});
 
 		function paymentHandler(e) {
-			Ti.Analytics.featureEvent(title+".paymentMade", {
+			Ti.Analytics.featureEvent(controller.title+".paymentMade", {
 				plaform: Ti.Platform.osname
 			});
-			alert("Payment of $"+selectedPayment+" submitted");
+			alert("Payment of $"+controller.selectedPayment+" submitted");
 			$.paymentOptions.close();
 			removeListener();
 		}
@@ -36,14 +37,16 @@ function goToPayBill (event) {
 }
 
 function handlePaymentChange (data) {
+	console.log('handlePaymentChange');
 	if (data.selectedIndex === 0) {
-		selectedPayment = args.currentPolicy.get("billDetails").minimumDue;
+		controller.selectedPayment = args.currentPolicy.get("billDetails").minimumDue;
 	} else if (data.selectedIndex === 1) {
-		selectedPayment = args.currentPolicy.get("billDetails").totalAmountDue;
+		controller.selectedPayment = args.currentPolicy.get("billDetails").totalAmountDue;
 	}
 }
 
 function init() {
+	Ti.Analytics.featureEvent(Ti.Platform.osname+"."+controller.title+".viewed");
 
     Alloy.Globals.setUpNavBar({
         currentWindow: $.paymentOptions,
