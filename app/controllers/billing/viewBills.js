@@ -21,9 +21,16 @@ function formatPolicy(policy) {
 }
 
 function filterPolicies (policyCollection) {
-	return policyCollection.filter(function(policy) {
+	var filteredPolicies =  policyCollection.filter(function(policy) {
 		return parseFloat(policy.get("billDetails").minimumDue) > 0;
 	});
+	if (filteredPolicies.length === 0) {
+		$.noBillsMessage.text = "There are currently no bills on your account";
+	} else {
+		$.noBillsMessage.text = "";
+	}
+
+	return filteredPolicies;
 }
 
 function init() {

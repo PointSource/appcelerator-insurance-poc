@@ -43,7 +43,7 @@
 								<Label class="dashboard-icon-label">Auto Maintenance</Label>
 							</View>
 						</View>
-						<View class="dashboard-grid-cell columns-4" onClick="onSelectIcon" controllerLink="homeInventory/homeInventory">
+						<View class="dashboard-grid-cell columns-4" onClick="onSelectIcon" controllerLink="homeInventory/viewRooms">
 							<View class="dashboard-icon-wrapper">
 								<Label id="inventoryIcon" class="icomoon-icon dashboard-icon"></Label>
 								<Label class="dashboard-icon-label">Home Inventory</Label>

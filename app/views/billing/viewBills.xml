@@ -2,6 +2,7 @@
 	<Collection src="policy"/>
 	<Window id="billList" class="container" title="YOUR BILLS">
 		<View id="AppWrapper">
+			<Label id="noBillsMessage"></Label>
 			<ScrollView layout="vertical" scrollType="vertical">
 				<View layout="vertical" dataCollection="policy" dataTransform="formatPolicy" dataFilter="filterPolicies">
 					<View platform="ios" class="card" layout="vertical">

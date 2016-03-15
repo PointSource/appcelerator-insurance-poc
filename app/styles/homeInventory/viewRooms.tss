@@ -1,5 +1,6 @@
 "ListView": {
-	backgroundColor: "transparent"
+	backgroundColor: "transparent",
+	separatorColor: Alloy.Globals.Colors.gray_light
 }
 
 "ListItem": {
@@ -10,6 +11,10 @@
 ".button": {
 	left: 0,
 	right: 0
+}
+
+".horizontal-divider": {
+	backgroundColor: Alloy.Globals.Colors.gray_light
 }
 
 ".home-inventory-header": {
