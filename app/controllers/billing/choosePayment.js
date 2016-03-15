@@ -21,7 +21,15 @@ function goToPayBill (event) {
 				Ti.Analytics.featureEvent(controller.title+".paymentMade");
 				$.paymentOptions.close();
 
-				alert("Payment of $"+selectedPayment+" submitted");
+				if (OS_IOS) {
+					alert("Payment of $"+selectedPayment+" submitted");
+				} else if (OS_ANDROID) {
+					var notification = Ti.UI.createNotification({
+						message:"Payment of $"+selectedPayment+" submitted",
+						duration: Ti.UI.NOTIFICATION_DURATION_LONG
+					});
+					notification.show();
+				}
 			}
 		}, controller.title);
 	}

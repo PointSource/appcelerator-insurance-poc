@@ -16,14 +16,6 @@ Alloy.Globals.Navigator = {
 		else {
 			win.open();
 		}
-	},
-	openWindow: function(win){
-		if(OS_IOS){
-			$.nav.openWindow(win);
-		}
-		else {
-			win.open();
-		}
 	}
 };
 
