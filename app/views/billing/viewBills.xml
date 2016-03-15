@@ -5,10 +5,10 @@
 			<ScrollView layout="vertical" scrollType="vertical">
 				<View layout="vertical" dataCollection="policy" dataTransform="formatPolicy" dataFilter="filterPolicies">
 					<View platform="ios" class="card" layout="vertical">
-						<Require src="payBill/viewBill"/>
+						<Require src="billing/billInfo"/>
 					</View>
 					<CardView platform="android" left="15" right="15" top="15">
-						<Require src="payBill/viewBill"/>
+						<Require src="billing/billInfo"/>
 					</CardView>
 				</View>
 				<!-- Spacer -->

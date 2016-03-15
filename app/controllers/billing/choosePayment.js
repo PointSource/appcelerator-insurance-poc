@@ -11,10 +11,10 @@ function goToPayBill (event) {
 		selectedPayment: controller.selectedPayment
 	});
 
-	if (selectedPayment === 0) {
+	if (controller.selectedPayment === 0) {
 		alert("Please select a payment amount");
 	} else {
-		var payBillController = Alloy.createController("payBill/payBill", {
+		var payBillController = Alloy.createController("billing/payBill", {
 			currentPolicy: args.currentPolicy,
 			selectedPayment: controller.selectedPayment
 		});

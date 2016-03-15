@@ -25,7 +25,7 @@
 				<View class="horizontal-divider"></View>
 			</View>
 
-			<View class="menu-row" onClick="selectMenuItem" controller="payBill/billList" onTouchstart="addHighlight" onTouchend="removeHighlight">
+			<View class="menu-row" onClick="selectMenuItem" controller="billing/viewBills" onTouchstart="addHighlight" onTouchend="removeHighlight">
 				<Label class="menu-label">PAY BILL</Label>
 				<View class="horizontal-divider"></View>
 			</View>
