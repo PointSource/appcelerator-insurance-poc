@@ -1,15 +1,16 @@
 {
-  "global": {},
-  "env:development": {},
-  "env:test": {},
-  "env:production": {},
-  "os:android": {},
-  "os:blackberry": {},
-  "os:ios": {},
-  "os:mobileweb": {},
-  "os:windows": {},
-  "dependencies": {
-    "ts.camera": "*"
-  },
-  "backbone": "1.1.2"
+    "global": {},
+    "env:development": {},
+    "env:test": {},
+    "env:production": {},
+    "os:android": {},
+    "os:blackberry": {},
+    "os:ios": {},
+    "os:mobileweb": {},
+    "os:windows": {},
+    "dependencies": {
+        "ts.camera": "*",
+        "ps.radioButtonGroup": "1.0"
+    },
+    "backbone": "1.1.2"
 }

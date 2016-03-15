@@ -1,16 +1,18 @@
 // Arguments passed into this controller can be accessed off of the `$.args` object directly or:
 var args = $.args;
-var radioButtonList = [];
+var controller = {
+	radioButtonList: []
+}
 
 function init () {
 
 	_.each($.args.children || [], function(child, i) {
-		var radioButton = Alloy.createController("radioButton", {
+		var radioButton = Widget.createController("radioButton", {
 			children:[child]
 		});
 
 		radioButton.on("click", function () {
-			_.each(radioButtonList, function(radioButtonSibling) {
+			_.each(controller.radioButtonList, function(radioButtonSibling) {
 				radioButtonSibling.unselect();
 			});
 			radioButton.select();
@@ -19,7 +21,7 @@ function init () {
 			});
 		});
 
-		radioButtonList.push(radioButton);
+		controller.radioButtonList.push(radioButton);
 
 		if ($.args.selectedIndex && parseInt($.args.selectedIndex, 10) === i) {
 			radioButton.select();

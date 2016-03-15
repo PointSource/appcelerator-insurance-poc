@@ -1,6 +1,8 @@
 // Arguments passed into this controller can be accessed off of the `$.args` object directly or:
 var args = $.args;
-var selected = false;
+var controller = {
+	selected: false
+}
 
 function unselect () {
 	var style = $.createStyle({
@@ -8,7 +10,7 @@ function unselect () {
 	});
 	$.radio.applyProperties(style);
 
-	selected = false;
+	controller.selected = false;
 }
 
 function select () {
@@ -17,7 +19,7 @@ function select () {
 	});
 	$.radio.applyProperties(style);
 
-	selected = true;
+	controller.selected = true;
 }
 
 function handleClick () {

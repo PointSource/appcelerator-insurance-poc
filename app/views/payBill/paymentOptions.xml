@@ -8,7 +8,7 @@
 						<Label id="typeIcon" class="icomoon-icon"></Label>
 						<Label class="card-label header-3">PAYMENT OPTIONS</Label>
 					</View>
-					<Require src="radioButtonGroup" onChange="handlePaymentChange" selectedIndex="0">
+					<Widget src="ps.radioButtonGroup" onChange="handlePaymentChange" selectedIndex="0">
 						<View layout="vertical" height="Ti.UI.SIZE">
 							<Label id="minimumDueTitle" class="card-label small">MINIMUM DUE</Label>
 							<Label id="minimumDueAmount" class="card-label header-2">{$.currentPolicy.minimumDue}</Label>
@@ -17,7 +17,7 @@
 							<Label class="card-label small">FULL BALANCE</Label>
 							<Label class="card-label header-2">{$.currentPolicy.totalAmountDue}</Label>
 						</View>
-					</Require>
+					</Widget>
 					<!-- Spacer -->
 					<View height="20"/>
 				</View>
