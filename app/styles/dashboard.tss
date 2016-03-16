@@ -19,16 +19,16 @@
 }
 
 ".agent-photo-section": {
-	width: "30%"
+	width: "35%"
 }
 
 ".agent-photo": {
-	height: 100,
-	width: 100
+	width: "85%",
+	right: 5
 }
 
 ".agent-info-section": {
-	width: "69%"
+	width: "65%"
 }
 
 ".agent-info": {
