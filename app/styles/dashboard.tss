@@ -100,21 +100,23 @@
 
 "#autoIcon[platform=android]": {
 	font: {
-		fontSize: "60%"
+		fontSize: "75%"
 	}
 }
 
 ".auto-section-divider": {
-	height: "80%",
+	bottom: "10%",
+	top: "10%",
 	backgroundColor: Alloy.Globals.Colors.pointsource_blue
 }
 
 ".auto-info-section": {
-	height: Ti.UI.FILL
+	width: "75%",
+	top: 0
 }
 
 ".auto-info": {
-	left: 20,
+	left: 15,
 	layout: "vertical",
 	width: Ti.UI.SIZE,
 	height: Ti.UI.SIZE
