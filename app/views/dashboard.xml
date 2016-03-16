@@ -3,7 +3,7 @@
 		<View id="AppWrapper">
 
 			<View class="dashboard">
-				<View class="agent-section">
+				<View id="agentSection">
 					<View class="agent-photo-section">
 						<ImageView class="agent-photo" image="/images/Point-Insurance-Agent-Photo-main.png"/>
 					</View>
@@ -15,49 +15,51 @@
 						</View>
 					</View>
 				</View>
-				<View class="launch-pad-section">
-					<View class="dashboard-row row" >
-						<View class="dashboard-grid-cell columns-4">
-							<View class="dashboard-icon-wrapper">
-								<Label id="profileIcon" class="icomoon-icon dashboard-icon"></Label>
-								<Label class="dashboard-icon-label">Profile</Label>
+				<View id="launchPadSection">
+					<View id="launchPadWrapper" layout="vertical" height="Titanium.UI.SIZE">
+						<View class="dashboard-row row" >
+							<View class="dashboard-grid-cell columns-4">
+								<View class="dashboard-icon-wrapper">
+									<Label id="profileIcon" class="icomoon-icon dashboard-icon"></Label>
+									<Label class="dashboard-icon-label">Profile</Label>
+								</View>
+							</View>
+							<View class="dashboard-grid-cell columns-4">
+								<View class="dashboard-icon-wrapper">
+									<Label id="policyIcon" class="icomoon-icon dashboard-icon"></Label>
+									<Label class="dashboard-icon-label">Policies</Label>
+								</View>
+							</View>
+							<View class="dashboard-grid-cell columns-4" onClick="onSelectIcon" controllerLink="billing/viewBills">
+								<View class="dashboard-icon-wrapper">
+									<Label id="paybillIcon" class="icomoon-icon dashboard-icon"></Label>
+									<Label class="dashboard-icon-label">Pay Bill</Label>
+								</View>
 							</View>
 						</View>
-						<View class="dashboard-grid-cell columns-4">
-							<View class="dashboard-icon-wrapper">
-								<Label id="policyIcon" class="icomoon-icon dashboard-icon"></Label>
-								<Label class="dashboard-icon-label">Policies</Label>
+						<View class="dashboard-row row">
+							<View class="dashboard-grid-cell columns-4">
+								<View class="dashboard-icon-wrapper">
+									<Label id="maintenanceIcon" class="icomoon-icon dashboard-icon"></Label>
+									<Label class="dashboard-icon-label">Auto\nMaintenance</Label>
+								</View>
 							</View>
-						</View>
-						<View class="dashboard-grid-cell columns-4" onClick="onSelectIcon" controllerLink="billing/viewBills">
-							<View class="dashboard-icon-wrapper">
-								<Label id="paybillIcon" class="icomoon-icon dashboard-icon"></Label>
-								<Label class="dashboard-icon-label">Pay Bill</Label>
+							<View class="dashboard-grid-cell columns-4" onClick="onSelectIcon" controllerLink="homeInventory/viewRooms">
+								<View class="dashboard-icon-wrapper">
+									<Label id="inventoryIcon" class="icomoon-icon dashboard-icon"></Label>
+									<Label class="dashboard-icon-label">Home\nInventory</Label>
+								</View>
 							</View>
-						</View>
-					</View>
-					<View class="dashboard-row row">
-						<View class="dashboard-grid-cell columns-4">
-							<View class="dashboard-icon-wrapper">
-								<Label id="maintenanceIcon" class="icomoon-icon dashboard-icon"></Label>
-								<Label class="dashboard-icon-label">Auto Maintenance</Label>
-							</View>
-						</View>
-						<View class="dashboard-grid-cell columns-4" onClick="onSelectIcon" controllerLink="homeInventory/viewRooms">
-							<View class="dashboard-icon-wrapper">
-								<Label id="inventoryIcon" class="icomoon-icon dashboard-icon"></Label>
-								<Label class="dashboard-icon-label">Home Inventory</Label>
-							</View>
-						</View>
-						<View class="dashboard-grid-cell columns-4">
-							<View class="dashboard-icon-wrapper">
-								<Label id="alertsIcon" class="icomoon-icon dashboard-icon"></Label>
-								<Label class="dashboard-icon-label">Notification Center</Label>
+							<View class="dashboard-grid-cell columns-4">
+								<View class="dashboard-icon-wrapper">
+									<Label id="alertsIcon" class="icomoon-icon dashboard-icon"></Label>
+									<Label class="dashboard-icon-label">Notification\nCenter</Label>
+								</View>
 							</View>
 						</View>
 					</View>
 				</View>
-				<View class="auto-section">
+				<View id="autoSection">
 					<View class="auto-image" onClick="resetBills">
 						<Label id="autoIcon" class="icomoon-icon"></Label>
 						<View class="vertical-divider auto-section-divider"></View>

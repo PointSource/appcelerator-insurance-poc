@@ -23,14 +23,10 @@ Alloy.Globals.Colors = {
 /* Icon Font */
 Alloy.Globals.Icomoon = require('/lib/icomoon');
 
-// Dashboard icon size
+// Device dimensions
 Alloy.Globals.deviceWidth = Ti.Platform.displayCaps.platformWidth;
 Alloy.Globals.deviceHeight = Ti.Platform.displayCaps.platformHeight;
-Alloy.Globals.dashboardIconSize = (Alloy.Globals.deviceWidth / 4);
-
-if (OS_ANDROID) {
-	Alloy.Globals.dashboardIconSize = (Alloy.Globals.deviceWidth / 4)+"px";
-}
+Alloy.Globals.aspectRatio = Alloy.Globals.deviceHeight / Alloy.Globals.deviceWidth;
 
 
 /* Utility functions */

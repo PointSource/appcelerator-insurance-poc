@@ -35,6 +35,14 @@ function init() {
 		androidMenu: true
 	});
 
+	var dashboardSectionHeight = "130";
+	if (Alloy.Globals.aspectRatio > 1.7) {
+		dashboardSectionHeight = "25%";
+	}
+	$.agentSection.height = dashboardSectionHeight;
+	$.launchPadSection.top = dashboardSectionHeight;
+	$.launchPadSection.bottom = dashboardSectionHeight;
+	$.autoSection.height = dashboardSectionHeight;
 }
 
 

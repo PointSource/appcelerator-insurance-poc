@@ -3,12 +3,24 @@
 	width: "100%",
 }
 
-".agent-section": {
+"#agentSection": {
 	top: 0,
 	height: "150",
 	backgroundColor: Alloy.Globals.Colors.pointsource_blue,
 	width: Ti.UI.FILL,
 	layout: "horizontal"
+}
+
+"#launchPadSection": {
+	top: "150",
+	bottom: "150",
+}
+
+"#autoSection": {
+	layout: "horizontal",
+	backgroundColor: Alloy.Globals.Colors.gray_verydark,
+	height: "150",
+	bottom: 0
 }
 
 ".agent-photo-section": {
@@ -29,19 +41,12 @@
 	height: Titanium.UI.SIZE
 }
 
-
-".launch-pad-section": {
-	top: "150",
-	bottom: "150",
-	layout: 'vertical'
-}
-
 ".dashboard-row": {
-	height: '50%'
+	height: Titanium.UI.SIZE
 }
 
 ".dashboard-grid-cell": {
-	 height: Titanium.UI.FILL
+	 height: Titanium.UI.SIZE
 }
 
 ".dashboard-icon-wrapper": {
@@ -51,22 +56,30 @@
 
 ".dashboard-icon": {
 	font: {
-		fontSize: Alloy.Globals.dashboardIconSize
-	},
-	textAlign: Ti.UI.TEXT_ALIGNMENT_CENTER,
+		fontSize: "100%"
+	}
+}
+
+".dashboard-icon[platform=android]": {
+	font: {
+		fontSize: "80%"
+	}
 }
 
 ".dashboard-icon-label": {
 	color: Alloy.Globals.Colors.gray_dark,
-	width: 100,
-	textAlign: Titanium.UI.TEXT_ALIGNMENT_CENTER
+	top: 0,
+	height: 50,
+	width: Titanium.UI.SIZE,
+	textAlign: Titanium.UI.TEXT_ALIGNMENT_CENTER,
+	verticalAlign: Titanium.UI.TEXT_VERTICAL_ALIGNMENT_TOP,
+	font: {
+		fontSize: 15
+	}
 }
 
-".auto-section": {
-	layout: "horizontal",
-	backgroundColor: Alloy.Globals.Colors.gray_verydark,
-	height: "150",
-	bottom: 0
+".dashboard-icon-label[platform=android]": {
+	height: 40
 }
 
 
@@ -75,17 +88,18 @@
 	height: 150
 }
 
-".auto-svg": {
-	height: 80,
-	width: 80,	
-}
-
 "#autoIcon": {
 	text: Alloy.Globals.Icomoon.charcode.main_auto_no_rule,
 	font: {
-		fontSize: 80
+		fontSize: "70%"
 	},
 	color: Alloy.Globals.Colors.pointsource_blue
+}
+
+"#autoIcon[platform=android]": {
+	font: {
+		fontSize: "60%"
+	}
 }
 
 ".auto-section-divider": {
