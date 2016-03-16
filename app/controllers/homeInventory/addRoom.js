@@ -89,8 +89,6 @@ function init() {
         appWrapper: $.AppWrapper
     });
 
-    $.cameraIcon.text = Alloy.Globals.icomoon.icon("camera");
-
     $.nameInput.addEventListener("return", function() {
         $.valueInput.focus();
     });

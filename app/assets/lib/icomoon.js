@@ -1,20 +1,20 @@
-exports.fontfamily = 'icomoon';
+exports.fontFamily = 'icomoon';
 
 exports.charcode = {
-	'back-arrow': 0xE900,
-	'forward-arrow': 0xE901,
-	'main-alerts': 0xE902,
-	'main-auto': 0xE903,
-	'main-auton-no-rule': 0xE904,
-	'main-home': 0xE905,
-	'main-inventory': 0xE906,
-	'main-maintenance': 0xE907,
-	'main-paybill': 0xE908,
-	'main-policies': 0xE909,
-	'main-profile': 0xE90A,
-	'menu-call': 0xE90B,
-	'menu-email': 0xE90C,
-	'menu-map': 0xE90D,
-	'menu': 0xE90E,
-	'camera': 0xE90F
+	back_arrow: "\uE900",
+	forward_arrow: "\uE901",
+	main_alerts: "\uE902",
+	main_auto: "\uE903",
+	main_auto_no_rule: "\uE904",
+	main_home: "\uE905",
+	main_inventory: "\uE906",
+	main_maintenance: "\uE907",
+	main_paybill: "\uE908",
+	main_policies: "\uE909",
+	main_profile: "\uE90A",
+	menu_call: "\uE90B",
+	menu_email: "\uE90C",
+	menu_map: "\uE90D",
+	menu: "\uE90E",
+	camera: "\uE90F"
 };

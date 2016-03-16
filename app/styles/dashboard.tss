@@ -81,6 +81,7 @@
 }
 
 "#autoIcon": {
+	text: Alloy.Globals.Icomoon.charcode.main_auto_no_rule,
 	font: {
 		fontSize: 80
 	},
@@ -107,3 +108,26 @@
 	left: 5
 }
 
+"#profileIcon": {
+	text: Alloy.Globals.Icomoon.charcode.main_profile
+}
+
+"#policyIcon": {
+	text: Alloy.Globals.Icomoon.charcode.main_policies
+}
+
+"#paybillIcon": {
+	text: Alloy.Globals.Icomoon.charcode.main_paybill
+}
+
+"#maintenanceIcon": {
+	text: Alloy.Globals.Icomoon.charcode.main_maintenance
+}
+
+"#inventoryIcon": {
+	text: Alloy.Globals.Icomoon.charcode.main_inventory
+}
+
+"#alertsIcon": {
+	text: Alloy.Globals.Icomoon.charcode.main_alerts
+}

@@ -58,10 +58,6 @@ function selectMenuItem (event) {
 }
 
 function init() {
-	$.callIcon.text = Alloy.Globals.icomoon.icon("menu-call");
-	$.emailIcon.text = Alloy.Globals.icomoon.icon("menu-email");
-	$.mapIcon.text = Alloy.Globals.icomoon.icon("menu-map");
-
 	if (OS_IOS) {
 		$.SlideMenu.addEventListener("swipe", function(_event) {
 			Ti.Analytics.featureEvent(Ti.Platform.osname+"."+controller.title+".swiped");

@@ -53,7 +53,6 @@ function init() {
 	controller.roomCollection.on("destroy", getTotalEstimate);
 
 	getTotalEstimate();
-	$.houseIcon.text = Alloy.Globals.icomoon.icon("main-home");
 }
 
 // Initialize page

@@ -31,6 +31,7 @@
 }
 
 "#houseIcon": {
+	text: Alloy.Globals.Icomoon.charcode.main_home,
 	right: 15,
 	height: Ti.UI.SIZE,
 	font: {

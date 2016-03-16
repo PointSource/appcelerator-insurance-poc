@@ -85,8 +85,6 @@ function init () {
 		appWrapper: $.AppWrapper
 	});	
 
-    $.cameraIcon.text = Alloy.Globals.icomoon.icon("camera");
-
     $.cardholderNameField.addEventListener("return", function() {
         $.postalCodeField.focus();
     });

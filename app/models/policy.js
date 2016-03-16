@@ -53,14 +53,14 @@ exports.definition = {
 			getIcon: function () {
 				switch (this.get('type')) {
 					case "AUTO":
-						return Alloy.Globals.icomoon.icon("main-auto");
+						return Alloy.Globals.Icomoon.charcode.main_auto;
 						break;
 					case "RENTERS":
 					case "HOME":
-						return Alloy.Globals.icomoon.icon("main-home");
+						return Alloy.Globals.Icomoon.charcode.main-home;
 						break;
 					default:
-						return Alloy.Globals.icomoon.icon("main-auto");
+						return Alloy.Globals.Icomoon.charcode.main-auto;
 				}
 			}
 		});

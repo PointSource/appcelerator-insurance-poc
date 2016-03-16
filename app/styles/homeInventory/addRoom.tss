@@ -36,6 +36,7 @@
 }
 
 "#cameraIcon": {
+	text: Alloy.Globals.Icomoon.charcode.camera,
 	color: Alloy.Globals.Colors.gray_dark,
 	font: {
 		fontSize: 40

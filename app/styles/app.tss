@@ -133,7 +133,7 @@ http://docs.appcelerator.com/platform/latest/#!/guide/Alloy_Styles_and_Themes
 
 ".icomoon-icon": {
 	font: {
-		fontFamily: "icomoon"
+		fontFamily: Alloy.Globals.Icomoon.fontFamily
 	}
 }
 

@@ -83,3 +83,17 @@
 ".menu-column": {
 	height: Ti.UI.FILL
 }
+
+"#callIcon": {
+	text: Alloy.Globals.Icomoon.charcode.menu_call
+}
+
+"#emailIcon": {
+	text: Alloy.Globals.Icomoon.charcode.menu_email
+}
+
+"#mapIcon": {
+	text: Alloy.Globals.Icomoon.charcode.menu_map
+}
+
+

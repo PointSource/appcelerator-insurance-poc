@@ -21,11 +21,7 @@ Alloy.Globals.Colors = {
 }
 
 /* Icon Font */
-
-var IconicFont = require('/lib/IconicFont');
-Alloy.Globals.icomoon = new IconicFont({
-    font: '/lib/icomoon'
-});
+Alloy.Globals.Icomoon = require('/lib/icomoon');
 
 // Dashboard icon size
 Alloy.Globals.deviceWidth = Ti.Platform.displayCaps.platformWidth;
@@ -70,9 +66,9 @@ Alloy.Globals.setUpNavBar = function (options) {
 
 		// Set up iOS menu button
         menuIcon = Titanium.UI.createLabel({
-        	text: Alloy.Globals.icomoon.icon("menu"),
+        	text: Alloy.Globals.Icomoon.charcode.menu,
         	font: {
-        		fontFamily: Alloy.Globals.icomoon.fontfamily,
+        		fontFamily: Alloy.Globals.Icomoon.fontFamily,
         		fontSize: 30
         	},
         	color: "#49a7f7"
@@ -88,9 +84,9 @@ Alloy.Globals.setUpNavBar = function (options) {
 		if (options.iosBackButton !== false) {
 	        // Set up iOS back button
 	        backIcon = Titanium.UI.createLabel({
-	        	text: Alloy.Globals.icomoon.icon("back-arrow"),
+	        	text: Alloy.Globals.Icomoon.charcode.back_arrow,
 	        	font: {
-	        		fontFamily: Alloy.Globals.icomoon.fontfamily,
+	        		fontFamily: Alloy.Globals.Icomoon.fontFamily,
 	        		fontSize: 30
 	        	},
 	        	color: "#49a7f7"

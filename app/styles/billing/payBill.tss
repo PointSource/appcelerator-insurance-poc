@@ -5,6 +5,7 @@
 }
 
 "#cameraIcon": {
+	text: Alloy.Globals.Icomoon.charcode.camera,
 	top: 20,
 	height: 70,
 	color: Alloy.Globals.Colors.gray_dark,
