@@ -28,10 +28,18 @@
 ".header-2": {
 	top: -5
 }
+
 ".header-1": {
-	top: -10
+	top: -8
 }
 
 "#dueLabel": {
 	top: -8
+}
+
+".amount-header": {
+	top: 10,
+	font: {
+		fontSize: 14
+	}
 }

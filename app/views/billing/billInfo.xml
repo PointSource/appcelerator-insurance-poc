@@ -4,7 +4,7 @@
 			<Label id="typeIcon" class="icomoon-icon">{typeIcon}</Label>
 			<Label class="card-label header-3 type-label">{type}</Label>
 		</View>
-		<Label class="card-label small">AMOUNT OF</Label>
+		<Label class="card-label amount-header">AMOUNT OF</Label>
 		<Label class="card-label header-1">{minimumDue}</Label>
 		<Label id="dueLabel" class="card-label header-3">{formattedDueDate}</Label>
 
