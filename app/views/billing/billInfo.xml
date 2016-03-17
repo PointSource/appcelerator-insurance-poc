@@ -1,8 +1,8 @@
 <Alloy>
 	<View height="Ti.UI.SIZE" layout="vertical">
-		<View height="Ti.UI.SIZE" top="20">
+		<View height="Ti.UI.SIZE" width="100%" top="20">
 			<Label id="typeIcon" class="icomoon-icon" text="{typeIcon}"></Label>
-			<Label class="card-label header-3" left="70" height="70">{type}</Label>
+			<Label class="card-label header-3" left="65" height="50">{type}</Label>
 		</View>
 		<Label class="card-label small">AMOUNT OF</Label>
 		<Label class="card-label header-1">{minimumDue}</Label>
@@ -14,7 +14,7 @@
 
 		<Label class="card-label small">Policy No.</Label>
 		<Label class="card-label header-2">{policyNumber}</Label>
-		<View height="Ti.UI.SIZE">
+		<View height="Ti.UI.SIZE" width="100%">
 			<Button id="payNowButton" class="button button-outline" onClick="goToPaymentOptions" top="10" bottom="20">PAY NOW</Button>
 		</View>
 	</View>

@@ -1,3 +1,6 @@
+".card-label": {
+	left: 40
+}
 
 ".small": {
 	top: 10

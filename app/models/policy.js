@@ -57,10 +57,10 @@ exports.definition = {
 						break;
 					case "RENTERS":
 					case "HOME":
-						return Alloy.Globals.Icomoon.charcode.main-home;
+						return Alloy.Globals.Icomoon.charcode.main_home;
 						break;
 					default:
-						return Alloy.Globals.Icomoon.charcode.main-auto;
+						return Alloy.Globals.Icomoon.charcode.main_auto;
 				}
 			}
 		});
