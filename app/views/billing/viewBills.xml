@@ -1,17 +1,19 @@
 <Alloy>
 	<Collection src="policy"/>
-	<Window id="billList" class="container" title="Your Bills">
+	<Window id="viewBills" class="container" title="Your Bills">
 		<View id="AppWrapper">
 			<Label id="noBillsMessage"></Label>
-			<ScrollView layout="vertical" scrollType="vertical"  dataCollection="policy" dataTransform="formatPolicy" dataFilter="filterPolicies">
-				<View platform="ios" class="card" layout="vertical">
+			<ScrollView id="billList" layout="vertical" scrollType="vertical" dataCollection="policy" dataTransform="formatPolicy" dataFilter="filterPolicies">
+				<View platform="ios" class="card" layout="vertical" bottom="{bottom}">
 					<Require src="billing/billInfo"/>
 				</View>
-				<CardView platform="android" left="15" right="15" top="15">
-					<Require src="billing/billInfo"/>
-				</CardView>
-				<!-- Spacer -->
-				<!-- <View height="15"></View> -->
+				<View platform="android" height="Ti.UI.SIZE" layout="vertical">
+					<CardView backgroundColor="{backgroundColor}">
+						<Require src="billing/billInfo"/>
+					</CardView>
+					<!-- Spacer -->
+					<View height="{bottom}"></View>
+				</View>
 			</ScrollView>
 		</View>
 	</Window>
