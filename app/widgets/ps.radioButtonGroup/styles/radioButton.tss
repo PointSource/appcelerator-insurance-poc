@@ -1,4 +1,5 @@
 ".radio-wrapper": {
+	bottom: 10,
 	height: Ti.UI.SIZE
 }
 

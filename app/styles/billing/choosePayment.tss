@@ -12,3 +12,7 @@
 		fontSize: 40
 	}
 }
+
+".header-2": {
+	top: -5
+}
