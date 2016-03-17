@@ -48,7 +48,7 @@ http://docs.appcelerator.com/platform/latest/#!/guide/Alloy_Styles_and_Themes
 ".button": {
 	left: 15,
 	right: 15,
-	height: 50,
+	height: 55,
 	color: Alloy.Globals.Colors.gray_verydark,
 	backgroundColor: Alloy.Globals.Colors.green
 }
@@ -86,14 +86,14 @@ http://docs.appcelerator.com/platform/latest/#!/guide/Alloy_Styles_and_Themes
 ".header-1": {
 	top: -10,
 	font: {
-		fontSize: 27,
+		fontSize: 32,
 		fontFamily: "OpenSans-Semibold"
 	}
 }
 
 ".header-2": {
 	font: {
-		fontSize: 25,
+		fontSize: 24,
 		fontFamily: "OpenSans-Semibold"
 	}
 }
@@ -167,7 +167,10 @@ http://docs.appcelerator.com/platform/latest/#!/guide/Alloy_Styles_and_Themes
 ".card": {
 	backgroundColor: "white",
 	height: Ti.UI.SIZE,
-	top: 10
+	top: 15,
+	left: 15,
+	right: 15,
+	borderRadius: 2
 }
 
 ".card[platform=ios]": {
@@ -185,9 +188,6 @@ http://docs.appcelerator.com/platform/latest/#!/guide/Alloy_Styles_and_Themes
 	}
 }
 
-".top-card": {
-	top: 0
-}
 
 /* Forms */
 ".input-wrapper": {

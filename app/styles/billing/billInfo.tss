@@ -1,23 +1,35 @@
 ".card-label": {
-	left: 40
+	left: 30
 }
+
+".policy-header": {
+	height: Ti.UI.SIZE,
+	width: "100%",
+	top: 25
+}
+
+"#typeIcon": {
+	left: 25,
+	font: {
+		fontSize: 40
+	}
+}
+
+".type-label": {
+ 	left: "70",
+ 	height: "50"
+}
+
 
 ".small": {
 	top: 10
 }
 
 ".header-2": {
-	top: -7
+	top: -5
 }
 ".header-1": {
 	top: -10
-}
-
-"#typeIcon": {
-	left: 15,
-	font: {
-		fontSize: 40
-	}
 }
 
 "#dueLabel": {

@@ -1,7 +1,11 @@
 ".card-label": {
-	left: 40
+	left: 30
 }
 
 ".small": {
 	top: 10
+}
+
+".header-2": {
+	top: -5
 }

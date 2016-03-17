@@ -111,7 +111,7 @@
 }
 
 ".auto-info-section": {
-	width: "75%",
+	width: Ti.UI.FILL,
 	top: 0
 }
 
