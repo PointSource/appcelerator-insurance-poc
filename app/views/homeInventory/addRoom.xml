@@ -1,5 +1,5 @@
 <Alloy>
-	<Window id="addRoom" class="container" title="ADD ROOM">
+	<Window id="addRoom" class="container" title="Add Room">
 		<View id="AppWrapper">
 	        <Widget id="camera" src="ts.camera" onPictureTaken="onPictureTaken"/>
 
@@ -35,7 +35,9 @@
 	        	<View class="camera-button-overlay">
 			        <Label id="cameraIcon" class="icomoon-icon" onClick="takePicture"></Label>
 	        	</View>
-		        <ScrollView id="imagePreview"></ScrollView>
+		        <ScrollView id="imagePreviewStrip">
+		        	<ImageView id="imagePlaceholder" image="/images/photo_thumb.png" class="image-preview"></ImageView>
+		        </ScrollView>
 				<Button class="button submit-button" onClick="submit">Submit</Button>
 	        </View>
         

@@ -50,7 +50,7 @@ function closeKeyboard () {
 
 function onPictureTaken(event) {
     var baseImage = Titanium.UI.createImageView({
-        image:event.image,
+        image: event.image,
         height: 120
     });
 
@@ -58,7 +58,6 @@ function onPictureTaken(event) {
     var cropView = Titanium.UI.createView({
         width:60, 
         height:60,
-        backgroundColor: 'blue',
         left: 3,
         right: 3,
         top: 5
@@ -67,11 +66,15 @@ function onPictureTaken(event) {
     // Add the image to the crop-view.
     // Position it left and above origin.
     cropView.add(baseImage);
-    baseImage.left=0;
-    baseImage.top="-30";
+    baseImage.left = 0;
+    baseImage.top = "-30";
 
-    $.imagePreview.add(cropView);
-    $.imagePreview.scrollToBottom();
+    if ($.imagePlaceholder) {
+        $.imagePreviewStrip.remove($.imagePlaceholder);
+    }
+
+    $.imagePreviewStrip.add(cropView);
+    $.imagePreviewStrip.scrollToBottom();
 
     controller.images.push(event.image);
 }
@@ -108,7 +111,7 @@ function init() {
         $.camera.switchCamera();
     }
 
-    $.imagePreview.addEventListener("swipe", function(e) {
+    $.imagePreviewStrip.addEventListener("swipe", function(e) {
         e.cancelBubble = true;
     })
 }

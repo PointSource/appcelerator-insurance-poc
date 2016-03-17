@@ -7,12 +7,20 @@
     height: Ti.UI.FILL
 },
 
-"#imagePreview": {
+"#imagePreviewStrip": {
 	layout: 'horizontal',
 	height: 70,
 	contentHeight: 70,
 	backgroundColor: "white",
     width: Ti.UI.FILL
+}
+
+".image-preview": {
+    width:60, 
+    height:60,
+    left: 3,
+    right: 3,
+    top: 5
 }
 
 "#valueInput[platform=android]": {
