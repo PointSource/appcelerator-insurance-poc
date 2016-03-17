@@ -53,7 +53,7 @@
 }
 
 "#menuSection[platform=android]": {
-	top: 240
+	top: 265
 }
 
 ".menu-row": {
