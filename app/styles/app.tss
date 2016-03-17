@@ -179,6 +179,28 @@ http://docs.appcelerator.com/platform/latest/#!/guide/Alloy_Styles_and_Themes
 	viewShadowOffset: "(0,0)"
 }
 
+"CardView[platform=android]": {
+	left: "15",
+	right: "15",
+	top: "15"
+}
+
+".card-header": {
+	height: Ti.UI.SIZE,
+	width: "100%",
+	top: 25,
+	bottom: 10
+}
+
+".card-header-label": {
+ 	left: 70,
+ 	height: 50,
+	font: {
+		fontSize: 18,
+		fontFamily: "OpenSans-Semibold"
+	}
+}
+
 ".card-label": {
 	color: Alloy.Globals.Colors.gray_verydark,
 	width: Ti.UI.FILL,
@@ -186,12 +208,6 @@ http://docs.appcelerator.com/platform/latest/#!/guide/Alloy_Styles_and_Themes
 	font: {
 		fontFamily: "OpenSans"
 	}
-}
-
-"CardView[platform=android]": {
-	left: "15",
-	right: "15",
-	top: "15"
 }
 
 /* Forms */

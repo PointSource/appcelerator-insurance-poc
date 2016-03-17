@@ -53,7 +53,7 @@ function init() {
 	
 	$.currentPolicy.set(args.currentPolicy.attributes);
 
-	$.paymentOptions.title = "PAY "+args.currentPolicy.get("type");
+	$.cardHeader.text = "PAY "+args.currentPolicy.get("type");
 
 	$.typeIcon.text = args.currentPolicy.getIcon();
 

@@ -1,8 +1,8 @@
 <Alloy>
 	<View height="Ti.UI.SIZE" layout="vertical">
-		<View class="policy-header">
+		<View class="card-header">
 			<Label id="typeIcon" class="icomoon-icon">{typeIcon}</Label>
-			<Label class="card-label header-3 type-label">{type}</Label>
+			<Label class="card-header-label">{type}</Label>
 		</View>
 		<Label class="card-label amount-header">AMOUNT OF</Label>
 		<Label class="card-label header-1">{minimumDue}</Label>

@@ -1,17 +1,14 @@
 ".card-label": {
-	left: 50
+	left: 70
 }
-
-
 
 ".button": {
 	top: 10
 }
 
-
 "#typeIcon": {
-	left: 10,
+	left: 25,
 	font: {
-		fontSize: 35
+		fontSize: 40
 	}
 }

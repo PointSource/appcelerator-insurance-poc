@@ -8,7 +8,7 @@
 	borderRadius: 14,
 	borderColor: "#282828",
 	borderWidth: 1,
-	left: 12
+	left: 30
 }
 
 ".radio": {

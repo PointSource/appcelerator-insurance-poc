@@ -1,11 +1,11 @@
 <Alloy>
 	<Model src="policy" instance="true" id="currentPolicy"/>
-	<Window id="paymentOptions" class="container">
+	<Window id="paymentOptions" class="container" title="PAYMENT OPTIONS">
 		<View id="AppWrapper">
 			<View class="card" layout="vertical">
-				<View height="Ti.UI.SIZE" top="20">
+				<View class="card-header">
 					<Label id="typeIcon" class="icomoon-icon"></Label>
-					<Label class="card-label header-3">PAYMENT OPTIONS</Label>
+					<Label id="cardHeader" class="card-header-label">PAY</Label>
 				</View>
 				<Widget src="ps.radioButtonGroup" onChange="handlePaymentChange" selectedIndex="0">
 					<View layout="vertical" height="Ti.UI.SIZE">

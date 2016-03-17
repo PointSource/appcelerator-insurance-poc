@@ -1,6 +1,6 @@
 <Alloy>
 	<Collection src="policy"/>
-	<Window id="viewBills" class="container" title="Your Bills">
+	<Window id="viewBills" class="container" title="YOUR BILLS">
 		<View id="AppWrapper">
 			<Label id="noBillsMessage"></Label>
 			<ScrollView platform="ios" layout="vertical" scrollType="vertical" dataCollection="policy" dataTransform="formatPolicy" dataFilter="filterPolicies">

@@ -9,12 +9,10 @@ function formatPolicy(policy) {
 	var lastPolicyNumber = Alloy.Collections.policy.last()
 							.get("policyNumber");
 	var dueDate = policy.getDueDate();
-	transformed.bottom = 0;
 
 	// Add padding to the last element in the list
 	if (policy.get("policyNumber") === lastPolicyNumber) {
 		transformed.bottom = 15;
-		transformed.backgroundColor = "red";
 	}
 
 	transformed.minimumDue = string.formatCurrency(policy.getMinimumDue());

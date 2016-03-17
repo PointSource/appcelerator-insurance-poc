@@ -2,12 +2,6 @@
 	left: 30
 }
 
-".policy-header": {
-	height: Ti.UI.SIZE,
-	width: "100%",
-	top: 25
-}
-
 "#typeIcon": {
 	left: 25,
 	font: {
@@ -38,7 +32,6 @@
 }
 
 ".amount-header": {
-	top: 10,
 	font: {
 		fontSize: 14
 	}
