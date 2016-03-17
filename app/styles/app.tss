@@ -214,7 +214,7 @@ http://docs.appcelerator.com/platform/latest/#!/guide/Alloy_Styles_and_Themes
 	height: 50,
 	left: 15,
 	color: Alloy.Globals.Colors.gray_verydark,
-	hintTextColor: Alloy.Globals.Colors.gray_medium
+	hintTextColor: Alloy.Globals.Colors.gray_medium_light
 }
 
 /* Nav Bar */
