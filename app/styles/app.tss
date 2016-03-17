@@ -188,6 +188,11 @@ http://docs.appcelerator.com/platform/latest/#!/guide/Alloy_Styles_and_Themes
 	}
 }
 
+"CardView[platform=android]": {
+	left: "15",
+	right: "15",
+	top: "15"
+}
 
 /* Forms */
 ".input-wrapper": {

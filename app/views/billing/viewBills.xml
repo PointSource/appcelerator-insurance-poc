@@ -3,18 +3,22 @@
 	<Window id="viewBills" class="container" title="Your Bills">
 		<View id="AppWrapper">
 			<Label id="noBillsMessage"></Label>
-			<ScrollView id="billList" layout="vertical" scrollType="vertical" dataCollection="policy" dataTransform="formatPolicy" dataFilter="filterPolicies">
-				<View platform="ios" class="card" layout="vertical" bottom="{bottom}">
+			<ScrollView platform="ios" layout="vertical" scrollType="vertical" dataCollection="policy" dataTransform="formatPolicy" dataFilter="filterPolicies">
+				<View class="card" layout="vertical" bottom="{bottom}">
 					<Require src="billing/billInfo"/>
 				</View>
-				<View platform="android" height="Ti.UI.SIZE" layout="vertical">
-					<CardView backgroundColor="{backgroundColor}">
+			</ScrollView>
+
+			<ScrollView platform="android" scrollType="vertical" layout="vertical">
+				<View layout="vertical" dataCollection="policy" dataTransform="formatPolicy" dataFilter="filterPolicies">
+					<CardView platform="android">
 						<Require src="billing/billInfo"/>
 					</CardView>
-					<!-- Spacer -->
-					<View height="{bottom}"></View>
 				</View>
+				<!-- Spacer -->
+				<View height="8"></View>
 			</ScrollView>
+
 		</View>
 	</Window>
 </Alloy>
