@@ -15,21 +15,23 @@
 
 ".agent-section": {
 	top: 0,
-	height: 200
+	height: 225
 }
 
 ".agent-photo-section": {
-	width: 200
+	width: 225
 }
 
 "#agentPhoto": {
-	top: 5
+	top: 0,
+	height: "125",
+	width: "125"
 }
 
 ".agent-icon": {
-	bottom: "10",
+	bottom: "5",
 	font: {
-		fontSize: 50
+		fontSize: 65
 	},
 	color: Alloy.Globals.Colors.pointsource_blue
 }
@@ -41,7 +43,7 @@
 
 "#menuSection": {
 	layout: "vertical",
-	top: 200,
+	top: 225,
 	height: Ti.UI.FILL
 }
 
@@ -65,7 +67,7 @@
 }
 
 ".menu-label": {
-	left: 10,
+	left: 15,
 }
 
 ".menu-label-selected": {
