@@ -49,7 +49,7 @@ module.exports.sync = function(method, model, options) {
 		if (error) {
 			// Calls the default Backbone error callback
 			// and invokes a custom callback if options.error was defined.
-			var err = res.error || error;
+			var err = (res && res.error) ? res.error : error;
 			Ti.API.error('ERROR: ' + err);
 			options.error(model, error, options);
 			model.trigger('error');
