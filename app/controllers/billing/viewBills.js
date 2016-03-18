@@ -49,9 +49,13 @@ function init() {
 
     Alloy.Collections.policy.fetch({
     	success: function () {
+			$.noBillsMessage.text = "";
     	},
     	error: function (err) {
-    		alert('could not get list of policies');
+    		alert('Could not get list of policies');
+			$.noBillsMessage.text = "Could not get policy list. "+
+								"Please check your internet connection.";
+
 		    Alloy.Globals.apm.logHandledException(err);
     	}
     });
