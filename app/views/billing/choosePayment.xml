@@ -1,6 +1,6 @@
 <Alloy>
 	<Model src="policy" instance="true" id="currentPolicy"/>
-	<Window id="paymentOptions" class="container" title="PAYMENT OPTIONS">
+	<Window id="paymentOptions" class="container" title="Payment Options">
 		<View id="AppWrapper">
 			<View class="card" layout="vertical">
 				<View class="card-header">
