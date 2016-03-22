@@ -1,5 +1,7 @@
 function goToPayBill (event) {
-	Alloy.Globals.Navigator.open("payBill/paymentOptions", {currentPolicy: $model});
+	var billingService = require("/lib/billing-service");
+	billingService.setCurrentPolicy($model);
+	Alloy.Globals.Navigator.open("payBill/paymentOptions");
 }
 
 function init() {

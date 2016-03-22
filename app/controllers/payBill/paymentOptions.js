@@ -1,13 +1,14 @@
 // Arguments passed into this controller can be accessed off of the `$.args` object directly or:
 var args = $.args;
 var selectedPayment = 0;
+var currentPolicy = {};
 
 function goToPayBill (event) {
 	if (selectedPayment === 0) {
 		alert("Please select a payment amount");
 	} else {
 		var payBillController = Alloy.createController("payBill/payBill", {
-			currentPolicy: args.currentPolicy,
+			currentPolicy: currentPolicy,
 			selectedPayment: selectedPayment
 		});
 
@@ -27,25 +28,29 @@ function goToPayBill (event) {
 
 function handlePaymentChange (data) {
 	if (data.selectedIndex === 0) {
-		selectedPayment = args.currentPolicy.get("billDetails").minimumDue;
+		selectedPayment = currentPolicy.get("billDetails").minimumDue;
 	} else if (data.selectedIndex === 1) {
-		selectedPayment = args.currentPolicy.get("billDetails").totalAmountDue;
+		selectedPayment = currentPolicy.get("billDetails").totalAmountDue;
 	}
 }
 
-function init() {
+function init () {
+	$.currentPolicy.set(currentPolicy.attributes);
 
-	$.currentPolicy.set(args.currentPolicy.attributes);
+	$.typeIcon.text = currentPolicy.getIcon();
 
-	$.typeIcon.text = args.currentPolicy.getIcon();
-
-	if (args.currentPolicy.getIsOverdue()) {
+	if (currentPolicy.getIsOverdue()) {
 		$.minimumDueTitle.color = Alloy.Globals.Colors.primary_accent;
 		$.minimumDueTitle.text = "MINIMUM DUE NOW";
 		$.minimumDueAmount.color =  Alloy.Globals.Colors.primary_accent;
 	}
 }
 
+var initData = function () {
+	var billingService = require("/lib/billing-service");
+	currentPolicy = billingService.getCurrentPolicy();
+}();
+
 exports.id = 'payBill/paymentOptions';
-exports.title = 'Payment '+args.currentPolicy.get("type");
+exports.title = 'Payment '+currentPolicy.get("type");
 exports.init = init;
