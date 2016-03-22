@@ -56,7 +56,7 @@ function init() {
 			$.noBillsMessage.text = "Could not get policy list. "+
 								"Please check your internet connection.";
 
-		    Alloy.Globals.apm.logHandledException(err);
+		    // Alloy.Globals.apm.logHandledException(err);
     	}
     });
 	Alloy.Globals.apm.leaveBreadcrumb("exit init: "+controller.title);
