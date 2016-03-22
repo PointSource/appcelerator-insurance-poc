@@ -1,0 +1,13 @@
+<Alloy>
+	<Model src="policy" instance="true" id="currentPolicy"/>
+	<Window id="paymentOptions" class="container" title="Payment Options">
+		<View id="AppWrapper">
+			<View platform="ios" id="card" class="card" height="Ti.UI.SIZE">
+				<!-- Choose Payment view goes here -->
+			</View>
+			<CardView platform="android" id="card">
+				<!-- Choose Payment view goes here -->
+			</CardView>
+		</View>
+	</Window>
+</Alloy>

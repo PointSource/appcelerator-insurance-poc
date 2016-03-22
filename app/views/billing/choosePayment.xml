@@ -1,25 +1,21 @@
 <Alloy>
 	<Model src="policy" instance="true" id="currentPolicy"/>
-	<Window id="paymentOptions" class="container" title="Payment Options">
-		<View id="AppWrapper">
-			<View class="card" layout="vertical">
-				<View class="card-header">
-					<Label id="typeIcon" class="icomoon-icon"></Label>
-					<Label id="cardHeader" class="card-header-label">PAY</Label>
-				</View>
-				<Widget src="ps.radioButtonGroup" onChange="handlePaymentChange" selectedIndex="0">
-					<View layout="vertical" height="Ti.UI.SIZE">
-						<Label id="minimumDueTitle" class="card-label small">MINIMUM DUE</Label>
-						<Label id="minimumDueAmount" class="card-label header-2">{$.currentPolicy.minimumDue}</Label>
-					</View>
-					<View layout="vertical" height="Ti.UI.SIZE">
-						<Label class="card-label small">FULL BALANCE</Label>
-						<Label class="card-label header-2">{$.currentPolicy.totalAmountDue}</Label>
-					</View>
-				</Widget>
-				<!-- Spacer -->
-				<Button class="button" onClick="goToPayBill" top="20" bottom="20">PAY BY CREDIT CARD</Button>
-			</View>
+	<View layout="vertical" height="Ti.UI.SIZE">
+		<View class="card-header">
+			<Label id="typeIcon" class="icomoon-icon"></Label>
+			<Label id="cardHeader" class="card-header-label">PAY</Label>
 		</View>
-	</Window>
+		<Widget src="ps.radioButtonGroup" onChange="handlePaymentChange" selectedIndex="0">
+			<View layout="vertical" height="Ti.UI.SIZE">
+				<Label id="minimumDueTitle" class="card-label small">MINIMUM DUE</Label>
+				<Label id="minimumDueAmount" class="card-label header-2">{$.currentPolicy.minimumDue}</Label>
+			</View>
+			<View layout="vertical" height="Ti.UI.SIZE">
+				<Label class="card-label small">FULL BALANCE</Label>
+				<Label class="card-label header-2">{$.currentPolicy.totalAmountDue}</Label>
+			</View>
+		</Widget>
+		<!-- Spacer -->
+		<Button class="button" onClick="goToPayBill" top="20" bottom="20">PAY BY CREDIT CARD</Button>
+	</View>
 </Alloy>

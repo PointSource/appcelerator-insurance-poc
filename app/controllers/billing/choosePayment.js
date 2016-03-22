@@ -1,7 +1,6 @@
 // Arguments passed into this controller can be accessed off of the `$.args` object directly or:
 var args = $.args;
 var controller = {
-	title: "paymentOptions",
 	selectedPayment: 0
 }
 
@@ -17,20 +16,7 @@ function goToPayBill (event) {
 		Alloy.Globals.Navigator.open("billing/payBill", {
 			currentPolicy: args.currentPolicy,
 			selectedPayment: controller.selectedPayment,
-			onPaymentMade: function(selectedPayment) {
-				Ti.Analytics.featureEvent(controller.title+".paymentMade");
-				$.paymentOptions.close();
-
-				if (OS_IOS) {
-					alert("Payment of $"+selectedPayment+" submitted");
-				} else if (OS_ANDROID) {
-					var notification = Ti.UI.createNotification({
-						message:"Payment of $"+selectedPayment+" submitted",
-						duration: Ti.UI.NOTIFICATION_DURATION_LONG
-					});
-					notification.show();
-				}
-			}
+			onPaymentMade: args.onPaymentMade
 		}, controller.title);
 	}
 }
@@ -44,13 +30,6 @@ function handlePaymentChange (data) {
 }
 
 function init() {
-	Ti.Analytics.featureEvent(Ti.Platform.osname+"."+controller.title+".viewed");
-
-    Alloy.Globals.setUpNavBar({
-        currentWindow: $.paymentOptions,
-        appWrapper: $.AppWrapper
-    });	
-	
 	$.currentPolicy.set(args.currentPolicy.attributes);
 
 	$.cardHeader.text = "PAY "+args.currentPolicy.get("type");
@@ -62,6 +41,7 @@ function init() {
 		$.minimumDueTitle.text = "MINIMUM DUE NOW";
 		$.minimumDueAmount.color =  Alloy.Globals.Colors.primary_accent;
 	}
+
 }
 
 init();

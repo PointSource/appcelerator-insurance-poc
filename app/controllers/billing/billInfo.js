@@ -6,7 +6,7 @@ var controller = {
 
 function goToPaymentOptions (event) {
 	Ti.Analytics.featureEvent(controller.title+".goToPaymentOptions");
-	Alloy.Globals.Navigator.open("billing/choosePayment", {currentPolicy: $model});
+	Alloy.Globals.Navigator.open("billing/paymentOptions", {currentPolicy: $model});
 }
 
 function init() {

@@ -1,4 +1,4 @@
 <Alloy>
-	<View id="radioButtonGroup" height="Ti.UI.SIZE" layout="vertical">
+	<View id="radioButtonGroup" height="Ti.UI.SIZE" layout="vertical" width="100%">
 	</View>
 </Alloy>
